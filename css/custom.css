@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Frutiger LT Arabic 45 Light";
+    src: url("../fonts/FrutigerLTArabic-45Light.ttf");
+}
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+section.header {
+    padding: 0 150px;
+    border: 1px solid #e5dacb;
+    background-color: #f9f8f5;
+}
+header nav .navbar-brand.logo-text {
+    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #106b2e;
+}
+header nav .navbar-brand.logo-text span {
+    color: #106b2e;
+    font-weight: 700;
+}
+header .navbar-collapse .navbar-nav .nav-item a {
+    font-family: Roboto, sans-serif;
+    color: #222222;
+}
+header .navbar-collapse .navbar-nav .nav-item .order-now {
+    color: #ac4c31;
+    font-weight: 700;
+    text-decoration: underline;
+}
+header .nav-item .dropdown-toggle::after {
+    margin-left: 0;
+    vertical-align: 0.15em;
+    border-top: .4em solid;
+    border-right: .2em solid transparent;
+    border-left: .2em solid transparent;
+}
+header .navbar-collapse i {
+    font-size: 18px;
+}
+header nav .modal-button {
+    width: 169px;
+    height: 47px;
+    border-radius: 24px;
+    background-color: #c8a038;
+    border-color: transparent;
+}
+header nav .modal-button:hover {
+    color: #fff;
+    background-color: #c8a038;
+    border-color: transparent;
+}
+
+
+
