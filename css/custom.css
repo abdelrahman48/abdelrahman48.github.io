@@ -14,7 +14,7 @@
     src: url("../fonts/Roboto-Light.ttf");
 }
 body {
-    height: 2000px;
+    height: 6000px;
 }
 /* -------------------- *\
   Start Header
@@ -147,15 +147,23 @@ section.header .text .learn-more a {
     font-size: 19px;
     text-decoration: underline;
 }
-section.header .image {
-    background: url("../img/mushaf-2.png") center/cover;
+section.header .carousel .image {
     width: 715px;
     height: 597px;
     top: 27px;
     right: -90px;
 }
-section.header .breaker {
-    background: url("../img/breaker.png") center/cover;
+/*section.header .carousel-one .image {
+    background: url("../img/mushaf-2.png") center/cover;
+}
+section.header .carousel-two .image {
+    background: url("../img/mushaf-1.png") center/cover;
+}*/
+section.header .image {
+    background: url("../img/mushaf-2.png") center/cover;
+}
+section.header .image-breaker {
+    background: url("../img/breaker-1.png") center/cover;
     width: 866px;
     height: 184px;
     bottom: -92px;
@@ -229,6 +237,37 @@ section.get-started a {
 }
 /* -------------------- *\
   End Get-Started Section
+\* -------------------- */
+
+.image-breaker {
+    height: 33px;
+    background: url("../img/breaker-2.png");
+}
+
+/* -------------------- *\
+  Start Designs Section
+\* -------------------- */
+section.designs {
+    background-color: #a07b1b;
+    padding: 85px 0 245px;
+}
+section.designs .row {
+    max-width: 1200px;
+}
+section.designs h2.h1 {
+    width: 609px;
+    font-family: "Roboto Light", sans-serif;
+    color: #ffffff;
+    margin-bottom: 65px;
+}
+section.designs p {
+    margin-top: 60px;
+    font-family: Roboto, sans-serif;
+    color: #e5dacb;
+}
+
+/* -------------------- *\
+  End Designs Section
 \* -------------------- */
 
 /* -------------------- *\
