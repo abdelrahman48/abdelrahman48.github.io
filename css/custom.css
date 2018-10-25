@@ -71,6 +71,10 @@ header nav .modal-button:hover {
 /* -------------------- *\
   End Header
 \* -------------------- */
+
+/* -------------------- *\
+  Start Header Section
+\* -------------------- */
 section.header .carousel {
     height: 624px;
 }
@@ -113,7 +117,6 @@ section.header .text {
 section.header .text h1 {
     width: 609px;
     font-family: "Roboto Light", sans-serif;
-    color: #000000;
 }
 section.header .text p {
     width: 506px;
@@ -132,7 +135,6 @@ section.header .text .order-copy a {
     color: #ffffff;
     font-family: Roboto, sans-serif;
     font-size: 18px;
-    font-weight: 400;
 }
 section.header .text .learn-more {
     border-radius: 6px;
@@ -143,7 +145,6 @@ section.header .text .learn-more a {
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
-    font-weight: 400;
     text-decoration: underline;
 }
 section.header .image {
@@ -174,8 +175,62 @@ section.header .service p {
     width: 160px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
-    font-weight: 400;
 }
+/* -------------------- *\
+  End Header Section
+\* -------------------- */
+
+/* -------------------- *\
+  Start Get-Started Section
+\* -------------------- */
+section.get-started {
+    padding: 170px 150px 70px;
+}
+section.get-started h2.h1 {
+    width: 772px;
+    font-family: "Roboto Light", sans-serif;
+    margin-bottom: 65px;
+    color: #000;
+}
+section.get-started span {
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    color: #a07b1b;
+}
+section.get-started h2 {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 40px;
+    color: #106b2e;
+}
+section.get-started p {
+    max-width: 340px;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    color: #afa9a0;
+    padding-left: 20px;
+}
+section.get-started .step-two {
+    margin-top: 60px;
+}
+section.get-started .get-started {
+    max-width: 323px;
+    border-radius: 6px;
+    background-color: #106b2e;
+    margin-top: 74px;
+}
+section.get-started a {
+    padding: 21px 0;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: #106b2e;
+    color: #fff;
+}
+/* -------------------- *\
+  End Get-Started Section
+\* -------------------- */
+
 /* -------------------- *\
   Media Queries
 \* -------------------- */
