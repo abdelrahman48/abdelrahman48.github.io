@@ -25,21 +25,17 @@ body {
 \* -------------------- */
 .container {
     padding: 0;
+    box-shadow: 0 0 5px #ccc;
 }
 section.header {
     padding: 0 150px;
-    border: 1px solid #e5dacb;
+    border-bottom: 1px solid #e5dacb;
     background-color: #f9f8f5;
 }
-header nav .navbar-brand.logo-text {
+header nav .navbar-brand.QuranGift {
     font-family: "Frutiger LT Arabic 45 Light", sans-serif;
     font-size: 20px;
-    font-weight: 300;
     color: #106b2e;
-}
-header nav .navbar-brand.logo-text span {
-    color: #106b2e;
-    font-weight: 700;
 }
 header .navbar-collapse .navbar-nav .nav-item a {
     font-family: Roboto, sans-serif;
@@ -231,7 +227,7 @@ section.get-started .get-started {
     margin-top: 74px;
 }
 section.get-started a {
-    padding: 21px 0;
+    padding: 17px 0;
     font-family: Roboto, sans-serif;
     font-size: 24px;
     text-transform: uppercase;
@@ -255,7 +251,7 @@ section.designs {
     background-color: #a07b1b;
     padding: 85px 0 245px;
 }
-section.designs .row {
+section.designs .design-images {
     max-width: 1200px;
 }
 section.designs h2.h1 {
@@ -299,7 +295,7 @@ section.designs p {
     border: 3px solid #a07b1b;
 }
 .designs-image-breaker .print-provider a {
-    padding: 15px 38px;
+    padding: 12px 38px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
@@ -328,6 +324,69 @@ section.world-map h2.h1 {
 }
 /* -------------------- *\
   End World-Map Section
+\* -------------------- */
+
+/* -------------------- *\
+  Start Footer Section
+\* -------------------- */
+footer {
+    background-color: #f9f8f5;
+    padding-top: 38px;
+}
+footer .QuranGift {
+    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+    font-size: 20px;
+    color: #106b2e;
+}
+footer p {
+    width: 463px;
+    margin-top: 34px;
+    font-family: Roboto, sans-serif;
+    color: #afa9a0;
+}
+footer .footer-links {
+    margin: 70px 0 65px;
+}
+footer .list:not(:last-of-type) {
+    border-right: 1px solid #dedfe1;
+}
+footer .list li a {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #222222;
+}
+footer .order-copy {
+    border-radius: 6px;
+    background-color: #106b2e;
+}
+footer .order-copy a {
+    padding: 14px 78px;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+footer .print-provider {
+    border-radius: 6px;
+    border: 3px solid #a07b1b;
+}
+footer .print-provider a {
+    padding: 11px 38px;
+    color: #a07b1b;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
+}
+footer .copyright {
+    background-color: #fefdfc;
+    padding: 35px 0 85px;
+    margin-top: 68px;
+}
+footer .copyright span {
+    font-family: Roboto, sans-serif;
+    color: #222222;
+}
+/* -------------------- *\
+  End Footer Section
 \* -------------------- */
 
 /* -------------------- *\
