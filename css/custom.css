@@ -17,14 +17,11 @@
     font-family: "Roboto Medium";
     src: url("../fonts/Roboto-Medium.ttf");
 }
-body {
-    height: 6000px;
-}
 /* -------------------- *\
   Start Header
 \* -------------------- */
-.container {
-    padding: 0;
+.my-container {
+    max-width: 1440px;
     box-shadow: 0 0 5px #ccc;
 }
 section.header {
@@ -81,6 +78,9 @@ section.header .carousel {
 section.header .carousel-inner {
     overflow: visible;
 }
+.carousel-control-next, .carousel-control-prev {
+    width: 8%;
+}
 .carousel-control-next {
     right: -135px;
 }
@@ -88,8 +88,7 @@ section.header .carousel-inner {
     left: -135px;
 }
 .carousel-next-icon, .carousel-prev-icon {
-    position: relative;
-    display: inline-block;
+    top: -30px;
     width: 55px;
     height: 55px;
     background-color: rgba(107, 83, 19, 0.3);
@@ -151,16 +150,7 @@ section.header .carousel .image {
     width: 715px;
     height: 597px;
     top: 27px;
-    right: -90px;
-}
-/*section.header .carousel-one .image {
-    background: url("../img/mushaf-2.png") center/cover;
-}
-section.header .carousel-two .image {
-    background: url("../img/mushaf-1.png") center/cover;
-}*/
-section.header .image {
-    background: url("../img/mushaf-2.png") center/cover;
+    right: -130px;
 }
 section.header .image-breaker {
     background: url("../img/breaker-1.png") center/cover;
@@ -395,6 +385,41 @@ footer .copyright span {
 @media (min-width: 1200px) {
     .container {
         max-width: 1440px;
+    }
+}
+@media (max-width: 1250px) {
+    .d-custom-inline-block {
+        display: inline-block !important;
+    }
+    .align-self-custom-start {
+        align-self: flex-start !important;
+    }
+}
+@media (min-width: 1250px) {
+    .navbar-expand-custom {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    .navbar-expand-custom > .container,
+    .navbar-expand-custom > .container-fluid {
+        flex-wrap: nowrap;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
     }
 }
 
