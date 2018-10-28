@@ -18,15 +18,9 @@
     src: url("../fonts/Roboto-Medium.ttf");
 }
 /* -------------------- *\
-  Start Header
+  Start Navbar
 \* -------------------- */
-.my-container {
-    max-width: 1440px;
-    box-shadow: 0 0 5px #ccc;
-}
-section.header {
-    padding: 0 150px;
-    border-bottom: 1px solid #e5dacb;
+header nav {
     background-color: #f9f8f5;
 }
 header nav .navbar-brand.QuranGift {
@@ -66,35 +60,30 @@ header nav .modal-button:hover {
     border-color: transparent;
 }
 /* -------------------- *\
-  End Header
+  End Navbar
 \* -------------------- */
 
 /* -------------------- *\
-  Start Header Section
+  Start Header
 \* -------------------- */
-section.header .carousel {
-    height: 624px;
+header {
+    border-bottom: 1px solid #e5dacb;
+    background-color: #f9f8f5;
 }
-section.header .carousel-inner {
-    overflow: visible;
+header .carousel {
+    padding: 0 60px;
 }
-.carousel-control-next, .carousel-control-prev {
-    width: 8%;
+header .carousel-control-next, .carousel-control-prev {
+    width: 60px;
 }
-.carousel-control-next {
-    right: -135px;
-}
-.carousel-control-prev {
-    left: -135px;
-}
-.carousel-next-icon, .carousel-prev-icon {
+header .carousel-next-icon, .carousel-prev-icon {
     top: -30px;
     width: 55px;
     height: 55px;
     background-color: rgba(107, 83, 19, 0.3);
     border-radius: 50%;
 }
-.carousel-next-icon:after, .carousel-prev-icon:after {
+header .carousel-next-icon:after, .carousel-prev-icon:after {
     content: "";
     position: absolute;
     top: 18px;
@@ -106,86 +95,89 @@ section.header .carousel-inner {
     border-left: 2px solid #fff;
     transform: rotate(-45deg);
 }
-.carousel-next-icon:after {
+header .carousel-next-icon:after {
     transform: rotate(135deg);
     left: 13px;
 }
-section.header .text {
-    margin-top: 130px;
+header .text {
+    flex: 40%;
 }
-section.header .text h1 {
-    width: 609px;
+header .text h1 {
     font-family: "Roboto Light", sans-serif;
 }
-section.header .text p {
-    width: 506px;
+header .text p {
     color: #106b2e;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 40px 0 48px;
 }
-section.header .text .order-copy {
+header .text .order-copy {
     border-radius: 6px;
     background-color: #106b2e;
 }
-section.header .text .order-copy a {
+header .text .order-copy a {
     padding: 13px 58px;
     color: #ffffff;
     font-family: Roboto, sans-serif;
     font-size: 18px;
 }
-section.header .text .learn-more {
+header .text .learn-more {
     border-radius: 6px;
     border: 2px solid #a07b1b;
 }
-section.header .text .learn-more a {
+header .text .learn-more a {
     padding: 12px 43px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
     text-decoration: underline;
 }
-section.header .carousel .image {
-    width: 715px;
-    height: 597px;
-    top: 27px;
-    right: -130px;
+header .carousel .image {
+    flex: 60%;
 }
-section.header .image-breaker {
+/* -------------------- *\
+  End Header
+\* -------------------- */
+
+/* -------------------- *\
+  Start features
+\* -------------------- */
+.features {
     background: url("../img/breaker-1.png") center/cover;
     width: 866px;
     height: 184px;
-    bottom: -92px;
+    top: -93px;
     left: 50%;
     transform: translateX(-50%);
 }
-section.header .services {
+.features .features-container {
     top: 50%;
     left: 43%;
     width: 75%;
     transform: translate(-50%, -50%);
 }
-section.header .service:not(:last-of-type) {
+.features .feature:not(:last-of-type) {
     border-right: 1px solid #dedfe1;
 }
-section.header .service p {
+.features .feature p {
     width: 160px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
 }
 /* -------------------- *\
-  End Header Section
+  End features
 \* -------------------- */
 
 /* -------------------- *\
   Start Get-Started Section
 \* -------------------- */
-section.get-started {
-    padding: 170px 150px 70px;
+section.get-started .steps {
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 section.get-started h2.h1 {
-    width: 772px;
+    max-width: 772px;
     font-family: "Roboto Light", sans-serif;
     margin-bottom: 65px;
     color: #000;
@@ -205,7 +197,7 @@ section.get-started p {
     font-family: Roboto, sans-serif;
     font-size: 15px;
     color: #afa9a0;
-    padding-left: 20px;
+    margin-left: -10px;
 }
 section.get-started .step-two {
     margin-top: 60px;
@@ -214,7 +206,7 @@ section.get-started .get-started {
     max-width: 323px;
     border-radius: 6px;
     background-color: #106b2e;
-    margin-top: 74px;
+    margin: 50px auto;
 }
 section.get-started a {
     padding: 17px 0;
@@ -241,17 +233,17 @@ section.designs {
     background-color: #a07b1b;
     padding: 85px 0 245px;
 }
-section.designs .design-images {
-    max-width: 1200px;
-}
 section.designs h2.h1 {
-    width: 609px;
+    max-width: 609px;
     font-family: "Roboto Light", sans-serif;
     color: #ffffff;
     margin-bottom: 65px;
 }
+section.designs .design-images {
+    justify-content: space-around;
+}
 section.designs p {
-    margin: 60px 0 0;
+    margin-top: 60px;
     font-family: Roboto, sans-serif;
     color: #e5dacb;
 }
@@ -260,38 +252,34 @@ section.designs p {
 \* -------------------- */
 
 /* -------------------- *\
-  Start breaker
+  Start Print Provider
 \* -------------------- */
-.designs-image-breaker {
+.print-provider-container {
     background: url("../img/breaker-3.png") center/cover;
-    left: 50%;
     top: -175px;
-    width: 1006px;
-    height: 334px;
-    transform: translateX(-50%);
+    max-width: 855px;
+    height: 363px;
 }
-.designs-image-breaker .text {
-    width: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.print-provider-container .text {
+    max-width: 500px;
+    top: 100px;
 }
-.designs-image-breaker h2 {
+.print-provider-container h2 {
     font-family: "Roboto Light", sans-serif;
     margin-bottom: 35px;
 }
-.designs-image-breaker .print-provider {
+.print-provider-container .print-provider-btn {
     border-radius: 6px;
     border: 3px solid #a07b1b;
 }
-.designs-image-breaker .print-provider a {
+.print-provider-container .print-provider-btn a {
     padding: 12px 38px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
 }
 /* -------------------- *\
-  End breaker
+  End Print Provider
 \* -------------------- */
 
 /* -------------------- *\
@@ -299,11 +287,9 @@ section.designs p {
 \* -------------------- */
 section.world-map {
     background: url("../img/world-map.png") center/cover;
-    width: 985px;
+    max-width: 985px;
     height: 497px;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: -135px auto 80px;
 }
 section.world-map h2.h1 {
     bottom: 16px;
@@ -321,7 +307,7 @@ section.world-map h2.h1 {
 \* -------------------- */
 footer {
     background-color: #f9f8f5;
-    padding-top: 38px;
+    padding: 38px 15px 68px;
 }
 footer .QuranGift {
     font-family: "Frutiger LT Arabic 45 Light", sans-serif;
@@ -329,7 +315,7 @@ footer .QuranGift {
     color: #106b2e;
 }
 footer p {
-    width: 463px;
+    max-width: 463px;
     margin-top: 34px;
     font-family: Roboto, sans-serif;
     color: #afa9a0;
@@ -366,12 +352,11 @@ footer .print-provider a {
     font-family: Roboto, sans-serif;
     font-size: 19px;
 }
-footer .copyright {
+.copyright {
     background-color: #fefdfc;
     padding: 35px 0 85px;
-    margin-top: 68px;
 }
-footer .copyright span {
+.copyright span {
     font-family: Roboto, sans-serif;
     color: #222222;
 }
@@ -382,17 +367,58 @@ footer .copyright span {
 /* -------------------- *\
   Media Queries
 \* -------------------- */
+@media (max-width: 350px) {
+    .print-provider h2 {
+        margin-bottom: 24px;
+    }
+    .print-provider .print-provider-btn a {
+        padding: 12px 28px;
+    }
+}
+@media (max-width: 500px) {
+    section.get-started h2 {
+        font-size: 34px;
+    }
+    section.world-map h2.h1 {
+        font-size: 28px;
+    }
+}
+@media (max-width: 630px) {
+    footer .order-copy  {
+        margin-bottom: 10px;
+    }
+    footer .order-copy, footer .print-provider  {
+        display: block !important;
+    }
+}
 @media (min-width: 1200px) {
     .container {
         max-width: 1440px;
     }
 }
-@media (max-width: 1250px) {
-    .d-custom-inline-block {
-        display: inline-block !important;
+@media (max-width: 1200px) {
+    section.get-started .step-two {
+        margin-top: 0;
     }
-    .align-self-custom-start {
-        align-self: flex-start !important;
+    /*section.designs .design-images {*/
+        /*flex-wrap: wrap;*/
+    /*}*/
+    section.designs .design-images .image {
+        /*flex: 50%;*/
+        margin-bottom: 20px;
+    }
+    section.designs p {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 1250px) {
+    .navbar-collapse {
+        padding: 10px;
+        display: flex;
+        align-items: start;
+    }
+    .navbar-nav {
+        margin-bottom: 10px;
     }
 }
 @media (min-width: 1250px) {
