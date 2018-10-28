@@ -371,6 +371,9 @@ footer .print-provider a {
   Media Queries
 \* -------------------- */
 @media (max-width: 350px) {
+    .print-provider-container .text {
+        top: 80px;
+    }
     .print-provider-container h2 {
         margin-bottom: 24px;
     }
