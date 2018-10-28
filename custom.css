@@ -1,0 +1,475 @@
+/* -------------------- *\
+  Fonts
+\* -------------------- */
+@font-face {
+    font-family: "Frutiger LT Arabic 45 Light";
+    src: url("../fonts/FrutigerLTArabic-45Light.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto Light";
+    src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+/* -------------------- *\
+  Start Navbar
+\* -------------------- */
+header nav {
+    background-color: #f9f8f5;
+}
+header nav .navbar-brand.QuranGift {
+    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+    font-size: 20px;
+    color: #106b2e;
+}
+header .navbar-collapse .navbar-nav .nav-item a {
+    font-family: Roboto, sans-serif;
+    color: #222222;
+}
+header .navbar-collapse .navbar-nav .nav-item .order-now {
+    color: #ac4c31;
+    font-weight: 700;
+    text-decoration: underline;
+}
+header .nav-item .dropdown-toggle::after {
+    margin-left: 0;
+    vertical-align: 0.15em;
+    border-top: .4em solid;
+    border-right: .2em solid transparent;
+    border-left: .2em solid transparent;
+}
+header .navbar-collapse i {
+    font-size: 18px;
+    line-height: 2.6;
+}
+header nav .modal-button {
+    width: 169px;
+    height: 47px;
+    border-radius: 24px;
+    background-color: #c8a038;
+    border-color: transparent;
+}
+header nav .modal-button:hover {
+    color: #fff;
+    background-color: #c8a038;
+    border-color: transparent;
+}
+/* -------------------- *\
+  End Navbar
+\* -------------------- */
+
+/* -------------------- *\
+  Start Header
+\* -------------------- */
+header {
+    border-bottom: 1px solid #e5dacb;
+    background-color: #f9f8f5;
+}
+header .carousel {
+    padding: 0 60px;
+}
+header .carousel-control-next, .carousel-control-prev {
+    width: 60px;
+}
+header .carousel-next-icon, .carousel-prev-icon {
+    top: -30px;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(107, 83, 19, 0.3);
+    border-radius: 50%;
+}
+header .carousel-next-icon:after, .carousel-prev-icon:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(-45deg);
+}
+header .carousel-next-icon:after {
+    transform: rotate(135deg);
+    left: 13px;
+}
+header .carousel .text {
+    flex: 40%;
+}
+header .text h1 {
+    font-family: "Roboto Light", sans-serif;
+}
+header .text p {
+    color: #106b2e;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 40px 0 48px;
+}
+header .text .order-copy {
+    border-radius: 6px;
+    background-color: #106b2e;
+}
+header .text .order-copy a {
+    padding: 13px 58px;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+header .text .learn-more {
+    border-radius: 6px;
+    border: 2px solid #a07b1b;
+}
+header .text .learn-more a {
+    padding: 12px 42px;
+    color: #a07b1b;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
+    text-decoration: underline;
+}
+header .carousel .image {
+    flex: 60%;
+}
+/* -------------------- *\
+  End Header
+\* -------------------- */
+
+/* -------------------- *\
+  Start features
+\* -------------------- */
+.features {
+    background: url("../img/breaker-1.png") center/cover;
+    max-width: 866px;
+    height: 184px;
+    top: -93px;
+    overflow: scroll;
+}
+.features .features-container {
+    top: 50%;
+    left: 43%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+}
+.features .feature:not(:last-of-type) {
+    border-right: 1px solid #dedfe1;
+}
+.features .feature p {
+    width: 160px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+/* -------------------- *\
+  End features
+\* -------------------- */
+
+/* -------------------- *\
+  Start Get-Started Section
+\* -------------------- */
+section.get-started .steps {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section.get-started h2.h1 {
+    max-width: 772px;
+    font-family: "Roboto Light", sans-serif;
+    margin-bottom: 65px;
+    color: #000;
+}
+section.get-started span {
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    color: #a07b1b;
+}
+section.get-started h2 {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 40px;
+    color: #106b2e;
+}
+section.get-started p {
+    max-width: 340px;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    color: #afa9a0;
+    margin-left: -10px;
+}
+section.get-started .step-two {
+    margin-top: 60px;
+}
+section.get-started .get-started {
+    max-width: 323px;
+    border-radius: 6px;
+    background-color: #106b2e;
+    margin: 50px auto;
+}
+section.get-started a {
+    padding: 17px 0;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: #106b2e;
+    color: #fff;
+}
+/* -------------------- *\
+  End Get-Started Section
+\* -------------------- */
+
+.image-breaker {
+    height: 33px;
+    background: url("../img/breaker-2.png");
+}
+
+/* -------------------- *\
+  Start Designs Section
+\* -------------------- */
+section.designs {
+    background-color: #a07b1b;
+    padding: 85px 0 245px;
+}
+section.designs h2.h1 {
+    max-width: 609px;
+    font-family: "Roboto Light", sans-serif;
+    color: #ffffff;
+    margin-bottom: 65px;
+}
+section.designs .design-images {
+    justify-content: space-around;
+}
+section.designs p {
+    margin-top: 60px;
+    font-family: Roboto, sans-serif;
+    color: #e5dacb;
+}
+/* -------------------- *\
+  End Designs Section
+\* -------------------- */
+
+/* -------------------- *\
+  Start Print Provider
+\* -------------------- */
+.print-provider-container {
+    background: url("../img/breaker-3.png") center/cover;
+    top: -175px;
+    max-width: 855px;
+    height: 363px;
+}
+.print-provider-container .text {
+    max-width: 500px;
+    top: 100px;
+}
+.print-provider-container h2 {
+    font-family: "Roboto Light", sans-serif;
+    margin-bottom: 35px;
+}
+.print-provider-container .print-provider-btn {
+    border-radius: 6px;
+    border: 3px solid #a07b1b;
+}
+.print-provider-container .print-provider-btn a {
+    padding: 12px 38px;
+    color: #a07b1b;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
+}
+/* -------------------- *\
+  End Print Provider
+\* -------------------- */
+
+/* -------------------- *\
+  Start World-Map Section
+\* -------------------- */
+section.world-map {
+    background: url("../img/world-map.png") center/cover;
+    max-width: 985px;
+    height: 497px;
+    margin: -135px auto 80px;
+}
+section.world-map h2.h1 {
+    bottom: 16px;
+    right: 0;
+    font-family: "Roboto Medium", sans-serif;
+    text-transform: uppercase;
+    color: #8a6810;
+}
+/* -------------------- *\
+  End World-Map Section
+\* -------------------- */
+
+/* -------------------- *\
+  Start Footer Section
+\* -------------------- */
+footer {
+    background-color: #f9f8f5;
+    padding: 38px 15px 68px;
+}
+footer .QuranGift {
+    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+    font-size: 20px;
+    color: #106b2e;
+}
+footer p {
+    max-width: 463px;
+    margin-top: 34px;
+    font-family: Roboto, sans-serif;
+    color: #afa9a0;
+}
+footer .footer-links {
+    margin: 70px 0 65px;
+}
+footer .list:not(:last-of-type) {
+    border-right: 1px solid #dedfe1;
+}
+footer .list li a {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #222222;
+}
+footer .social-links i {
+    cursor: pointer;
+}
+footer .order-copy {
+    border-radius: 6px;
+    background-color: #106b2e;
+}
+footer .order-copy a {
+    padding: 14px 78px;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+footer .print-provider {
+    border-radius: 6px;
+    border: 3px solid #a07b1b;
+}
+footer .print-provider a {
+    padding: 11px 38px;
+    color: #a07b1b;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
+}
+.copyright {
+    background-color: #fefdfc;
+    padding: 35px 0 85px;
+}
+.copyright span {
+    font-family: Roboto, sans-serif;
+    color: #222222;
+}
+/* -------------------- *\
+  End Footer Section
+\* -------------------- */
+
+/* -------------------- *\
+  Media Queries
+\* -------------------- */
+@media (max-width: 350px) {
+    .print-provider-container h2 {
+        margin-bottom: 24px;
+    }
+    .print-provider-container .print-provider-btn a {
+        padding: 12px 28px;
+    }
+    footer .order-copy a {
+        padding: 14px 70px;
+    }
+    footer .print-provider a {
+        padding: 11px 31px;
+    }
+}
+@media (max-width: 400px) {
+    header .text .order-copy a {
+        padding: 13px 30px;
+    }
+}
+@media (max-width: 500px) {
+    header .text h1 {
+        font-size: 24px;
+    }
+    section.get-started h2 {
+        font-size: 34px;
+    }
+    section.world-map h2.h1 {
+        font-size: 28px;
+    }
+}
+@media (max-width: 630px) {
+    footer .order-copy  {
+        margin-bottom: 10px;
+    }
+    footer .order-copy, footer .print-provider  {
+        display: block !important;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+@media (max-width: 992px) {
+    header .carousel .image, header .carousel .text {
+        flex: unset;
+    }
+}
+@media (max-width: 1200px) {
+    header .text .order-copy {
+        margin: 0 0 10px 0 !important;
+    }
+    section.get-started .step-two {
+        margin-top: 0;
+    }
+    section.designs .design-images .image {
+        margin-bottom: 20px;
+    }
+    section.designs p {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 1250px) {
+    header {
+        padding-bottom: 130px;
+    }
+    .navbar-collapse {
+        padding: 10px;
+        display: flex;
+        align-items: start;
+    }
+    .navbar-nav {
+        margin-bottom: 10px;
+    }
+}
+@media (min-width: 1250px) {
+    .navbar-expand-custom {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    .navbar-expand-custom > .container,
+    .navbar-expand-custom > .container-fluid {
+        flex-wrap: nowrap;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+}
+
