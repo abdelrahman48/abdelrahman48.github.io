@@ -44,9 +44,12 @@ header .nav-item .dropdown-toggle::after {
     border-right: .2em solid transparent;
     border-left: .2em solid transparent;
 }
-header .navbar-collapse i {
-    font-size: 18px;
-    line-height: 2.6;
+header .login-register {
+    right: 0;
+}
+header .login-register i {
+    font-size: 24px;
+    vertical-align: middle;
 }
 header nav .modal-button {
     width: 169px;
@@ -56,9 +59,9 @@ header nav .modal-button {
     border-color: transparent;
 }
 header nav .modal-button:hover {
-    color: #fff;
-    background-color: #c8a038;
-    border-color: transparent;
+    color: #c8a038 !important;
+    background-color: transparent !important;
+    border-color: #c8a038 !important;
 }
 /* -------------------- *\
   End Navbar
@@ -116,26 +119,48 @@ header .text p {
 header .text .order-copy {
     border-radius: 6px;
     background-color: #106b2e;
+    border: 2px solid #106b2e;
+    transition: .15s ease-in-out;
+}
+header .text .order-copy:hover {
+    background-color: #f9f8f5;
 }
 header .text .order-copy a {
     padding: 13px 58px;
-    color: #ffffff;
+    color: #fff;
     font-family: Roboto, sans-serif;
     font-size: 18px;
+    transition: .15s ease-in-out;
+}
+header .text .order-copy:hover a {
+    color: #106b2e;
+    text-decoration: none;
 }
 header .text .learn-more {
     border-radius: 6px;
     border: 2px solid #a07b1b;
+    transition: .15s ease-in-out;
+}
+header .text .learn-more:hover {
+    background-color: #a07b1b;
 }
 header .text .learn-more a {
-    padding: 12px 42px;
+    padding: 13px 42px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
     text-decoration: underline;
+    transition: .15s ease-in-out;
+}
+header .text .learn-more:hover a {
+    color: #fff;
+    text-decoration: underline;
 }
 header .carousel .image {
     flex: 60%;
+}
+header nav .handbag:hover {
+    cursor: pointer;
 }
 /* -------------------- *\
   End Header
@@ -149,13 +174,6 @@ header .carousel .image {
     max-width: 866px;
     height: 184px;
     top: -93px;
-    overflow: scroll;
-}
-.features .features-container {
-    top: 50%;
-    left: 43%;
-    width: 75%;
-    transform: translate(-50%, -50%);
 }
 .features .feature:not(:last-of-type) {
     border-right: 1px solid #dedfe1;
@@ -205,8 +223,13 @@ section.get-started .step-two {
 section.get-started .get-started {
     max-width: 323px;
     border-radius: 6px;
+    border: 2px solid #106b2e;
     background-color: #106b2e;
     margin: 50px auto;
+    transition: .15s ease-in-out;
+}
+section.get-started .get-started:hover {
+    background-color: #fff;
 }
 section.get-started a {
     padding: 17px 0;
@@ -214,8 +237,12 @@ section.get-started a {
     font-size: 24px;
     text-transform: uppercase;
     border-radius: 6px;
-    background-color: #106b2e;
     color: #fff;
+    transition: .15s ease-in-out;
+}
+section.get-started .get-started:hover a {
+    color: #106b2e;
+    text-decoration: none;
 }
 /* -------------------- *\
   End Get-Started Section
@@ -271,12 +298,21 @@ section.designs p {
 .print-provider-container .print-provider-btn {
     border-radius: 6px;
     border: 3px solid #a07b1b;
+    transition: .15s ease-in-out;
+}
+.print-provider-container .print-provider-btn:hover {
+    background-color: #a07b1b;
 }
 .print-provider-container .print-provider-btn a {
     padding: 12px 38px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
+    transition: .15s ease-in-out;
+}
+.print-provider-container .print-provider-btn:hover a {
+    color: #fff;
+    text-decoration: none;
 }
 /* -------------------- *\
   End Print Provider
@@ -297,6 +333,9 @@ section.world-map h2.h1 {
     font-family: "Roboto Medium", sans-serif;
     text-transform: uppercase;
     color: #8a6810;
+    background: -webkit-linear-gradient(240deg, rgba(138,104,16,1) 0%, rgba(200,160,56,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* -------------------- *\
   End World-Map Section
@@ -307,7 +346,7 @@ section.world-map h2.h1 {
 \* -------------------- */
 footer {
     background-color: #f9f8f5;
-    padding: 38px 15px 68px;
+    padding: 38px 0 68px;
 }
 footer .QuranGift {
     font-family: "Frutiger LT Arabic 45 Light", sans-serif;
@@ -338,22 +377,41 @@ footer .social-links i {
 footer .order-copy {
     border-radius: 6px;
     background-color: #106b2e;
+    border: 3px solid #106b2e;
+    transition: .15s ease-in-out;
+}
+footer .order-copy:hover {
+    background-color: #f9f8f5;
 }
 footer .order-copy a {
-    padding: 14px 78px;
-    color: #ffffff;
+    padding: 12px 78px;
+    color: #fff;
     font-family: Roboto, sans-serif;
     font-size: 18px;
+    transition: .15s ease-in-out;
+}
+footer .order-copy a:hover {
+    color: #106b2e;
+    text-decoration: none;
 }
 footer .print-provider {
     border-radius: 6px;
     border: 3px solid #a07b1b;
+    transition: .15s ease-in-out;
+}
+footer .print-provider:hover {
+    background-color: #a07b1b;
 }
 footer .print-provider a {
     padding: 11px 38px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
+    text-decoration: none;
+    transition: .15s ease-in-out;
+}
+footer .print-provider:hover a {
+    color: #fff;
 }
 .copyright {
     background-color: #fefdfc;
@@ -381,10 +439,10 @@ footer .print-provider a {
         padding: 12px 28px;
     }
     footer .order-copy a {
-        padding: 14px 70px;
+        padding: 12px 65px;
     }
     footer .print-provider a {
-        padding: 11px 31px;
+        padding: 11px 25px;
     }
 }
 @media (max-width: 400px) {
@@ -395,6 +453,10 @@ footer .print-provider a {
 @media (max-width: 500px) {
     header .text h1 {
         font-size: 24px;
+    }
+    header nav .modal-button {
+        max-width: 169px;
+        width: auto;
     }
     section.get-started h2 {
         font-size: 34px;
@@ -409,11 +471,18 @@ footer .print-provider a {
     }
     footer .order-copy, footer .print-provider  {
         display: block !important;
+        margin-right: 0 !important;
     }
 }
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1440px;
+@media (max-width: 767px) {
+    footer .list:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid #dedfe1;
+    }
+}
+@media (max-width: 850px) {
+    .features {
+        overflow-x: scroll;
     }
 }
 @media (max-width: 992px) {
@@ -435,17 +504,37 @@ footer .print-provider a {
         margin-top: 50px;
     }
 }
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
 @media (max-width: 1250px) {
     header {
         padding-bottom: 130px;
     }
-    .navbar-collapse {
-        padding: 10px;
+    header .navbar-collapse {
+        margin-top: 15px;
         display: flex;
         align-items: start;
     }
-    .navbar-nav {
+    header .navbar-nav {
         margin-bottom: 10px;
+    }
+    header .navbar-nav li {
+        margin: 0 !important;
+    }
+    header .login-register {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    header nav .login-register i {
+        flex: 100%;
+        order: 2;
+        text-align: right;
+        margin-top: 15px;
+        margin-right: 0 !important;
     }
 }
 @media (min-width: 1250px) {

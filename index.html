@@ -31,7 +31,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item mx-2">
                                 <a class="nav-link order-now" href="#">ORDER NOW</a>
@@ -62,36 +62,36 @@
                                 </div>
                             </li>
                         </ul>
-
-                        <i class="icon-handbag mr-3"></i>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary modal-button" data-toggle="modal" data-target="#exampleModalCenter">
-                            Login/Register
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="login-register position-absolute">
+                            <i class="icon-handbag handbag mr-3"></i>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary modal-button" data-toggle="modal" data-target="#exampleModalCenter">
+                                Login/Register
+                            </button>
                         </div>
                     </div>
                 </div>
             </nav>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="carouselExampleFade" class="carousel slide d-flex" data-ride="carousel">
                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                     <span class="carousel-prev-icon position-relative d-inline-block" aria-hidden="true"></span>
@@ -153,8 +153,8 @@
     <!-- End Header Section -->
 
     <!-- Start Features Section -->
-    <div class="features mx-auto position-relative">
-        <div class="features-container position-absolute d-flex">
+    <div class="features d-flex align-items-center mx-auto position-relative">
+        <div class="features-container mx-auto d-flex justify-content-center">
             <div class="feature text-center px-5">
                 <img src="img/pencil.svg" alt="">
                 <p class="mt-3 mb-0">Easy to order and pay online</p>
@@ -250,50 +250,52 @@
 
     <!-- Start Footer Section -->
     <footer class="text-center">
-        <img src="img/logo.svg" alt="Mushaf Logo" width="81" height="79">
-        <br>
-        <span class="QuranGift">Quran<strong>Gift</strong></span>
-        <p class="mb-4 mx-auto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
+        <div class="container">
+            <img src="img/logo.svg" alt="Mushaf Logo" width="81" height="79">
+            <br>
+            <span class="QuranGift">Quran<strong>Gift</strong></span>
+            <p class="mb-4 mx-auto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
 
-        <div class="social-links">
-            <i class="fab fa-facebook-square fa-2x mx-2" style="color: #6081c4"></i>
-            <i class="fab fa-twitter-square fa-2x mx-2" style="color: #43bdf0"></i>
-            <i class="fab fa-google-plus-square fa-2x mx-2" style="color: #f34a38"></i>
-            <i class="fab fa-vimeo-square fa-2x mx-2" style="color: #69b4e5"></i>
-            <i class="fab fa-youtube-square fa-2x mx-2" style="color: #f61c0d"></i>
-        </div>
+            <div class="social-links">
+                <i class="fab fa-facebook-square fa-2x mx-2" style="color: #6081c4"></i>
+                <i class="fab fa-twitter-square fa-2x mx-2" style="color: #43bdf0"></i>
+                <i class="fab fa-google-plus-square fa-2x mx-2" style="color: #f34a38"></i>
+                <i class="fab fa-vimeo-square fa-2x mx-2" style="color: #69b4e5"></i>
+                <i class="fab fa-youtube-square fa-2x mx-2" style="color: #f61c0d"></i>
+            </div>
 
-        <div class="row no-gutters footer-links">
-            <div class="col list">
-                <ul class="list-unstyled mb-0">
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">How it works</a></li>
-                    <li><a href="#">Print on demand</a></li>
-                    <li><a href="#">Shipping Guide</a></li>
-                </ul>
+            <div class="row no-gutters footer-links">
+                <div class="col-sm-12 col-md-4 list">
+                    <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">How it works</a></li>
+                        <li><a href="#">Print on demand</a></li>
+                        <li><a href="#">Shipping Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 list">
+                    <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
+                        <li><a href="#">Print Provider Network</a></li>
+                        <li><a href="#">Become a Print Provider</a></li>
+                        <li><a href="#">Intellectual Property Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 list">
+                    <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col list">
-                <ul class="list-unstyled mb-0">
-                    <li><a href="#">Print Provider Network</a></li>
-                    <li><a href="#">Become a Print Provider</a></li>
-                    <li><a href="#">Intellectual Property Policy</a></li>
-                </ul>
-            </div>
-            <div class="col list">
-                <ul class="list-unstyled mb-0">
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="order-copy d-inline-block text-center mr-2">
-            <a href="#" class="d-inline-block text-uppercase">Order A Copy</a>
-        </div>
-        <div class="d-inline-block print-provider">
-            <a href="#" class="d-inline-block">Become a Print Provider</a>
+            <div class="order-copy d-inline-block text-center mr-2">
+                <a href="#" class="d-inline-block text-uppercase">Order A Copy</a>
+            </div>
+            <div class="d-inline-block print-provider">
+                <a href="#" class="d-inline-block">Become a Print Provider</a>
+            </div>
         </div>
     </footer>
     <div class="copyright text-center">
