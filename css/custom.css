@@ -47,9 +47,12 @@ header .nav-item .dropdown-toggle::after {
 header .login-register {
     right: 0;
 }
-header .login-register i {
+header nav .handbag {
     font-size: 24px;
     vertical-align: middle;
+}
+header nav .handbag:hover {
+    cursor: pointer;
 }
 header nav .modal-button {
     width: 169px;
@@ -63,6 +66,11 @@ header nav .modal-button:hover {
     background-color: transparent !important;
     border-color: #c8a038 !important;
 }
+header nav .modal-button:active, header nav .modal-button:focus {
+    background-color: #c8a038 !important;
+    border-color: #c8a038 !important;
+    box-shadow: none;
+}
 /* -------------------- *\
   End Navbar
 \* -------------------- */
@@ -75,7 +83,9 @@ header {
     background-color: #f9f8f5;
 }
 header .carousel {
-    padding: 0 60px;
+    padding: 0 60px 0 120px;
+    max-width: 1340px;
+    margin: 0 auto;
 }
 header .carousel-control-next, .carousel-control-prev {
     width: 60px;
@@ -103,11 +113,18 @@ header .carousel-next-icon:after {
     transform: rotate(135deg);
     left: 13px;
 }
+header .carousel .image {
+    top: 0;
+    right: -40px;
+}
 header .carousel .text {
-    flex: 40%;
+    text-align: left;
+    max-width: 609px;
+    margin: 110px 0 195px;
 }
 header .text h1 {
     font-family: "Roboto Light", sans-serif;
+    max-width: 609px;
 }
 header .text p {
     color: #106b2e;
@@ -115,36 +132,27 @@ header .text p {
     font-size: 18px;
     font-weight: 700;
     margin: 40px 0 48px;
+    max-width: 506px;
 }
 header .text .order-copy {
     border-radius: 6px;
     background-color: #106b2e;
     border: 2px solid #106b2e;
-    transition: .15s ease-in-out;
-}
-header .text .order-copy:hover {
-    background-color: #f9f8f5;
-}
-header .text .order-copy a {
     padding: 13px 58px;
+    margin-right: 6px;
     color: #fff;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     transition: .15s ease-in-out;
 }
-header .text .order-copy:hover a {
+header .text .order-copy:hover {
+    background-color: #f9f8f5;
     color: #106b2e;
     text-decoration: none;
 }
 header .text .learn-more {
     border-radius: 6px;
     border: 2px solid #a07b1b;
-    transition: .15s ease-in-out;
-}
-header .text .learn-more:hover {
-    background-color: #a07b1b;
-}
-header .text .learn-more a {
     padding: 13px 42px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
@@ -152,15 +160,10 @@ header .text .learn-more a {
     text-decoration: underline;
     transition: .15s ease-in-out;
 }
-header .text .learn-more:hover a {
+header .text .learn-more:hover {
+    background-color: #a07b1b;
     color: #fff;
     text-decoration: underline;
-}
-header .carousel .image {
-    flex: 60%;
-}
-header nav .handbag:hover {
-    cursor: pointer;
 }
 /* -------------------- *\
   End Header
@@ -179,7 +182,7 @@ header nav .handbag:hover {
     border-right: 1px solid #dedfe1;
 }
 .features .feature p {
-    width: 160px;
+    max-width: 160px;
     font-family: Roboto, sans-serif;
     font-size: 14px;
 }
@@ -190,6 +193,9 @@ header nav .handbag:hover {
 /* -------------------- *\
   Start Get-Started Section
 \* -------------------- */
+section.get-started {
+    padding-bottom: 70px;
+}
 section.get-started .steps {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -221,18 +227,9 @@ section.get-started .step-two {
     margin-top: 60px;
 }
 section.get-started .get-started {
-    max-width: 323px;
-    border-radius: 6px;
     border: 2px solid #106b2e;
     background-color: #106b2e;
-    margin: 50px auto;
-    transition: .15s ease-in-out;
-}
-section.get-started .get-started:hover {
-    background-color: #fff;
-}
-section.get-started a {
-    padding: 17px 0;
+    padding: 17px 85px;
     font-family: Roboto, sans-serif;
     font-size: 24px;
     text-transform: uppercase;
@@ -240,7 +237,8 @@ section.get-started a {
     color: #fff;
     transition: .15s ease-in-out;
 }
-section.get-started .get-started:hover a {
+section.get-started .get-started:hover {
+    background-color: #fff;
     color: #106b2e;
     text-decoration: none;
 }
@@ -266,9 +264,6 @@ section.designs h2.h1 {
     color: #ffffff;
     margin-bottom: 65px;
 }
-section.designs .design-images {
-    justify-content: space-around;
-}
 section.designs p {
     margin-top: 60px;
     font-family: Roboto, sans-serif;
@@ -282,35 +277,30 @@ section.designs p {
   Start Print Provider
 \* -------------------- */
 .print-provider-container {
-    background: url("../img/breaker-3.png") center/cover;
     top: -175px;
-    max-width: 855px;
-    height: 363px;
+    max-width: 1006px;
+    overflow: hidden;
+    margin-bottom: -100px;
 }
 .print-provider-container .text {
-    max-width: 500px;
-    top: 100px;
+    max-width: 609px;
+    padding: 0 15px;
 }
-.print-provider-container h2 {
+.print-provider-container h2.h1 {
     font-family: "Roboto Light", sans-serif;
     margin-bottom: 35px;
 }
 .print-provider-container .print-provider-btn {
     border-radius: 6px;
     border: 3px solid #a07b1b;
-    transition: .15s ease-in-out;
-}
-.print-provider-container .print-provider-btn:hover {
-    background-color: #a07b1b;
-}
-.print-provider-container .print-provider-btn a {
     padding: 12px 38px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
     font-size: 19px;
     transition: .15s ease-in-out;
 }
-.print-provider-container .print-provider-btn:hover a {
+.print-provider-container .print-provider-btn:hover {
+    background-color: #a07b1b;
     color: #fff;
     text-decoration: none;
 }
@@ -322,13 +312,11 @@ section.designs p {
   Start World-Map Section
 \* -------------------- */
 section.world-map {
-    background: url("../img/world-map.png") center/cover;
+    margin-bottom: 80px;
     max-width: 985px;
-    height: 497px;
-    margin: -135px auto 80px;
 }
 section.world-map h2.h1 {
-    bottom: 16px;
+    bottom: -5px;
     right: 0;
     font-family: "Roboto Medium", sans-serif;
     text-transform: uppercase;
@@ -378,31 +366,21 @@ footer .order-copy {
     border-radius: 6px;
     background-color: #106b2e;
     border: 3px solid #106b2e;
-    transition: .15s ease-in-out;
-}
-footer .order-copy:hover {
-    background-color: #f9f8f5;
-}
-footer .order-copy a {
     padding: 12px 78px;
+    margin-right: 11px;
     color: #fff;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     transition: .15s ease-in-out;
 }
-footer .order-copy a:hover {
+footer .order-copy:hover {
+    background-color: #f9f8f5;
     color: #106b2e;
     text-decoration: none;
 }
-footer .print-provider {
+footer .print-provider-btn {
     border-radius: 6px;
     border: 3px solid #a07b1b;
-    transition: .15s ease-in-out;
-}
-footer .print-provider:hover {
-    background-color: #a07b1b;
-}
-footer .print-provider a {
     padding: 11px 38px;
     color: #a07b1b;
     font-family: Roboto, sans-serif;
@@ -410,7 +388,8 @@ footer .print-provider a {
     text-decoration: none;
     transition: .15s ease-in-out;
 }
-footer .print-provider:hover a {
+footer .print-provider-btn:hover {
+    background-color: #a07b1b;
     color: #fff;
 }
 .copyright {
@@ -428,91 +407,18 @@ footer .print-provider:hover a {
 /* -------------------- *\
   Media Queries
 \* -------------------- */
-@media (max-width: 350px) {
-    .print-provider-container .text {
-        top: 80px;
+@media (max-width: 1300px) {
+    header .carousel-item {
+        text-align: center !important;
     }
-    .print-provider-container h2 {
-        margin-bottom: 24px;
+    header .carousel .image {
+        position: unset !important;
     }
-    .print-provider-container .print-provider-btn a {
-        padding: 12px 28px;
-    }
-    footer .order-copy a {
-        padding: 12px 65px;
-    }
-    footer .print-provider a {
-        padding: 11px 25px;
-    }
-}
-@media (max-width: 400px) {
-    header .text .order-copy a {
-        padding: 13px 30px;
-    }
-}
-@media (max-width: 500px) {
-    header .text h1 {
-        font-size: 24px;
-    }
-    header nav .modal-button {
-        max-width: 169px;
-        width: auto;
-    }
-    section.get-started h2 {
-        font-size: 34px;
-    }
-    section.world-map h2.h1 {
-        font-size: 28px;
-    }
-}
-@media (max-width: 630px) {
-    footer .order-copy  {
-        margin-bottom: 10px;
-    }
-    footer .order-copy, footer .print-provider  {
-        display: block !important;
-        margin-right: 0 !important;
-    }
-}
-@media (max-width: 767px) {
-    footer .list:not(:last-of-type) {
-        border-right: none;
-        border-bottom: 1px solid #dedfe1;
-    }
-}
-@media (max-width: 850px) {
-    .features {
-        overflow-x: scroll;
-    }
-}
-@media (max-width: 992px) {
-    header .carousel .image, header .carousel .text {
-        flex: unset;
-    }
-}
-@media (max-width: 1200px) {
-    header .text .order-copy {
-        margin: 0 0 10px 0 !important;
-    }
-    section.get-started .step-two {
-        margin-top: 0;
-    }
-    section.designs .design-images .image {
-        margin-bottom: 20px;
-    }
-    section.designs p {
-        margin-top: 50px;
-    }
-}
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1440px;
+    header .carousel .text {
+        margin: 50px 0 145px;
     }
 }
 @media (max-width: 1250px) {
-    header {
-        padding-bottom: 130px;
-    }
     header .navbar-collapse {
         margin-top: 15px;
         display: flex;
@@ -535,6 +441,108 @@ footer .print-provider:hover a {
         text-align: right;
         margin-top: 15px;
         margin-right: 0 !important;
+    }
+}
+@media (max-width: 1200px) {
+    section.get-started .step-two {
+        margin-top: 0;
+    }
+    section.designs .design-images .image {
+        flex-basis: calc(50% - 20px);
+    }
+    section.designs .design-images .image:nth-of-type(odd) {
+        margin: 0 20px 20px 0;
+    }
+    section.designs p {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 992px) {
+    header .carousel {
+        padding: 0 60px;
+    }
+}
+@media (max-width: 900px) {
+    header .carousel .text {
+        margin: 50px 0;
+    }
+    .features {
+        background: none;
+        top: 0;
+        height: auto;
+        margin: 80px 0;
+    }
+}
+@media (max-width: 767px) {
+    .features .feature:not(:last-of-type) {
+        border-right: none;
+    }
+    .features .feature {
+        flex: 0 0 50%;
+    }
+    footer .list:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid #dedfe1;
+    }
+    footer .order-copy, footer .print-provider-btn {
+        display: block !important;
+    }
+    footer .order-copy {
+        margin: 0 0 10px 0;
+    }
+}
+@media (max-width: 576px) {
+    header .text .order-copy, header .text .learn-more {
+        display: block !important;
+    }
+    header .text .order-copy {
+        padding-left: 42px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .features {
+        margin: 32px 0;
+    }
+    .features .feature {
+        flex: 0 0 100%;
+    }
+    .features .feature:not(:last-of-type) {
+        border-bottom: 1px solid #dedfe1;
+    }
+    .features .feature {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 500px) {
+    header .text h1, section.get-started h2, section.designs h2.h1, .print-provider-container h2.h1, section.world-map h2.h1 {
+        font-size: 24px;
+    }
+    header nav .modal-button {
+        max-width: 169px;
+        width: auto;
+    }
+}
+@media (max-width: 400px) {
+    header .text .order-copy, header .text .learn-more {
+        padding: 13px 26px;
+    }
+    section.world-map h2.h1 {
+        font-size: 28px;
+    }
+}
+@media (max-width: 350px) {
+    .print-provider-container h2 {
+        margin-bottom: 24px;
+    }
+    .print-provider-container .print-provider-btn {
+        padding: 12px 28px;
+    }
+    footer .order-copy {
+        padding: 12px 65px;
+    }
+    footer .print-provider-btn {
+        padding: 11px 25px;
     }
 }
 @media (min-width: 1250px) {
