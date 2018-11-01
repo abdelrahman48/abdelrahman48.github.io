@@ -20,25 +20,27 @@
 
     <!-- Start Header Section -->
     <header>
-        <nav class="navbar navbar-expand-custom navbar-light fixed-top pt-3 px-0">
+        <nav class="navbar navbar-expand-custom navbar-light px-0">
             <div class="container">
-                <a class="navbar-brand QuranGift" href="#">
-                    <img class="mr-3" src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
-                    Quran<strong>Gift</strong>
-                </a>
+                <div>
+                    <a class="navbar-brand QuranGift-logo" href="#">
+                        <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
+                    </a>
+                    <a class="navbar-brand QuranGift-text" href="#">Quran<strong>Gift</strong></a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item mx-2">
+                        <li class="nav-item">
                             <a class="nav-link order-now" href="#">ORDER NOW</a>
                         </li>
-                        <li class="nav-item mx-2">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Become a Partner</a>
                         </li>
-                        <li class="nav-item dropdown mx-2">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 About Service
                             </a>
@@ -49,7 +51,7 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown mx-2">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Support
                             </a>
@@ -68,29 +70,29 @@
                             Login/Register
                         </button>
                     </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="carouselExampleFade" class="carousel slide d-flex" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active carousel-one">
@@ -143,15 +145,15 @@
     <!-- Start Features Section -->
     <div class="features d-flex container align-items-center position-relative">
         <div class="features-container mx-auto d-flex flex-wrap flex-sm-wrap flex-md-nowrap justify-content-center">
-            <div class="feature text-center px-5">
+            <div class="feature text-center">
                 <img src="img/pencil.svg" alt="">
                 <p class="mx-auto mt-3 mb-0">Easy to order and pay online</p>
             </div>
-            <div class="feature text-center px-5">
+            <div class="feature text-center">
                 <img src="img/pencil.svg" alt="">
                 <p class="mx-auto mt-3 mb-0">Print in Diferrant Themes & colors</p>
             </div>
-            <div class="feature text-center px-5">
+            <div class="feature text-center">
                 <img src="img/clock.svg" alt="">
                 <p class="mx-auto mt-3 mb-0">Fast shipping and high quality</p>
             </div>
@@ -167,29 +169,29 @@
             Get your Copy of the mushaf anywhere in just 3 Easy Steps
         </h2>
         <div class="d-flex steps">
-            <div class="step-one mb-4">
+            <div class="step-one">
                 <div class="title pl-1 text-left">
                     <span>Step One</span>
-                    <h2 class="mb-3">Choose language</h2>
+                    <h2>Choose language</h2>
                 </div>
                 <div class="image text-left"><img src="img/step-one.png" class="img-fluid"></div>
-                <p class="mt-2 text-center">Choose design from many choices designed to suit all countries and cultures</p>
+                <p class="text-center mb-0">Choose design from many choices designed to suit all countries and cultures</p>
             </div>
-            <div class="step-two mb-4">
+            <div class="step-two">
                 <div class="title pl-1 text-left">
                     <span>Step Two</span>
-                    <h2 class="mb-3">Easy Payment</h2>
+                    <h2>Easy Payment</h2>
                 </div>
                 <div class="image text-left"><img src="img/step-two.png" class="img-fluid"></div>
-                <p class="mt-2 text-center">Choose design from many choices designed to suit all countries and cultures</p>
+                <p class="text-center mb-0">Choose design from many choices designed to suit all countries and cultures</p>
             </div>
-            <div class="step-three mb-4">
+            <div class="step-three">
                 <div class="title pl-1 text-left">
                     <span>Step Three</span>
-                    <h2 class="mb-3">Receive a Copy</h2>
+                    <h2>Receive a Copy</h2>
                 </div>
                 <div class="image text-left"><img src="img/step-three.png" class="img-fluid"></div>
-                <p class="mt-2 text-center">Choose design from many choices designed to suit all countries and cultures</p>
+                <p class="text-center mb-0">Choose design from many choices designed to suit all countries and cultures</p>
             </div>
         </div>
         <a href="#" class="get-started d-inline-block text-center">Get Started</a>
@@ -205,11 +207,11 @@
     <section class="designs text-center mt-2">
         <div class="container">
             <h2 class="h1 mx-auto">Amazing designs suitable for any country and cult</h2>
-            <div class="d-flex flex-wrap justify-content-around design-images">
+            <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between design-images">
                 <div class="image"><a href="#"><img src="img/design-1.png" class="img-fluid"></a></div>
                 <div class="image"><a href="#"><img src="img/design-2.png" class="img-fluid"></a></div>
-                <div class="image"><a href="#"><img src="img/design-3.png" class="img-fluid"></a></div>
-                <div class="image"><a href="#"><img src="img/design-4.png" class="img-fluid"></a></div>
+                <div class="image last"><a href="#"><img src="img/design-3.png" class="img-fluid"></a></div>
+                <div class="image last"><a href="#"><img src="img/design-4.png" class="img-fluid"></a></div>
             </div>
             <p>We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
         </div>
@@ -239,18 +241,18 @@
             <img src="img/logo.svg" alt="Mushaf Logo" width="81" height="79">
             <br>
             <span class="QuranGift">Quran<strong>Gift</strong></span>
-            <p class="mb-4 mx-auto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
+            <p class="mx-auto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
 
             <div class="social-links">
-                <i class="fab fa-facebook-square fa-2x mx-2" style="color: #6081c4"></i>
-                <i class="fab fa-twitter-square fa-2x mx-2" style="color: #43bdf0"></i>
-                <i class="fab fa-google-plus-square fa-2x mx-2" style="color: #f34a38"></i>
-                <i class="fab fa-vimeo-square fa-2x mx-2" style="color: #69b4e5"></i>
-                <i class="fab fa-youtube-square fa-2x mx-2" style="color: #f61c0d"></i>
+                <i class="fab fa-facebook-square fa-2x fa-fw" style="color: #6081c4"></i>
+                <i class="fab fa-twitter-square fa-2x fa-fw" style="color: #43bdf0"></i>
+                <i class="fab fa-google-plus-square fa-2x fa-fw" style="color: #f34a38"></i>
+                <i class="fab fa-vimeo-square fa-2x fa-fw" style="color: #69b4e5"></i>
+                <i class="fab fa-youtube-square fa-2x fa-fw" style="color: #f61c0d"></i>
             </div>
 
-            <div class="row no-gutters footer-links">
-                <div class="col-sm-12 col-md-4 list">
+            <div class="d-flex flex-wrap footer-links">
+                <div class="flex-grow-1 list">
                     <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
                         <li><a href="#">Help Center</a></li>
                         <li><a href="#">How it works</a></li>
@@ -258,14 +260,14 @@
                         <li><a href="#">Shipping Guide</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-4 list">
+                <div class="flex-grow-1 list">
                     <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
                         <li><a href="#">Print Provider Network</a></li>
                         <li><a href="#">Become a Print Provider</a></li>
                         <li><a href="#">Intellectual Property Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-4 list">
+                <div class="flex-grow-1 list">
                     <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">About us</a></li>
