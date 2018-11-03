@@ -3,34 +3,103 @@
 \* -------------------- */
 @font-face {
     font-family: "Frutiger LT Arabic 45 Light";
-    src: url("../fonts/FrutigerLTArabic-45Light.ttf");
+    src: url(../fonts/FrutigerLTArabic-45Light.ttf);
 }
 @font-face {
-    font-family: "Roboto";
-    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 @font-face {
     font-family: "Roboto Light";
-    src: url("../fonts/Roboto-Light.ttf");
+    src: url(../fonts/Roboto-Light.ttf);
 }
 @font-face {
     font-family: "Roboto Medium";
-    src: url("../fonts/Roboto-Medium.ttf");
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+/* -------------------- *\
+  Start components
+\* -------------------- */
+.frutiger-light {
+    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+}
+.roboto {
+    font-family: Roboto, sans-serif;
+}
+.roboto-light {
+    font-family: "Roboto Light", sans-serif;
+}
+.roboto-medium {
+    font-family: "Roboto Medium", sans-serif;
+}
+.text-underline {
+    text-decoration: underline;
+}
+.green-text {
+    color: #106b2e;
+}
+.white-text {
+    color: #fff;
+}
+.black-text-0 {
+    color: #000;
+}
+.black-text-2 {
+    color: #222;
+}
+.brown-text {
+    color: #a07b1b;
+}
+.quran-btn {
+    border-radius: 6px;
+    font-family: Roboto, sans-serif;
+}
+.btn-green {
+    background-color: #106b2e;
+    border-color: #106b2e;
+    margin-right: 6px;
+    font-size: 18px;
+}
+.btn-brown-transparent {
+    border-color: #a07b1b;
+    color: #a07b1b;
+}
+.border-2 {
+    border-width: 2px;
+    border-style: solid;
+}
+.border-3 {
+    border-width: 3px;
+    border-style: solid;
+}
+.transition {
+    transition: .15s ease-in-out;
+}
+.QuranGift-text {
+    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+    font-size: 20px;
+    color: #106b2e !important;
+}
+.btn-green:hover {
+    background-color: #f9f8f5;
+    color: #106b2e;
+    text-decoration: none;
+}
+.btn-brown-transparent:hover {
+    background-color: #a07b1b;
+    color: #fff;
+    text-decoration: none;
 }
 /* -------------------- *\
   Start Navbar
 \* -------------------- */
 header nav.navbar {
-    background-color: #f9f8f5;
     padding-top: 16px;
 }
 header .navbar-nav .nav-item > a {
     padding: 0 !important;
 }
 header nav .navbar-brand.QuranGift-text {
-    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
-    font-size: 20px;
-    color: #106b2e;
     margin-right: 25px;
 }
 header nav .navbar-brand.QuranGift img {
@@ -41,17 +110,15 @@ header .navbar-collapse .navbar-nav .nav-item {
     margin: 0 20px;
 }
 header .navbar-collapse .navbar-nav .nav-item a {
-    font-family: Roboto, sans-serif;
-    color: #222222;
+    color: #222;
 }
 header .navbar-collapse .navbar-nav .nav-item .order-now {
     color: #ac4c31;
     font-weight: 700;
-    text-decoration: underline;
 }
 header .nav-item .dropdown-toggle::after {
     margin-left: 0;
-    vertical-align: 0.15em;
+    vertical-align: .15em;
     border-top: .4em solid;
     border-right: .2em solid transparent;
     border-left: .2em solid transparent;
@@ -71,17 +138,13 @@ header nav .modal-button {
     height: 47px;
     border-radius: 24px;
     background-color: #c8a038;
-    border-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #c8a038;
 }
 header nav .modal-button:hover {
-    color: #c8a038 !important;
-    background-color: transparent !important;
-    border-color: #c8a038 !important;
-}
-header nav .modal-button:active, header nav .modal-button:focus {
-    background-color: #c8a038 !important;
-    border-color: #c8a038 !important;
-    box-shadow: none;
+    color: #c8a038;
+    background-color: transparent;
 }
 /* -------------------- *\
   End Navbar
@@ -106,7 +169,7 @@ header .carousel-next-icon, .carousel-prev-icon {
     top: -30px;
     width: 55px;
     height: 55px;
-    background-color: rgba(107, 83, 19, 0.3);
+    background-color: rgba(107, 83, 19, .3);
     border-radius: 50%;
 }
 header .carousel-next-icon:after, .carousel-prev-icon:after {
@@ -135,12 +198,9 @@ header .carousel .text {
     margin: 120px 0 195px;
 }
 header .text h1 {
-    font-family: "Roboto Light", sans-serif;
     max-width: 609px;
 }
 header .text p {
-    color: #106b2e;
-    font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 40px 0 46px;
@@ -148,34 +208,15 @@ header .text p {
     line-height: 21px;
 }
 header .text .order-copy {
-    border-radius: 6px;
-    background-color: #106b2e;
-    border: 2px solid #106b2e;
     padding: 12px 56px;
     margin-right: 6px;
-    color: #fff;
-    font-family: Roboto, sans-serif;
     font-size: 18px;
-    transition: .15s ease-in-out;
-}
-header .text .order-copy:hover {
-    background-color: #f9f8f5;
-    color: #106b2e;
-    text-decoration: none;
 }
 header .text .learn-more {
-    border-radius: 6px;
-    border: 2px solid #a07b1b;
     padding: 12px 42px;
-    color: #a07b1b;
-    font-family: Roboto, sans-serif;
     font-size: 19px;
-    text-decoration: underline;
-    transition: .15s ease-in-out;
 }
 header .text .learn-more:hover {
-    background-color: #a07b1b;
-    color: #fff;
     text-decoration: underline;
 }
 /* -------------------- *\
@@ -186,7 +227,7 @@ header .text .learn-more:hover {
   Start features
 \* -------------------- */
 .features {
-    background: url("../img/breaker-1.png") center/cover;
+    background: url(../img/breaker-1.png) center/cover;
     max-width: 866px;
     height: 184px;
     top: -93px;
@@ -199,10 +240,8 @@ header .text .learn-more:hover {
 }
 .features .feature p {
     max-width: 160px;
-    font-family: Roboto, sans-serif;
     font-size: 14px;
     line-height: 16px;
-    color: #222;
 }
 /* -------------------- *\
   End features
@@ -221,24 +260,17 @@ section.get-started .steps {
 }
 section.get-started h2.h1 {
     max-width: 772px;
-    font-family: "Roboto Light", sans-serif;
     margin-bottom: 65px;
-    color: #000;
 }
 section.get-started span {
-    font-family: Roboto, sans-serif;
     font-size: 15px;
-    color: #a07b1b;
 }
 section.get-started h2 {
-    font-family: "Roboto Light", sans-serif;
     font-size: 40px;
-    color: #106b2e;
     margin-bottom: 18px;
 }
 section.get-started p {
     max-width: 340px;
-    font-family: Roboto, sans-serif;
     font-size: 15px;
     color: #afa9a0;
     margin-top: 4px;
@@ -252,20 +284,8 @@ section.get-started .step-two {
     margin-top: 60px;
 }
 section.get-started .get-started {
-    border: 2px solid #106b2e;
-    background-color: #106b2e;
     padding: 15px 85px;
-    font-family: Roboto, sans-serif;
     font-size: 24px;
-    text-transform: uppercase;
-    border-radius: 6px;
-    color: #fff;
-    transition: .15s ease-in-out;
-}
-section.get-started .get-started:hover {
-    background-color: #fff;
-    color: #106b2e;
-    text-decoration: none;
 }
 /* -------------------- *\
   End Get-Started Section
@@ -273,7 +293,7 @@ section.get-started .get-started:hover {
 
 .image-breaker {
     height: 33px;
-    background: url("../img/breaker-2.png");
+    background: url(../img/breaker-2.png);
 }
 
 /* -------------------- *\
@@ -285,8 +305,6 @@ section.designs {
 }
 section.designs h2.h1 {
     max-width: 609px;
-    font-family: "Roboto Light", sans-serif;
-    color: #ffffff;
     margin-bottom: 65px;
 }
 section.designs .image {
@@ -297,7 +315,6 @@ section.designs .image {
 }
 section.designs p {
     margin-top: 58px;
-    font-family: Roboto, sans-serif;
     color: #e5dacb;
 }
 /* -------------------- *\
@@ -312,29 +329,18 @@ section.designs p {
     max-width: 1006px;
     overflow: hidden;
     margin-bottom: -100px;
-    box-shadow: 0 1px 60px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 1px 60px rgba(0, 0, 0, .17);
 }
 .print-provider-container .text {
     max-width: 609px;
     padding: 0 15px;
 }
 .print-provider-container h2.h1 {
-    font-family: "Roboto Light", sans-serif;
     margin-bottom: 35px;
 }
 .print-provider-container .print-provider-btn {
-    border-radius: 6px;
-    border: 3px solid #a07b1b;
     padding: 12px 38px 10px;
-    color: #a07b1b;
-    font-family: Roboto, sans-serif;
     font-size: 19px;
-    transition: .15s ease-in-out;
-}
-.print-provider-container .print-provider-btn:hover {
-    background-color: #a07b1b;
-    color: #fff;
-    text-decoration: none;
 }
 /* -------------------- *\
   End Print Provider
@@ -350,8 +356,6 @@ section.world-map {
 section.world-map h2.h1 {
     bottom: 16px;
     right: 0;
-    font-family: "Roboto Medium", sans-serif;
-    text-transform: uppercase;
     color: #8a6810;
     background: -webkit-linear-gradient(240deg, rgba(138,104,16,1) 0%, rgba(200,160,56,1) 100%);
     -webkit-background-clip: text;
@@ -368,16 +372,10 @@ footer {
     background-color: #f9f8f5;
     padding: 38px 0 66px;
 }
-footer .QuranGift {
-    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
-    font-size: 20px;
-    color: #106b2e;
-}
 footer p {
     max-width: 463px;
     margin-top: 40px;
     margin-bottom: 19px;
-    font-family: Roboto, sans-serif;
     color: #afa9a0;
 }
 footer .footer-links {
@@ -388,51 +386,25 @@ footer .list:not(:last-of-type) {
     border-right: 1px solid #dedfe1;
 }
 footer .list li a {
-    font-family: Roboto, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #222222;
+    color: #222;
 }
 footer .social-links i {
     cursor: pointer;
 }
 footer .order-copy {
-    border-radius: 6px;
-    background-color: #106b2e;
-    border: 3px solid #106b2e;
     padding: 10px 75px;
     margin-right: 9px;
-    color: #fff;
-    font-family: Roboto, sans-serif;
     font-size: 18px;
-    transition: .15s ease-in-out;
-}
-footer .order-copy:hover {
-    background-color: #f9f8f5;
-    color: #106b2e;
-    text-decoration: none;
 }
 footer .print-provider-btn {
-    border-radius: 6px;
-    border: 3px solid #a07b1b;
     padding: 11px 36px;
-    color: #a07b1b;
-    font-family: Roboto, sans-serif;
     font-size: 19px;
-    text-decoration: none;
-    transition: .15s ease-in-out;
-}
-footer .print-provider-btn:hover {
-    background-color: #a07b1b;
-    color: #fff;
 }
 .copyright {
     background-color: #fefdfc;
     padding: 33px 0 81px;
-}
-.copyright span {
-    font-family: Roboto, sans-serif;
-    color: #222222;
 }
 /* -------------------- *\
   End Footer Section
@@ -548,13 +520,11 @@ footer .print-provider-btn:hover {
     }
     .features .feature {
         flex: 0 0 100%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     .features .feature:not(:last-of-type) {
         border-bottom: 1px solid #dedfe1;
-    }
-    .features .feature {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
     }
 }
 @media (max-width: 500px) {
@@ -603,8 +573,8 @@ footer .print-provider-btn:hover {
         position: absolute;
     }
     .navbar-expand-custom .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
     }
     .navbar-expand-custom > .container,
     .navbar-expand-custom > .container-fluid {
