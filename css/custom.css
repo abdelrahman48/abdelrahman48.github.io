@@ -18,6 +18,15 @@
     src: url(../fonts/Roboto-Medium.ttf);
 }
 /* -------------------- *\
+  Start Globals
+\* -------------------- */
+body {
+    color: #000;
+}
+.container {
+    padding: 0;
+}
+/* -------------------- *\
   Start components
 \* -------------------- */
 .frutiger-light {
@@ -49,6 +58,9 @@
 }
 .brown-text {
     color: #a07b1b;
+}
+.grey-text {
+    color: #afa9a0;
 }
 .quran-btn {
     border-radius: 6px;
@@ -90,6 +102,9 @@
     color: #fff;
     text-decoration: none;
 }
+.pointer {
+    cursor: pointer;
+}
 /* -------------------- *\
   Start Navbar
 \* -------------------- */
@@ -130,15 +145,11 @@ header nav .handbag {
     font-size: 24px;
     vertical-align: middle;
 }
-header nav .handbag:hover {
-    cursor: pointer;
-}
 header nav .modal-button {
     width: 169px;
     height: 47px;
     border-radius: 24px;
     background-color: #c8a038;
-    cursor: pointer;
     outline: none;
     border: 2px solid #c8a038;
 }
@@ -149,6 +160,10 @@ header nav .modal-button:hover {
 /* -------------------- *\
   End Navbar
 \* -------------------- */
+
+/* ------------------------------------------------------------------ *\
+  Start Home Page
+\* ------------------------------------------------------------------ */
 
 /* -------------------- *\
   Start Header
@@ -272,7 +287,6 @@ section.get-started h2 {
 section.get-started p {
     max-width: 340px;
     font-size: 15px;
-    color: #afa9a0;
     margin-top: 4px;
     margin-left: -10px;
     line-height: 17px;
@@ -370,13 +384,15 @@ section.world-map h2.h1 {
 \* -------------------- */
 footer {
     background-color: #f9f8f5;
-    padding: 38px 0 66px;
+    padding-top: 38px;
+}
+footer .container {
+    padding-bottom: 66px;
 }
 footer p {
     max-width: 463px;
     margin-top: 40px;
     margin-bottom: 19px;
-    color: #afa9a0;
 }
 footer .footer-links {
     max-width: 990px;
@@ -390,9 +406,6 @@ footer .list li a {
     font-weight: 400;
     color: #222;
 }
-footer .social-links i {
-    cursor: pointer;
-}
 footer .order-copy {
     padding: 10px 75px;
     margin-right: 9px;
@@ -402,13 +415,147 @@ footer .print-provider-btn {
     padding: 11px 36px;
     font-size: 19px;
 }
-.copyright {
+footer .copyright {
     background-color: #fefdfc;
     padding: 33px 0 81px;
 }
 /* -------------------- *\
   End Footer Section
 \* -------------------- */
+
+/* ------------------------------------------------------------------ *\
+  End Home Page
+\* ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------ *\
+  Start Mushaf-Templates Page
+\* ------------------------------------------------------------------ */
+
+/* -------------------- *\
+  Start Products Section
+\* -------------------- */
+section.products {
+    padding: 47px 0 80px;
+}
+section.products .text-wrapper {
+    margin-right: 60px;
+}
+section.products .text-wrapper h2 {
+    margin-bottom: 17px;
+}
+section.products .input-wrapper {
+    width: 389px;
+    max-width: 389px;
+    margin-right: 48px;
+}
+section.products .input-wrapper input {
+    font-size: 18px;
+    padding: 14px 23px 15px 57px;
+    border-radius: 6px;
+    border: 1px solid #e5dacb;
+    background-color: #f7f3ee;
+}
+section.products .input-wrapper input::placeholder {
+    color: #afa9a0;
+}
+section.products .input-wrapper i {
+    padding-left: 21px;
+    left: 3px;
+    top: calc(50% - 0.5em);
+}
+section.products .sort-wrapper i {
+    vertical-align: middle;
+}
+section.products .sort-wrapper span {
+    margin: 0 5px 0 15px;
+    font-size: 18px;
+}
+section.products .category-list {
+    margin: 12px 0 76px;
+}
+section.products .item {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
+    border-radius: 2px;
+    margin: 19px 25px 19px 0;
+    flex-direction: column;
+    flex: calc(33.3333% - 25px);
+}
+section.products .item:nth-of-type(3n) {
+    margin-right: 0;
+}
+section.products .item .item-image {
+    padding-left: 7px;
+}
+section.products .item .item-flag {
+    left: 28px;
+    bottom: -32px;
+}
+section.products .item-body {
+    padding: 40px 34px 30px;
+}
+section.products .item .item-title {
+    font-size: 25px;
+}
+section.products .item .item-text {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+section.products .item .preview {
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: rgba(160, 123, 27, .08);
+    border: none;
+    outline: none;
+    padding: 17px 0 15px;
+    width: 144px;
+    margin-right: 9px;
+    line-height: 21px
+}
+section.products .item .handbag {
+    vertical-align: sub;
+    font-size: 23px;
+    border-radius: 6px;
+    background-color: rgba(16, 107, 46, .07);
+    color: #106b2e;
+    padding: 14px 0 13px;
+    width: 57px;
+    line-height: 26px;
+}
+/* -------------------- *\
+  Start Pagination Section
+\* -------------------- */
+.products-pagination {
+    max-width: 586px;
+    font-size:  22px;
+}
+.pagination-list li, .pagination-list li a {
+    display: inline-block;
+}
+.pagination-list li a {
+    width: 58px;
+    padding: 17px 0 15px;
+    line-height: 26px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+}
+.products-pagination .active a, .products-pagination a:hover {
+    background-color: rgba(200, 160, 56, .2);
+    color: #a07b1b;
+}
+/* -------------------- *\
+  End Pagination Section
+\* -------------------- */
+
+/* -------------------- *\
+  End Products Section
+\* -------------------- */
+
+/* ------------------------------------------------------------------ *\
+  End Mushaf-Templates Page
+\* ------------------------------------------------------------------ */
 
 /* -------------------- *\
   Media Queries
@@ -453,6 +600,12 @@ footer .print-provider-btn {
     section.get-started .step-two {
         margin-top: 0;
     }
+    section.products .input-wrapper {
+        margin-right: 0;
+    }
+    section.products .item .item-flag {
+        left: 24px;
+    }
 }
 @media (max-width: 992px) {
     header .carousel {
@@ -460,6 +613,22 @@ footer .print-provider-btn {
     }
     section.designs .design-images .image:not(.last) {
         margin-bottom: 20px;
+    }
+    section.products .input-wrapper {
+        width: 300px;
+        max-width: 389px;
+    }
+    section.products .item {
+        flex: calc(50% - 25px);
+    }
+    section.products .item:nth-of-type(even) {
+        margin-right: 0;
+    }
+    section.products .item:nth-of-type(odd) {
+        margin-right: 25px;
+    }
+    section.products .item .item-flag {
+        left: 27px;
     }
 }
 @media (max-width: 900px) {
@@ -505,8 +674,27 @@ footer .print-provider-btn {
     footer .order-copy {
         margin: 0 0 10px 0;
     }
+    section.products .text-wrapper {
+        margin-bottom: 30px;
+    }
+    section.products .item {
+        flex: 0 0 365px;
+        margin-right: 0 !important;
+    }
+    section.products .item:nth-of-type(even) {
+        margin-right: 0;
+    }
+    section.products .item:nth-of-type(odd) {
+        margin-right: 25px;
+    }
+    section.products .item .item-flag {
+        left: 28px;
+    }
 }
 @media (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
     header .text .order-copy, header .text .learn-more {
         display: block !important;
     }
@@ -525,6 +713,21 @@ footer .print-provider-btn {
     }
     .features .feature:not(:last-of-type) {
         border-bottom: 1px solid #dedfe1;
+    }
+    section.products .title-wrapper {
+        display: block !important;
+    }
+    section.products .text-wrapper {
+        margin-right: 0;
+    }
+    section.products .input-wrapper {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 30px;
+    }
+    section.products .item {
+        max-width: 365px;
+        display: inline-block !important;
     }
 }
 @media (max-width: 500px) {
@@ -545,7 +748,19 @@ footer .print-provider-btn {
     }
     section.world-map h2.h1 {
         font-size: 28px;
+}
+    section.products .text-wrapper h2 {
+        font-size: 32px;
     }
+    section.products .item .item-image {
+    padding-left: 0;
+}
+    section.products .item .item-flag {
+    left: 20px;
+}
+    section.products .item-body {
+    padding: 40px 15px 30px;
+}
 }
 @media (max-width: 350px) {
     .print-provider-container h2 {
