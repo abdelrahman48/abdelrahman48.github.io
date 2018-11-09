@@ -5,8 +5,13 @@ $(function () {
 
     $('a').on('click', function (e) { e.preventDefault()} );
 
-    var paginationLi = $('.pagination-list .page-number');
-    
+    var paginationLi = $('.pagination-list .page-number'),
+        productThumbnail = $('section.product .thumbnail li'),
+        sizeButton = $('section.product .details .size button'),
+        copyNumber = $('section.product .copies-number span'),
+        addCopy = $('section.product .copies-number .plus'),
+        removeCopy = $('section.product .copies-number .minus');
+
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
     });
@@ -22,4 +27,20 @@ $(function () {
     for(i = 0; i < 2; i++) {
         $('.category-list .item').clone().insertAfter(".category-list .item:last");
     }
+
+    productThumbnail.on('click', function () {
+        $(this).addClass('active').siblings('li').removeClass('active');
+    });
+
+    sizeButton.on('click', function () {
+        $(this).addClass('active').siblings('button').removeClass('active');
+    });
+
+    addCopy.on('click', function () {
+        copyNumber.text(parseInt(copyNumber.text()) + 1)
+    });
+    removeCopy.on('click', function () {
+        if(parseInt(copyNumber.text()) < 1) return;
+        copyNumber.text(parseInt(copyNumber.text()) - 1)
+    })
 });
