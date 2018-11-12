@@ -27,6 +27,15 @@
 body {
     color: #000;
 }
+button {
+    border: none;
+}
+button, i {
+    cursor: pointer;
+}
+.modal {
+    padding: 0 !important;
+}
 /* -------------------- *\
   Start components
 \* -------------------- */
@@ -36,17 +45,26 @@ body {
 .font-18 {
     font-size: 18px;
 }
+.font-16 {
+    font-size: 16px;
+}
 .font-21 {
     font-size: 21px;
 }
 .font-22 {
     font-size: 22px;
 }
+.font-24 {
+    font-size: 24px;
+}
 .font-25 {
     font-size: 25px;
 }
 .font-28 {
     font-size: 28px;
+}
+.font-32 {
+    font-size: 32px;
 }
 .font-38 {
     font-size: 38px;
@@ -69,6 +87,9 @@ body {
 .text-underline {
     text-decoration: underline;
 }
+.no-underline, .no-underline:hover {
+    text-decoration: none;
+}
 .green-text {
     color: #106b2e;
 }
@@ -87,14 +108,19 @@ body {
 .black-text-6 {
     color: #666;
 }
+.black-text-7 {
+    color: #777;
+}
 .brown-text {
     color: #a07b1b;
 }
 .grey-text {
     color: #afa9a0;
 }
-.no-border-outline, .no-border-outline:focus {
+.no-outline, .no-outline:focus {
     outline: none;
+}
+.no-border {
     border: none;
 }
 .quran-btn {
@@ -104,19 +130,19 @@ body {
 .btn-green {
     background-color: #106b2e;
     border-color: #106b2e;
-    margin-right: 6px;
     font-size: 18px;
 }
-.btn-brown-transparent {
+.btn-brown {
     border-color: #a07b1b;
     color: #a07b1b;
+    font-size: 19px;
 }
 .btn-green:hover {
     background-color: #f9f8f5;
     color: #106b2e;
     text-decoration: none;
 }
-.btn-brown-transparent:hover {
+.btn-brown:hover {
     background-color: #a07b1b;
     color: #fff;
     text-decoration: none;
@@ -131,6 +157,9 @@ body {
 }
 .transition {
     transition: .15s ease-in-out;
+}
+.transparent {
+    background-color: transparent;
 }
 .QuranGift-text {
     font-family: "Frutiger LT Arabic 45 Light", sans-serif;
@@ -176,21 +205,110 @@ header .nav-item .dropdown-toggle::after {
 header .login-register {
     right: 0;
 }
-header nav .handbag {
+header .navbar .handbag {
     font-size: 24px;
-    vertical-align: middle;
 }
-header nav .modal-button {
+header .navbar .cart-modal {
+    top: 18px ;
+    left: -147px;
+    border-radius: 0;
+}
+header .cart-modal .modal-dialog {
+    max-width: 724px;
+    left: 298px;
+    top: 34px;
+}
+header .navbar .cart-modal .modal-content {
+    padding: 0;
+    border-radius: 0;
+}
+header .cart-modal .modal-content:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -24px;
+    left: 358px;
+    border-style: solid;
+    border-width: 12px;
+    border-color: transparent transparent #fff transparent
+}
+header .navbar .cart-modal .modal-header {
+    padding: 36px 14px 3px 14px;
+}
+header .cart-modal .modal-body {
+    padding: 26px 37px;
+    margin-top: 23px;
+    overflow: hidden;
+    background-color: #f9f8f5;
+}
+header .cart-modal .item {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
+    border-radius: 2px;
+    margin-right: 25px;
+}
+header .navbar .cart-modal .modal-footer {
+    padding: 23px 25px 26px 33px;
+}
+header .cart-modal .modal-footer button {
+    height: 61px;
+    border-radius: 2px;
+    background-color: rgba(16, 107, 46, .1);
+}
+header .navbar .modal-button {
     width: 169px;
     height: 47px;
     border-radius: 24px;
     background-color: #c8a038;
-    outline: none;
     border: 2px solid #c8a038;
 }
-header nav .modal-button:hover {
+header .navbar .modal-button:hover {
     color: #c8a038;
     background-color: transparent;
+}
+header .navbar .modal-content {
+    padding: 0 8px 0 11px;
+    box-shadow: 0 2px 34px rgba(0, 0, 0, .2);
+}
+header .navbar .modal-header {
+    padding: 32px 9px 3px 16px;
+}
+header .navbar .form-group {
+    border-radius: 2px;
+    border: 1px solid #e5dacb;
+}
+header .navbar form .form-control {
+    height: 61px;
+}
+header .navbar form .input-group i {
+    padding: 0 10px 0 20px;
+}
+header .navbar form input::placeholder {
+    color: #777;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+header .navbar .submit {
+    width: 100%;
+    height: 61px;
+    border-radius: 2px;
+    background-color: rgba(16, 107, 46, .1);
+    margin-top: 4px;
+}
+header .navbar .modal-footer {
+    padding-top: 21px;
+    padding-bottom: 31px;
+}
+header .navbar .social-login {
+    margin-top: 19px;
+}
+header .navbar .social-login button {
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 0 6px;
+}
+header .navbar .social-login i {
+    margin-right: 4px;
 }
 /* -------------------- *\
   End Navbar
@@ -251,7 +369,6 @@ header .text h1 {
     max-width: 609px;
 }
 header .text p {
-    font-size: 18px;
     font-weight: 700;
     margin: 40px 0 46px;
     max-width: 506px;
@@ -260,11 +377,9 @@ header .text p {
 header .text .order-copy {
     padding: 12px 56px;
     margin-right: 6px;
-    font-size: 18px;
 }
 header .text .learn-more {
     padding: 12px 42px;
-    font-size: 19px;
 }
 header .text .learn-more:hover {
     text-decoration: underline;
@@ -276,7 +391,7 @@ header .text .learn-more:hover {
 /* -------------------- *\
   Start features
 \* -------------------- */
-section.features {
+section.features .features-image {
     background: url(../img/breaker-1.png) center/cover;
     max-width: 866px;
     height: 184px;
@@ -290,7 +405,6 @@ section.features .feature:not(:last-of-type) {
 }
 section.features .feature p {
     max-width: 160px;
-    font-size: 14px;
     line-height: 16px;
 }
 /* -------------------- *\
@@ -389,7 +503,6 @@ section.designs p {
 }
 .print-provider-container .print-provider-btn {
     padding: 12px 38px 10px;
-    font-size: 19px;
 }
 /* -------------------- *\
   End Print Provider
@@ -437,18 +550,15 @@ footer .list:not(:last-of-type) {
     border-right: 1px solid #dedfe1;
 }
 footer .list li a {
-    font-size: 16px;
     font-weight: 400;
     color: #222;
 }
 footer .order-copy {
     padding: 10px 75px;
     margin-right: 9px;
-    font-size: 18px;
 }
 footer .print-provider-btn {
     padding: 11px 36px;
-    font-size: 19px;
 }
 footer .copyright {
     background-color: #fefdfc;
@@ -484,7 +594,6 @@ section.products .input-wrapper {
     margin-right: 48px;
 }
 section.products .input-wrapper input {
-    font-size: 18px;
     padding: 14px 23px 15px 57px;
     border-radius: 6px;
     border: 1px solid #e5dacb;
@@ -498,12 +607,8 @@ section.products .input-wrapper i {
     left: 3px;
     top: calc(50% - 0.5em);
 }
-section.products .sort-wrapper i {
-    vertical-align: middle;
-}
 section.products .sort-wrapper span {
     margin: 0 5px 0 15px;
-    font-size: 18px;
 }
 section.products .category-list {
     margin: 12px 0 76px;
@@ -528,19 +633,13 @@ section.products .item .item-flag {
 section.products .item-body {
     padding: 40px 34px 30px;
 }
-section.products .item .item-title {
-    font-size: 25px;
-}
 section.products .item .item-text {
-    font-size: 14px;
     margin-bottom: 30px;
 }
 section.products .item .preview {
     font-size: 18px;
     border-radius: 6px;
     background-color: rgba(160, 123, 27, .08);
-    border: none;
-    outline: none;
     padding: 17px 0 15px;
     width: 144px;
     margin-right: 9px;
@@ -615,6 +714,7 @@ section.product .thumbnail .active, section.product .thumbnail li:hover {
     border: 2px solid #a07b1b;
 }
 section.product .image {
+    height: 686px;
     border: 1px solid #afa9a0;
     margin: 0 30px 0 15px;
 }
@@ -720,6 +820,63 @@ section.product .cart:hover {
     border: 2px solid #106b2e;
 }
 /* -------------------- *\
+  Start Product Box-Modal Section
+\* -------------------- */
+.book-modal .modal-dialog {
+    max-width: 995px;
+}
+section.product .modal-header .title-wrapper {
+    width: 100%;
+    padding: 24px 30px 16px 26px;
+}
+section.product .modal-header .title-wrapper h1 {
+    margin-left: 11px;
+    margin-bottom: 0;
+}
+section.product .modal-header .close {
+    width: 34px;
+    height: 34px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #dedfe1;
+    border-radius: 50%;
+    opacity: 1;
+    line-height: 0;
+    margin: 0;
+}
+section.product .modal-body {
+     padding: 0 24px 0 29px;
+}
+section.product .modal-body .image-wrapper {
+    margin: 0 34px 0 0;
+}
+section.product .modal-body .image {
+    height: auto;
+    margin: 0;
+}
+section.product .modal-body .thumbnail li {
+    width: 51px;
+    height: 35px;
+    margin: 22px 5px 6px;
+}
+section.product .modal-body .details {
+    padding-bottom: 62px;
+}
+section.product .modal-body .details p {
+    margin-bottom: 14px;
+}
+section.product .modal-body .size {
+    margin: 24px 0 19px;
+}
+section.product .modal-body .select-wrapper {
+    margin-bottom: 29px;
+}
+section.product .modal-body .copies-number {
+    margin: 15px 0 18px;
+}
+/* -------------------- *\
+  End Product Box-Modal Section
+\* -------------------- */
+/* -------------------- *\
   End Product Section
 \* -------------------- */
 
@@ -757,12 +914,8 @@ section.faq h2 {
 section.faq .accordion {
     margin-top: 26px;
 }
-section.faq .card {
-    border: none;
-}
 section.faq .card-header {
     background-color: transparent;
-    border: none;
     padding: 0 0 6px;
 }
 section.faq .card .caret {
@@ -819,7 +972,7 @@ section.faq .card .card-body {
         flex-wrap: wrap;
         justify-content: flex-end;
     }
-    header nav .login-register i {
+    header .navbar .login-register i {
         flex: 100%;
         order: 2;
         text-align: right;
@@ -827,7 +980,7 @@ section.faq .card .card-body {
         margin-right: 0 !important;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
     section.get-started .step-two {
         margin-top: 0;
     }
@@ -840,11 +993,14 @@ section.faq .card .card-body {
     section.product .image {
         margin: 0 0 40px 15px;
     }
+    section.product .modal-body .image-wrapper {
+        margin: 0;
+    }
     section.product-info .text-wrapper .description {
         flex: 0 0 350px;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     header .carousel {
         padding: 0 60px;
     }
@@ -852,7 +1008,7 @@ section.faq .card .card-body {
         margin-bottom: 20px;
     }
     section.products .input-wrapper {
-        width: 300px;
+        margin-right: 48px;
         max-width: 389px;
     }
     section.products .item {
@@ -899,7 +1055,7 @@ section.faq .card .card-body {
         flex: 0 0 50%;
     }
     section.designs .image {
-        flex: 0 0 calc( 50% - 32px );
+        flex: 0 0 calc(50% - 32px);
     }
     section.world-map h2.h1 {
         bottom: -10px;
@@ -920,8 +1076,9 @@ section.faq .card .card-body {
     footer .order-copy {
         margin: 0 0 10px 0;
     }
-    section.products .text-wrapper {
-        margin-bottom: 30px;
+    section.products .input-wrapper {
+        margin-bottom: 12px;
+        width: 300px;
     }
     section.products .item {
         flex: 0 0 365px;
@@ -936,8 +1093,14 @@ section.faq .card .card-body {
     section.products .item .item-flag {
         left: 28px;
     }
+    section.product .image {
+        height: auto;
+    }
+    section.product .modal-body {
+        padding: 0 24px;
+    }
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     header .text .order-copy, header .text .learn-more {
         display: block !important;
     }
@@ -956,9 +1119,6 @@ section.faq .card .card-body {
     }
     section.features .feature:not(:last-of-type) {
         border-bottom: 1px solid #dedfe1;
-    }
-    section.products .title-wrapper {
-        display: block !important;
     }
     section.products .text-wrapper {
         margin-right: 0;
@@ -986,12 +1146,33 @@ section.faq .card .card-body {
     header .text h1, section.get-started h2, section.designs h2.h1, .print-provider-container h2.h1 {
         font-size: 24px;
     }
-    header nav .modal-button {
+    header .navbar .modal-button {
         max-width: 169px;
         width: auto;
     }
+    section.product .modal-header .title-wrapper {
+        padding: 55px 15px 16px 15px;
+    }
+    section.product .modal-header .title-wrapper h1 {
+        margin-left: 5px;
+        font-size: 26px;
+    }
+    section.product .modal-header .close {
+        position: absolute;
+        right: 5px;
+        top: 8px;
+    }
 }
 @media (max-width: 400px) {
+    header .navbar .register {
+        font-size: 16px;
+    }
+    header .navbar .social-login {
+        flex-direction: column;
+    }
+    header .navbar .social-login button {
+        margin: 6px 0;
+    }
     header .text .order-copy, header .text .learn-more {
         padding: 13px 26px;
     }
@@ -1012,6 +1193,14 @@ section.faq .card .card-body {
     }
     section.products .item-body {
         padding: 40px 15px 30px;
+    }
+    section.product .title-wrapper h1 {
+        font-size: 32px;
+        margin-left: 10px;
+    }
+    section.product .modal-body .thumbnail li {
+        flex-basis: 30%;
+        height: 55px;
     }
 }
 @media (max-width: 350px) {
