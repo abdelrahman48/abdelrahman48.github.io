@@ -64,7 +64,73 @@
                     </li>
                 </ul>
                 <div class="login-register position-absolute">
-                    <i class="icon-handbag handbag mr-3 align-middle"></i>
+                    <i class="icon-handbag handbag mr-3 align-middle" data-toggle="modal" data-target="#shop-cart"></i>
+                    <!-- Modal -->
+                    <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-arrow"></div>
+
+                                <div class="modal-header no-border">
+                                    <h4 class="roboto font-24">Shopping Cart
+                                        <span class="green-text roboto-medium font-22">(3 items)</span>
+                                    </h4>
+                                    <button class="brown-text roboto-medium font-18 transparent">Edit Cart
+                                        <i class="ti-angle-right align-middle"></i>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body d-flex pointer">
+                                    <div class="item d-flex flex-column position-relative">
+                                        <button type="button" class="close position-absolute" aria-label="Close">
+                                            <span class="d-inline-block" aria-hidden="true">×</span>
+                                        </button>
+
+                                        <div class="item-image">
+                                            <img src="img/cart-item.png" alt="France Mushaf">
+                                        </div>
+                                        <div class="item-body d-flex align-items-center">
+                                            <img class="item-flag" src="img/france-flag.png" width="30" height="30">
+                                            <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item d-flex flex-column position-relative">
+                                        <button type="button" class="close position-absolute" aria-label="Close">
+                                            <span class="d-inline-block" aria-hidden="true">×</span>
+                                        </button>
+                                        <div class="item-image">
+                                            <img src="img/cart-item.png" alt="France Mushaf">
+                                        </div>
+                                        <div class="item-body d-flex align-items-center">
+                                            <img src="img/france-flag.png" width="30" height="30">
+                                            <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item d-flex flex-column position-relative">
+                                        <button type="button" class="close position-absolute" aria-label="Close">
+                                            <span class="d-inline-block" aria-hidden="true">×</span>
+                                        </button>
+
+                                        <div class="item-image">
+                                            <img src="img/cart-item.png" alt="France Mushaf">
+                                        </div>
+                                        <div class="item-body d-flex align-items-center">
+                                            <img class="item-flag" src="img/france-flag.png" width="30" height="30">
+                                            <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="modal-footer no-border">
+                                    <button class="green-text roboto-medium font-18 w-100 text-uppercase">$75 Checkout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Button trigger modal -->
                     <button type="button" class="white-text transition modal-button" data-toggle="modal" data-target="#login">
                         Login/Register
