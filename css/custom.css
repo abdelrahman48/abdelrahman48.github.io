@@ -27,8 +27,12 @@
 body {
     color: #000;
 }
+
 button {
     border: none;
+}
+button:focus {
+    outline: none;
 }
 button, i {
     cursor: pointer;
@@ -227,24 +231,59 @@ header .cart-modal .modal-content:after {
     display: inline-block;
     position: absolute;
     top: -24px;
-    left: 358px;
+    left: 469px;
     border-style: solid;
     border-width: 12px;
     border-color: transparent transparent #fff transparent
 }
 header .navbar .cart-modal .modal-header {
-    padding: 36px 14px 3px 14px;
+    padding: 36px 25px 3px 37px;
 }
 header .cart-modal .modal-body {
     padding: 26px 37px;
     margin-top: 23px;
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
     background-color: #f9f8f5;
+}
+header .cart-modal .modal-body.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
 }
 header .cart-modal .item {
     box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
     border-radius: 2px;
     margin-right: 25px;
+    background-color: #fff;
+}
+header .cart-modal .close {
+    top: 6px;
+    left: 7px;
+    width: 14px;
+    height: 14px;
+    color: #fff;
+    background-color: #ac4c31;
+    opacity: 1;
+    text-shadow: none;
+    border-radius: 50%;
+    line-height: 0;
+}
+header .cart-modal .close:hover {
+    color: #fff !important;
+    opacity: .9 !important;
+}
+header .cart-modal .close span {
+    margin: 0 0 8px 0;
+    font-size: 10px;
+}
+header .cart-modal .item-image {
+    margin: 3px 0 0 16px;
+}
+header .cart-modal .item-body {
+    padding: 16px 12px 13px 11px;
+}
+header .cart-modal .item-title {
+    margin-left: 13px;
 }
 header .navbar .cart-modal .modal-footer {
     padding: 23px 25px 26px 33px;
@@ -836,12 +875,17 @@ section.product .modal-header .title-wrapper h1 {
 section.product .modal-header .close {
     width: 34px;
     height: 34px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     background-color: #dedfe1;
     border-radius: 50%;
+    padding: 0;
+    text-shadow: none;
     opacity: 1;
     line-height: 0;
     margin: 0;
+}
+section.product .modal-header .close span {
+    margin: 0 0 5px 1px;
 }
 section.product .modal-body {
      padding: 0 24px 0 29px;
@@ -978,6 +1022,13 @@ section.faq .card .card-body {
         text-align: right;
         margin-top: 15px;
         margin-right: 0 !important;
+    }
+    header .navbar .cart-modal, header .cart-modal .modal-dialog {
+        top: 0;
+        left: 0;
+    }
+    header .cart-modal .modal-content:after {
+        content: none;
     }
 }
 @media (max-width: 1199px) {
@@ -1143,12 +1194,16 @@ section.faq .card .card-body {
     }
 }
 @media (max-width: 500px) {
-    header .text h1, section.get-started h2, section.designs h2.h1, .print-provider-container h2.h1 {
-        font-size: 24px;
+    header .navbar .cart-modal .modal-header {
+        padding: 36px 15px 3px;
+        flex-direction: column;
     }
     header .navbar .modal-button {
         max-width: 169px;
         width: auto;
+    }
+    header .text h1, section.get-started h2, section.designs h2.h1, .print-provider-container h2.h1 {
+        font-size: 24px;
     }
     section.product .modal-header .title-wrapper {
         padding: 55px 15px 16px 15px;
