@@ -7,13 +7,20 @@ $(function () {
 
     var paginationLi = $('.pagination-list .page-number'),
         productThumbnail = $('section.product .thumbnail li'),
-        sizeButton = $('section.product .details .size button'),
-        copyNumber = $('section.product .copies-number span'),
-        addCopy = $('section.product .copies-number .plus'),
-        removeCopy = $('section.product .copies-number .minus'),
+        sizeButton = $('.details .size button'),
+        addCopy = $('.copies-number .plus'),
+        removeCopy = $('.copies-number .minus'),
         thumbnailLi = $('section.product .modal-body .thumbnail li'),
         thumbnailArrowLeft = $('section.product .modal-body .left'),
-        thumbnailArrowright = $('section.product .modal-body .right');
+        thumbnailArrowright = $('section.product .modal-body .right'),
+        addToCart = $('section.products .item .handbag'),
+        shoppingCart = $('header .navbar .handbag'),
+        shoppingCartNumber = $('header .navbar .cart-number'),
+        editItemOptions = $('section.shopping-cart .details .edit'),
+        finishEditItemOptions = $('section.shopping-cart .details .done'),
+        hiddenItemOptions = $('section.shopping-cart .details .hidden'),
+        visibleItemOptions = $('section.shopping-cart .details .visible'),
+        deleteItem = $('section.shopping-cart .details .delete');
 
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
@@ -40,11 +47,20 @@ $(function () {
     });
 
     addCopy.on('click', function () {
-        copyNumber.text(parseInt(copyNumber.text()) + 1)
+        $(this).siblings('.number').text(parseInt($(this).siblings('.number').text()) + 1)
     });
     removeCopy.on('click', function () {
-        if(parseInt(copyNumber.text()) < 1) return;
-        copyNumber.text(parseInt(copyNumber.text()) - 1)
+        if(parseInt($(this).siblings('.number').text()) < 1) return;
+        $(this).siblings('.number').text(parseInt($(this).siblings('.number').text()) - 1)
+    });
+
+    $('.category-list').on('click', addToCart, function () {
+        if (shoppingCartNumber.text() === '') {
+            shoppingCartNumber.text('0')
+        }
+        shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
+        shoppingCartNumber.addClass('active');
+        shoppingCart.attr('src', 'img/handbag-active.svg');
     });
 
     thumbnailArrowLeft.on('click', function () {
@@ -54,6 +70,19 @@ $(function () {
     thumbnailArrowright.on('click', function () {
         if( thumbnailLi.filter('.active').index() === thumbnailLi.length - 1 ) return;
         thumbnailLi.filter('.active').removeClass('active').next('li').addClass('active');
+    });
+
+    editItemOptions.on('click', function () {
+        $(this).parents('.details').find($('.hidden')).removeClass('hide');
+        $(this).parents('.details').find($('.visible')).addClass('hide')
+    });
+    finishEditItemOptions.on('click', function () {
+        $(this).parents('.details').find($('.hidden')).addClass('hide');
+        $(this).parents('.details').find($('.visible')).removeClass('hide')
+    });
+
+    deleteItem.on('click', function () {
+        $(this).parents('.shopping-item').fadeOut();
     });
 });
 // Shopping Cart Box Modal Scroll

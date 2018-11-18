@@ -20,7 +20,7 @@
 <body>
 <!-- Start Header Section -->
 <header>
-    <nav class="navbar navbar-expand-custom navbar-light px-0">
+    <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
         <div class="container">
             <div>
                 <a class="navbar-brand QuranGift-logo" href="#">
@@ -32,109 +32,114 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto roboto">
-                    <li class="nav-item">
-                        <a class="nav-link order-now text-underline" href="#">ORDER NOW</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Become a Partner</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            About Service
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Support
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="login-register position-absolute">
-                    <i class="icon-handbag handbag mr-3 align-middle" data-toggle="modal" data-target="#shop-cart"></i>
-                    <!-- Modal -->
-                    <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav-wrapper w-100 d-flex align-items-center justify-content-between">
+                    <ul class="navbar-nav mr-auto roboto">
+                        <li class="nav-item">
+                            <a class="nav-link order-now text-underline" href="#">ORDER NOW</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Become a Partner</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About Service
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Support
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="login-register">
+                    <span class="position-relative">
+                        <img src="img/handbag.svg" class="handbag align-middle pointer" data-toggle="modal" data-target="#shop-cart">
+                        <span class="cart-number position-absolute white-text roboto-medium">2</span>
+                    </span>
+                        <!-- Modal -->
+                        <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
 
-                                <div class="modal-arrow"></div>
+                                    <div class="modal-arrow"></div>
 
-                                <div class="modal-header no-border">
-                                    <h4 class="roboto font-24">Shopping Cart
-                                        <span class="green-text roboto-medium font-22">(3 items)</span>
-                                    </h4>
-                                    <button class="brown-text roboto-medium font-18 transparent">Edit Cart
-                                        <i class="ti-angle-right align-middle"></i>
-                                    </button>
-                                </div>
-
-                                <div class="modal-body d-flex pointer">
-                                    <div class="item d-flex flex-column position-relative">
-                                        <button type="button" class="close position-absolute" aria-label="Close">
-                                            <span class="d-inline-block" aria-hidden="true">×</span>
+                                    <div class="modal-header no-border">
+                                        <h4 class="roboto font-24">Shopping Cart
+                                            <span class="green-text roboto-medium font-22">(3 items)</span>
+                                        </h4>
+                                        <button class="brown-text roboto-medium font-18 transparent">Edit Cart
+                                            <i class="ti-angle-right align-middle"></i>
                                         </button>
-
-                                        <div class="item-image">
-                                            <img src="img/cart-item.png" alt="France Mushaf">
-                                        </div>
-                                        <div class="item-body d-flex align-items-center">
-                                            <img class="item-flag" src="img/france-flag.png" width="30" height="30">
-                                            <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
-                                        </div>
                                     </div>
 
-                                    <div class="item d-flex flex-column position-relative">
-                                        <button type="button" class="close position-absolute" aria-label="Close">
-                                            <span class="d-inline-block" aria-hidden="true">×</span>
-                                        </button>
-                                        <div class="item-image">
-                                            <img src="img/cart-item.png" alt="France Mushaf">
+                                    <div class="modal-body d-flex pointer">
+                                        <div class="item d-flex flex-column position-relative">
+                                            <button type="button" class="close position-absolute" aria-label="Close">
+                                                <span class="d-inline-block" aria-hidden="true">×</span>
+                                            </button>
+
+                                            <div class="item-image">
+                                                <img src="img/cart-item.png" alt="France Mushaf">
+                                            </div>
+                                            <div class="item-body d-flex align-items-center">
+                                                <img class="item-flag" src="img/france-flag.png" width="30" height="30">
+                                                <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+                                            </div>
                                         </div>
-                                        <div class="item-body d-flex align-items-center">
-                                            <img src="img/france-flag.png" width="30" height="30">
-                                            <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+
+                                        <div class="item d-flex flex-column position-relative">
+                                            <button type="button" class="close position-absolute" aria-label="Close">
+                                                <span class="d-inline-block" aria-hidden="true">×</span>
+                                            </button>
+                                            <div class="item-image">
+                                                <img src="img/cart-item.png" alt="France Mushaf">
+                                            </div>
+                                            <div class="item-body d-flex align-items-center">
+                                                <img src="img/france-flag.png" width="30" height="30">
+                                                <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+                                            </div>
                                         </div>
+
+                                        <div class="item d-flex flex-column position-relative">
+                                            <button type="button" class="close position-absolute" aria-label="Close">
+                                                <span class="d-inline-block" aria-hidden="true">×</span>
+                                            </button>
+
+                                            <div class="item-image">
+                                                <img src="img/cart-item.png" alt="France Mushaf">
+                                            </div>
+                                            <div class="item-body d-flex align-items-center">
+                                                <img class="item-flag" src="img/france-flag.png" width="30" height="30">
+                                                <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
+                                            </div>
+                                        </div>
+
                                     </div>
 
-                                    <div class="item d-flex flex-column position-relative">
-                                        <button type="button" class="close position-absolute" aria-label="Close">
-                                            <span class="d-inline-block" aria-hidden="true">×</span>
-                                        </button>
-
-                                        <div class="item-image">
-                                            <img src="img/cart-item.png" alt="France Mushaf">
-                                        </div>
-                                        <div class="item-body d-flex align-items-center">
-                                            <img class="item-flag" src="img/france-flag.png" width="30" height="30">
-                                            <h5 class="item-title roboto-medium font-26 mb-0">France Mushaf</h5>
-                                        </div>
+                                    <div class="modal-footer no-border">
+                                        <button class="green-text roboto-medium font-18 w-100 text-uppercase">$75 Checkout</button>
                                     </div>
-
-                                </div>
-
-                                <div class="modal-footer no-border">
-                                    <button class="green-text roboto-medium font-18 w-100 text-uppercase">$75 Checkout</button>
                                 </div>
                             </div>
                         </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="white-text transition modal-button" data-toggle="modal" data-target="#login">
+                            Login/Register
+                        </button>
                     </div>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="white-text transition modal-button" data-toggle="modal" data-target="#login">
-                        Login/Register
-                    </button>
                 </div>
                 <!-- Modal -->
                 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
@@ -350,7 +355,7 @@
             <i class="fab fa-youtube-square fa-2x fa-fw" style="color: #f61c0d"></i>
         </div>
 
-        <div class="footer-links font-16 d-flex flex-wrap">
+        <div class="footer-links d-flex flex-wrap">
             <div class="flex-grow-1 list">
                 <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
                     <li><a href="#">Help Center</a></li>
