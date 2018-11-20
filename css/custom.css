@@ -21,13 +21,17 @@
     font-family: "Roboto Bold";
     src: url(../fonts/Roboto-Bold.ttf);
 }
+@font-face {
+    font-family: "themify";
+    src: url(../components/themify-icons/fonts/themify.ttf);
+}
 /* -------------------- *\
   Start Globals
 \* -------------------- */
 body {
     color: #000;
+    background: #FEFDFC;
 }
-
 button {
     border: none;
 }
@@ -40,6 +44,25 @@ button, i {
 .modal {
     padding: 0 !important;
 }
+::placeholder {
+    color: #777;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+}
+input:focus ~ .floating-label,
+textarea:focus ~ .floating-label {
+    top: 3px;
+    font-size: 14px;
+}
+.floating-label {
+    pointer-events: none;
+    left: 57px;
+    top: 26px;
+    z-index: 999;
+}
+select {
+    -webkit-appearance: none;
+}
 /* -------------------- *\
   Start components
 \* -------------------- */
@@ -51,6 +74,9 @@ button, i {
 }
 .font-16 {
     font-size: 16px;
+}
+.font-20 {
+    font-size: 20px;
 }
 .font-21 {
     font-size: 21px;
@@ -123,6 +149,12 @@ button, i {
 }
 .grey-text {
     color: #afa9a0;
+}
+.red-text {
+    color: #ac4c31;
+}
+.white-bg {
+    background-color: #fff;
 }
 .no-outline, .no-outline:focus {
     outline: none;
@@ -325,20 +357,15 @@ header .navbar .modal-content {
 header .navbar .modal-header {
     padding: 32px 9px 3px 16px;
 }
-header .navbar .form-group {
+header .form-group, section.checkout .form-group {
     border-radius: 2px;
     border: 1px solid #e5dacb;
 }
-header .navbar form .form-control {
+header form .form-control {
     height: 61px;
 }
-header .navbar form .input-group i {
+header form .input-group i {
     padding: 0 10px 0 20px;
-}
-header .navbar form input::placeholder {
-    color: #777;
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
 }
 header .navbar .submit {
     width: 100%;
@@ -789,7 +816,8 @@ section.product .size .checkbox, section.shopping-cart .size .checkbox {
 section.product .size .active .checkbox, section.shopping-cart .size .active .checkbox {
     background-color: #106b2e;
 }
-section.product .size .active .checkbox:after, section.shopping-cart .size .active .checkbox:after {
+section.product .size .active .checkbox:after,
+section.shopping-cart .size .active .checkbox:after {
     position: absolute;
     top: 4px;
     left: 8px;
@@ -800,7 +828,7 @@ section.product .size .active .checkbox:after, section.shopping-cart .size .acti
     height: 13px;
     border: solid white;
     border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    transform: rotate(35deg);
     transition: .15s ease-in-out;
 }
 section.product .size button, section.shopping-cart .size button {
@@ -818,7 +846,7 @@ section.product .select-wrapper, section.shopping-cart .select-wrapper {
     height: 61px;
     margin-bottom: 34px;
 }
-section.product .select-wrapper:after, section.shopping-cart .select-wrapper:after {
+section.product .select-wrapper:after, section.shopping-cart .select-wrapper:after, section.checkout .information .select-wrapper:after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -837,7 +865,6 @@ section.product .select, section.shopping-cart .select {
     border-radius: 2px;
     border: 1px solid #e5dacb;
     background-color: #fff;
-    -webkit-appearance: none;
     padding: 0 18px;
 }
 section.product .copies-number, section.shopping-cart .copies-number {
@@ -1085,6 +1112,174 @@ section.shopping-cart .shopping-price .footer {
   End Copy 16 Page
 \* ------------------------------------------------------------------ */
 
+/* ------------------------------------------------------------------ *\
+  Start Copy 13 Page
+\* ------------------------------------------------------------------ */
+section.checkout .information {
+    flex-basis: 800px;
+    margin: 52px 35px 51px 0;
+}
+section.checkout .information .sender-info,
+section.checkout .information .reciver-info,
+section.checkout .information .payment-methods {
+    border-radius: 5px;
+    border: 1px solid #e5dacb;
+}
+section.checkout .information .sender-info {
+    padding: 30px 24px 7px 33px;
+    margin-bottom: 35px;
+}
+section.checkout .sender-info h2 {
+    margin-bottom: 37px;
+}
+section.checkout .information .form-group {
+    flex: 1 1 calc(50% - 21px);
+    margin-bottom: 21px;
+}
+section.checkout .information .form-group:nth-of-type(odd):not(:last-of-type) {
+    margin-right: 21px;
+}
+section.checkout .information .form-group i {
+    padding: 0 9px 0 20px;
+}
+section.checkout .information input, section.checkout .information select {
+    height: 75px;
+}
+section.checkout .information .select-wrapper:after {
+    right: 19px;
+}
+section.checkout .information input[type=checkbox] {
+    height: auto;
+}
+section.checkout .information .reciver-info {
+    padding: 40px 34px 36px 33px;
+    margin-bottom: 21px;
+}
+section.checkout .reciver-info h2 {
+    margin-bottom: 32px;
+}
+section.checkout .reciver-info .checkbox:before {
+    width: 27px;
+    height: 27px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #444;
+    left: -44px;
+    top: -1px;
+}
+section.checkout .reciver-info .checkbox:after {
+    top: 5px;
+    left: -33px;
+    width: 5px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(35deg);
+    background-image: none !important;
+}
+section.checkout .reciver-info .checkbox.bg-red:before {
+    left: -37px;
+}
+section.checkout .reciver-info .checkbox.bg-red:after {
+    left: -26px;
+}
+section.checkout .reciver-info input[type=checkbox]:checked + .checkbox:before {
+    background-color: #a07b1b;
+    border: none;
+}
+section.checkout .reciver-info input[type=checkbox]:checked + .checkbox.bg-red:before {
+    background-color: #ac4c31;;
+    border: none;
+}
+section.checkout .reciver-info .gift-checkbox {
+    left: 13px;
+    margin: 11px 0 32px;
+}
+section.checkout .reciver-info .textarea {
+    width: 728px;
+    height: 198px;
+    padding: 27px;
+    border-radius: 5px;
+    border: 1px solid #ac4c31;
+    background-color: rgba(172, 76, 49, .05);
+    resize: none;
+}
+.floating-label.gift-label {
+    left: 28px;
+}
+section.checkout .information .payment-methods {
+    padding: 34px 0 17px;
+}
+section.checkout .payment-methods h2 {
+    margin: 0 0 30px 34px;
+}
+section.checkout .payment-methods .nav-tabs {
+    border: none;
+    height: 94px;
+}
+section.checkout .payment-methods .nav-item {
+    background-color: #fefdfc;
+    border-radius: 0;
+    border-color: #e5dacb transparent;
+    border-width: .5px;
+    flex: 1;
+}
+section.checkout .payment-methods .nav-item.active,
+section.checkout .payment-methods .nav-item:focus,
+section.checkout .payment-methods .nav-item:hover {
+    background-color: #fff;
+    border-color: #e5dacb #e5dacb #fff;
+    color: #a07b1b;
+}
+section.checkout .payment-methods .tab-content {
+    padding: 40px 44px 0 32px;
+}
+section.checkout .payment-methods .tab-content>.active {
+    display: flex;
+}
+section.checkout .payment-methods .checkout-button {
+    margin-right: 42px;
+    flex-basis: 445px;
+}
+section.checkout .payment-methods .price {
+    margin-bottom: 15px;
+}
+section.checkout .payment-methods .checkout {
+    height: 61px;
+    border-radius: 2px;
+}
+section.checkout .payment-methods .text {
+    flex-basis: 232px;
+}
+section.checkout .payment-methods .text h3 {
+    margin-bottom: 21px;
+}
+section.checkout .payment-methods .text p {
+    margin-top: 15px;
+}
+section.checkout .shopping-items {
+    border-radius: 5px;
+    border: 1px solid #e5dacb;
+    top: -73px;
+}
+section.checkout .shopping-items .title {
+    border-bottom: 1px solid #e5dacb;
+    padding: 26px 28px 16px 24px;
+}
+section.checkout .shopping-items .item {
+    padding: 20px 0 13px 21px;
+    border-bottom: 1px solid #e5dacb;
+}
+section.checkout .shopping-items .text {
+    margin-left: 18px;
+}
+section.checkout .shopping-items .footer {
+    padding: 19px 12px 22px 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 13 Page
+\* ------------------------------------------------------------------ */
+
 /* -------------------- *\
   Media Queries
 \* -------------------- */
@@ -1144,6 +1339,14 @@ section.shopping-cart .shopping-price .footer {
     }
     section.shopping-cart .shopping-price {
         margin-top: 40px;
+    }
+    section.checkout .information {
+        margin-right: 0;
+        flex-basis: auto;
+    }
+    section.checkout .shopping-items {
+        top: 0;
+        margin-bottom: 35px;
     }
 }
 @media (max-width: 991px) {
@@ -1244,6 +1447,20 @@ section.shopping-cart .shopping-price .footer {
     }
     section.product .modal-body {
         padding: 0 24px;
+    }
+    section.checkout .information .form-group:nth-of-type(odd):not(:last-of-type) {
+        margin-right: 0;
+    }
+    section.checkout .reciver-info .checkbox.info {
+        left: 20px;
+        margin-bottom: 32px;
+    }
+    section.checkout .payment-methods .checkout-button, section.checkout .payment-methods .text {
+        flex-basis: auto;
+    }
+    section.checkout .payment-methods .checkout-button {
+        margin-right: 0;
+        margin-bottom: 40px;
     }
 }
 @media (max-width: 575px) {
@@ -1363,6 +1580,13 @@ section.shopping-cart .shopping-price .footer {
     }
     section.shopping-cart .details .edit {
         margin-top: 20px;
+    }
+    section.checkout .container {
+        padding: 0;
+    }
+    section.checkout .information .reciver-info, section.checkout .information .sender-info {
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
 @media (max-width: 350px) {

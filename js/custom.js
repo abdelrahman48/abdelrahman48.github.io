@@ -54,13 +54,15 @@ $(function () {
         $(this).siblings('.number').text(parseInt($(this).siblings('.number').text()) - 1)
     });
 
-    $('.category-list').on('click', addToCart, function () {
-        if (shoppingCartNumber.text() === '') {
-            shoppingCartNumber.text('0')
+    $('.category-list').on('click', function (e) {
+        if(e.target.tagName === 'I') {
+            if (shoppingCartNumber.text() === '') {
+                shoppingCartNumber.text('0')
+            }
+            shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
+            shoppingCartNumber.addClass('active');
+            shoppingCart.attr('src', 'img/handbag-active.svg');
         }
-        shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
-        shoppingCartNumber.addClass('active');
-        shoppingCart.attr('src', 'img/handbag-active.svg');
     });
 
     thumbnailArrowLeft.on('click', function () {
