@@ -148,6 +148,9 @@ textarea {
 .font-38 {
     font-size: 38px;
 }
+.font-700 {
+    font-weight: 700;
+}
 .frutiger-light {
     font-family: "Frutiger LT Arabic 45 Light", sans-serif;
 }
@@ -205,6 +208,9 @@ textarea {
 .white-bg {
     background-color: #fff;
 }
+.whitish-bg {
+    background-color: #fefdfc;
+}
 .no-outline, .no-outline:focus {
     outline: none;
 }
@@ -213,6 +219,12 @@ textarea {
 }
 .main-border {
     border: 1px solid #e5dacb;
+}
+.main-border-b {
+    border-bottom: 1px solid #e5dacb;
+}
+.image-border {
+    border: 1px solid rgba(175, 169, 160, .5)
 }
 .br-2 {
     border-radius: 2px;
@@ -225,6 +237,12 @@ textarea {
 }
 .br-5 {
     border-radius: 5px;
+}
+.br-10 {
+    border-radius: 10px;
+}
+.br-24 {
+    border-radius: 24px;
 }
 .quran-btn {
     border-radius: 6px;
@@ -1422,7 +1440,84 @@ section.create-account .social-login button {
 /* ------------------------------------------------------------------ *\
   End Copy 15 Page
 \* ------------------------------------------------------------------ */
-
+/* ------------------------------------------------------------------ *\
+  Start Copy 18 Page
+\* ------------------------------------------------------------------ */
+header .user-button {
+    height: 47px;
+    width: 210px;
+    background-color: #e5dacb;
+}
+section.user-profile .profile-info-container {
+    padding: 44px 0 124px;
+}
+section.user-profile .profile-links {
+    margin-right: 40px;
+}
+section.user-profile .profile-links .active i,
+section.user-profile .profile-links .active a,
+section.user-profile .profile-links a:hover {
+    color: #106b2e;
+}
+section.user-profile .profile-links li {
+    padding: 30px 0 29px 39px;
+}
+section.user-profile  .profile-links i {
+    margin-right: 23px;
+}
+section.user-profile  .profile-links li:not(:last-of-type) {
+    border-bottom: 1px solid #e5dacb;
+}
+section.user-profile .orders-container {
+    flex-basis: 723px;
+}
+section.user-profile .orders-info {
+    padding: 25px 0 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+section.user-profile .orders-info:not(:last-of-type) {
+    margin-bottom: 42px;
+}
+section.user-profile .orders-info .header,
+section.user-profile .shopping-item,
+section.user-profile .orders-info .footer {
+    padding: 0 25px 0 34px;
+}
+section.user-profile .orders-info .header {
+    padding-bottom: 24px;
+}
+section.user-profile .orders-info .delivered {
+    color: #106b2e;
+}
+section.user-profile .shopping-item .title {
+    padding: 35px 0 25px;
+}
+section.user-profile .shopping-item .image {
+    margin-right: 23px;
+}
+section.user-profile .shopping-item .flag {
+    margin-right: 11px;
+}
+section.user-profile .shopping-item .size {
+    padding: 11px 15px 8px;
+    background-color: #f7f4ef;
+}
+section.user-profile .size span:nth-of-type(odd) {
+    margin-right: 32px;
+}
+section.user-profile .shopping-item .copies-number {
+    padding: 22px 0 31px;
+}
+section.user-profile .orders-info .footer {
+    padding-top: 16px;
+}
+section.user-profile .footer .view-order {
+    width: 157px;
+    height: 50px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 18 Page
+\* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
 \* -------------------- */
@@ -1477,7 +1572,8 @@ section.create-account .social-login button {
     section.product-info .text-wrapper .description {
         flex: 0 0 350px;
     }
-    section.shopping-cart .shopping-items {
+    section.shopping-cart .shopping-items,
+    section.user-profile .profile-links {
         margin-right: 0;
     }
     section.shopping-cart .shopping-price {
@@ -1485,7 +1581,8 @@ section.create-account .social-login button {
     }
     section.checkout .information,
     section.contact-us .contact-form,
-    section.create-account .register-form {
+    section.create-account .register-form,
+    section.user-profile .orders-container {
         margin-right: 0;
         flex-basis: auto;
     }
@@ -1498,6 +1595,9 @@ section.create-account .social-login button {
     }
     section.create-account .register-form {
         margin-bottom: 52px;
+    }
+    section.user-profile .profile-links {
+        margin-bottom: 44px;
     }
 }
 @media (max-width: 991px) {
@@ -1682,6 +1782,13 @@ section.create-account .social-login button {
         right: 5px;
         top: 8px;
     }
+    section.user-profile .orders-info .footer {
+        flex-direction: column;
+    }
+    section.user-profile .footer .view-order {
+        margin-top: 14px;
+        width: 100%;
+    }
 }
 @media (max-width: 400px) {
     header .navbar .register,
@@ -1740,7 +1847,10 @@ section.create-account .social-login button {
     section.checkout .information .sender-info,
     section.contact-us .contact-form,
     section.create-account .register-form,
-    section.create-account .login-form {
+    section.create-account .login-form,
+    section.user-profile .orders-info .header,
+    section.user-profile .shopping-item,
+    section.user-profile .orders-info .footer {
         padding-right: 10px;
         padding-left: 10px;
     }
