@@ -1363,6 +1363,7 @@ section.faq.contact .accordion {
 }
 section.faq.contact .accordion .card {
     margin-bottom: 12px;
+    background-color: transparent;
 }
 section.faq.contact .card .caret {
     margin-right: 9px;
