@@ -6,6 +6,10 @@
     src: url(../fonts/FrutigerLTArabic-45Light.ttf);
 }
 @font-face {
+    font-family: "Frutiger LT Arabic 55 Roman";
+    src: url(../fonts/FrutigerLTArabic-55Roman.ttf);
+}
+@font-face {
     font-family: Roboto;
     src: url(../fonts/Roboto-Regular.ttf);
 }
@@ -63,17 +67,53 @@ textarea:focus ~ .floating-label {
 select {
     -webkit-appearance: none;
 }
+.form-group {
+    flex: 1 1 calc(50% - 20px);
+    margin-bottom: 20px;
+}
+.flex-wrap .form-group:nth-of-type(odd):not(:last-of-type) {
+    margin-right: 20px;
+}
+.form-group i {
+    padding: 0 9px 0 20px;
+}
+.form-group input, .form-group select {
+    height: 75px;
+}
+.select-wrapper:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent;
+    border-top-color: #afa9a0;
+    cursor: pointer;
+    pointer-events: none;
+}
+input[type=checkbox] {
+    height: auto;
+}
+textarea {
+    resize: none;
+}
 /* -------------------- *\
   Start components
 \* -------------------- */
 .font-14 {
     font-size: 14px;
 }
-.font-18 {
-    font-size: 18px;
+.font-15 {
+    font-size: 15px;
 }
 .font-16 {
     font-size: 16px;
+}
+.font-18 {
+    font-size: 18px;
 }
 .font-20 {
     font-size: 20px;
@@ -104,6 +144,9 @@ select {
 }
 .frutiger-light {
     font-family: "Frutiger LT Arabic 45 Light", sans-serif;
+}
+.frutiger-roman {
+    font-family: "Frutiger LT Arabic 45 Roman", sans-serif;
 }
 .roboto {
     font-family: Roboto, sans-serif;
@@ -161,6 +204,21 @@ select {
 }
 .no-border {
     border: none;
+}
+.main-border {
+    border: 1px solid #e5dacb;
+}
+.br-2 {
+    border-radius: 2px;
+}
+.br-3 {
+    border-radius: 3px;
+}
+.br-4 {
+    border-radius: 4px;
+}
+.br-5 {
+    border-radius: 5px;
 }
 .quran-btn {
     border-radius: 6px;
@@ -846,20 +904,6 @@ section.product .select-wrapper, section.shopping-cart .select-wrapper {
     height: 61px;
     margin-bottom: 34px;
 }
-section.product .select-wrapper:after, section.shopping-cart .select-wrapper:after, section.checkout .information .select-wrapper:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    transform: translateY(-50%);
-    border-style: solid;
-    border-width: 6px;
-    border-color: transparent;
-    border-top-color: #afa9a0;
-    cursor: pointer;
-    pointer-events: none;
-}
 section.product .select, section.shopping-cart .select {
     height: 61px;
     border-radius: 2px;
@@ -1132,25 +1176,6 @@ section.checkout .information .sender-info {
 section.checkout .sender-info h2 {
     margin-bottom: 37px;
 }
-section.checkout .information .form-group {
-    flex: 1 1 calc(50% - 21px);
-    margin-bottom: 21px;
-}
-section.checkout .information .form-group:nth-of-type(odd):not(:last-of-type) {
-    margin-right: 21px;
-}
-section.checkout .information .form-group i {
-    padding: 0 9px 0 20px;
-}
-section.checkout .information input, section.checkout .information select {
-    height: 75px;
-}
-section.checkout .information .select-wrapper:after {
-    right: 19px;
-}
-section.checkout .information input[type=checkbox] {
-    height: auto;
-}
 section.checkout .information .reciver-info {
     padding: 40px 34px 36px 33px;
     margin-bottom: 21px;
@@ -1196,13 +1221,10 @@ section.checkout .reciver-info .gift-checkbox {
     margin: 11px 0 32px;
 }
 section.checkout .reciver-info .textarea {
-    width: 728px;
     height: 198px;
     padding: 27px;
-    border-radius: 5px;
     border: 1px solid #ac4c31;
     background-color: rgba(172, 76, 49, .05);
-    resize: none;
 }
 .floating-label.gift-label {
     left: 28px;
@@ -1279,6 +1301,69 @@ section.checkout .shopping-items .footer {
 /* ------------------------------------------------------------------ *\
   End Copy 13 Page
 \* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 14 Page
+\* ------------------------------------------------------------------ */
+section.contact-us .contact-form {
+    flex-basis: 734px;
+    padding: 30px 36px 30px 33px;
+    margin: 52px 44px 35px 0;
+}
+section.contact-us .contact-form h2 {
+    margin: 0 0 24px 1px;
+}
+section.contact-us .contact-form .textarea {
+    height: 191px;
+    padding: 27px;
+}
+section.contact-us .contact-form .submit {
+    height: 61px;
+    width: 238px;
+    margin-top: 12px;
+}
+section.contact-us .contact-info {
+    margin: 52px 0;
+}
+section.contact-us .contact-number {
+    padding: 32px 0 25px 34px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+section.contact-us .contact-number .phone-icon {
+    font-size: 38px;
+    transform: rotate(90deg);
+    left: -5px;
+    margin-right: 19px;
+}
+section.contact-us .follow-us h3 {
+    margin-bottom: 18px;
+}
+section.contact-us .follow-us i {
+    font-size: 28px;
+    margin: 6px 6px 0 0;
+}
+section.contact-us .follow-us span {
+    padding: 21px 0 8px;
+    border-bottom: 1px solid #c8c7cc;
+}
+section.faq.contact {
+    margin-bottom: 53px;
+}
+section.faq.contact .card button:hover, section.faq.contact .card button:focus {
+    color: #106b2e;
+}
+section.faq.contact .accordion {
+    margin-top: 11px;
+}
+section.faq.contact .accordion .card {
+    margin-bottom: 12px;
+}
+section.faq.contact .card .caret {
+    margin-right: 9px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 14 Page
+\* ------------------------------------------------------------------ */
 
 /* -------------------- *\
   Media Queries
@@ -1340,13 +1425,16 @@ section.checkout .shopping-items .footer {
     section.shopping-cart .shopping-price {
         margin-top: 40px;
     }
-    section.checkout .information {
+    section.checkout .information, section.contact-us .contact-form {
         margin-right: 0;
         flex-basis: auto;
     }
     section.checkout .shopping-items {
         top: 0;
         margin-bottom: 35px;
+    }
+    section.contact-us .contact-info {
+        margin-bottom: 20px;
     }
 }
 @media (max-width: 991px) {
@@ -1448,7 +1536,7 @@ section.checkout .shopping-items .footer {
     section.product .modal-body {
         padding: 0 24px;
     }
-    section.checkout .information .form-group:nth-of-type(odd):not(:last-of-type) {
+    .flex-wrap .form-group:nth-of-type(odd):not(:last-of-type) {
         margin-right: 0;
     }
     section.checkout .reciver-info .checkbox.info {
@@ -1584,9 +1672,17 @@ section.checkout .shopping-items .footer {
     section.checkout .container {
         padding: 0;
     }
-    section.checkout .information .reciver-info, section.checkout .information .sender-info {
+    section.checkout .information .reciver-info,
+    section.checkout .information .sender-info,
+    section.contact-us .contact-form {
         padding-right: 10px;
         padding-left: 10px;
+    }
+    section.contact-us .contact-form .submit {
+        width: auto;
+    }
+    section.contact-us .contact-number {
+        padding-left: 15px;
     }
 }
 @media (max-width: 350px) {
