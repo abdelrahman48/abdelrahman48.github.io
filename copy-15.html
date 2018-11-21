@@ -205,7 +205,7 @@
 <!-- Start Checkout Section -->
 <section class="create-account">
     <div class="container">
-        <div class="contact d-block d-md-flex align-items-start justify-content-center flex-wrap flex-xl-nowrap">
+        <div class="form d-block d-xl-flex align-items-start justify-content-center flex-wrap flex-xl-nowrap">
 
             <div class="register-form main-border br-5 white-bg">
                 <h2 class="roboto font-24">Register</h2>
@@ -270,47 +270,54 @@
                 </form>
             </div>
 
-            <div class="login-form white-bg flex-grow-1">
+            <div class="login-container flex-grow-1">
 
-                <div class="header align-items-center">
-                    <h4 class="roboto font-24">Login</h4>
-                    <button class="register brown-text roboto-medium font-18 transparent">Create a new account
-                        <i class="ti-angle-right align-middle"></i>
-                    </button>
+                <div class="login-form white-bg">
+
+                    <div class="header d-flex align-items-center justify-content-between">
+                        <h2 class="roboto font-24">Login</h2>
+                        <button class="forget-account d-flex align-items-center
+                     brown-text roboto-medium font-18 transparent">Forget my account
+                            <i class="ti-angle-down ml-2"></i>
+                        </button>
+                    </div>
+
+                    <form class="d-flex flex-column">
+                        <div class="form-group main-border br-2 mr-0">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
+                                </div>
+                                <input type="email" class="form-control font-18 roboto black-text-0 no-border small" placeholder="" aria-label="Email Adress" name="sender-email">
+                                <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group main-border br-2">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
+                                </div>
+                                <input type="password" class="form-control font-18 roboto black-text-0 no-border small" placeholder="" aria-label="Password" name="sender-password">
+                                <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Password</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit roboto-medium font-18 green-text">Login</button>
+                    </form>
                 </div>
 
-                <form class="d-flex flex-column">
-                    <div class="form-group main-border br-2 mr-0">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <input type="email" class="form-control roboto no-border" placeholder="Email Adress" aria-label="Email Adress">
-                        </div>
-                    </div>
-                    <div class="form-group main-border br-2">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <input type="password" class="form-control no-border" placeholder="Password" aria-label="Password">
-                        </div>
-                    </div>
-                    <button type="submit" class="submit roboto-medium font-18 green-text">Login</button>
-                </form>
-                <div class="modal-footer no-border flex-column">
-                    <h5 class="black-text-6 roboto font-18 mb-0">Easy Login with social media</h5>
+                <div class="social-login text-center">
+                    <h5 class="black-text-6 roboto font-18">Easy Login with social media</h5>
 
-                    <div class="social-login d-flex">
-                        <button class="white-text font-14" style="background-color: #6081c4">
+                    <div class="social-links d-flex justify-content-center align-items-center">
+                        <button class="white-text font-14 br-3" style="background-color: #6081c4">
                             <i class="fab fa-facebook-f  font-16"></i>
                             Facebook
                         </button>
-                        <button class="white-text font-14" style="background-color: #43bdf0">
+                        <button class="white-text font-14 br-3" style="background-color: #43bdf0">
                             <i class="fab fa-twitter  font-16"></i>
                             Twitter
                         </button>
-                        <button class="white-text font-14" style="background-color: #f34a38">
+                        <button class="white-text font-14 br-3" style="background-color: #f34a38">
                             <i class="fab fa-google-plus-g  font-16"></i>
                             Google+
                         </button>
