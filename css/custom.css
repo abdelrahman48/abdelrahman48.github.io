@@ -64,6 +64,12 @@ textarea:focus ~ .floating-label {
     top: 26px;
     z-index: 999;
 }
+input.small:focus ~ .floating-label {
+    top: 1px;
+}
+input.small ~ .floating-label {
+    top: 19px;
+}
 select {
     -webkit-appearance: none;
 }
@@ -1367,9 +1373,12 @@ section.faq.contact .card .caret {
 /* ------------------------------------------------------------------ *\
   Start Copy 15 Page
 \* ------------------------------------------------------------------ */
+section.create-account .form {
+    margin: 52px 0 70px;
+}
 section.create-account .register-form {
     flex-basis: 644px;
-    margin: 52px 44px 70px 0;
+    margin-right: 44px;
     padding: 30px 26px 36px 33px;
 }
 section.create-account .register-form h2 {
@@ -1382,6 +1391,32 @@ section.create-account .register-form .submit {
 }
 section.create-account .login-form {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    padding: 31px 22px 45px 23px;
+}
+section.create-account .login-form .header {
+    margin: 0 0 19px 2px;
+}
+section.create-account .login-form .form-group {
+    margin-bottom: 10px;
+}
+section.create-account .login-form input {
+    height: 61px;
+}
+section.create-account .login-form .submit {
+    background-color: rgba(16, 107, 46, .1);
+    margin-top: 10px;
+    height: 61px;
+}
+section.create-account .social-login {
+    margin-top: 70px;
+}
+section.create-account .social-login h5 {
+    margin-bottom: 19px;
+}
+section.create-account .social-login button {
+    margin: 0 6px;
+    height: 40px;
+    width: 110px;
 }
 /* ------------------------------------------------------------------ *\
   End Copy 15 Page
@@ -1447,7 +1482,9 @@ section.create-account .login-form {
     section.shopping-cart .shopping-price {
         margin-top: 40px;
     }
-    section.checkout .information, section.contact-us .contact-form {
+    section.checkout .information,
+    section.contact-us .contact-form,
+    section.create-account .register-form {
         margin-right: 0;
         flex-basis: auto;
     }
@@ -1457,6 +1494,9 @@ section.create-account .login-form {
     }
     section.contact-us .contact-info {
         margin-bottom: 20px;
+    }
+    section.create-account .register-form {
+        margin-bottom: 52px;
     }
 }
 @media (max-width: 991px) {
@@ -1643,8 +1683,9 @@ section.create-account .login-form {
     }
 }
 @media (max-width: 400px) {
-    header .navbar .register {
-        font-size: 16px;
+    header .navbar .register,
+    section.create-account .forget-account {
+        font-size: 15px;
     }
     header .navbar .social-login {
         flex-direction: column;
@@ -1696,7 +1737,9 @@ section.create-account .login-form {
     }
     section.checkout .information .reciver-info,
     section.checkout .information .sender-info,
-    section.contact-us .contact-form {
+    section.contact-us .contact-form,
+    section.create-account .register-form,
+    section.create-account .login-form {
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -1705,6 +1748,12 @@ section.create-account .login-form {
     }
     section.contact-us .contact-number {
         padding-left: 15px;
+    }
+    section.create-account .social-links {
+        flex-direction: column;
+    }
+    section.create-account .social-links button {
+        margin: 6px 0;
     }
 }
 @media (max-width: 350px) {
