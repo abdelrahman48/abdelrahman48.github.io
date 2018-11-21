@@ -1364,6 +1364,28 @@ section.faq.contact .card .caret {
 /* ------------------------------------------------------------------ *\
   End Copy 14 Page
 \* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 15 Page
+\* ------------------------------------------------------------------ */
+section.create-account .register-form {
+    flex-basis: 644px;
+    margin: 52px 44px 70px 0;
+    padding: 30px 26px 36px 33px;
+}
+section.create-account .register-form h2 {
+    margin: 0 0 38px 1px;
+}
+section.create-account .register-form .submit {
+    width: 193px;
+    height: 61px;
+    margin-top: 13px;
+}
+section.create-account .login-form {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 15 Page
+\* ------------------------------------------------------------------ */
 
 /* -------------------- *\
   Media Queries
@@ -1678,7 +1700,7 @@ section.faq.contact .card .caret {
         padding-right: 10px;
         padding-left: 10px;
     }
-    section.contact-us .contact-form .submit {
+    section.contact-us .contact-form .submit, section.create-account .register-form .submit {
         width: auto;
     }
     section.contact-us .contact-number {
