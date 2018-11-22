@@ -136,8 +136,8 @@ textarea {
     font-size: 24px;
 }
 .font-26 {
-     font-size: 26px;
- }
+    font-size: 26px;
+}
 .font-25 {
     font-size: 25px;
 }
@@ -998,7 +998,7 @@ section.product .modal-header .close span {
     margin: 0 0 5px 1px;
 }
 section.product .modal-body {
-     padding: 0 24px 0 29px;
+    padding: 0 24px 0 29px;
 }
 section.product .modal-body .image-wrapper {
     margin: 0 34px 0 0;
@@ -1543,11 +1543,8 @@ section.user-profile address {
 section.user-profile address span {
     line-height: 21px;
 }
-section.user-profile .buttons {
-    margin-left: 4px;
-}
-section.user-profile .primary-address button.green-bg,
-section.user-profile .secondry-address button.green-bg {
+section.user-profile button.green-bg,
+section.user-profile button.green-bg {
     width: 199px;
     height: 50px;
     margin-right: 35px;
@@ -1564,9 +1561,30 @@ section.user-profile .new-address {
 \* ------------------------------------------------------------------ */
 section.user-profile .personal-info {
     padding: 40px 35px;
+    margin-bottom: 17px;
 }
 section.user-profile .personal-info h2 {
     margin-bottom: 40px;
+}
+section.user-profile .personal-info .buttons {
+    margin-top: 33px;
+}
+section.user-profile .save {
+    width: 193px;
+    height: 61px;
+}
+section.user-profile .account-info {
+    padding: 41px 33px;
+}
+section.user-profile .account-info h2 {
+    margin-bottom: 27px;
+}
+section.user-profile .account-info address {
+    margin-bottom: 60px;
+}
+section.user-profile .account-info button {
+    margin-left: 4px;
+    margin-right: 0;
 }
 /* ------------------------------------------------------------------ *\
   End Copy 20 Page
@@ -1634,10 +1652,7 @@ section.user-profile .personal-info h2 {
     }
     section.checkout .information,
     section.contact-us .contact-form,
-    section.create-account .register-form,
-    section.user-profile .orders-container,
-    section.user-profile .orders-container,
-    section.user-profile .address-container{
+    section.create-account .register-form {
         margin-right: 0;
         flex-basis: auto;
     }
@@ -1761,7 +1776,8 @@ section.user-profile .personal-info h2 {
         left: 20px;
         margin-bottom: 32px;
     }
-    section.checkout .payment-methods .checkout-button, section.checkout .payment-methods .text {
+    section.checkout .payment-methods .checkout-button,
+    section.checkout .payment-methods .text {
         flex-basis: auto;
     }
     section.checkout .payment-methods .checkout-button {
@@ -1844,7 +1860,7 @@ section.user-profile .personal-info h2 {
         margin-top: 14px;
         width: 100%;
     }
-    section.user-profile .buttons {
+    section.user-profile .address-container .buttons {
         text-align: center;
     }
     section.user-profile .primary-address button.green-bg,
@@ -1919,7 +1935,9 @@ section.user-profile .personal-info h2 {
     section.user-profile .shopping-item,
     section.user-profile .orders-info .footer,
     section.user-profile .primary-address,
-    section.user-profile .secondry-address {
+    section.user-profile .secondry-address,
+    section.user-profile .personal-info,
+    section.user-profile .account-info {
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -1934,6 +1952,9 @@ section.user-profile .personal-info h2 {
     }
     section.create-account .social-links button {
         margin: 6px 0;
+    }
+    section.user-profile .personal-info-container button {
+        width: 100%;
     }
 }
 @media (max-width: 350px) {
@@ -1980,9 +2001,3 @@ section.user-profile .personal-info h2 {
         display: none;
     }
 }
-* {
-    color: blue !important;
-    border-color: blue !important;
-}
-
-
