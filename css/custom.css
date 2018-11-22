@@ -76,8 +76,10 @@ select {
 .form-group {
     flex: 1 1 calc(50% - 20px);
     margin-bottom: 20px;
+    border-radius: 2px;
+    border: 1px solid #e5dacb;
 }
-.flex-wrap .form-group:nth-of-type(odd):not(:last-of-type) {
+.flex-wrap > .form-group:nth-of-type(odd):not(:last-of-type) {
     margin-right: 20px;
 }
 .form-group i {
@@ -211,6 +213,9 @@ textarea {
 .whitish-bg {
     background-color: #fefdfc;
 }
+.green-bg {
+    background-color: rgba(16, 107, 46, .1);;
+}
 .no-outline, .no-outline:focus {
     outline: none;
 }
@@ -237,6 +242,9 @@ textarea {
 }
 .br-5 {
     border-radius: 5px;
+}
+.br-6 {
+    border-radius: 6px;
 }
 .br-10 {
     border-radius: 10px;
@@ -438,10 +446,6 @@ header .navbar .modal-content {
 }
 header .navbar .modal-header {
     padding: 32px 9px 3px 16px;
-}
-header .form-group, section.checkout .form-group {
-    border-radius: 2px;
-    border: 1px solid #e5dacb;
 }
 header form .form-control {
     height: 61px;
@@ -756,8 +760,6 @@ section.products .input-wrapper {
 }
 section.products .input-wrapper input {
     padding: 14px 23px 15px 57px;
-    border-radius: 6px;
-    border: 1px solid #e5dacb;
     background-color: #f7f3ee;
 }
 section.products .input-wrapper input::placeholder {
@@ -1187,12 +1189,6 @@ section.checkout .information {
     flex-basis: 800px;
     margin: 52px 35px 51px 0;
 }
-section.checkout .information .sender-info,
-section.checkout .information .reciver-info,
-section.checkout .information .payment-methods {
-    border-radius: 5px;
-    border: 1px solid #e5dacb;
-}
 section.checkout .information .sender-info {
     padding: 30px 24px 7px 33px;
     margin-bottom: 35px;
@@ -1468,8 +1464,8 @@ section.user-profile  .profile-links i {
 section.user-profile  .profile-links li:not(:last-of-type) {
     border-bottom: 1px solid #e5dacb;
 }
-section.user-profile .orders-container {
-    flex-basis: 723px;
+section.user-profile .orders-container, section.user-profile .address-container {
+    flex-basis: 726px;
 }
 section.user-profile .orders-info {
     padding: 25px 0 15px 0;
@@ -1517,6 +1513,49 @@ section.user-profile .footer .view-order {
 }
 /* ------------------------------------------------------------------ *\
   End Copy 18 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 19 Page
+\* ------------------------------------------------------------------ */
+section.user-profile .primary-address {
+    padding: 40px 21px 30px 33px;
+    margin-bottom: 27px;
+}
+section.user-profile .primary-address h2 {
+    margin-bottom: 40px;
+}
+section.user-profile .primary-address .buttons {
+    margin-top: 49px;
+}
+section.user-profile .secondry-address {
+    padding: 39px 33px 25px;
+    margin-bottom: 50px;
+}
+section.user-profile .secondry-address h2 {
+    margin-bottom: 28px;
+}
+section.user-profile address {
+    margin-left: 2px;
+    margin-bottom: 39px;
+}
+section.user-profile address span {
+    line-height: 21px;
+}
+section.user-profile .buttons {
+    margin-left: 4px;
+}
+section.user-profile .primary-address button.green-bg,
+section.user-profile .secondry-address button.green-bg {
+    width: 199px;
+    height: 50px;
+    margin-right: 35px;
+}
+section.user-profile .new-address {
+    width: 382px;
+    height: 50px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 19 Page
 \* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
@@ -1582,7 +1621,9 @@ section.user-profile .footer .view-order {
     section.checkout .information,
     section.contact-us .contact-form,
     section.create-account .register-form,
-    section.user-profile .orders-container {
+    section.user-profile .orders-container,
+    section.user-profile .orders-container,
+    section.user-profile .address-container{
         margin-right: 0;
         flex-basis: auto;
     }
@@ -1789,6 +1830,18 @@ section.user-profile .footer .view-order {
         margin-top: 14px;
         width: 100%;
     }
+    section.user-profile .buttons {
+        text-align: center;
+    }
+    section.user-profile .primary-address button.green-bg,
+    section.user-profile .secondry-address button.green-bg {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+    section.user-profile .new-address {
+        width: 100%;
+    }
 }
 @media (max-width: 400px) {
     header .navbar .register,
@@ -1850,7 +1903,9 @@ section.user-profile .footer .view-order {
     section.create-account .login-form,
     section.user-profile .orders-info .header,
     section.user-profile .shopping-item,
-    section.user-profile .orders-info .footer {
+    section.user-profile .orders-info .footer,
+    section.user-profile .primary-address,
+    section.user-profile .secondry-address {
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -1880,6 +1935,9 @@ section.user-profile .footer .view-order {
     footer .print-provider-btn {
         padding: 11px 25px;
     }
+    section.user-profile .profile-links li {
+        padding-left: 20px;
+    }
 }
 @media (min-width: 1250px) {
     .navbar-expand-custom {
@@ -1908,4 +1966,5 @@ section.user-profile .footer .view-order {
         display: none;
     }
 }
+
 
