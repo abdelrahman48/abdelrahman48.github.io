@@ -1464,7 +1464,9 @@ section.user-profile  .profile-links i {
 section.user-profile  .profile-links li:not(:last-of-type) {
     border-bottom: 1px solid #e5dacb;
 }
-section.user-profile .orders-container, section.user-profile .address-container {
+section.user-profile .orders-container,
+section.user-profile .address-container,
+section.user-profile .personal-info-container {
     flex-basis: 726px;
 }
 section.user-profile .orders-info {
@@ -1556,6 +1558,18 @@ section.user-profile .new-address {
 }
 /* ------------------------------------------------------------------ *\
   End Copy 19 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 20 Page
+\* ------------------------------------------------------------------ */
+section.user-profile .personal-info {
+    padding: 40px 35px;
+}
+section.user-profile .personal-info h2 {
+    margin-bottom: 40px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 20 Page
 \* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
@@ -1965,6 +1979,10 @@ section.user-profile .new-address {
     .navbar-expand-custom .navbar-toggler {
         display: none;
     }
+}
+* {
+    color: blue !important;
+    border-color: blue !important;
 }
 
 
