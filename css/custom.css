@@ -378,21 +378,28 @@ header .navbar .cart-modal .modal-header {
 header .cart-modal .modal-body {
     padding: 26px 37px;
     margin-top: 23px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: #f9f8f5;
+}
+header .cart-modal .modal-body {
+    cursor: grab;
 }
 header .cart-modal .modal-body.active {
     cursor: grabbing;
     cursor: -webkit-grabbing;
 }
 header .cart-modal .item {
+    width: 233px;
+    height: 248px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
     border-radius: 2px;
     margin-right: 25px;
     background-color: #fff;
 }
-header .cart-modal .close {
+header .cart-modal .empty-cart.hide {
+    display: none !important;
+}
+header .cart-modal .delete {
     top: 6px;
     left: 7px;
     width: 14px;
@@ -404,16 +411,17 @@ header .cart-modal .close {
     border-radius: 50%;
     line-height: 0;
 }
-header .cart-modal .close:hover {
+header .cart-modal .delete:hover {
     color: #fff !important;
     opacity: .9 !important;
 }
-header .cart-modal .close span {
-    margin: 0 0 8px 0;
+header .cart-modal .delete span {
+    left: 4px;
+    top: 6px;
     font-size: 10px;
 }
 header .cart-modal .item-image {
-    margin: 3px 0 0 16px;
+    margin: -20px 0 0 16px;
 }
 header .cart-modal .item-body {
     padding: 16px 12px 13px 11px;
@@ -1006,6 +1014,12 @@ section.product .modal-body .image-wrapper {
 section.product .modal-body .image {
     height: auto;
     margin: 0;
+}
+section.product .modal-body .image img {
+    display: none ;
+}
+section.product .modal-body .image img.active {
+    display: block;
 }
 section.product .modal-body .thumbnail li {
     width: 51px;

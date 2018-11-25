@@ -8,19 +8,26 @@ $(function () {
     var paginationLi = $('.pagination-list .page-number'),
         productThumbnail = $('section.product .thumbnail li'),
         sizeButton = $('.details .size button'),
-        addCopy = $('.copies-number .plus'),
-        removeCopy = $('.copies-number .minus'),
+        previewItem = $('section.products .item .preview'),
+        increaseNumberOfCopy = $('.copies-number .plus'),
+        decreaseNumberOfCopy = $('.copies-number .minus'),
+        addToCart = $('section.product .cart'),
+        shoppingCart = $('header .navbar .handbag'),
+        shoppingCartNumber = $('header .navbar .cart-number'),
+        numberOfCopies = $('.copies-number .number'),
+        shoppingCartItemsParent = $('header .cart-modal .modal-body'),
         thumbnailLi = $('section.product .modal-body .thumbnail li'),
         thumbnailArrowLeft = $('section.product .modal-body .left'),
         thumbnailArrowright = $('section.product .modal-body .right'),
-        addToCart = $('section.products .item .handbag'),
-        shoppingCart = $('header .navbar .handbag'),
-        shoppingCartNumber = $('header .navbar .cart-number'),
         editItemOptions = $('section.shopping-cart .details .edit'),
         finishEditItemOptions = $('section.shopping-cart .details .done'),
-        hiddenItemOptions = $('section.shopping-cart .details .hidden'),
-        visibleItemOptions = $('section.shopping-cart .details .visible'),
-        deleteItem = $('section.shopping-cart .details .delete');
+        deleteItem1 = $('header .cart-modal .delete');
+        deleteItem2 = $('section.shopping-cart .details .delete');
+        
+        
+        if(shoppingCartItemsParent.children('.item').length == 0) {
+        $('.empty-cart').removeClass('hide');
+    }
 
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
@@ -34,7 +41,7 @@ $(function () {
         paginationLi.filter('.active').removeClass('active').next('.page-number').addClass('active');
     });
 
-    for(i = 0; i < 2; i++) {
+    for(i = 0; i < 2; i++) { // generate multiply items divs by clone only 3 items
         $('.category-list .item').clone().insertAfter(".category-list .item:last");
     }
 
@@ -46,32 +53,55 @@ $(function () {
         $(this).addClass('active').siblings('button').removeClass('active');
     });
 
-    addCopy.on('click', function () {
-        $(this).siblings('.number').text(parseInt($(this).siblings('.number').text()) + 1)
-    });
-    removeCopy.on('click', function () {
-        if(parseInt($(this).siblings('.number').text()) < 1) return;
-        $(this).siblings('.number').text(parseInt($(this).siblings('.number').text()) - 1)
+    previewItem.on('click', function () {
+        numberOfCopies.text('0');
     });
 
-    $('.category-list').on('click', function (e) {
-        if(e.target.tagName === 'I') {
-            if (shoppingCartNumber.text() === '') {
-                shoppingCartNumber.text('0')
-            }
-            shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
+    increaseNumberOfCopy.on('click', function () {
+        numberOfCopies.text(parseInt(numberOfCopies.text()) + 1);
+    });
+    decreaseNumberOfCopy.on('click', function () {
+        if(parseInt(numberOfCopies.text()) < 1) return;
+        numberOfCopies.text(parseInt(numberOfCopies.text()) - 1);
+    });
+
+    addToCart.on('click', function () {
+        if(parseInt(numberOfCopies.text()) < 1) return;
+        shoppingCartNumber.text( parseInt(shoppingCartNumber.text()) + parseInt(numberOfCopies.text()) );
+        if (parseInt(numberOfCopies.text()) > 0) {
+            if(shoppingCartNumber.hasClass('active')) return;
             shoppingCartNumber.addClass('active');
             shoppingCart.attr('src', 'img/handbag-active.svg');
         }
     });
 
+    $('.category-list').on('click', function (e) { // add item to shopping cart when click on shopping icon
+        if(e.target.tagName === 'I') {
+            shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
+
+            if(shoppingCartNumber.hasClass('active')) return;
+            shoppingCartNumber.addClass('active');
+            shoppingCart.attr('src', 'img/handbag-active.svg');
+        }
+    });
+
+    thumbnailLi.on('click', function () { // change item's img when click on thumbnial imgs
+        $( '.' + $(this).children().data('img') ).fadeIn().addClass('active').siblings('.active').removeClass('active').hide()
+    });
+
     thumbnailArrowLeft.on('click', function () {
         if( thumbnailLi.filter('.active').index() === 0 ) return;
         thumbnailLi.filter('.active').removeClass('active').prev('li').addClass('active');
+
+        $(this).parents('.thumbnail').siblings('.image').children('.active').hide().removeClass('active')
+            .prev().fadeIn().addClass('active');
     });
     thumbnailArrowright.on('click', function () {
         if( thumbnailLi.filter('.active').index() === thumbnailLi.length - 1 ) return;
         thumbnailLi.filter('.active').removeClass('active').next('li').addClass('active');
+
+        $(this).parents('.thumbnail').siblings('.image').children('.active').hide().removeClass('active')
+            .next().fadeIn().addClass('active')
     });
 
     editItemOptions.on('click', function () {
@@ -83,7 +113,11 @@ $(function () {
         $(this).parents('.details').find($('.visible')).removeClass('hide')
     });
 
-    deleteItem.on('click', function () {
+    deleteItem1.on('click', function () {
+        console.log(shoppingCartItemsParent.children('.item').length);
+        $(this).parents('.item').fadeOut();
+    });
+    deleteItem2.on('click', function () {
         $(this).parents('.shopping-item').fadeOut();
     });
 });
@@ -95,19 +129,16 @@ var slider = document.querySelector('header .cart-modal .modal-body'),
 
 slider.addEventListener('mousedown', (e) => {
     isDown = true;
-    slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
 });
 
 slider.addEventListener('mouseleave', () => {
     isDown = false;
-    slider.classList.remove('active');
 });
 
 slider.addEventListener('mouseup', () => {
     isDown = false;
-    slider.classList.remove('active');
 });
 
 slider.addEventListener('mousemove', (e) => {
