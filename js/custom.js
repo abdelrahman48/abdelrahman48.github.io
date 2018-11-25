@@ -16,16 +16,19 @@ $(function () {
         shoppingCartNumber = $('header .navbar .cart-number'),
         numberOfCopies = $('.copies-number .number'),
         shoppingCartItemsParent = $('header .cart-modal .modal-body'),
-        thumbnailLi = $('section.product .modal-body .thumbnail li'),
+        thumbnailLi = $('.thumbnail li'),
         thumbnailArrowLeft = $('section.product .modal-body .left'),
         thumbnailArrowright = $('section.product .modal-body .right'),
         editItemOptions = $('section.shopping-cart .details .edit'),
         finishEditItemOptions = $('section.shopping-cart .details .done'),
-        deleteItem1 = $('header .cart-modal .delete');
-        deleteItem2 = $('section.shopping-cart .details .delete');
+        deleteItem1 = $('header .cart-modal .delete'),
+        deleteItem2 = $('section.shopping-cart .details .delete'),
+        sortOption = $('section.products .sort-wrapper .dropdown-toggle'),
+        sortOptions = $('section.products .sort-wrapper .dropdown-item'),
+        inputFloatingLabel = $('input:not([type="submit"])');
         
         
-        if(shoppingCartItemsParent.children('.item').length == 0) {
+    if(shoppingCartItemsParent.children('.item').length === 0) {
         $('.empty-cart').removeClass('hide');
     }
 
@@ -120,7 +123,20 @@ $(function () {
     deleteItem2.on('click', function () {
         $(this).parents('.shopping-item').fadeOut();
     });
+
+    sortOptions.on('click', function () {
+        sortOption.text($(this).text());
+    });
+
+    inputFloatingLabel.on('blur', function () {
+       if($(this).val() === '') {
+            $(this).siblings('.floating-label').removeClass('active')
+       } else {
+           $(this).siblings('.floating-label').addClass('active')
+       }
+    });
 });
+
 // Shopping Cart Box Modal Scroll
 var slider = document.querySelector('header .cart-modal .modal-body'),
     isDown = false,
@@ -145,6 +161,6 @@ slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;  // stop the fn from running
     e.preventDefault();
     var x = e.pageX - slider.offsetLeft,
-        walk = (x - startX) * 3;
+        walk = (x - startX) * .4;
     slider.scrollLeft = scrollLeft - walk;
 });

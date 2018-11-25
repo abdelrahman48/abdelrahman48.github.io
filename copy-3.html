@@ -80,9 +80,9 @@
                                         <h4 class="roboto font-24">Shopping Cart
                                             <span class="green-text roboto-medium font-22">(3 items)</span>
                                         </h4>
-                                        <button class="brown-text roboto-medium font-18 transparent">Edit Cart
+                                        <a href="copy-16.html" class="edit-cart brown-text roboto-medium font-18 no-underline">Edit Cart
                                             <i class="ti-angle-right align-middle"></i>
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <div class="modal-body d-flex pointer">
@@ -130,7 +130,6 @@
                                                 <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
                                             </div>
                                         </div>
-
                                     </div>
 
                                     <div class="modal-footer no-border">
@@ -216,7 +215,16 @@
             </div>
             <div class="sort-wrapper">
                 <i class="ti-exchange-vertical pointer align-middle"></i>
-                <span class="roboto font-18">Sort by Date</span>
+                <div class="dropdown d-inline-block">
+                    <a class="dropdown-toggle roboto font-18 black-text-0 no-underline" href="#" id="sortBy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by Date
+                    </a>
+                    <div class="dropdown-menu roboto font-18" aria-labelledby="sortBy">
+                        <a class="dropdown-item" href="#">Sort by Date</a>
+                        <a class="dropdown-item" href="#">Sort by Name</a>
+                        <a class="dropdown-item" href="#">Sort by Language</a>
+                    </div>
+                </div>
                 <i class="ti-angle-down pointer pointer align-middle"></i>
             </div>
         </div>
@@ -280,7 +288,7 @@
                                         <img src="img/france-flag.png" width="40px" height="40px">
                                         <h1 id="mushafLabel" class="roboto font-32">France Mushaf</h1>
                                     </div>
-                                    <button type="button" class="delete" data-dismiss="modal">
+                                    <button type="button" class="close" data-dismiss="modal">
                                         <span class="d-inline-block" aria-hidden="true">×</span>
                                     </button>
                                 </div>
@@ -289,10 +297,10 @@
                                 <div class="d-flex flex-wrap flex-xl-nowrap justify-content-center">
                                     <div class="image-wrapper">
                                         <div class="image">
-                                            <img src="img/book-modal.png" class="img-slider-one">
-                                            <img src="img/book-modal.png" class="img-slider-two active">
-                                            <img src="img/book-modal.png" class="img-slider-three">
-                                            <img src="img/book-modal.png" class="img-slider-four">
+                                            <img src="img/book-modal.png" class="img-slider-one img-fluid">
+                                            <img src="img/book-modal.png" class="img-slider-two img-fluid active">
+                                            <img src="img/book-modal.png" class="img-slider-three img-fluid">
+                                            <img src="img/book-modal.png" class="img-slider-four img-fluid">
                                         </div>
                                         <div class="thumbnail black-text-6 font-22 d-flex align-items-center justify-content-around">
                                             <i class="ti-arrow-left arrow left pointer"></i>

@@ -58,6 +58,10 @@ textarea:focus ~ .floating-label {
     top: 3px;
     font-size: 14px;
 }
+.floating-label.active {
+    top: 3px;
+    font-size: 14px;
+}
 .floating-label {
     pointer-events: none;
     left: 57px;
@@ -252,6 +256,9 @@ textarea {
 .br-24 {
     border-radius: 24px;
 }
+.br-rd {
+    border-radius: 50%;
+}
 .quran-btn {
     border-radius: 6px;
     font-family: Roboto, sans-serif;
@@ -374,6 +381,9 @@ header .cart-modal .modal-content:after {
 }
 header .navbar .cart-modal .modal-header {
     padding: 36px 25px 3px 37px;
+}
+header .edit-cart:hover {
+    color: #a07b1b;
 }
 header .cart-modal .modal-body {
     padding: 26px 37px;
@@ -778,8 +788,14 @@ section.products .input-wrapper i {
     left: 3px;
     top: calc(50% - 0.5em);
 }
-section.products .sort-wrapper span {
+section.products .sort-wrapper .dropdown-toggle {
     margin: 0 5px 0 15px;
+}
+section.products .sort-wrapper .dropdown-toggle:hover {
+    color: rgba(0, 0, 0, .9);
+}
+section.products .sort-wrapper .dropdown-toggle::after {
+    display: none;
 }
 section.products .category-list {
     margin: 12px 0 76px;
@@ -885,9 +901,14 @@ section.product .thumbnail .active, section.product .thumbnail li:hover {
     border: 2px solid #a07b1b;
 }
 section.product .image {
-    height: 686px;
     border: 1px solid #afa9a0;
     margin: 0 30px 0 15px;
+}
+section.product .image img {
+    display: none;
+}
+section.product .image img.active {
+    display: block;
 }
 section.product .details {
     max-width: 416px;
