@@ -390,13 +390,13 @@ header .cart-modal .modal-body {
     margin-top: 23px;
     overflow: hidden;
     background-color: #f9f8f5;
+    height: 300px;
 }
 header .cart-modal .modal-body {
     cursor: grab;
 }
-header .cart-modal .modal-body.active {
-    cursor: grabbing;
-    cursor: -webkit-grabbing;
+header .cart-modal .modal-body.empty {
+    cursor: default;
 }
 header .cart-modal .item {
     width: 233px;
@@ -406,8 +406,16 @@ header .cart-modal .item {
     margin-right: 25px;
     background-color: #fff;
 }
+header .cart-modal .empty-cart {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 header .cart-modal .empty-cart.hide {
-    display: none !important;
+    display: none;
+}
+header .cart-modal .empty-cart .shop-now {
+    height: 50px;
 }
 header .cart-modal .delete {
     top: 6px;
@@ -1107,10 +1115,6 @@ section.faq .card-header {
     background-color: transparent;
     padding: 0 0 6px;
 }
-section.faq .card .caret {
-    margin-right: 14px;
-    font-size: 23px;
-}
 section.faq .card button {
     padding-left: 0;
     white-space: normal;
@@ -1118,6 +1122,14 @@ section.faq .card button {
 section.faq .card button:hover, section.faq .card button:focus {
     color: unset;
     text-decoration: none;
+}
+section.faq .card .caret {
+    transform: rotate(0);
+    margin-right: 14px;
+    font-size: 23px;
+}
+section.faq .card button.collapsed .caret {
+    transform: rotate(-90deg);
 }
 section.faq .card .card-body {
     padding: 0;

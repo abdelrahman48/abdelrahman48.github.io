@@ -26,11 +26,6 @@ $(function () {
         sortOption = $('section.products .sort-wrapper .dropdown-toggle'),
         sortOptions = $('section.products .sort-wrapper .dropdown-item'),
         inputFloatingLabel = $('input:not([type="submit"])');
-        
-        
-    if(shoppingCartItemsParent.children('.item').length === 0) {
-        $('.empty-cart').removeClass('hide');
-    }
 
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
@@ -117,8 +112,11 @@ $(function () {
     });
 
     deleteItem1.on('click', function () {
-        console.log(shoppingCartItemsParent.children('.item').length);
-        $(this).parents('.item').fadeOut();
+        $(this).parents('.item').fadeOut().addClass('deleted');
+        if(shoppingCartItemsParent.children('.item.deleted').length === shoppingCartItemsParent.children('.item').length) {
+            $('.empty-cart').fadeIn(3000);
+            shoppingCartItemsParent.addClass('empty')
+        }
     });
     deleteItem2.on('click', function () {
         $(this).parents('.shopping-item').fadeOut();

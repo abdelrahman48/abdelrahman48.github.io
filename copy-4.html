@@ -23,10 +23,10 @@
     <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
         <div class="container">
             <div>
-                <a class="navbar-brand QuranGift-logo" href="#">
+                <a class="navbar-brand QuranGift-logo" href="index.html">
                     <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
                 </a>
-                <a class="navbar-brand QuranGift-text" href="#">Quran<strong>Gift</strong></a>
+                <a class="navbar-brand QuranGift-text" href="index.html">Quran<strong>Gift</strong></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -85,11 +85,17 @@
                                         </a>
                                     </div>
 
-                                    <div class="modal-body d-flex pointer">
-                                        <div class="empty-cart hide d-flex justify-content-center align-content-center">
-                                            <h2>Your cart is empty.</h2>
-                                            <button class="btn-green br-2 br-5 transition">Shop Now</button>
+                                    <div class="modal-body d-flex position-relative">
+
+                                        <div class="empty-cart hide text-center position-absolute">
+                                            <h2 class="mb-4 roboto-medium font-24">Your cart is empty.</h2>
+
+                                            <a href="copy-3.html" class="shop-now w-100 d-flex
+                                                 justify-content-center align-items-center btn-green br-2 border-2
+                                                 white-text roboto-medium font-18
+                                                 br-5 text-uppercase transition">Shop Now</a>
                                         </div>
+
                                         <div class="item">
                                             <button type="button" class="delete position-relative">
                                                 <span class="position-absolute" aria-hidden="true">×</span>
@@ -329,7 +335,7 @@
                 <div class="card no-border">
                     <div class="card-header no-border" id="headingTwo">
                         <h5 class="mb-0">
-                            <button class="btn btn-link text-left collapsed roboto-medium font-28 black-text-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link text-left roboto-medium font-28 black-text-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 <i class="fas fa-caret-down caret"></i>What is Production Turnaround?
                             </button>
                         </h5>
@@ -357,7 +363,7 @@
                 <div class="card no-border">
                     <div class="card-header no-border" id="headingFour">
                         <h5 class="mb-0">
-                            <button class="btn btn-link text-left collapsed roboto-medium font-28 black-text-0" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <button class="btn btn-link text-left roboto-medium font-28 black-text-0" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 <i class="fas fa-caret-down caret"></i>How long does it take?
                             </button>
                         </h5>
@@ -381,7 +387,7 @@
     <div class="container">
         <img src="img/logo.svg" alt="Mushaf Logo" width="81" height="79">
         <br>
-        <span class="QuranGift-text">Quran<strong>Gift</strong></span>
+        <a class="QuranGift-text">Quran<strong>Gift</strong></a>
         <p class="mx-auto grey-text">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
 
         <div class="social-links">
