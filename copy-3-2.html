@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <!-- Modal -->
-                <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+                <div class="modal" id="login" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header no-border align-items-center">
@@ -205,139 +205,251 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <h1 class="title roboto-light">Create a new account</h1>
-    </div>
 </header>
 <!-- End Header Section -->
-
-<!-- Start Checkout Section -->
-<section class="create-account">
+<!-- Start Products Section -->
+<section class="products two">
     <div class="container">
-        <div class="form d-block d-xl-flex align-items-start justify-content-center flex-wrap flex-xl-nowrap">
 
-            <div class="register-form main-border br-5 white-bg">
-                <h2 class="roboto font-24">Register</h2>
+        <div class="title roboto-light">
+            <h2 class="h1 roboto-light black-text-2">Order a Copy</h2>
+            <p class="roboto font-18 grey-text">
+                We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
+        </div>
 
-                <form class="d-flex flex-column">
+        <div class="progress-steps d-md-flex">
+            <div class="step step-one position-relative active">
+                <span class="circle"></span>
+                <h4 class="roboto font-18 mb-0">Step One</h4>
+                <h4 class="roboto-bold font-18">Choose mushaf theme</h4>
+            </div>
+            <div class="step step-two position-relative">
+                <span class="circle"></span>
+                <h4 class="roboto font-18 mb-0">Step Two</h4>
+                <h4 class="black-text-0 roboto-bold font-18">Login / Register</h4>
+            </div>
+            <div class="step step-three position-relative">
+                <span class="circle"></span>
+                <h4 class="roboto font-18 mb-0">Step Three</h4>
+                <h4 class="black-text-0 roboto-bold font-18">Recive adress & Payment</h4>
+            </div>
+        </div>
 
-                    <div class="form-group main-border br-2 mr-0">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <input type="email" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Email Adress" name="sender-email">
-                            <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Email</label>
-                        </div>
-                    </div>
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
 
-                    <div class="form-group main-border br-2 mr-0">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <input type="password" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Password" name="sender-password">
-                            <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Password</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group main-border br-2 mr-0">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <input type="text" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Name" name="sender-name">
-                            <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Name</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group main-border br-2 mr-0">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <input type="tel" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Phone" name="sender-phone">
-                            <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Phone</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group main-border br-2">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
-                            </div>
-                            <div class="select-wrapper position-relative flex-grow-1">
-                                <select title="" class="select form-control no-border pointer roboto font-18 black-text-7">
-                                    <option value="United State">United State</option>
-                                    <option value="Caneda">Caneda</option>
-                                    <option value="Egypt">Egypt</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="submit" class="submit roboto-medium font-18 btn-green br-2 transition border-2 pointer text-uppercase white-text" value="Register">
-                </form>
+            <div class="input-wrapper position-relative">
+                <input class="roboto grey-text font-18 main-border br-6" type="search" placeholder="Mushaf theme name" aria-label="Search">
+                <i class="ti-search grey-text position-absolute"></i>
             </div>
 
-            <div class="login-container flex-grow-1">
-
-                <div class="login-form white-bg">
-
-                    <div class="header d-flex align-items-center justify-content-between">
-                        <h2 class="roboto font-24">Login</h2>
-                        <button class="forget-account d-flex align-items-center
-                     brown-text roboto-medium font-18 transparent">Forget my account
-                            <i class="ti-angle-down ml-2"></i>
-                        </button>
+            <div class="sort-wrapper">
+                <i class="ti-exchange-vertical pointer align-middle"></i>
+                <div class="dropdown d-inline-block">
+                    <a class="dropdown-toggle roboto font-18 black-text-0 no-underline" href="#" id="sortBy" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by Date
+                    </a>
+                    <div class="dropdown-menu roboto font-18" aria-labelledby="sortBy">
+                        <a class="dropdown-item" href="#">Sort by Date</a>
+                        <a class="dropdown-item" href="#">Sort by Name</a>
+                        <a class="dropdown-item" href="#">Sort by Language</a>
                     </div>
-
-                    <form class="d-flex flex-column">
-                        <div class="form-group main-border br-2 mr-0">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
-                                </div>
-                                <input type="email" class="form-control font-18 roboto black-text-0 no-border small" placeholder="" aria-label="Email Adress" name="sender-email">
-                                <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Email</label>
-                            </div>
-                        </div>
-                        <div class="form-group main-border br-2">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
-                                </div>
-                                <input type="password" class="form-control font-18 roboto black-text-0 no-border small" placeholder="" aria-label="Password" name="sender-password">
-                                <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Password</label>
-                            </div>
-                        </div>
-                        <button type="submit" class="submit roboto-medium font-18 green-text">Login</button>
-                    </form>
                 </div>
+                <i class="ti-angle-down pointer pointer align-middle"></i>
+            </div>
+        </div>
 
-                <div class="social-login text-center">
-                    <h5 class="black-text-6 roboto font-18">Easy Login with social media</h5>
-
-                    <div class="social-links d-flex justify-content-center align-items-center">
-                        <button class="white-text font-14 br-3" style="background-color: #6081c4">
-                            <i class="fab fa-facebook-f  font-16"></i>
-                            Facebook
-                        </button>
-                        <button class="white-text font-14 br-3" style="background-color: #43bdf0">
-                            <i class="fab fa-twitter  font-16"></i>
-                            Twitter
-                        </button>
-                        <button class="white-text font-14 br-3" style="background-color: #f34a38">
-                            <i class="fab fa-google-plus-g  font-16"></i>
-                            Google+
-                        </button>
-                    </div>
+        <div class="category-list text-center d-md-flex flex-wrap justify-content-center">
+            <div class="item text-left d-flex justify-content-between">
+                <div class="item-image position-relative">
+                    <img class="img-fluid" src="img/mushaf-product-4.png" alt="France Mushaf">
+                    <img class="item-flag position-absolute" src="img/france-flag.png">
+                </div>
+                <div class="item-body roboto">
+                    <h5 class="item-title roboto-medium font-25">France Mushaf</h5>
+                    <p class="item-text grey-text font-14">We print and deliver al mushaf to anywhere around the world…</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="preview brown-text  transition modal-button pointer text-uppercase" data-toggle="modal" data-target="#mushaf">
+                        Preview
+                    </button>
+                    <i class="icon-handbag handbag pointer d-inline-block text-center align-middle"></i>
+                </div>
+            </div>
+            <div class="item text-left d-flex justify-content-between">
+                <div class="item-image position-relative">
+                    <img class="img-fluid" src="img/mushaf-product-4.png" alt="Japanese Mushaf">
+                    <img class="item-flag position-absolute" src="img/japan-flag.png">
+                </div>
+                <div class="item-body roboto">
+                    <h5 class="item-title roboto-medium">Japanese Mushaf</h5>
+                    <p class="item-text grey-text font-14">We print and deliver al mushaf to anywhere around the world…</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="preview brown-text transition modal-button pointer text-uppercase" data-toggle="modal" data-target="#mushaf">
+                        Preview
+                    </button>
+                    <i class="icon-handbag handbag pointer d-inline-block text-center"></i>
+                </div>
+            </div>
+            <div class="item text-left d-flex justify-content-between">
+                <div class="item-image position-relative">
+                    <img class="img-fluid" src="img/mushaf-product-4.png" alt="English Mushaf">
+                    <img class="item-flag position-absolute" src="img/english-flag.png">
+                </div>
+                <div class="item-body roboto">
+                    <h5 class="item-title roboto-medium">English Mushaf</h5>
+                    <p class="item-text grey-text font-14">We print and deliver al mushaf to anywhere around the world…</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="preview brown-text transition modal-button pointer text-uppercase" data-toggle="modal" data-target="#mushaf">
+                        Preview
+                    </button>
+                    <i class="icon-handbag handbag pointer d-inline-block text-center"></i>
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal book-modal fade" id="mushaf" tabindex="-1" role="dialog" aria-labelledby="mushafLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <section class="product">
+                    <div class="container p-0">
+                        <div class="modal-content">
+                            <div class="modal-header no-border p-0">
+                                <div class="title-wrapper d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/france-flag.png" width="40px" height="40px">
+                                        <h1 id="mushafLabel" class="roboto font-32">France Mushaf</h1>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span class="d-inline-block" aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="d-flex flex-wrap flex-xl-nowrap justify-content-center">
+                                    <div class="image-wrapper">
+                                        <div class="image">
+                                            <img src="img/book-modal.png" class="img-slider-one img-fluid">
+                                            <img src="img/book-modal.png" class="img-slider-two img-fluid active">
+                                            <img src="img/book-modal.png" class="img-slider-three img-fluid">
+                                            <img src="img/book-modal.png" class="img-slider-four img-fluid">
+                                        </div>
+                                        <div class="thumbnail black-text-6 font-22 d-flex align-items-center justify-content-around">
+                                            <i class="ti-arrow-left arrow left pointer"></i>
+                                            <ul class="list-unstyled d-flex flex-wrap justify-content-center">
+                                                <li class="pointer">
+                                                    <a href="#" data-img="img-slider-one" class="d-inline-block w-100"></a>
+                                                </li>
+                                                <li class="active pointer">
+                                                    <a href="#" data-img="img-slider-two" class="d-inline-block w-100"></a>
+                                                </li>
+                                                <li class="pointer">
+                                                    <a href="#" data-img="img-slider-three" class="d-inline-block w-100"></a>
+                                                </li>
+                                                <li class="pointer">
+                                                    <a href="#" data-img="img-slider-four" class="d-inline-block w-100"></a>
+                                                </li>
+                                            </ul>
+                                            <i class="ti-arrow-right arrow right pointer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="details flex-lg-shrink-0">
+                                        <div class="description">
+                                            <h2 class="roboto-medium font-18">Short Description:</h2>
+                                            <p class="roboto font-18 black-text-6">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
+                                            <a href="copy-4.html" class="brown-text font-18 roboto-medium no-underline transition">Read More
+                                                <i class="ti-angle-right align-middle"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="size roboto text-center">
+                                            <h5 class="roboto-medium font-18 mb-0">Choose book Size:</h5>
+                                            <div class="buttons d-flex justify-content-center">
+                                                <button class="pointer transition text-uppercase no-outline flex-grow-1">
+                                                    <span class="checkbox transition position-relative d-block"></span>Small
+                                                </button>
+                                                <button class="active pointer transition text-uppercase no-outline flex-grow-1">
+                                                    <span class="checkbox transition position-relative d-block"></span>Medium
+                                                </button>
+                                                <button class="pointer transition text-uppercase no-outline roboto-bold flex-grow-1">
+                                                    <span class="checkbox transition position-relative d-block"></span>Large
+                                                </button>
+                                            </div>
+                                            <span class="d-block font-18 grey-text">17 x 24 x 20 cm</span>
+                                        </div>
+
+                                        <div class="select-wrapper position-relative">
+                                            <select title="" class="select w-100 no-border pointer roboto font-18 black-text-3">
+                                                <option value="0">Quran with translation</option>
+                                                <option value="1">Quran with no translation</option>
+                                                <option value="2">Quran with translation & sound</option>
+                                            </select>
+                                        </div>
+
+                                        <h5 class="font-18 roboto-medium">Number of copies:</h5>
+                                        <div class="copies-number text-center roboto font-22 black-text-6 position-relative">
+                                            <i class="ti-minus minus pointer position-absolute"></i>
+                                            <span class="number position-absolute">0</span>
+                                            <i class="ti-plus plus pointer text-right position-absolute"></i>
+                                        </div>
+                                        <button class="cart w-100 pointer no-border roboto-medium font-18 text-white transition text-uppercase position-relative">
+                                            <span class="added-number roboto-medium font-18 position-absolute"></span>
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="products-pagination mx-auto text-center roboto ">
+            <ul class="pagination-list list-unstyled">
+                <li class="page-icon left">
+                    <a href="#"><i class="ti-arrow-left"></i></a>
+                </li>
+                <li class="page-number active">
+                    <a href="#">1</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">2</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">3</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">4</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">5</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">6</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">7</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">8</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">9</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">10</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">11</a>
+                </li>
+                <li class="page-number">
+                    <a href="#">12</a>
+                </li>
+                <li class="page-icon right">
+                    <a href="#"><i class="ti-arrow-right"></i></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
-<!-- End Checkout Section -->
-
+<!-- End Products Section -->
 <!-- Start Footer Section -->
 <footer class="text-center roboto">
     <div class="container">
@@ -347,11 +459,11 @@
         <p class="mx-auto grey-text">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
 
         <div class="social-links">
-            <i class="fab fa-facebook-square fa-2x fa-fw" style="color: #6081c4"></i>
-            <i class="fab fa-twitter-square fa-2x fa-fw" style="color: #43bdf0"></i>
-            <i class="fab fa-google-plus-square fa-2x fa-fw" style="color: #f34a38"></i>
-            <i class="fab fa-vimeo-square fa-2x fa-fw" style="color: #69b4e5"></i>
-            <i class="fab fa-youtube-square fa-2x fa-fw" style="color: #f61c0d"></i>
+            <i class="fab fa-facebook-square fa-2x fa-fw pointer" style="color: #6081c4"></i>
+            <i class="fab fa-twitter-square fa-2x fa-fw pointer" style="color: #43bdf0"></i>
+            <i class="fab fa-google-plus-square fa-2x fa-fw pointer" style="color: #f34a38"></i>
+            <i class="fab fa-vimeo-square fa-2x fa-fw pointer" style="color: #69b4e5"></i>
+            <i class="fab fa-youtube-square fa-2x fa-fw pointer" style="color: #f61c0d"></i>
         </div>
 
         <div class="footer-links d-flex flex-wrap">
@@ -394,6 +506,5 @@
 <script src="components/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
 <script src="js/custom.js"></script>
 <!--End scripts-->
-
 </body>
 </html>

@@ -25,7 +25,8 @@ $(function () {
         deleteItem2 = $('section.shopping-cart .details .delete'),
         sortOption = $('section.products .sort-wrapper .dropdown-toggle'),
         sortOptions = $('section.products .sort-wrapper .dropdown-item'),
-        inputFloatingLabel = $('input:not([type="submit"])');
+        inputFloatingLabel = $('input:not([type="submit"])'),
+        numberOfCopiesAdded = $('section.product .cart .added-number');
 
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
@@ -66,6 +67,13 @@ $(function () {
     addToCart.on('click', function () {
         if(parseInt(numberOfCopies.text()) < 1) return;
         shoppingCartNumber.text( parseInt(shoppingCartNumber.text()) + parseInt(numberOfCopies.text()) );
+
+        numberOfCopiesAdded.text( parseInt(numberOfCopies.text()) + '+' );
+        numberOfCopiesAdded.addClass('active');
+        setTimeout(function () {
+            numberOfCopiesAdded.removeClass('active')
+        }, 1500);
+
         if (parseInt(numberOfCopies.text()) > 0) {
             if(shoppingCartNumber.hasClass('active')) return;
             shoppingCartNumber.addClass('active');

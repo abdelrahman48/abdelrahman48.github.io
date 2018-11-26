@@ -390,7 +390,6 @@ header .cart-modal .modal-body {
     margin-top: 23px;
     overflow: hidden;
     background-color: #f9f8f5;
-    height: 300px;
 }
 header .cart-modal .modal-body {
     cursor: grab;
@@ -399,8 +398,8 @@ header .cart-modal .modal-body.empty {
     cursor: default;
 }
 header .cart-modal .item {
-    width: 233px;
-    height: 248px;
+    width: 175px;
+    height: 200px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
     border-radius: 2px;
     margin-right: 25px;
@@ -418,8 +417,8 @@ header .cart-modal .empty-cart .shop-now {
     height: 50px;
 }
 header .cart-modal .delete {
-    top: 6px;
-    left: 7px;
+    top: 3px;
+    left: 5px;
     width: 14px;
     height: 14px;
     color: #fff;
@@ -999,11 +998,30 @@ section.product .cart {
     height: 61px;
     border-radius: 2px;
     background-color: #106b2e;
+    user-select: none;
 }
 section.product .cart:hover {
     background-color: #f9f8f5;
     color: #106b2e !important;
     border: 2px solid #106b2e;
+}
+section.product .cart:hover .added-number {
+    color: #106b2e;
+}
+section.product .cart .added-number {
+    opacity: 0;
+    right: 70px;
+}
+section.product .cart .added-number.active {
+    animation: plus 2s;
+}
+@keyframes plus {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 /* -------------------- *\
   Start Product Box-Modal Section
@@ -1636,6 +1654,105 @@ section.user-profile .account-info button {
 /* ------------------------------------------------------------------ *\
   End Copy 20 Page
 \* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 3-2 Page
+\* ------------------------------------------------------------------ */
+section.products.two {
+    overflow: hidden;
+}
+section.products.two .title {
+    width: 670px;
+    margin-bottom: 80px;
+}
+section.products.two .title h2 {
+    margin-bottom: 25px;
+}
+section.products.two .title p {
+    line-height: 22px;
+}
+section.products.two .progress-steps {
+    margin-bottom: 77px;
+}
+section.products.two .progress-steps .step {
+    width: 240px;
+    margin: 40px 84px 0 0;
+}
+section.products.two .progress-steps .circle {
+    position: absolute;
+    top: -60px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #afa9a0;
+    background-color: #f9f8f5;
+}
+section.products.two .progress-steps .step-one:after,
+section.products.two .progress-steps .step-one:before,
+section.products.two .progress-steps .step-two:after,
+section.products.two .progress-steps .step-three:after {
+    content: '';
+    position: absolute;
+    top: -43px;
+    height: 3px;
+    background-color: #afa9a0;
+}
+section.products.two .progress-steps .step-one:after {
+    left: 40px;
+    width: 293px;
+}
+section.products.two .progress-steps .step-one:before {
+    left: -1195px;
+    width: 1200px;
+}
+section.products.two .progress-steps .step-two:after {
+    left: 40px;
+    width: 294px;
+}
+section.products.two .progress-steps .step-three:after {
+    left: 40px;
+    width: 1600px;
+}
+section.products.two .progress-steps .step.active:before,
+section.products.two .progress-steps .step.active:after {
+    background-color: #106b2e;
+}
+section.products.two .progress-steps .step.active .circle {
+    border-color: #106b2e;
+}
+section.products.two .progress-steps .step.active h4:last-child{
+    color: #106b2e;
+}
+section.products.two .input-wrapper {
+    width: 676px;
+    max-width: 676px;
+    margin-right: 0;
+}
+section.products.two .input-wrapper input {
+    padding-left: 57px;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+section.products.two .category-list {
+    margin-top: 26px;
+}
+section.products.two .item {
+    flex: calc(50% - 25px)
+}
+section.products.two .item {
+    margin-right: 42px;
+}
+section.products.two .item:nth-of-type(2n) {
+    margin-right: 0;
+}
+section.products.two .item .item-image {
+    padding-left: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 3-2 Page
+\* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
 \* -------------------- */
@@ -1749,6 +1866,9 @@ section.user-profile .account-info button {
     section.product-info .text-wrapper .description {
         flex: auto;
     }
+    section.products.two .input-wrapper {
+        margin-bottom: 12px;
+    }
 }
 @media (max-width: 900px) {
     header .carousel .text {
@@ -1830,6 +1950,25 @@ section.user-profile .account-info button {
     section.checkout .payment-methods .checkout-button {
         margin-right: 0;
         margin-bottom: 40px;
+    }
+    section.products.two .progress-steps {
+        margin-left: 60px;
+    }
+    section.products.two .progress-steps .step {
+        margin-top: 40px
+    }
+    section.products.two .progress-steps .step:before, section.products.two .progress-steps .step:last-of-type:after {
+        display: none;
+    }
+    section.products.two .progress-steps .step:after {
+        top: 57px;
+        left: -67px;
+        width: 48px;
+        transform: rotate(90deg);
+    }
+    section.products.two .progress-steps .step .circle {
+        top: 0;
+        left: -60px;
     }
 }
 @media (max-width: 575px) {
