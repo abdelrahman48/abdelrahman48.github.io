@@ -217,6 +217,9 @@ textarea {
 .whitish-bg {
     background-color: #fefdfc;
 }
+.grey-bg {
+    background-color: #f8f5f0;
+}
 .green-bg {
     background-color: rgba(16, 107, 46, .1);;
 }
@@ -233,7 +236,7 @@ textarea {
     border-bottom: 1px solid #e5dacb;
 }
 .image-border {
-    border: 1px solid rgba(175, 169, 160, .5)
+    border: 1px solid rgba(175, 169, 160, .2)
 }
 .br-2 {
     border-radius: 2px;
@@ -912,10 +915,10 @@ section.product .image {
     border: 1px solid #afa9a0;
     margin: 0 30px 0 15px;
 }
-section.product .image img {
+section.product .image.slider img {
     display: none;
 }
-section.product .image img.active {
+section.product .image.slider img.active {
     display: block;
 }
 section.product .details {
@@ -1063,10 +1066,10 @@ section.product .modal-body .image {
     height: auto;
     margin: 0;
 }
-section.product .modal-body .image img {
+section.product .modal-body .image.slider img {
     display: none ;
 }
-section.product .modal-body .image img.active {
+section.product .modal-body .image.slider img.active {
     display: block;
 }
 section.product .modal-body .thumbnail li {
@@ -1683,6 +1686,16 @@ section.products.two .modal-body .image {
     border: none;
     background-color: #f6f2e9;
 }
+section.products.two .modal-body .image .left,
+section.products.two .modal-body .image .right {
+    bottom: 31px;
+}
+section.products.two .modal-body .image .left {
+    left: 22px;
+}
+section.products.two .modal-body .image .right {
+    right: 20px;
+}
 section.products.two .modal-body .details {
     margin-left: 30px;
     padding: 50px 0 0;
@@ -1805,6 +1818,94 @@ section.products.two .item .item-image {
 /* ------------------------------------------------------------------ *\
   End Copy 3-2 Page
 \* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 6 Page
+\* ------------------------------------------------------------------ */
+section.product.two {
+    padding: 39px 0 66px;
+}
+section.product.two .title {
+    max-width: 703px;
+    margin-bottom: 51px;
+}
+section.product.two .title h2 {
+    margin-bottom: -6px;
+}
+section.product.two .title p {
+    line-height: 22px;
+}
+section.product.two .image-wrapper {
+    border: 1px solid #f2ede5;
+    margin-right: 32px;
+    max-width: 691px;
+}
+section.product.two .image-wrapper .image {
+    border: none;
+}
+section.product.two .features {
+    padding: 27px;
+    margin-bottom: 37px;
+}
+section.product.two .features h5 {
+    margin-bottom: 12px;
+}
+section.product.two .features span {
+    line-height: 24px;
+}
+section.product.two .options hr {
+    height: .5px;
+    background-color: #a07b1b;
+    opacity: .6;
+    margin: 12px 0 21px;
+}
+section.product.two .mushaf-size {
+    margin-bottom: 46px;
+}
+section.product.two .mushaf-translation {
+    margin-bottom: 34px;
+}
+section.product.two .mushaf-size h4,
+section.product.two .mushaf-translation h4{
+    margin-bottom: 15px;
+}
+section.product.two .options .custom-radio {
+    margin: 0 0 9px 20px;
+}
+section.product.two .options label:before {
+    top: 2px;
+    left: -44px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    background-color: transparent;
+}
+section.product.two .options label:after {
+    left: -35px;
+    top: 6px;
+    width: 5px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(35deg);
+    background-image: none !important;
+}
+section.product.two .options input:checked ~ label {
+    color: #106b2e;
+}
+section.product.two .options input:checked ~ label:before {
+    background-color: #106b2e
+}
+section.product.two .copies-number {
+    max-width: 222px;
+    margin: 17px 0 27px;
+}
+section.product.two .cart {
+    max-width: 357px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 6 Page
+\* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
 \* -------------------- */
@@ -1920,6 +2021,9 @@ section.products.two .item .item-image {
     }
     section.products.two .input-wrapper {
         margin-bottom: 12px;
+    }
+    section.product.two .image-wrapper {
+        margin: 0 0 40px;
     }
 }
 @media (max-width: 900px) {
@@ -2196,6 +2300,15 @@ section.products.two .item .item-image {
     }
     section.user-profile .personal-info-container button {
         width: 100%;
+    }
+    section.product.two .title h2 {
+        font-size: 34px;
+    }
+    section.product.two .features {
+        padding: 10px;
+    }
+    section.product.two .features span {
+        font-size: 16px;
     }
 }
 @media (max-width: 350px) {

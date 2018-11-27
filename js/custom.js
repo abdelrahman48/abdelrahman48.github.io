@@ -91,7 +91,7 @@ $(function () {
         }
     });
 
-    thumbnailLi.on('click', function () { // change item's img when click on thumbnial imgs
+    thumbnailLi.on('click', function () { // change item's img when click on thumbnail imgs
         $( '.' + $(this).children().data('img') ).fadeIn().addClass('active').siblings('.active').removeClass('active').hide()
     });
 
@@ -99,14 +99,14 @@ $(function () {
         if( thumbnailLi.filter('.active').index() === 0 ) return;
         thumbnailLi.filter('.active').removeClass('active').prev('li').addClass('active');
 
-        $(this).parents('.thumbnail').siblings('.image').children('.active').hide().removeClass('active')
+        $('.image').children('.active').hide().removeClass('active')
             .prev().fadeIn().addClass('active');
     });
     thumbnailArrowright.on('click', function () {
         if( thumbnailLi.filter('.active').index() === thumbnailLi.length - 1 ) return;
         thumbnailLi.filter('.active').removeClass('active').next('li').addClass('active');
 
-        $(this).parents('.thumbnail').siblings('.image').children('.active').hide().removeClass('active')
+        $('.image').children('.active').hide().removeClass('active')
             .next().fadeIn().addClass('active')
     });
 
