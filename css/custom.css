@@ -393,6 +393,7 @@ header .cart-modal .modal-body {
 }
 header .cart-modal .modal-body {
     cursor: grab;
+    height: 300px;
 }
 header .cart-modal .modal-body.empty {
     cursor: default;
@@ -1660,6 +1661,57 @@ section.user-profile .account-info button {
 section.products.two {
     overflow: hidden;
 }
+section.products.two section.product {
+    max-width: 1026px;
+    height: 641px;
+}
+section.products.two .modal-content {
+    border-radius: 0;
+}
+section.products.two .modal-body {
+    padding: 0 24px 0 10px;
+}
+section.products.two .modal-body .thumbnail {
+    margin: 22px 8px 0 0;
+}
+section.products.two .modal-body .thumbnail li {
+    width: 88px;
+    height: 56px;
+    margin: 0 7px 15px 3px;
+}
+section.products.two .modal-body .image {
+    border: none;
+    background-color: #f6f2e9;
+}
+section.products.two .modal-body .details {
+    margin-left: 30px;
+    padding: 50px 0 0;
+}
+section.products.two .modal-body .description {
+    margin-bottom: 32px;
+}
+section.products.two .modal-body .description h2 {
+    margin-bottom: 20px;
+}
+section.products.two .modal-body .description p {
+    line-height: 21px;
+}
+section.products.two .modal-body .features {
+    margin-bottom: 54px;
+}
+section.products.two .modal-body .features h5 {
+    margin-bottom: 10px;
+}
+section.products.two .modal-body .features h5 {
+    margin-bottom: 10px;
+}
+section.products.two .modal-body .features span {
+    line-height: 21px;
+}
+section.products.two .modal-body .copies-number {
+    width: 222px;
+    margin-bottom: 21px;
+}
 section.products.two .title {
     width: 670px;
     margin-bottom: 80px;
@@ -1969,6 +2021,9 @@ section.products.two .item .item-image {
     section.products.two .progress-steps .step .circle {
         top: 0;
         left: -60px;
+    }
+    section.products.two .modal-body .image img {
+        max-width: 100%;
     }
 }
 @media (max-width: 575px) {
