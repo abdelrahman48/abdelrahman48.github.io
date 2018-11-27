@@ -286,6 +286,10 @@ textarea {
     color: #fff;
     text-decoration: none;
 }
+.border-1 {
+    border-width: 1px;
+    border-style: solid;
+}
 .border-2 {
     border-width: 2px;
     border-style: solid;
@@ -1014,7 +1018,7 @@ section.product .cart:hover .added-number {
 }
 section.product .cart .added-number {
     opacity: 0;
-    right: 70px;
+    right: 30px;
 }
 section.product .cart .added-number.active {
     animation: plus 2s;
@@ -1682,7 +1686,7 @@ section.products.two .modal-body .thumbnail li {
     height: 56px;
     margin: 0 7px 15px 3px;
 }
-section.products.two .modal-body .image {
+section.products.two .modal-body .image.with-out-boder {
     border: none;
     background-color: #f6f2e9;
 }
@@ -1834,12 +1838,12 @@ section.product.two .title h2 {
 section.product.two .title p {
     line-height: 22px;
 }
-section.product.two .image-wrapper {
+section.product.two .image-wrapper.with-border {
     border: 1px solid #f2ede5;
     margin-right: 32px;
     max-width: 691px;
 }
-section.product.two .image-wrapper .image {
+section.product.two .image.with-out-border {
     border: none;
 }
 section.product.two .features {
@@ -1905,6 +1909,39 @@ section.product.two .cart {
 }
 /* ------------------------------------------------------------------ *\
   End Copy 6 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 7 Page
+\* ------------------------------------------------------------------ */
+section.product.two.with-flag .title {
+    max-width: 640px;
+    margin-bottom: 36px;
+}
+section.product.two.with-flag .title .image {
+    margin: 0 20px 0 0;
+}
+section.product.two.with-flag .title h2 {
+    margin-bottom: -8px;
+}
+section.product.two.with-flag .top-cart {
+    width: 264px;
+    top: 13px;
+    right: 15px;
+}
+section.product.two.with-flag .image-wrapper {
+    width: 691px;
+    margin-right: 34px
+}
+section.product.two.with-flag .image-wrapper .image {
+    border: 1px solid #e5dacb;
+    margin: 0 0 18px 0;
+    padding: 0 44px;
+}
+section.product.two.with-flag .thumbnail li {
+    margin: 0 8px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 7 Page
 \* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
@@ -2025,6 +2062,10 @@ section.product.two .cart {
     section.product.two .image-wrapper {
         margin: 0 0 40px;
     }
+    section.product.two.with-flag .image-wrapper {
+        width: auto;
+        margin-right: 0;
+    }
 }
 @media (max-width: 900px) {
     header .carousel .text {
@@ -2129,6 +2170,12 @@ section.product.two .cart {
     section.products.two .modal-body .image img {
         max-width: 100%;
     }
+    section.product.two.with-flag .image-wrapper .image {
+        padding: 0;
+    }
+    section.product.two.with-flag .thumbnail li {
+        margin: 0 8px 8px;
+    }
 }
 @media (max-width: 575px) {
     header .text .order-copy, header .text .learn-more {
@@ -2167,6 +2214,10 @@ section.product.two .cart {
     }
     section.faq .card .caret {
         margin-right: 5px;
+    }
+    section.product.two.with-flag .thumbnail li {
+        width: 60px;
+        height: 40px;
     }
 }
 @media (max-width: 500px) {
@@ -2309,6 +2360,12 @@ section.product.two .cart {
     }
     section.product.two .features span {
         font-size: 16px;
+    }
+    section.product.two.with-flag .title .image {
+        margin: 0 5px 0 0;
+    }
+    section.product.two.with-flag .title h2 {
+        font-size: 30px;
     }
 }
 @media (max-width: 350px) {
