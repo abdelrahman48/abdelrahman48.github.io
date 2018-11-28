@@ -1980,6 +1980,49 @@ section.user-profile.with-tabs .tab-content {
 /* ------------------------------------------------------------------ *\
   End Copy 17 Page
 \* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 9 Page
+\* ------------------------------------------------------------------ */
+section.product.two.with-faq {
+    padding: 50px 0 25px;
+}
+section.product.two.with-faq .image-wrapper {
+    max-width: 654px;
+    margin-right: 52px;
+}
+section.product.two.with-faq .image-wrapper .image {
+    padding: 26px 94px;
+    margin: 0 0 26px 0;
+}
+section.product.two.with-faq .thumbnail li {
+    width: 69px;
+    height: 44px;
+    background-color: #e5dacb;
+}
+section.product.two.with-faq .title img {
+    margin-right: 12px;
+}
+section.product.two.with-faq .title p {
+    margin-top: 23px;
+}
+section.product.two.with-faq .cart {
+    max-width: initial;
+}
+section.faq.two {
+    margin-bottom: 105px;
+}
+section.faq.two .question p {
+    line-height: 21px;
+}
+section.faq.two .questions {
+    margin-top: 39px;
+}
+section.faq.two .question h5 {
+    margin-bottom: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 9 Page
+\* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
 \* -------------------- */
@@ -2257,10 +2300,6 @@ section.user-profile.with-tabs .tab-content {
     }
     section.faq .card .caret {
         margin-right: 5px;
-    }
-    section.product.two.with-flag .thumbnail li {
-        width: 60px;
-        height: 40px;
     }
     section.user-profile.with-tabs .nav-tab {
         padding: 16px 20px;
