@@ -1943,6 +1943,43 @@ section.product.two.with-flag .thumbnail li {
 /* ------------------------------------------------------------------ *\
   End Copy 7 Page
 \* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 17 Page
+\* ------------------------------------------------------------------ */
+header.with-tabs {
+    padding-bottom: 76px;
+}
+section.user-profile.with-tabs .tabs {
+    top: -60px;
+}
+section.user-profile.with-tabs .profile-info-container {
+    padding-top: 0;
+}
+section.user-profile.with-tabs .nav-tab {
+    padding: 16px 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+}
+section.user-profile.with-tabs .nav-tab:hover {
+    border-color: #e5dacb #e5dacb transparent;
+}
+section.user-profile.with-tabs .changer {
+    display: none;
+    line-height: 26px;
+}
+section.user-profile.with-tabs .changer.hide {
+    display: none;
+}
+section.user-profile.with-tabs .changer.show {
+    display: inline-block;
+}
+section.user-profile.with-tabs .tab-content {
+    max-width: 676px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 17 Page
+\* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
 \* -------------------- */
@@ -2176,6 +2213,12 @@ section.product.two.with-flag .thumbnail li {
     section.product.two.with-flag .thumbnail li {
         margin: 0 8px 8px;
     }
+    section.user-profile.with-tabs a.nav-tab:not(.active) {
+        display: none;
+    }
+    section.user-profile.with-tabs .right {
+        display: inline-block;
+    }
 }
 @media (max-width: 575px) {
     header .text .order-copy, header .text .learn-more {
@@ -2218,6 +2261,9 @@ section.product.two.with-flag .thumbnail li {
     section.product.two.with-flag .thumbnail li {
         width: 60px;
         height: 40px;
+    }
+    section.user-profile.with-tabs .nav-tab {
+        padding: 16px 20px;
     }
 }
 @media (max-width: 500px) {
