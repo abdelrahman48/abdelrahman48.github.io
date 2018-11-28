@@ -1913,31 +1913,31 @@ section.product.two .cart {
 /* ------------------------------------------------------------------ *\
   Start Copy 7 Page
 \* ------------------------------------------------------------------ */
-section.product.two.with-flag .title {
+section.product.with-flag .title {
     max-width: 640px;
     margin-bottom: 36px;
 }
-section.product.two.with-flag .title .image {
+section.product.with-flag .title .image {
     margin: 0 20px 0 0;
 }
-section.product.two.with-flag .title h2 {
+section.product.with-flag .title h2 {
     margin-bottom: -8px;
 }
-section.product.two.with-flag .top-cart {
+section.product.with-flag .top-cart {
     width: 264px;
     top: 13px;
     right: 15px;
 }
-section.product.two.with-flag .image-wrapper {
+section.product.with-flag .image-wrapper {
     width: 691px;
     margin-right: 34px
 }
-section.product.two.with-flag .image-wrapper .image {
+section.product.with-flag .image-wrapper .image {
     border: 1px solid #e5dacb;
     margin: 0 0 18px 0;
     padding: 0 44px;
 }
-section.product.two.with-flag .thumbnail li {
+section.product.with-flag .thumbnail li {
     margin: 0 8px;
 }
 /* ------------------------------------------------------------------ *\
@@ -1983,29 +1983,29 @@ section.user-profile.with-tabs .tab-content {
 /* ------------------------------------------------------------------ *\
   Start Copy 9 Page
 \* ------------------------------------------------------------------ */
-section.product.two.with-faq {
+section.product.with-faq {
     padding: 50px 0 25px;
 }
-section.product.two.with-faq .image-wrapper {
+section.product.with-faq .image-wrapper {
     max-width: 654px;
     margin-right: 52px;
 }
-section.product.two.with-faq .image-wrapper .image {
+section.product.with-faq .image-wrapper .image {
     padding: 26px 94px;
     margin: 0 0 26px 0;
 }
-section.product.two.with-faq .thumbnail li {
+section.product.with-faq .thumbnail li {
     width: 69px;
     height: 44px;
     background-color: #e5dacb;
 }
-section.product.two.with-faq .title img {
+section.product.with-faq .title img {
     margin-right: 12px;
 }
-section.product.two.with-faq .title p {
+section.product.with-faq .title p {
     margin-top: 23px;
 }
-section.product.two.with-faq .cart {
+section.product.with-faq .cart {
     max-width: initial;
 }
 section.faq.two {
@@ -2022,6 +2022,59 @@ section.faq.two .question h5 {
 }
 /* ------------------------------------------------------------------ *\
   End Copy 9 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 8 Page
+\* ------------------------------------------------------------------ */
+section.product.two-book {
+    padding: 66px 0 0;
+}
+section.product.two-book .top-cart {
+    top: -3px;
+}
+section.product.two-book .order {
+    background-color: #a07b1b;
+    width: 264px;
+    height: 61px;
+}
+section.product.two-book .options {
+    padding: 44px 38px;
+    right: 0;
+    width: 396px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
+    display: none;
+    z-index: 9999;
+}
+section.product.two-book .title {
+    margin-bottom: 44px;
+}
+section.product.two-book .title img {
+    margin-right: 21px;
+}
+section.product.two-book .title h2 {
+    margin-top: 5px;
+}
+section.product.two-book .image-wrapper {
+    width: auto;
+    margin-right: 0;
+}
+section.product.two-book .image-wrapper .image {
+    flex-basis: calc(50% - 14px);
+    padding: 20px 0 20px 10px;
+    margin-bottom: 30px;
+}
+section.product.two-book .image-wrapper .image:nth-of-type(odd) {
+    margin-right: 28px;
+}
+section.product.two-book .image-wrapper .image:nth-last-of-type(1),
+section.product.two-book .image-wrapper .image:nth-last-of-type(2){
+    margin-bottom: 0;
+}
+section.product-info.two-book .text-wrapper {
+    margin: 34px 0 96px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 8 Page
 \* ------------------------------------------------------------------ */
 /* -------------------- *\
   Media Queries
@@ -2262,6 +2315,15 @@ section.faq.two .question h5 {
     section.user-profile.with-tabs .right {
         display: inline-block;
     }
+    section.product.two-book .image-wrapper .image:nth-of-type(odd) {
+        margin-right: 0;
+    }
+    section.product.two-book .title {
+        margin-bottom: 90px;
+    }
+    section.product.two-book .top-cart {
+        top: 66px;
+    }
 }
 @media (max-width: 575px) {
     header .text .order-copy, header .text .learn-more {
@@ -2303,6 +2365,10 @@ section.faq.two .question h5 {
     }
     section.user-profile.with-tabs .nav-tab {
         padding: 16px 20px;
+    }
+    section.product.two-book .options {
+        width: 264px;
+        padding: 44px 20px;
     }
 }
 @media (max-width: 500px) {
@@ -2446,11 +2512,15 @@ section.faq.two .question h5 {
     section.product.two .features span {
         font-size: 16px;
     }
-    section.product.two.with-flag .title .image {
+    section.product.with-flag .title .image {
         margin: 0 5px 0 0;
     }
-    section.product.two.with-flag .title h2 {
+    section.product.with-flag .title h2 {
         font-size: 30px;
+    }
+    section.product.two-book .title h2 {
+        font-size: 26px;
+        margin-top: 14px;
     }
 }
 @media (max-width: 350px) {

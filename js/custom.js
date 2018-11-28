@@ -28,7 +28,10 @@ $(function () {
         inputFloatingLabel = $('input:not([type="submit"])'),
         numberOfCopiesAdded = $('section.product .cart .added-number'),
         profileTabChangerLeft = $('section.user-profile.with-tabs .changer.left'),
-        profileTabChangerRight = $('section.user-profile.with-tabs .changer.right');
+        profileTabChangerRight = $('section.user-profile.with-tabs .changer.right'),
+        orderBtn = $('section.two-book .order'),
+        orderContainer = $('section.two-book .options'),
+        orderAddToCart = $('section.two-book .options .cart');
 
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
@@ -165,6 +168,16 @@ $(function () {
         } else {
             $(this).siblings('a.active').prev().click();
         }
+    });
+
+    orderBtn.on('click', function () {
+        orderContainer.fadeToggle();
+    });
+    orderAddToCart.on('click', function () {
+        if(parseInt(numberOfCopies.text()) < 1) return;
+        setTimeout(function () {
+            orderContainer.fadeOut();
+        }, 4000)
     });
 });
 
