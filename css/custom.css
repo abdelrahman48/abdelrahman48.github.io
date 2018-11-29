@@ -1550,7 +1550,7 @@ section.user-profile .profile-links a:hover {
     color: #106b2e;
 }
 section.user-profile .profile-links li {
-    padding: 30px 0 28px 39px;
+    padding: 30px 0 30px 39px;
 }
 section.user-profile .profile-links i {
     margin-right: 16px;
@@ -1619,14 +1619,17 @@ section.user-profile .footer .view-order {
   Start Copy 19 Page
 \* ------------------------------------------------------------------ */
 section.user-profile .primary-address {
-    padding: 40px 21px 30px 33px;
+    padding: 40px 21px 29px 33px;
     margin-bottom: 27px;
 }
 section.user-profile .primary-address h2 {
     margin-bottom: 40px;
 }
+section.user-profile .primary-address .with-out-icon {
+    padding-left: 19px;
+}
 section.user-profile .primary-address .buttons {
-    margin-top: 49px;
+    margin-top: 31px;
 }
 section.user-profile .secondry-address {
     padding: 39px 33px 25px;
