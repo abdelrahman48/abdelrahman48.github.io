@@ -1335,7 +1335,7 @@ section.checkout .reciver-info .textarea {
     left: 28px;
 }
 section.checkout .information .payment-methods {
-    padding: 34px 0 17px;
+    padding: 34px 0 23px;
 }
 section.checkout .payment-methods h2 {
     margin: 0 0 30px 34px;
@@ -1359,7 +1359,7 @@ section.checkout .payment-methods .nav-item:hover {
     color: #a07b1b;
 }
 section.checkout .payment-methods .tab-content {
-    padding: 40px 44px 0 32px;
+    padding: 42px 39px 0 32px;
 }
 section.checkout .payment-methods .tab-content>.active {
     display: flex;
@@ -1372,8 +1372,7 @@ section.checkout .payment-methods .price {
     margin-bottom: 15px;
 }
 section.checkout .payment-methods .checkout {
-    height: 61px;
-    border-radius: 2px;
+    height: 61px
 }
 section.checkout .payment-methods .text {
     flex-basis: 232px;
@@ -1382,7 +1381,8 @@ section.checkout .payment-methods .text h3 {
     margin-bottom: 21px;
 }
 section.checkout .payment-methods .text p {
-    margin-top: 15px;
+    margin-top: 21px;
+    line-height: 16px;
 }
 section.checkout .shopping-items {
     border-radius: 5px;
@@ -1391,7 +1391,7 @@ section.checkout .shopping-items {
 }
 section.checkout .shopping-items .title {
     border-bottom: 1px solid #e5dacb;
-    padding: 26px 28px 16px 24px;
+    padding: 26px 28px 16px 26px;
 }
 section.checkout .shopping-items .item {
     padding: 20px 0 13px 21px;
@@ -1401,7 +1401,7 @@ section.checkout .shopping-items .text {
     margin-left: 18px;
 }
 section.checkout .shopping-items .footer {
-    padding: 19px 12px 22px 0;
+    padding: 21px 23px 22px 0;
 }
 /* ------------------------------------------------------------------ *\
   End Copy 13 Page
@@ -2153,8 +2153,9 @@ section.product-info.two-book .text-wrapper {
         flex-basis: auto;
     }
     section.checkout .shopping-items {
-        top: 0;
-        margin-bottom: 35px;
+        position: unset !important;
+        width: 100%;
+        margin-bottom: 52px;
     }
     section.contact-us .contact-info {
         margin-bottom: 20px;
@@ -2411,6 +2412,12 @@ section.product-info.two-book .text-wrapper {
         padding: 36px 15px 3px;
         flex-direction: column;
     }
+    header .title {
+        font-size: 34px;
+    }
+    header .title span {
+        margin-left: 18px;
+    }
     section.slider .text h1,
     section.get-started h2,
     section.designs h2.h1,
@@ -2495,9 +2502,6 @@ section.product-info.two-book .text-wrapper {
     }
     section.shopping-cart .details .edit {
         margin-top: 20px;
-    }
-    section.checkout .container {
-        padding: 0;
     }
     section.checkout .information .reciver-info,
     section.checkout .information .sender-info,
