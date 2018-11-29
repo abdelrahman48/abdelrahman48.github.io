@@ -1539,7 +1539,7 @@ header .user-button {
     background-color: #e5dacb;
 }
 section.user-profile .profile-info-container {
-    padding: 44px 0 124px;
+    padding: 44px 0 125px;
 }
 section.user-profile .profile-links {
     margin-right: 40px;
@@ -1550,10 +1550,11 @@ section.user-profile .profile-links a:hover {
     color: #106b2e;
 }
 section.user-profile .profile-links li {
-    padding: 30px 0 29px 39px;
+    padding: 30px 0 28px 39px;
 }
-section.user-profile  .profile-links i {
-    margin-right: 23px;
+section.user-profile .profile-links i {
+    margin-right: 16px;
+    font-size: 22px;
 }
 section.user-profile  .profile-links li:not(:last-of-type) {
     border-bottom: 1px solid #e5dacb;
@@ -1564,7 +1565,7 @@ section.user-profile .personal-info-container {
     flex-basis: 726px;
 }
 section.user-profile .orders-info {
-    padding: 25px 0 15px 0;
+    padding: 26px 0 15px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 section.user-profile .orders-info:not(:last-of-type) {
@@ -1573,35 +1574,39 @@ section.user-profile .orders-info:not(:last-of-type) {
 section.user-profile .orders-info .header,
 section.user-profile .shopping-item,
 section.user-profile .orders-info .footer {
-    padding: 0 25px 0 34px;
+    padding: 0 25px 0 39px;
 }
 section.user-profile .orders-info .header {
-    padding-bottom: 24px;
+    padding-bottom: 25px;
+    padding-right: 29px;
 }
 section.user-profile .orders-info .delivered {
     color: #106b2e;
 }
 section.user-profile .shopping-item .title {
-    padding: 35px 0 25px;
+    padding: 35px 0 28px;
 }
 section.user-profile .shopping-item .image {
     margin-right: 23px;
 }
 section.user-profile .shopping-item .flag {
-    margin-right: 11px;
+    margin-right: 18px;
 }
 section.user-profile .shopping-item .size {
-    padding: 11px 15px 8px;
+    padding: 15px 15px 8px;
     background-color: #f7f4ef;
 }
 section.user-profile .size span:nth-of-type(odd) {
     margin-right: 32px;
 }
 section.user-profile .shopping-item .copies-number {
-    padding: 22px 0 31px;
+    padding: 25px 0 31px;
 }
 section.user-profile .orders-info .footer {
-    padding-top: 16px;
+    padding-top: 18px;
+}
+section.user-profile .orders-info .total-price {
+    margin-left: 43px;
 }
 section.user-profile .footer .view-order {
     width: 157px;
@@ -2175,6 +2180,10 @@ section.product-info.two-book .text-wrapper {
     section.user-profile .profile-links {
         margin-bottom: 44px;
     }
+    section.shopping-cart .shopping-items,
+    section.user-profile .profile-links {
+        margin-right: 0;
+    }
 }
 @media (max-width: 991px) {
     section.slider .carousel {
@@ -2208,10 +2217,6 @@ section.product-info.two-book .text-wrapper {
     }
     section.product-info .text-wrapper .description {
         flex: auto;
-    }
-    section.shopping-cart .shopping-items,
-    section.user-profile .profile-links {
-        margin-right: 0;
     }
     section.shopping-cart .shopping-price {
         margin-top: 40px;
