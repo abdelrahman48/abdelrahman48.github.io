@@ -220,11 +220,42 @@ textarea {
 .grey-bg {
     background-color: #f8f5f0;
 }
-.green-bg {
-    background-color: rgba(16, 107, 46, .1);;
+.greyish-bg {
+    background-color: #f9f8f5;
 }
-.no-outline, .no-outline:focus {
-    outline: none;
+.green-bg {
+    background-color: #106b2e;
+}
+.greenish-bg {
+    background-color: rgba(16, 107, 46, .1);
+}
+.btn-green:hover {
+    background-color: #f9f8f5;
+    color: #106b2e;
+    text-decoration: none;
+}
+.btn-brown:hover {
+    background-color: #a07b1b;
+    color: #fff;
+    text-decoration: none;
+}
+.border-1 {
+    border-width: 1px;
+    border-style: solid;
+}
+.border-2 {
+    border-width: 2px;
+    border-style: solid;
+}
+.border-3 {
+    border-width: 3px;
+    border-style: solid;
+}
+.border-green {
+    border-color: #106b2e;
+}
+.border-brown {
+    border-color: #a07b1b;
 }
 .no-border {
     border: none;
@@ -262,41 +293,8 @@ textarea {
 .br-rd {
     border-radius: 50%;
 }
-.quran-btn {
-    border-radius: 6px;
-    font-family: Roboto, sans-serif;
-}
-.btn-green {
-    background-color: #106b2e;
-    border-color: #106b2e;
-    font-size: 18px;
-}
-.btn-brown {
-    border-color: #a07b1b;
-    color: #a07b1b;
-    font-size: 19px;
-}
-.btn-green:hover {
-    background-color: #f9f8f5;
-    color: #106b2e;
-    text-decoration: none;
-}
-.btn-brown:hover {
-    background-color: #a07b1b;
-    color: #fff;
-    text-decoration: none;
-}
-.border-1 {
-    border-width: 1px;
-    border-style: solid;
-}
-.border-2 {
-    border-width: 2px;
-    border-style: solid;
-}
-.border-3 {
-    border-width: 3px;
-    border-style: solid;
+.no-outline, .no-outline:focus {
+    outline: none;
 }
 .transition {
     transition: .15s ease-in-out;
@@ -304,49 +302,48 @@ textarea {
 .transparent {
     background-color: transparent;
 }
-.QuranGift-text {
-    font-family: "Frutiger LT Arabic 45 Light", sans-serif;
-    font-size: 20px;
-    color: #106b2e !important;
-}
 .pointer {
     cursor: pointer;
 }
 /* -------------------- *\
   Start Navbar
 \* -------------------- */
-header nav.navbar {
+header .navbar {
     padding-top: 12px;
+}
+header .quran-gift-logo {
+    margin-right: 12px;
 }
 header .navbar-nav .nav-item > a {
     padding: 0 !important;
 }
-header nav .navbar-brand.QuranGift-text {
+header .navbar .quran-gift-text {
     margin-right: 25px;
+    color: #106b2e;
 }
-header nav .navbar-brand.QuranGift img {
-    margin-right: 8px;
-    margin-top: 6px;
+header .navbar .quran-gift-text:hover {
+    color: #106b2e;
 }
-header .navbar-collapse .navbar-nav .nav-item {
+header .navbar-nav .nav-item {
     margin: 0 20px;
 }
-header .navbar-collapse .navbar-nav .nav-item a {
+header .navbar-nav .nav-item:last-of-type {
+    margin-left: 6px;
+}
+header .navbar-nav .nav-item .nav-link {
     color: #222;
 }
-header .navbar-collapse .navbar-nav .nav-item .order-now {
-    color: #ac4c31;
-    font-weight: 700;
+header .navbar-collapse .order-now {
+    color: #ac4c31 !important;
 }
 header .nav-item .dropdown-toggle::after {
-    margin-left: 0;
+    margin-left: 3px;
     vertical-align: .15em;
     border-top: .4em solid;
     border-right: .2em solid transparent;
     border-left: .2em solid transparent;
 }
 header .navbar .handbag {
-    font-size: 24px;
     margin-right: 16px;
 }
 header .navbar .cart-number {
@@ -372,7 +369,7 @@ header .cart-modal .modal-dialog {
     left: 298px;
     top: 34px;
 }
-header .navbar .cart-modal .modal-content {
+header .cart-modal .modal-content {
     padding: 0;
     border-radius: 0;
 }
@@ -386,7 +383,7 @@ header .cart-modal .modal-content:after {
     border-width: 12px;
     border-color: transparent transparent #fff transparent
 }
-header .navbar .cart-modal .modal-header {
+header .cart-modal .modal-header {
     padding: 36px 25px 3px 37px;
 }
 header .edit-cart:hover {
@@ -396,7 +393,6 @@ header .cart-modal .modal-body {
     padding: 26px 37px;
     margin-top: 23px;
     overflow: hidden;
-    background-color: #f9f8f5;
 }
 header .cart-modal .modal-body {
     cursor: grab;
@@ -454,7 +450,7 @@ header .cart-modal .item-body {
 header .cart-modal .item-title {
     margin-left: 13px;
 }
-header .navbar .cart-modal .modal-footer {
+header .cart-modal .modal-footer {
     padding: 23px 25px 26px 33px;
 }
 header .cart-modal .modal-footer button {
@@ -465,7 +461,6 @@ header .cart-modal .modal-footer button {
 header .navbar .modal-button {
     width: 169px;
     height: 47px;
-    border-radius: 24px;
     background-color: #c8a038;
     border: 2px solid #c8a038;
 }
@@ -512,34 +507,31 @@ header .navbar .social-login i {
 /* -------------------- *\
   End Navbar
 \* -------------------- */
-
 /* ------------------------------------------------------------------ *\
   Start Home Page
 \* ------------------------------------------------------------------ */
-
 /* -------------------- *\
-  Start Header
+  Start slider Section
 \* -------------------- */
-header {
-    border-bottom: 1px solid #e5dacb;
-    background-color: #f9f8f5;
-}
-header .carousel {
-    padding: 0 60px 0 120px;
+section.slider .carousel {
+    padding: 0 45px 0 100px;
     max-width: 1340px;
     margin: 0 auto;
 }
-header .carousel-control-next, .carousel-control-prev {
+section.slider .carousel-control-next,
+.carousel-control-prev {
     width: 60px;
 }
-header .carousel-next-icon, .carousel-prev-icon {
-    top: -30px;
+section.slider .carousel-next-icon,
+.carousel-prev-icon {
+    top: -39px;
     width: 55px;
     height: 55px;
     background-color: rgba(107, 83, 19, .3);
     border-radius: 50%;
 }
-header .carousel-next-icon:after, .carousel-prev-icon:after {
+section.slider .carousel-next-icon:after,
+.carousel-prev-icon:after {
     content: "";
     position: absolute;
     top: 18px;
@@ -551,42 +543,43 @@ header .carousel-next-icon:after, .carousel-prev-icon:after {
     border-left: 2px solid #fff;
     transform: rotate(-45deg);
 }
-header .carousel-next-icon:after {
+section.slider .carousel-next-icon:after {
     transform: rotate(135deg);
     left: 13px;
 }
-header .carousel .image {
-    top: 5px;
-    right: -40px;
+section.slider .carousel .image {
+    top: -1px;
+    right: -33px;
 }
-header .carousel .text {
+section.slider .carousel .text {
     text-align: left;
     max-width: 609px;
-    margin: 120px 0 195px;
+    margin: 116px 0 195px;
 }
-header .text h1 {
+section.slider .text h1 {
     max-width: 609px;
 }
-header .text p {
+section.slider .text p {
     font-weight: 700;
-    margin: 40px 0 46px;
+    margin: 42px 0 46px;
     max-width: 506px;
     line-height: 21px;
 }
-header .text .order-copy {
-    padding: 12px 56px;
-    margin-right: 6px;
+section.slider .text .order-copy {
+    width: 239px;
+    height: 53px;
+    margin-right: 11px;
 }
-header .text .learn-more {
-    padding: 12px 42px;
+section.slider .text .learn-more {
+    width: 182px;
+    height: 53px;
 }
-header .text .learn-more:hover {
+section.slider .text .learn-more:hover {
     text-decoration: underline;
 }
 /* -------------------- *\
-  End Header
+  End Slider Section
 \* -------------------- */
-
 /* -------------------- *\
   Start features
 \* -------------------- */
@@ -595,6 +588,7 @@ section.features .features-image {
     max-width: 866px;
     height: 184px;
     top: -93px;
+    left: 6px;
 }
 section.features .feature {
     padding: 0 42px;
@@ -609,13 +603,12 @@ section.features .feature p {
 /* -------------------- *\
   End features
 \* -------------------- */
-
 /* -------------------- *\
   Start Get-Started Section
 \* -------------------- */
 section.get-started {
-    padding-bottom: 70px;
-    margin-top: -10px;
+    padding-bottom: 72px;
+    margin-top: -7px;
 }
 section.get-started .steps {
     flex-wrap: wrap;
@@ -631,6 +624,7 @@ section.get-started span {
 section.get-started h2 {
     font-size: 40px;
     margin-bottom: 18px;
+    margin-top: -4px;
 }
 section.get-started p {
     max-width: 340px;
@@ -643,21 +637,19 @@ section.get-started .steps > div {
     margin-bottom: 75px;
 }
 section.get-started .step-two {
-    margin-top: 60px;
+    margin-top: 69px;
 }
 section.get-started .get-started {
-    padding: 15px 85px;
-    font-size: 24px;
+    width: 323px;
+    height: 70px;
 }
 /* -------------------- *\
   End Get-Started Section
 \* -------------------- */
-
 .image-breaker {
     height: 33px;
     background: url(../img/breaker-2.png);
 }
-
 /* -------------------- *\
   Start Designs Section
 \* -------------------- */
@@ -670,19 +662,15 @@ section.designs h2.h1 {
     margin-bottom: 65px;
 }
 section.designs .image {
-    border-radius: 6px;
-    margin-right: 16px;
-    margin-left: 16px;
     border: 1px solid #979797;
 }
 section.designs p {
-    margin-top: 58px;
+    margin-top: 54px;
     color: #e5dacb;
 }
 /* -------------------- *\
   End Designs Section
 \* -------------------- */
-
 /* -------------------- *\
   Start Print Provider
 \* -------------------- */
@@ -696,12 +684,14 @@ section.designs p {
 .print-provider-container .text {
     max-width: 609px;
     padding: 0 15px;
+    margin-left: -15px;
 }
 .print-provider-container h2.h1 {
     margin-bottom: 35px;
 }
 .print-provider-container .print-provider-btn {
-    padding: 12px 38px 10px;
+    max-width: 280px;
+    height: 53px;
 }
 /* -------------------- *\
   End Print Provider
@@ -730,7 +720,6 @@ section.world-map h2.h1 {
   Start Footer Section
 \* -------------------- */
 footer {
-    background-color: #f9f8f5;
     padding-top: 38px;
 }
 footer .container {
@@ -738,12 +727,12 @@ footer .container {
 }
 footer p {
     max-width: 463px;
-    margin-top: 40px;
-    margin-bottom: 19px;
+    margin: 45px 0 23px;
+    line-height: 19px;
 }
 footer .footer-links {
     max-width: 990px;
-    margin: 67px auto 63px;
+    margin: 70px auto 63px;
 }
 footer .list:not(:last-of-type) {
     border-right: 1px solid #dedfe1;
@@ -751,12 +740,9 @@ footer .list:not(:last-of-type) {
 footer .list li a {
     color: #222;
 }
-footer .order-copy {
-    padding: 10px 75px;
-    margin-right: 9px;
-}
-footer .print-provider-btn {
-    padding: 11px 36px;
+footer .buttons a {
+    width: 280px;
+    height: 53px;
 }
 footer .copyright {
     background-color: #fefdfc;
@@ -881,7 +867,8 @@ section.products .item .handbag {
     transition: .15s ease-in-out;
     cursor: pointer;
 }
-.products-pagination .active a, .products-pagination a:hover {
+.products-pagination .active a,
+.products-pagination a:hover {
     background-color: rgba(200, 160, 56, .2);
     color: #a07b1b;
 }
@@ -912,7 +899,8 @@ section.product .thumbnail li {
     background-color: #f3f1ed;
     margin: 0 0 9px 0;
 }
-section.product .thumbnail .active, section.product .thumbnail li:hover {
+section.product .thumbnail .active,
+section.product .thumbnail li:hover {
     border: 2px solid #a07b1b;
 }
 section.product .image {
@@ -928,20 +916,23 @@ section.product .image.slider img.active {
 section.product .details {
     max-width: 416px;
 }
-section.product .size, section.shopping-cart .size {
+section.product .size,
+section.shopping-cart .size {
     border-radius: 5px;
     background-color: #f8f4ef;
     margin: 30px 0 24px;
     padding: 22px 21px 13px;
 }
-section.product .size .checkbox, section.shopping-cart .size .checkbox {
+section.product .size .checkbox,
+section.shopping-cart .size .checkbox {
     margin: 0 auto 8px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1px solid #afa9a0;
 }
-section.product .size .active .checkbox, section.shopping-cart .size .active .checkbox {
+section.product .size .active .checkbox,
+section.shopping-cart .size .active .checkbox {
     background-color: #106b2e;
 }
 section.product .size .active .checkbox:after,
@@ -959,37 +950,46 @@ section.shopping-cart .size .active .checkbox:after {
     transform: rotate(35deg);
     transition: .15s ease-in-out;
 }
-section.product .size button, section.shopping-cart .size button {
+section.product .size button,
+section.shopping-cart .size button {
     height: 76px;
     border-radius: 5px;
     background-color: #ede4d9;
     margin: 19px 4px 14px;
 }
-section.product .size .active, section.shopping-cart .size .active {
+section.product .size .active,
+section.shopping-cart .size .active {
     border: 2px solid #106b2e;
     background-color: #fcfbf9;
     color: #106B2E;
 }
-section.product .select-wrapper, section.shopping-cart .select-wrapper {
+section.product .select-wrapper,
+section.shopping-cart .select-wrapper {
     height: 61px;
     margin-bottom: 34px;
 }
-section.product .select, section.shopping-cart .select {
+section.product .select,
+section.shopping-cart .select {
     height: 61px;
     border-radius: 2px;
     border: 1px solid #e5dacb;
     background-color: #fff;
     padding: 0 18px;
 }
-section.product .copies-number, section.shopping-cart .copies-number {
+section.product .copies-number,
+section.shopping-cart .copies-number {
     height: 52px;
     border: 1px solid #e5dacb;
     background-color: #ffffff;
     margin: 20px 0 23px;
     padding: 0 20px;
 }
-section.product .copies-number .minus, section.product .copies-number .plus, section.product .copies-number span,
-section.shopping-cart .copies-number .minus, section.shopping-cart .copies-number .plus, section.shopping-cart .copies-number span {
+section.product .copies-number .minus,
+section.product .copies-number .plus,
+section.product .copies-number span,
+section.shopping-cart .copies-number .minus,
+section.shopping-cart .copies-number .plus,
+section.shopping-cart .copies-number span {
     top: 50%;
     transform: translateY(-50%);
 }
@@ -1616,8 +1616,8 @@ section.user-profile address {
 section.user-profile address span {
     line-height: 21px;
 }
-section.user-profile button.green-bg,
-section.user-profile button.green-bg {
+section.user-profile button.greenish-bg,
+section.user-profile button.greenish-bg {
     width: 199px;
     height: 50px;
     margin-right: 35px;
@@ -2080,13 +2080,13 @@ section.product-info.two-book .text-wrapper {
   Media Queries
 \* -------------------- */
 @media (max-width: 1300px) {
-    header .carousel-item {
+    section.slider .carousel-item {
         text-align: center !important;
     }
-    header .carousel .image {
+    section.slider .carousel .image {
         position: unset !important;
     }
-    header .carousel .text {
+    section.slider .carousel .text {
         margin: 50px 0 145px;
     }
 }
@@ -2103,7 +2103,8 @@ section.product-info.two-book .text-wrapper {
     header .nav-wrapper {
         align-items: flex-start !important;
     }
-    header .navbar .cart-modal, header .cart-modal .modal-dialog {
+    header .navbar .cart-modal,
+    header .cart-modal .modal-dialog {
         top: 0;
         left: 0;
     }
@@ -2158,10 +2159,10 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 991px) {
-    header .carousel {
+    section.slider .carousel {
         padding: 0 60px;
     }
-    section.designs .design-images .image:not(.last) {
+    section.designs .design-images .image {
         margin-bottom: 20px;
     }
     section.products .input-wrapper {
@@ -2183,7 +2184,8 @@ section.product-info.two-book .text-wrapper {
     section.product .thumbnail li {
         margin: 0 9px 20px 0;
     }
-    section.product-info .text-wrapper .features, section.product-info .text-wrapper .description {
+    section.product-info .text-wrapper .features,
+    section.product-info .text-wrapper .description {
         margin-bottom: 27px;
     }
     section.product-info .text-wrapper .description {
@@ -2201,7 +2203,7 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 900px) {
-    header .carousel .text {
+    section.slider .carousel .text {
         margin: 50px 0;
     }
     section.features .features-image {
@@ -2222,7 +2224,10 @@ section.product-info.two-book .text-wrapper {
         flex: 0 0 50%;
     }
     section.designs .image {
-        flex: 0 0 calc(50% - 32px);
+        flex: 0 0 calc(50% - 16px);
+    }
+    .print-provider-container .text {
+        padding: 0 26px 0 42px;
     }
     section.world-map h2.h1 {
         bottom: -10px;
@@ -2236,12 +2241,6 @@ section.product-info.two-book .text-wrapper {
     footer .list:not(:last-of-type) {
         border-right: none;
         border-bottom: 1px solid #dedfe1;
-    }
-    footer .order-copy, footer .print-provider-btn {
-        display: block !important;
-    }
-    footer .order-copy {
-        margin: 0 0 10px 0;
     }
     section.products .input-wrapper {
         margin-bottom: 12px;
@@ -2287,7 +2286,8 @@ section.product-info.two-book .text-wrapper {
     section.products.two .progress-steps .step {
         margin-top: 40px
     }
-    section.products.two .progress-steps .step:before, section.products.two .progress-steps .step:last-of-type:after {
+    section.products.two .progress-steps .step:before,
+    section.products.two .progress-steps .step:last-of-type:after {
         display: none;
     }
     section.products.two .progress-steps .step:after {
@@ -2326,13 +2326,12 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 575px) {
-    header .text .order-copy, header .text .learn-more {
-        display: block !important;
-    }
-    header .text .order-copy {
-        padding-left: 42px;
+    section.slider .text .order-copy {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+    section.slider .text .order-copy,section.slider .text .learn-more {
+        width: 100%;
     }
     section.features .feature {
         flex: 0 0 100%;
@@ -2341,6 +2340,10 @@ section.product-info.two-book .text-wrapper {
     }
     section.features .feature:not(:last-of-type) {
         border-bottom: 1px solid #dedfe1;
+    }
+    footer .buttons a {
+        margin-bottom: 10px;
+        width: 100%;
     }
     section.products .text-wrapper {
         margin-right: 0;
@@ -2377,6 +2380,7 @@ section.product-info.two-book .text-wrapper {
     }
     header .nav-wrapper {
         flex-direction: column;
+        margin-bottom: 40px;
     }
     header .navbar.nav-with-out-ul .login-register {
         margin-top: 25px;
@@ -2385,7 +2389,10 @@ section.product-info.two-book .text-wrapper {
         padding: 36px 15px 3px;
         flex-direction: column;
     }
-    header .text h1, section.get-started h2, section.designs h2.h1, .print-provider-container h2.h1 {
+    section.slider .text h1,
+    section.get-started h2,
+    section.designs h2.h1,
+    .print-provider-container h2.h1 {
         font-size: 24px;
     }
     section.product .modal-header .title-wrapper {
@@ -2410,8 +2417,8 @@ section.product-info.two-book .text-wrapper {
     section.user-profile .address-container .buttons {
         text-align: center;
     }
-    section.user-profile .primary-address button.green-bg,
-    section.user-profile .secondry-address button.green-bg {
+    section.user-profile .primary-address button.greenish-bg,
+    section.user-profile .secondry-address button.greenish-bg {
         width: 100%;
         margin-bottom: 20px;
         margin-right: 0;
@@ -2431,11 +2438,8 @@ section.product-info.two-book .text-wrapper {
     header .navbar .social-login button {
         margin: 6px 0;
     }
-    header .text .order-copy, header .text .learn-more {
-        padding: 13px 26px;
-    }
     section.get-started .get-started {
-        padding: 15px 59px;
+        width: 100%;
     }
     section.world-map h2.h1 {
         font-size: 28px;
@@ -2488,7 +2492,8 @@ section.product-info.two-book .text-wrapper {
         padding-right: 10px;
         padding-left: 10px;
     }
-    section.contact-us .contact-form .submit, section.create-account .register-form .submit {
+    section.contact-us .contact-form .submit,
+    section.create-account .register-form .submit {
         width: auto;
     }
     section.contact-us .contact-number {
@@ -2526,12 +2531,6 @@ section.product-info.two-book .text-wrapper {
 @media (max-width: 350px) {
     .print-provider-container h2 {
         margin-bottom: 24px;
-    }
-    .print-provider-container .print-provider-btn {
-        padding: 12px 28px;
-    }
-    footer .order-copy {
-        padding: 12px 65px;
     }
     footer .print-provider-btn {
         padding: 11px 25px;

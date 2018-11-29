@@ -19,14 +19,14 @@
 </head>
 <body>
 <!-- Start Header Section -->
-<header>
+<header class="greyish-bg">
     <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
-        <div class="container">
-            <div>
-                <a class="navbar-brand QuranGift-logo" href="index.html">
+        <div class="container p-xl-0">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand quran-gift-logo" href="index.html">
                     <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
                 </a>
-                <a class="navbar-brand QuranGift-text" href="index.html">Quran<strong>Gift</strong></a>
+                <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
                 <div class="nav-wrapper w-100 d-flex align-items-center justify-content-between">
                     <ul class="navbar-nav mr-auto roboto">
                         <li class="nav-item">
-                            <a class="nav-link order-now text-underline" href="#">ORDER NOW</a>
+                            <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Become a Partner</a>
@@ -66,7 +66,7 @@
                     </ul>
                     <div class="login-register">
                     <span class="position-relative text-center">
-                        <img src="img/handbag.svg" class="handbag align-middle pointer" data-toggle="modal" data-target="#shop-cart">
+                        <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" data-toggle="modal" data-target="#shop-cart">
                         <span class="cart-number position-absolute white-text roboto-medium">0</span>
                     </span>
                         <!-- Modal -->
@@ -85,7 +85,7 @@
                                         </a>
                                     </div>
 
-                                    <div class="modal-body d-flex position-relative">
+                                    <div class="modal-body greyish-bg d-flex position-relative">
 
                                         <div class="empty-cart hide text-center position-absolute">
                                             <h2 class="mb-4 roboto-medium font-24">Your cart is empty.</h2>
@@ -145,7 +145,7 @@
                             </div>
                         </div>
                         <!-- Button trigger modal -->
-                        <button type="button" class="modal-button white-text roboto-medium font-14 text-uppercase transition" data-toggle="modal" data-target="#login">
+                        <button type="button" class="modal-button white-text roboto-medium font-14 br-24 text-uppercase transition" data-toggle="modal" data-target="#login">
                             Login/Register
                         </button>
                     </div>
@@ -205,6 +205,9 @@
             </div>
         </div>
     </nav>
+</header>
+<!-- End Header Section -->
+<section class="slider greyish-bg main-border-b">
     <div id="carouselExampleFade" class="carousel slide d-flex" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active carousel-one">
@@ -212,7 +215,7 @@
                     <img class="img-fluid" src="img/mushaf-slider.png" alt="Mushaf">
                 </div>
                 <div class="text d-inline-block">
-                    <h1 class="roboto-light black-text-0">
+                    <h1 class="roboto-light black-text-2">
                         Al-Mushaf Al-Sharif is the best gift
                         to anyone around the world
                     </h1>
@@ -220,8 +223,16 @@
                         We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures
                     </p>
 
-                    <a href="#" class="order-copy white-text quran-btn btn-green border-2 d-inline-block text-uppercase transition">Order A Copy</a>
-                    <a href="#" class="learn-more brown-text quran-btn btn-brown border-2 d-inline-block text-underline transition">Learn more</a>
+                    <div class="buttons d-sm-flex ml-1">
+                        <a href="#" class="order-copy btn-green roboto font-18 white-text green-bg border-2 border-green br-6
+                     d-inline-block text-uppercase no-underline transition d-flex justify-content-center align-items-center">
+                            Order A Copy
+                        </a>
+                        <a href="#" class="learn-more btn-brown roboto font-18 brown-text border-2 border-brown br-6
+                      d-inline-block text-underline transition d-flex justify-content-center align-items-center">
+                            Learn more
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item carousel-two">
@@ -229,16 +240,24 @@
                     <img class="img-fluid" src="img/mushaf-slider.png" alt="Mushaf">
                 </div>
                 <div class="text d-inline-block">
-                    <h1 class="roboto-light">
+                    <h1 class="roboto-light black-text-2">
                         Al-Mushaf Al-Sharif is the best gift
                         to anyone around the world
                     </h1>
-                    <p class="roboto">
+                    <p class="roboto font-18 green-text">
                         We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures
                     </p>
 
-                    <a href="#" class="order-copy white-text quran-btn btn-green border-2 d-inline-block text-uppercase transition">Order A Copy</a>
-                    <a href="#" class="learn-more brown-text quran-btn btn-brown border-2 d-inline-block text-underline transition">Learn more</a>
+                    <div class="buttons d-sm-flex ml-1">
+                        <a href="#" class="order-copy btn-green roboto font-18 white-text green-bg border-2 border-green br-6
+                     d-inline-block text-uppercase no-underline transition d-flex justify-content-center align-items-center">
+                            Order A Copy
+                        </a>
+                        <a href="#" class="learn-more btn-brown roboto font-18 brown-text border-2 border-brown br-6
+                     border-2 d-inline-block text-underline transition d-flex justify-content-center align-items-center">
+                            Learn more
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,13 +270,12 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-</header>
-<!-- End Header Section -->
-
+</section>
 <!-- Start Features Section -->
 <section class="features">
     <div class="features-image d-flex container align-items-center position-relative roboto">
-        <div class="features-container roboto font-14 black-text-2 mx-auto d-flex flex-wrap flex-sm-wrap flex-md-nowrap justify-content-center">
+        <div class="features-container roboto font-14 black-text-2 mx-auto
+         d-flex flex-wrap flex-sm-wrap flex-md-nowrap justify-content-center align-items-end">
             <div class="feature text-center">
                 <img src="img/pencil-icon.svg" alt="">
                 <p class="mx-auto mt-3 mb-0">Easy to order and pay online</p>
@@ -274,7 +292,6 @@
     </div>
 </section>
 <!-- End Features Section -->
-
 <!-- Start get-started Section -->
 <section class="get-started text-center roboto">
     <div class="container">
@@ -287,7 +304,9 @@
                     <span class="brown-text">Step One</span>
                     <h2 class="roboto-light green-text">Choose language</h2>
                 </div>
-                <div class="image text-left"><img src="img/step-one.png" class="img-fluid"></div>
+                <div class="image text-left">
+                    <img src="img/step-one.png" alt="Easy Order and Pay Online" class="img-fluid">
+                </div>
                 <p class="text-center mb-0 grey-text">Choose design from many choices designed to suit all countries and cultures</p>
             </div>
             <div class="step-two">
@@ -295,7 +314,9 @@
                     <span class="brown-text">Step Two</span>
                     <h2 class="roboto-light green-text">Easy Payment</h2>
                 </div>
-                <div class="image text-left"><img src="img/step-two.png" class="img-fluid"></div>
+                <div class="image text-left">
+                    <img src="img/step-two.png" alt="Themes and Colors" class="img-fluid">
+                </div>
                 <p class="text-center mb-0 grey-text">Choose design from many choices designed to suit all countries and cultures</p>
             </div>
             <div class="step-three">
@@ -303,58 +324,77 @@
                     <span class="brown-text">Step Three</span>
                     <h2 class="roboto-light green-text">Receive a Copy</h2>
                 </div>
-                <div class="image text-left"><img src="img/step-three.png" class="img-fluid"></div>
+                <div class="image text-left">
+                    <img src="img/step-three.png" alt="Fast Shipping and High Quality" class="img-fluid">
+                </div>
                 <p class="text-center mb-0 grey-text">Choose design from many choices designed to suit all countries and cultures</p>
             </div>
         </div>
-        <a href="#" class="get-started d-inline-block text-center text-uppercase white-text quran-btn btn-green border-2 transition">Get Started</a>
+        <a href="#" class="get-started btn-green roboto font-24 white-text green-bg border-2 border-green br-6
+                      text-uppercase no-underline transition d-flex justify-content-center align-items-center mx-auto">
+            Get Started
+        </a>
     </div>
 </section>
 <!-- End Get-Started Section -->
-
 <!-- Start Breaker -->
 <div class="image-breaker"></div>
 <!-- End Breaker -->
-
 <!-- Start Designs Section -->
 <section class="designs text-center mt-2">
-    <div class="container">
+    <div class="container p-sm-0">
         <h2 class="h1 mx-auto roboto-light white-text">Amazing designs suitable for any country and cult</h2>
         <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between design-images">
-            <div class="image"><a href="#"><img src="img/design-1.png" class="img-fluid"></a></div>
-            <div class="image"><a href="#"><img src="img/design-2.png" class="img-fluid"></a></div>
-            <div class="image last"><a href="#"><img src="img/design-3.png" class="img-fluid"></a></div>
-            <div class="image last"><a href="#"><img src="img/design-4.png" class="img-fluid"></a></div>
+            <div class="image br-6 mr-0 mr-lg-3 mr-xl-0">
+                <a href="#">
+                    <img src="img/design-1.png" alt="Mushaf Design" class="img-fluid">
+                </a>
+            </div>
+            <div class="image br-6 mr-0 mr-lg-3 mr-xl-0">
+                <a href="#">
+                    <img src="img/design-2.png" alt="Mushaf Design" class="img-fluid">
+                </a>
+            </div>
+            <div class="image br-6 mb-0 mr-0 mr-lg-3 mr-xl-0">
+                <a href="#">
+                    <img src="img/design-3.png" alt="Mushaf Design" class="img-fluid">
+                </a>
+            </div>
+            <div class="image br-6 mb-0">
+                <a href="#">
+                    <img src="img/design-4.png" alt="Mushaf Design" class="img-fluid">
+                </a>
+            </div>
         </div>
         <p class="roboto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
     </div>
 </section>
 <!-- End Designs Section -->
-
 <!-- Start Print Provider -->
 <div class="print-provider-container mx-auto position-relative d-flex justify-content-center align-items-center">
     <img src="img/print-provider.png">
     <div class="text text-center position-absolute">
         <h2 class="h1 roboto-light black-text-0">Message for printers to become our partners</h2>
-        <a href="#" class="print-provider-btn transition d-inline-block quran-btn btn-brown border-3 brown-text transition">Become a Print Provider</a>
+        <a href="#" class="print-provider-btn btn-brown roboto font-18 brown-text border-3 border-brown br-6
+                     mx-auto d-inline-block transition d-flex justify-content-center align-items-center">
+            Become a Print Provider
+        </a>
     </div>
 </div>
 <!-- End Print Provider -->
-
 <!-- Start World-Map Section -->
 <section class="world-map mx-auto position-relative">
     <img src="img/world-map.png" class="img-fluid" alt="Receive Al-Mushaf Anywhere">
     <h2 class="h1 position-absolute roboto-medium text-uppercase">Receive it anywhere</h2>
 </section>
 <!-- End World-Map Section -->
-
 <!-- Start Footer Section -->
-<footer class="text-center roboto">
-    <div class="container">
+<footer class="greyish-bg">
+    <div class="container text-center">
         <img src="img/logo.svg" alt="Mushaf Logo" width="81" height="79">
         <br>
-        <span class="QuranGift-text">Quran<strong>Gift</strong></span>
-        <p class="mx-auto grey-text">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
+        <span class="frutiger-light font-20 green-text">Quran<strong>Gift</strong></span>
+        <p class="roboto grey-text mx-auto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
 
         <div class="social-links">
             <i class="fab fa-facebook-square fa-2x fa-fw" style="color: #6081c4"></i>
@@ -364,7 +404,7 @@
             <i class="fab fa-youtube-square fa-2x fa-fw" style="color: #f61c0d"></i>
         </div>
 
-        <div class="footer-links d-flex flex-wrap">
+        <div class="footer-links roboto d-flex flex-wrap">
             <div class="flex-grow-1 list">
                 <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
                     <li><a href="#">Help Center</a></li>
@@ -390,11 +430,19 @@
             </div>
         </div>
 
-        <a href="#" class="order-copy quran-btn btn-green border-3 white-text transition d-inline-block text-uppercase">Order A Copy</a>
-        <a href="#" class="print-provider-btn quran-btn btn-brown border-3 brown-text transition d-inline-block">Become a Print Provider</a>
+        <div class="buttons d-sm-flex justify-content-center">
+            <a href="#" class="order-copy btn-green roboto font-18 white-text green-bg border-3 border-green br-6
+                     d-inline-block text-uppercase no-underline transition d-flex justify-content-center align-items-center mr-3">
+                Order A Copy
+            </a>
+            <a href="#" class="btn-brown roboto font-18 brown-text border-3 border-brown br-6
+                      d-inline-block transition d-flex justify-content-center align-items-center">
+                Become a Print Provider
+            </a>
+        </div>
     </div>
-    <div class="copyright roboto">
-        <span class="black-text-2">© 2018 QuranGift, Inc. All rights reserved.</span>
+    <div class="copyright text-center">
+        <span class="roboto black-text-2">© 2018 QuranGift, Inc. All rights reserved.</span>
     </div>
 </footer>
 <!-- End Footer Section -->
