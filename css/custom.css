@@ -321,7 +321,7 @@ header .navbar-nav .nav-item > a {
     padding: 0 !important;
 }
 header .navbar .quran-gift-text {
-    margin-right: 25px;
+    margin-right: 28px;
     color: #106b2e;
 }
 header .navbar .quran-gift-text:hover {
@@ -1170,9 +1170,6 @@ section.faq .card button.collapsed .caret {
 section.faq .card .card-body {
     padding: 0;
 }
-section.faq .accordion .card-body p {
-    line-height: 22px;
-}
 /* -------------------- *\
   End FAQ Section
 \* -------------------- */
@@ -1411,11 +1408,11 @@ section.checkout .shopping-items .footer {
 \* ------------------------------------------------------------------ */
 section.contact-us .contact-form {
     flex-basis: 734px;
-    padding: 30px 36px 30px 33px;
-    margin: 52px 44px 35px 0;
+    padding: 31px 38px 30px 32px;
+    margin: 53px 45px 26px 0;
 }
 section.contact-us .contact-form h2 {
-    margin: 0 0 24px 1px;
+    margin: 0 0 26px 1px;
 }
 section.contact-us .contact-form .textarea {
     height: 191px;
@@ -1427,10 +1424,10 @@ section.contact-us .contact-form .submit {
     margin-top: 12px;
 }
 section.contact-us .contact-info {
-    margin: 52px 0;
+    margin: 52px 0 26px;
 }
 section.contact-us .contact-number {
-    padding: 32px 0 25px 34px;
+    padding: 34px 0 25px 39px;
     margin-bottom: 48px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
 }
@@ -1444,24 +1441,35 @@ section.contact-us .follow-us h3 {
     margin-bottom: 18px;
 }
 section.contact-us .follow-us i {
-    font-size: 28px;
-    margin: 6px 6px 0 0;
+    font-size: 32px;
+    margin: 8px 8px 0 0;
 }
-section.contact-us .follow-us span {
+section.contact-us .follow-us .text-link {
     padding: 21px 0 8px;
     border-bottom: 1px solid #c8c7cc;
+    color: #444;
 }
 section.faq.contact {
-    margin-bottom: 53px;
+    margin-bottom: 64px;
 }
-section.faq.contact .card button:hover, section.faq.contact .card button:focus {
+section.faq.contact .text-wrapper {
+    max-width: 733px;
+}
+section.faq.contact .text-wrapper h2 {
+    letter-spacing: .3px;
+}
+section.faq.contact .text-wrapper p {
+    margin-top: 0;
+}
+section.faq.contact .card button:hover,
+section.faq.contact .card button:focus {
     color: #106b2e;
 }
 section.faq.contact .accordion {
     margin-top: 11px;
 }
 section.faq.contact .accordion .card {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     background-color: transparent;
 }
 section.faq.contact .card .caret {

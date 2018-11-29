@@ -28,6 +28,42 @@
                 </a>
                 <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="nav-wrapper w-100 d-flex align-items-center justify-content-between">
+                    <ul class="navbar-nav mr-auto roboto">
+                        <li class="nav-item">
+                            <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Become a Partner</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About Service
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Support
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
             <div class="login-register">
                 <span class="position-relative text-center">
                     <!-- trigger Cart modal -->
@@ -167,7 +203,7 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container p-sm-0">
         <h1 class="title roboto-light">Contact US</h1>
     </div>
 </header>
@@ -175,8 +211,8 @@
 
 <!-- Start Checkout Section -->
 <section class="contact-us">
-    <div class="container">
-        <div class="contact d-block d-md-flex align-items-start justify-content-center flex-wrap flex-xl-nowrap">
+    <div class="container p-sm-0">
+        <div class="contact d-xl-flex align-items-start">
 
             <div class="contact-form main-border br-5 white-bg">
                 <h2 class="roboto font-24">How can we help?</h2>
@@ -242,7 +278,8 @@
                         <textarea class="textarea font-18 roboto black-text-0 main-border br-2 w-100" placeholder=""></textarea>
                         <label class="floating-label gift-label roboto font-18 black-text-7 transition position-absolute">Your message</label>
                     </div>
-                    <input type="submit" class="submit roboto-medium font-18 btn-green br-2 transition border-2 pointer text-uppercase white-text" value="send">
+                    <input type="submit" class="submit roboto-medium font-18 btn-green green-bg border-green br-2 transition border-2
+                     pointer text-uppercase white-text" value="send">
                 </form>
             </div>
 
@@ -261,27 +298,29 @@
                     <ul class="list-unstyled">
                         <li class="d-flex align-items-center">
                             <a href="#"><i class="fab fa-facebook-square fa-fw" style="color: #6081c4"></i></a>
-                            <span class="w-100 frutiger-roman font-15">Facebook</span>
+                            <a href="#" class="text-link w-100 frutiger-roman font-15">Facebook</a>
                         </li>
                         <li class="d-flex align-items-center">
                             <a href="#"><i class="fab fa-twitter-square fa-fw" style="color: #43bdf0"></i></a>
-                            <span class="w-100 frutiger-roman font-15">Twitter</span>
+                            <a href="#" class="text-link w-100 frutiger-roman font-15">Twitter</a>
                         </li>
                         <li class="d-flex align-items-center">
                             <a href="#"><i class="fab fa-instagram fa-fw" style="color: #d00868"></i></a>
-                            <span class="w-100 frutiger-roman font-15">Instagram</span>
+                            <a href="#" class="text-link w-100 frutiger-roman font-15">Instagram</a>
                         </li>
                         <li class="d-flex align-items-center">
-                            <a href="#"><i class="fab fa-youtube-square fa-fw" style="color: #f61c0d"></i></a>
-                            <span class="w-100 frutiger-roman font-15">Youtube</span>
+                            <a href="#">
+                                <i class="fab fa-youtube-square fa-fw" style="color: #f61c0d"></i>
+                            </a>
+                            <a href="#" class="text-link w-100 frutiger-roman font-15">Youtube</a>
                         </li>
                         <li class="d-flex align-items-center">
                             <a href="#"><i class="fab fa-vimeo-square fa-fw" style="color: #69b4e5"></i></a>
-                            <span class="w-100 frutiger-roman font-15">Vimeo</span>
+                            <a href="#" class="text-link w-100 frutiger-roman font-15">Vimeo</a>
                         </li>
                         <li class="d-flex align-items-center">
                             <a href="#"><i class="fab fa-google-plus-square fa-fw" style="color: #f34a38"></i></a>
-                            <span class="w-100 frutiger-roman font-15">Google+</span>
+                            <a href="#" class="text-link w-100 frutiger-roman font-15">Google+</a>
                         </li>
                     </ul>
                 </div>
@@ -293,7 +332,7 @@
 
 <!-- Start FAQ Section -->
 <section class="faq contact">
-    <div class="container">
+    <div class="container p-sm-0">
         <div class="text-wrapper roboto">
             <h2 class="roboto-medium font-28">FREQUENTLY ASKED QUESTIONS</h2>
 
@@ -319,7 +358,7 @@
                     <div class="card-header no-border" id="headingTwo">
                         <h5 class="mb-0">
                             <button class="btn btn-link text-left roboto-medium font-22 green-text" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fas fa-caret-down caret"></i>	Where is My Order?
+                                <i class="fas fa-caret-down caret"></i>Where is My Order?
                             </button>
                         </h5>
                     </div>
