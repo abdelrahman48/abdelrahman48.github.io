@@ -937,8 +937,7 @@ section.product .description h2 {
 section.product .description p {
     line-height: 24px;
 }
-section.product .size,
-section.shopping-cart .size {
+section.product .size {
     border-radius: 5px;
     background-color: #f8f4ef;
     margin: 30px 0 26px;
@@ -1184,24 +1183,24 @@ section.faq .accordion .card-body p {
   Start Copy 16 Page
 \* ------------------------------------------------------------------ */
 header .title {
-    margin-top: 37px;
+    margin-top: 32px;
     margin-bottom: 24px;
 }
 header .title span {
-    margin-left: 16px;
+    margin-left: 49px;
 }
 section.shopping-cart {
-    padding: 33px 0 52px;
+    padding: 35px 0 52px;
 }
 section.shopping-cart .hide {
     display: none !important;
 }
 section.shopping-cart .shopping-items {
     flex-basis: 676px;
-    margin-right: 25px;
+    margin-right: 39px;
 }
 section.shopping-cart .shopping-item {
-    padding: 30px 28px 0;
+    padding: 29px 32px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     border-radius: 5px;
     border: 1px solid #e5dacb;
@@ -1210,10 +1209,10 @@ section.shopping-cart .shopping-item:not(:last-of-type) {
     margin-bottom: 24px;
 }
 section.shopping-cart .title-wrapper {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
 }
 section.shopping-cart .title-wrapper h1 {
-    margin-left: 13px;
+    margin-left: 18px;
 }
 section.shopping-cart .shopping-items .image {
     margin-right: 28px;
@@ -1222,11 +1221,13 @@ section.shopping-cart .shopping-items .image {
 section.shopping-cart .details {
     max-width: 410px;
 }
-section.shopping-cart .size {
-    margin-bottom: 27px;
+section.shopping-cart .description p {
+    line-height: 25px;
 }
-section.shopping-cart .size .mb-12 {
-    margin-bottom: 12px;
+section.shopping-cart .size {
+    background-color: #f8f4ef;
+    margin: 21px 0 27px;
+    padding: 13px 13px 9px 17px;
 }
 section.shopping-cart .select-wrapper {
     margin-bottom: 18px;
@@ -2145,13 +2146,6 @@ section.product-info.two-book .text-wrapper {
     section.product-info .text-wrapper .description {
         flex: 0 0 350px;
     }
-    section.shopping-cart .shopping-items,
-    section.user-profile .profile-links {
-        margin-right: 0;
-    }
-    section.shopping-cart .shopping-price {
-        margin-top: 40px;
-    }
     section.checkout .information,
     section.contact-us .contact-form,
     section.create-account .register-form {
@@ -2204,6 +2198,13 @@ section.product-info.two-book .text-wrapper {
     }
     section.product-info .text-wrapper .description {
         flex: auto;
+    }
+    section.shopping-cart .shopping-items,
+    section.user-profile .profile-links {
+        margin-right: 0;
+    }
+    section.shopping-cart .shopping-price {
+        margin-top: 40px;
     }
     section.products.two .input-wrapper {
         margin-bottom: 12px;
@@ -2285,6 +2286,9 @@ section.product-info.two-book .text-wrapper {
     }
     .flex-wrap .form-group:nth-of-type(odd):not(:last-of-type) {
         margin-right: 0;
+    }
+    section.shopping-cart .details {
+        max-width: initial;
     }
     section.checkout .reciver-info .checkbox.info {
         left: 20px;
