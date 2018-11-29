@@ -363,8 +363,8 @@ header .navbar .cart-number.active {
     display: inline-block;
 }
 header .navbar .cart-modal {
-    top: 18px ;
-    left: -147px;
+    top: 17px ;
+    left: -202px;
     border-radius: 0;
 }
 header .cart-modal .modal-dialog {
@@ -380,10 +380,10 @@ header .cart-modal .modal-content:after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: -24px;
-    left: 469px;
+    top: -32px;
+    left: 507px;
     border-style: solid;
-    border-width: 12px;
+    border-width: 16px;
     border-color: transparent transparent #fff transparent
 }
 header .cart-modal .modal-header {
@@ -393,13 +393,13 @@ header .edit-cart:hover {
     color: #a07b1b;
 }
 header .cart-modal .modal-body {
-    padding: 26px 37px;
+    padding: 26px 25px;
     margin-top: 23px;
     overflow: hidden;
 }
 header .cart-modal .modal-body {
     cursor: grab;
-    height: 300px;
+    height: 255px;
 }
 header .cart-modal .modal-body.empty {
     cursor: default;
@@ -476,7 +476,7 @@ header .navbar .modal-content {
     box-shadow: 0 2px 34px rgba(0, 0, 0, .2);
 }
 header .navbar .modal-header {
-    padding: 32px 9px 3px 16px;
+    padding: 36px 24px 3px 24px;
 }
 header form .form-control {
     height: 61px;
@@ -492,7 +492,7 @@ header .navbar .submit {
     margin-top: 4px;
 }
 header .navbar .modal-footer {
-    padding-top: 21px;
+    padding-top: 30px;
     padding-bottom: 31px;
 }
 header .navbar .social-login {
