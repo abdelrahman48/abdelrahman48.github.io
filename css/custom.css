@@ -340,6 +340,7 @@ header .navbar-collapse .order-now {
     color: #ac4c31 !important;
 }
 header .nav-item .dropdown-toggle::after {
+    font-size: 17px;
     margin-left: 3px;
     vertical-align: .15em;
     border-top: .4em solid;
@@ -1482,12 +1483,12 @@ section.faq.contact .card .caret {
   Start Copy 15 Page
 \* ------------------------------------------------------------------ */
 section.create-account .form {
-    margin: 52px 0 70px;
+    margin: 54px 0 78px;
 }
 section.create-account .register-form {
     flex-basis: 644px;
-    margin-right: 44px;
-    padding: 30px 26px 36px 33px;
+    margin-right: 41px;
+    padding: 30px 29px 41px 33px;
 }
 section.create-account .register-form h2 {
     margin: 0 0 38px 1px;
@@ -1502,7 +1503,7 @@ section.create-account .login-form {
     padding: 31px 22px 45px 23px;
 }
 section.create-account .login-form .header {
-    margin: 0 0 19px 2px;
+    margin: 0 0 20px 2px;
 }
 section.create-account .login-form .form-group {
     margin-bottom: 10px;
