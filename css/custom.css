@@ -293,6 +293,9 @@ textarea {
 .br-rd {
     border-radius: 50%;
 }
+.no-br-rd {
+    border-radius: 0 !important;
+}
 .no-outline, .no-outline:focus {
     outline: none;
 }
@@ -872,7 +875,7 @@ section.products .item .handbag {
   End Copy 3 Page
 \* ------------------------------------------------------------------ */
 /* ------------------------------------------------------------------ *\
-  Start Copy 3 Page
+  Start Copy 4 Page
 \* ------------------------------------------------------------------ */
 /* -------------------- *\
   Start Product Section
@@ -905,7 +908,7 @@ section.product .image.slider img.active {
     display: block;
 }
 section.product .details {
-    max-width: 416px;
+    max-width: 417px;
 }
 section.product .description h2 {
     margin-bottom: 13px;
@@ -1029,20 +1032,23 @@ section.product .cart .added-number.active {
     }
 }
 /* -------------------- *\
-  Start Box-Modal
+  Start book-box-modal
 \* -------------------- */
+.book-modal {
+    margin: -17px auto auto -46px;
+}
 .book-modal .modal-dialog {
     max-width: 995px;
 }
-section.product .modal-header .title-wrapper {
+.book-modal section.product .title-wrapper {
     width: 100%;
-    padding: 24px 30px 16px 26px;
+    padding: 25px 30px 30px 22px;
 }
-section.product .modal-header .title-wrapper h1 {
+.book-modal section.product .title-wrapper h1 {
     margin-left: 11px;
     margin-bottom: 0;
 }
-section.product .modal-header .close {
+.book-modal section.product .close {
     width: 34px;
     height: 34px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
@@ -1054,47 +1060,38 @@ section.product .modal-header .close {
     line-height: 0;
     margin: 0;
 }
-section.product .modal-header .close span {
-    margin: 0 0 5px 1px;
-}
-section.product .modal-body {
+.book-modal section.product .modal-body {
     padding: 0 24px 0 29px;
 }
-section.product .modal-body .image-wrapper {
+.book-modal section.product .image-wrapper {
     margin: 0 34px 0 0;
 }
-section.product .modal-body .image {
-    height: auto;
+.book-modal section.product .image {
     margin: 0;
+    padding-top: 0;
 }
-section.product .modal-body .image.slider img {
-    display: none ;
-}
-section.product .modal-body .image.slider img.active {
-    display: block;
-}
-section.product .modal-body .thumbnail li {
+.book-modal section.product .thumbnail li {
     width: 51px;
     height: 35px;
     margin: 22px 5px 6px;
 }
-section.product .modal-body .details {
+.book-modal section.product .details {
     padding-bottom: 62px;
 }
-section.product .modal-body .details p {
+.book-modal section.product .details p {
     margin-bottom: 14px;
 }
-section.product .modal-body .size {
+.book-modal section.product .size {
     margin: 24px 0 19px;
 }
-section.product .modal-body .select-wrapper {
+.book-modal section.product .select-wrapper {
     margin-bottom: 29px;
 }
-section.product .modal-body .copies-number {
-    margin: 15px 0 18px;
+.book-modal section.product .copies-number {
+    margin: 15px 0 20px;
 }
 /* -------------------- *\
-  End Box-Modal
+  End book-box-modal
 \* -------------------- */
 section.product-info .text-wrapper {
     margin: 46px 0;
@@ -2108,6 +2105,9 @@ section.product-info.two-book .text-wrapper {
 @media (max-width: 1199px) {
     section.get-started .step-two {
         margin-top: 0;
+    }
+    .book-modal {
+        margin: auto;
     }
     section.products .input-wrapper {
         margin-right: 0;
