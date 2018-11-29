@@ -309,7 +309,7 @@ textarea {
   Start Navbar
 \* -------------------- */
 header .navbar {
-    padding-top: 12px;
+    padding: 12px 0;
 }
 header .quran-gift-logo {
     margin-right: 12px;
@@ -696,7 +696,6 @@ section.designs p {
 /* -------------------- *\
   End Print Provider
 \* -------------------- */
-
 /* -------------------- *\
   Start World-Map Section
 \* -------------------- */
@@ -715,9 +714,8 @@ section.world-map h2.h1 {
 /* -------------------- *\
   End World-Map Section
 \* -------------------- */
-
 /* -------------------- *\
-  Start Footer Section
+  Start Footer
 \* -------------------- */
 footer {
     padding-top: 38px;
@@ -749,36 +747,30 @@ footer .copyright {
     padding: 33px 0 81px;
 }
 /* -------------------- *\
-  End Footer Section
+  End Footer
 \* -------------------- */
-
 /* ------------------------------------------------------------------ *\
   End Home Page
 \* ------------------------------------------------------------------ */
-
 /* ------------------------------------------------------------------ *\
   Start Copy 3 Page
 \* ------------------------------------------------------------------ */
-
-/* -------------------- *\
-  Start Products Section
-\* -------------------- */
 section.products {
-    padding: 47px 0 80px;
+    padding: 39px 0 63px;
 }
 section.products .text-wrapper {
     margin-right: 60px;
 }
 section.products .text-wrapper h2 {
-    margin-bottom: 17px;
+    margin-bottom: 5px;
 }
 section.products .input-wrapper {
     width: 389px;
-    max-width: 389px;
     margin-right: 48px;
 }
 section.products .input-wrapper input {
-    padding: 14px 23px 15px 57px;
+    padding-left: 57px;
+    height: 58px;
     background-color: #f7f3ee;
 }
 section.products .input-wrapper input::placeholder {
@@ -790,7 +782,10 @@ section.products .input-wrapper i {
     top: calc(50% - 0.5em);
 }
 section.products .sort-wrapper .dropdown-toggle {
-    margin: 0 5px 0 15px;
+    margin-left: 15px;
+}
+section.products .sort-wrapper .dropdown-toggle i {
+    margin-left: 5px;
 }
 section.products .sort-wrapper .dropdown-toggle:hover {
     color: rgba(0, 0, 0, .9);
@@ -799,30 +794,32 @@ section.products .sort-wrapper .dropdown-toggle::after {
     display: none;
 }
 section.products .category-list {
-    margin: 12px 0 76px;
+    margin: 18px 0 76px;
 }
 section.products .item {
     box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
     border-radius: 2px;
     margin: 19px 25px 19px 0;
+    padding: 8px 0 0 7px;
     flex-direction: column;
     flex: calc(33.3333% - 25px);
 }
 section.products .item:nth-of-type(3n) {
     margin-right: 0;
 }
-section.products .item .item-image {
-    padding-left: 7px;
-}
 section.products .item .item-flag {
-    left: 28px;
-    bottom: -32px;
+    left: 19px;
+    top: -38px;
 }
 section.products .item-body {
     padding: 40px 34px 30px;
 }
+section.products .item .item-title {
+    margin-bottom: 5px;
+}
 section.products .item .item-text {
     margin-bottom: 30px;
+    line-height: 17px;
 }
 section.products .item .preview {
     font-size: 18px;
@@ -843,10 +840,6 @@ section.products .item .handbag {
     width: 57px;
     line-height: 26px;
 }
-/* -------------------- *\
-  End Products Section
-\* -------------------- */
-
 /* -------------------- *\
   Start Pagination Section
 \* -------------------- */
@@ -875,15 +868,12 @@ section.products .item .handbag {
 /* -------------------- *\
   End Pagination Section
 \* -------------------- */
-
 /* ------------------------------------------------------------------ *\
   End Copy 3 Page
 \* ------------------------------------------------------------------ */
-
 /* ------------------------------------------------------------------ *\
   Start Copy 3 Page
 \* ------------------------------------------------------------------ */
-
 /* -------------------- *\
   Start Product Section
 \* -------------------- */
@@ -1032,7 +1022,7 @@ section.product .cart .added-number.active {
     }
 }
 /* -------------------- *\
-  Start Product Box-Modal Section
+  Start Box-Modal
 \* -------------------- */
 .book-modal .modal-dialog {
     max-width: 995px;
@@ -1097,14 +1087,7 @@ section.product .modal-body .copies-number {
     margin: 15px 0 18px;
 }
 /* -------------------- *\
-  End Product Box-Modal Section
-\* -------------------- */
-/* -------------------- *\
-  End Product Section
-\* -------------------- */
-
-/* -------------------- *\
-  Start Product-Info Section
+  End Box-Modal
 \* -------------------- */
 section.product-info .text-wrapper {
     margin: 46px 0;
@@ -1118,10 +1101,6 @@ section.product-info .text-wrapper .description {
 section.product-info .text-wrapper h2 {
     margin-bottom: 27px;
 }
-/* -------------------- *\
-  End Product-Info Section
-\* -------------------- */
-
 /* -------------------- *\
   Start FAQ Section
 \* -------------------- */
@@ -1163,11 +1142,9 @@ section.faq .card .card-body {
 /* -------------------- *\
   End FAQ Section
 \* -------------------- */
-
 /* ------------------------------------------------------------------ *\
   End Copy 4 Page
 \* ------------------------------------------------------------------ */
-
 /* ------------------------------------------------------------------ *\
   Start Copy 16 Page
 \* ------------------------------------------------------------------ */
@@ -1254,7 +1231,6 @@ section.shopping-cart .shopping-price .footer {
 /* ------------------------------------------------------------------ *\
   End Copy 16 Page
 \* ------------------------------------------------------------------ */
-
 /* ------------------------------------------------------------------ *\
   Start Copy 13 Page
 \* ------------------------------------------------------------------ */
