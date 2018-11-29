@@ -79,7 +79,7 @@ select {
 }
 .form-group {
     flex: 1 1 calc(50% - 20px);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border-radius: 2px;
     border: 1px solid #e5dacb;
 }
@@ -362,6 +362,25 @@ header .navbar .cart-number {
 header .navbar .cart-number.active {
     display: inline-block;
 }
+header .navbar .modal-button {
+    width: 169px;
+    height: 47px;
+    background-color: #c8a038;
+    border: 2px solid #c8a038;
+}
+header .navbar .modal-button:hover {
+    color: #c8a038;
+    background-color: transparent;
+}
+header .navbar .modal-content {
+    box-shadow: 0 2px 34px rgba(0, 0, 0, .2);
+}
+/* -------------------- *\
+  End Navbar
+\* -------------------- */
+/* -------------------- *\
+  Start cart-box-modal
+\* -------------------- */
 header .navbar .cart-modal {
     top: 17px ;
     left: -202px;
@@ -371,10 +390,6 @@ header .cart-modal .modal-dialog {
     max-width: 724px;
     left: 298px;
     top: 34px;
-}
-header .cart-modal .modal-content {
-    padding: 0;
-    border-radius: 0;
 }
 header .cart-modal .modal-content:after {
     content: '';
@@ -386,10 +401,13 @@ header .cart-modal .modal-content:after {
     border-width: 16px;
     border-color: transparent transparent #fff transparent
 }
-header .cart-modal .modal-header {
-    padding: 36px 25px 3px 37px;
+header .logged .cart-modal .modal-content:after {
+    left: 468px;
 }
-header .edit-cart:hover {
+header .cart-modal .modal-header {
+    padding: 36px 32px 3px 36px;
+}
+header .cart-modal .edit-cart:hover {
     color: #a07b1b;
 }
 header .cart-modal .modal-body {
@@ -461,54 +479,57 @@ header .cart-modal .modal-footer button {
     border-radius: 2px;
     background-color: rgba(16, 107, 46, .1);
 }
-header .navbar .modal-button {
-    width: 169px;
-    height: 47px;
-    background-color: #c8a038;
-    border: 2px solid #c8a038;
+
+/* -------------------- *\
+  Start cart-box-modal
+\* -------------------- */
+/* -------------------- *\
+  Start login-box-modal
+\* -------------------- */
+header .login-modal .modal-dialog {
+    max-width: 551px;
+    left: -10px;
 }
-header .navbar .modal-button:hover {
-    color: #c8a038;
-    background-color: transparent;
+header .login-modal .modal-header {
+    padding: 32px 18px 4px 25px;
 }
-header .navbar .modal-content {
-    padding: 0 8px 0 11px;
-    box-shadow: 0 2px 34px rgba(0, 0, 0, .2);
+header .login-modal .modal-body {
+    padding: 16px 25px;
 }
-header .navbar .modal-header {
-    padding: 36px 24px 3px 24px;
+header .login-modal .form-group {
+ margin-bottom: 9px;
 }
-header form .form-control {
+header .login-modal .form-control {
     height: 61px;
 }
-header form .input-group i {
+header .login-modal .input-group i {
     padding: 0 10px 0 20px;
 }
-header .navbar .submit {
+header .login-modal .submit {
     width: 100%;
     height: 61px;
     border-radius: 2px;
     background-color: rgba(16, 107, 46, .1);
-    margin-top: 4px;
+    margin-top: 11px;
 }
-header .navbar .modal-footer {
-    padding-top: 30px;
+header .login-modal .modal-footer {
+    padding-top: 21px;
     padding-bottom: 31px;
 }
-header .navbar .social-login {
+header .login-modal .social-login {
     margin-top: 19px;
 }
-header .navbar .social-login button {
+header .login-modal .social-login button {
     width: 100px;
     height: 30px;
     border-radius: 3px;
-    margin: 0 6px;
+    margin: 0 7px;
 }
-header .navbar .social-login i {
+header .login-modal .social-login i {
     margin-right: 4px;
 }
 /* -------------------- *\
-  End Navbar
+  End login-box-modal
 \* -------------------- */
 /* ------------------------------------------------------------------ *\
   Start Home Page
@@ -2210,6 +2231,10 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 767px) {
+    header .login-modal .modal-dialog {
+         max-width: initial;
+         left: 0;
+    }
     section.features .feature:not(:last-of-type) {
         border-right: none;
     }

@@ -19,14 +19,14 @@
 </head>
 <body>
 <!-- Start Header Section -->
-<header>
+<header class="greyish-bg main-border-b">
     <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
-        <div class="container">
-            <div>
-                <a class="navbar-brand QuranGift-logo" href="index.html">
+        <div class="container p-xl-0">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand quran-gift-logo" href="index.html">
                     <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
                 </a>
-                <a class="navbar-brand QuranGift-text" href="index.html">Quran<strong>Gift</strong></a>
+                <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
                 <div class="nav-wrapper w-100 d-flex align-items-center justify-content-between">
                     <ul class="navbar-nav mr-auto roboto">
                         <li class="nav-item">
-                            <a class="nav-link order-now text-underline" href="#">ORDER NOW</a>
+                            <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Become a Partner</a>
@@ -64,18 +64,19 @@
                             </div>
                         </li>
                     </ul>
-                    <div class="login-register">
-                    <span class="position-relative text-center">
-                        <img src="img/handbag.svg" class="handbag align-middle pointer" alt="Shopping Cart"
-                             data-toggle="modal" data-target="#shop-cart">
-                        <span class="cart-number position-absolute white-text roboto-medium">0</span>
-                    </span>
-                        <!-- Modal -->
+                    <div class="login-register logged">
+                        <span class="position-relative text-center">
+                            <!-- trigger Cart modal -->
+                            <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
+                                 data-toggle="modal" data-target="#shop-cart">
+                            <span class="cart-number position-absolute white-text roboto-medium">0</span>
+                        </span>
+                        <!-- Cart Modal -->
                         <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+                                <div class="modal-content no-br-rd">
 
-                                    <div class="modal-header no-border">
+                                    <div class="modal-header no-border no-br-rd">
                                         <h4 class="roboto font-24">Shopping Cart
                                             <span class="green-text roboto-medium font-22">(3 items)</span>
                                         </h4>
@@ -84,13 +85,13 @@
                                         </a>
                                     </div>
 
-                                    <div class="modal-body d-flex position-relative">
+                                    <div class="modal-body greyish-bg d-flex position-relative">
 
                                         <div class="empty-cart hide text-center position-absolute">
                                             <h2 class="mb-4 roboto-medium font-24">Your cart is empty.</h2>
 
                                             <a href="copy-3.html" class="shop-now w-100 d-flex
-                                                 justify-content-center align-items-center btn-green br-2 border-2
+                                                 justify-content-center align-items-center btn-green green-bg br-2 border-2
                                                  white-text roboto-medium font-18
                                                  br-5 text-uppercase transition">Shop Now</a>
                                         </div>
@@ -104,7 +105,7 @@
                                                 <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
                                             </div>
                                             <div class="item-body d-flex align-items-center">
-                                                <img class="item-flag" src="img/france-flag.png" width="30" height="30">
+                                                <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
                                                 <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
                                             </div>
                                         </div>
@@ -117,7 +118,7 @@
                                                 <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
                                             </div>
                                             <div class="item-body d-flex align-items-center">
-                                                <img src="img/france-flag.png" width="30" height="30">
+                                                <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
                                                 <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
                                             </div>
                                         </div>
@@ -131,7 +132,7 @@
                                                 <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
                                             </div>
                                             <div class="item-body d-flex align-items-center">
-                                                <img class="item-flag" src="img/france-flag.png" width="30" height="30">
+                                                <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
                                                 <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
                                             </div>
                                         </div>
@@ -296,12 +297,12 @@
 <!-- End Shopping Cart Section -->
 
 <!-- Start Footer Section -->
-<footer class="text-center roboto">
-    <div class="container">
+<footer class="greyish-bg">
+    <div class="container text-center">
         <img src="img/logo.svg" alt="Mushaf Logo" width="81" height="79">
         <br>
-        <span class="QuranGift-text">Quran<strong>Gift</strong></span>
-        <p class="mx-auto grey-text">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
+        <span class="frutiger-light font-20 green-text">Quran<strong>Gift</strong></span>
+        <p class="roboto grey-text mx-auto">We print and deliver al mushaf to anywhere around the world and with large variety of designs and cultures</p>
 
         <div class="social-links">
             <i class="fab fa-facebook-square fa-2x fa-fw" style="color: #6081c4"></i>
@@ -311,7 +312,7 @@
             <i class="fab fa-youtube-square fa-2x fa-fw" style="color: #f61c0d"></i>
         </div>
 
-        <div class="footer-links d-flex flex-wrap">
+        <div class="footer-links roboto d-flex flex-wrap">
             <div class="flex-grow-1 list">
                 <ul class="list-unstyled mt-3 mt-md-0 mb-3 mb-md-0">
                     <li><a href="#">Help Center</a></li>
@@ -337,11 +338,19 @@
             </div>
         </div>
 
-        <a href="#" class="order-copy quran-btn btn-green border-3 white-text transition d-inline-block text-uppercase">Order A Copy</a>
-        <a href="#" class="print-provider-btn quran-btn btn-brown border-3 brown-text transition d-inline-block">Become a Print Provider</a>
+        <div class="buttons d-sm-flex justify-content-center">
+            <a href="#" class="order-copy btn-green roboto font-18 white-text green-bg border-3 border-green br-6
+                     d-inline-block text-uppercase no-underline transition d-flex justify-content-center align-items-center mr-3">
+                Order A Copy
+            </a>
+            <a href="#" class="btn-brown roboto font-18 brown-text border-3 border-brown br-6
+                      d-inline-block transition d-flex justify-content-center align-items-center">
+                Become a Print Provider
+            </a>
+        </div>
     </div>
-    <div class="copyright roboto">
-        <span class="black-text-2">© 2018 QuranGift, Inc. All rights reserved.</span>
+    <div class="copyright text-center">
+        <span class="roboto black-text-2">© 2018 QuranGift, Inc. All rights reserved.</span>
     </div>
 </footer>
 <!-- End Footer Section -->

@@ -65,17 +65,18 @@
                         </li>
                     </ul>
                     <div class="login-register">
-                    <span class="position-relative text-center">
-                        <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
-                             data-toggle="modal" data-target="#shop-cart">
-                        <span class="cart-number position-absolute white-text roboto-medium">0</span>
-                    </span>
-                        <!-- Modal -->
+                        <span class="position-relative text-center">
+                            <!-- trigger Cart modal -->
+                            <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
+                                 data-toggle="modal" data-target="#shop-cart">
+                            <span class="cart-number position-absolute white-text roboto-medium">0</span>
+                        </span>
+                        <!-- Cart Modal -->
                         <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <div class="modal-content">
+                                <div class="modal-content no-br-rd">
 
-                                    <div class="modal-header no-border">
+                                    <div class="modal-header no-border no-br-rd">
                                         <h4 class="roboto font-24">Shopping Cart
                                             <span class="green-text roboto-medium font-22">(3 items)</span>
                                         </h4>
@@ -143,17 +144,17 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Button trigger modal -->
+                        <!-- Button trigger Login modal -->
                         <button type="button" class="modal-button white-text roboto-medium font-14 br-24 text-uppercase transition" data-toggle="modal" data-target="#login">
                             Login/Register
                         </button>
                     </div>
                 </div>
-                <!-- Modal -->
-                <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+                <!-- Login Modal -->
+                <div class="modal login-modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header no-border align-items-center">
+                        <div class="modal-content no-br-rd">
+                            <div class="modal-header no-border no-br-rd align-items-center">
                                 <h4 class="roboto font-24">Login</h4>
                                 <button class="register brown-text roboto-medium font-18 transparent">Create a new account
                                     <i class="ti-angle-right align-middle"></i>
@@ -177,7 +178,7 @@
                                             <input type="password" class="form-control no-border" placeholder="Password" aria-label="Password">
                                         </div>
                                     </div>
-                                    <button type="submit" class="submit roboto-medium font-18 green-text">Login</button>
+                                    <button type="submit" class="submit roboto-medium font-18 green-text text-uppercase">Login</button>
                                 </form>
                             </div>
                             <div class="modal-footer no-border flex-column">
@@ -240,9 +241,11 @@
         <div class="category-list d-sm-flex flex-wrap">
 
             <div class="item d-flex justify-content-between">
+
                 <div class="item-image">
                     <img class="img-fluid" src="img/mushaf-product-1.png" alt="France Mushaf">
                 </div>
+
                 <div class="item-body roboto position-relative">
                     <img class="item-flag position-absolute" alt="France Flag" src="img/france-flag.png">
                     <h5 class="item-title roboto-medium font-25">France Mushaf</h5>
@@ -256,9 +259,11 @@
             </div>
 
             <div class="item d-flex justify-content-between">
+
                 <div class="item-image">
                     <img class="img-fluid" src="img/mushaf-product-2.png" alt="Japanese Mushaf">
                 </div>
+
                 <div class="item-body roboto position-relative">
                     <img class="item-flag position-absolute" alt="Japanese Flag" src="img/japan-flag.png">
                     <h5 class="item-title roboto-medium font-25">Japanese Mushaf</h5>
@@ -272,9 +277,11 @@
             </div>
 
             <div class="item d-flex justify-content-between">
+
                 <div class="item-image">
                     <img class="img-fluid" src="img/mushaf-product-3.png" alt="English Mushaf">
                 </div>
+
                 <div class="item-body roboto position-relative">
                     <img class="item-flag position-absolute" alt="English Flag" src="img/english-flag.png">
                     <h5 class="item-title roboto-medium font-25">English Mushaf</h5>

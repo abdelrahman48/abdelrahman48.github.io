@@ -13,6 +13,7 @@ $(function () {
         decreaseNumberOfCopy = $('.copies-number .minus'),
         addToCart = $('section.product .cart'),
         shoppingCart = $('header .navbar .handbag'),
+        shoppingCartModal = $('header .cart-modal'),
         shoppingCartNumber = $('header .navbar .cart-number'),
         numberOfCopies = $('.copies-number .number'),
         shoppingCartItemsParent = $('header .cart-modal .modal-body'),
@@ -67,6 +68,10 @@ $(function () {
     decreaseNumberOfCopy.on('click', function () {
         if(parseInt(numberOfCopies.text()) < 1) return;
         numberOfCopies.text(parseInt(numberOfCopies.text()) - 1);
+    });
+
+    shoppingCart.on('click', function () {
+        shoppingCartModal.fadeIn();
     });
 
     addToCart.on('click', function () {
