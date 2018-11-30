@@ -401,6 +401,21 @@ header .nav-wrapper.show {
         width: 75%;
     }
 }
+header .nav-wrapper .navbar-nav-responsive {
+    display: none;
+}
+.overlay-menu {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 999;
+}
+.overlay-menu.active {
+    display: block;
+}
 /*header .nav-wrapper.hide {
     animation: showMenu .5s ease-in-out;
 }
@@ -2108,7 +2123,7 @@ section.product.two-book .options {
     width: 396px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
     display: none;
-    z-index: 9999;
+    z-index: 999;
 }
 section.product.two-book .title {
     margin-bottom: 44px;
@@ -2205,11 +2220,17 @@ section.product-info.two-book .text-wrapper {
 @media (max-width: 991px) {
     /* Start Responsive Menu */
     header .nav-wrapper {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: -300px;
         height: 100%;
         z-index: 9999;
+    }
+    header .nav-wrapper .navbar-nav {
+        display: none;
+    }
+    header .nav-wrapper .navbar-nav-responsive {
+        display: flex;
     }
     header .header-responsive-menu {
         padding: 25px 20px 25px 23px;
