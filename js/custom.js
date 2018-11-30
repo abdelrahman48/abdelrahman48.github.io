@@ -37,16 +37,16 @@ $(function () {
 
     $('header .navbar-toggler').on('click', function () {
         $('header .nav-wrapper').removeClass('hide').addClass('show');
-        $('header .nav-wrapper .logo-menu').addClass('show');
-        $('header .nav-wrapper .close-menu').addClass('show');
-        $('.overlay-menu').addClass('active');
+        $('header .nav-wrapper .logo-menu').fadeIn();
+        $('header .nav-wrapper .close-menu').fadeIn();
+        $('.overlay-menu').fadeIn();
     });
 
     $('header .nav-wrapper .close-menu').on('click', function () {
         $('header .nav-wrapper').removeClass('show').addClass('hide');
-        $('header .nav-wrapper .logo-menu').removeClass('show');
-        $('header .nav-wrapper .close-menu').removeClass('show');
-        $('.overlay-menu').removeClass('active');
+        $('header .nav-wrapper .logo-menu').fadeOut();
+        $('header .nav-wrapper .close-menu').fadeOut();
+        $('.overlay-menu').fadeOut();
     });
 
     paginationLi.on('click', function () {

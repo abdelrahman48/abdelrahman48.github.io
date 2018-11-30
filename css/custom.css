@@ -329,10 +329,10 @@ header .navbar .quran-gift-text:hover {
     color: #106b2e;
 }
 header .navbar-nav .nav-item {
-    margin: 0 20px;
+    margin: 0 12px;
 }
 header .navbar-nav .nav-item:last-of-type {
-    margin-left: 6px;
+    margin-left: -1px;
 }
 header .navbar-nav .nav-item .nav-link {
     color: #222;
@@ -381,12 +381,9 @@ header .navbar .navbar-toggler {
     margin-right: 22px;
 }
 header .nav-wrapper .logo-menu,
-header .nav-wrapper .close-menu {
+header .nav-wrapper .close-menu,
+header .nav-wrapper .navbar-nav-responsive {
     display: none;
-}
-header .nav-wrapper .logo-menu.show,
-header .nav-wrapper .close-menu.show {
-    display: block;
 }
 header .nav-wrapper.show {
     animation: showMenu .5s forwards ease-in-out;
@@ -401,8 +398,18 @@ header .nav-wrapper.show {
         width: 75%;
     }
 }
-header .nav-wrapper .navbar-nav-responsive {
-    display: none;
+header .nav-wrapper.hide {
+    animation: hideMenu .5s ease-in-out;
+}
+@keyframes hideMenu {
+    0% {
+        left: 0;
+        width: 75%;
+    }
+    100% {
+        left: -300px;
+        width: 0;
+    }
 }
 .overlay-menu {
     display: none;
@@ -413,22 +420,6 @@ header .nav-wrapper .navbar-nav-responsive {
     background-color: rgba(0, 0, 0, .2);
     z-index: 999;
 }
-.overlay-menu.active {
-    display: block;
-}
-/*header .nav-wrapper.hide {
-    animation: showMenu .5s ease-in-out;
-}
-@keyframes showMenu {
-    0% {
-        left: 0;
-        width: 75%;
-    }
-    100% {
-        left: -300px;
-        width: 0;
-    }
-}*/
 /* -------------------- *\
   End Navbar
 \* -------------------- */
