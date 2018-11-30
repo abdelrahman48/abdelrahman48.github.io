@@ -1539,7 +1539,7 @@ header .user-button {
     background-color: #e5dacb;
 }
 section.user-profile .profile-info-container {
-    padding: 44px 0 125px;
+    padding: 44px 0 80px;
 }
 section.user-profile .profile-links {
     margin-right: 40px;
@@ -1662,21 +1662,19 @@ section.user-profile .new-address {
   Start Copy 20 Page
 \* ------------------------------------------------------------------ */
 section.user-profile .personal-info {
-    padding: 40px 35px;
-    margin-bottom: 17px;
+    padding: 40px 35px 38px;
+    margin-bottom: 18px;
 }
 section.user-profile .personal-info h2 {
     margin-bottom: 40px;
 }
-section.user-profile .personal-info .buttons {
-    margin-top: 33px;
-}
 section.user-profile .save {
     width: 193px;
     height: 61px;
+    margin-top: 19px;
 }
 section.user-profile .account-info {
-    padding: 41px 33px;
+    padding: 41px 33px 38px;
 }
 section.user-profile .account-info h2 {
     margin-bottom: 27px;
