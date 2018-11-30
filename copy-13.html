@@ -20,21 +20,23 @@
 <body>
 <!-- Start Header Section -->
 <header class="greyish-bg main-border-b">
-    <nav class="navbar nav-with-out-ul navbar-expand-custom navbar-light px-0">
-        <div class="container p-xl-0">
+    <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
+        <div class="container justify-content-start p-xl-0">
+
             <div class="d-flex align-items-center">
                 <a class="navbar-brand quran-gift-logo" href="index.html">
                     <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
                 </a>
                 <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
             </div>
-            <div class="login-register">
-                <span class="position-relative text-center">
-                    <!-- trigger Cart modal -->
-                    <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
-                         data-toggle="modal" data-target="#shop-cart">
-                    <span class="cart-number position-absolute white-text roboto-medium">0</span>
-                </span>
+
+            <div class="login-register ml-auto order-last">
+                        <span class="position-relative text-center">
+                            <!-- trigger Cart modal -->
+                            <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
+                                 data-toggle="modal" data-target="#shop-cart">
+                            <span class="cart-number position-absolute white-text roboto-medium">0</span>
+                        </span>
                 <!-- Cart Modal -->
                 <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -109,9 +111,12 @@
                     </div>
                 </div>
                 <!-- Button trigger Login modal -->
-                <button type="button" class="modal-button white-text roboto-medium font-14 br-24 text-uppercase transition" data-toggle="modal" data-target="#login">
+                <button type="button" class="modal-button white-text roboto-medium font-14 br-24
+                         text-uppercase transition d-none d-xl-inline-block" data-toggle="modal" data-target="#login">
                     Login/Register
                 </button>
+                <img src="img/responsive-login.png" alt="Login/Register" class="d-inline-block d-xl-none pointer mt-1"
+                     data-toggle="modal" data-target="#login">
             </div>
             <!-- Login Modal -->
             <div class="modal login-modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
@@ -489,6 +494,5 @@
 <script src="components/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
 <script src="js/custom.js"></script>
 <!--End scripts-->
-
 </body>
 </html>

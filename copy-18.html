@@ -22,136 +22,153 @@
 <header class="greyish-bg main-border-b">
     <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
         <div class="container p-xl-0">
+
+            <button class="navbar-toggler no-border p-0" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="d-flex align-items-center">
                 <a class="navbar-brand quran-gift-logo" href="index.html">
                     <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
                 </a>
                 <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="nav-wrapper w-100 d-flex align-items-center justify-content-between">
-                    <ul class="navbar-nav mr-auto roboto">
-                        <li class="nav-item">
-                            <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Become a Partner</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                About Service
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+            <div class="nav-wrapper greyish-bg">
+
+                <div class="header-responsive-menu d-lg-none d-flex justify-content-between">
+                    <div class="logo-menu">
+                        <a class="navbar-brand quran-gift-logo" href="index.html">
+                            <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
+                        </a>
+                        <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
+                    </div>
+
+                    <span class="close-menu font-38 mb-2 pointer">×</span>
+                </div>
+
+                <ul class="navbar-nav mr-auto roboto">
+                    <li class="nav-item">
+                        <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Become a Partner</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Service
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Support
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="login-register logged ml-auto">
+                <span class="position-relative text-center">
+                    <!-- trigger Cart modal -->
+                    <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
+                         data-toggle="modal" data-target="#shop-cart">
+                    <span class="cart-number position-absolute white-text roboto-medium">0</span>
+                </span>
+                <!-- Cart Modal -->
+                <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content no-br-rd">
+
+                            <div class="modal-header no-border no-br-rd">
+                                <h4 class="roboto font-24">Shopping Cart
+                                    <span class="green-text roboto-medium font-22">(3 items)</span>
+                                </h4>
+                                <a href="copy-16.html" class="edit-cart brown-text roboto-medium font-18 no-underline">Edit Cart
+                                    <i class="ti-angle-right align-middle"></i>
+                                </a>
                             </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Support
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="login-register logged">
-                        <span class="position-relative text-center">
-                            <!-- trigger Cart modal -->
-                            <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
-                                 data-toggle="modal" data-target="#shop-cart">
-                            <span class="cart-number position-absolute white-text roboto-medium">0</span>
-                        </span>
-                        <!-- Cart Modal -->
-                        <div class="modal cart-modal" id="shop-cart" tabindex="-1" role="dialog" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content no-br-rd">
 
-                                    <div class="modal-header no-border no-br-rd">
-                                        <h4 class="roboto font-24">Shopping Cart
-                                            <span class="green-text roboto-medium font-22">(3 items)</span>
-                                        </h4>
-                                        <a href="copy-16.html" class="edit-cart brown-text roboto-medium font-18 no-underline">Edit Cart
-                                            <i class="ti-angle-right align-middle"></i>
-                                        </a>
+                            <div class="modal-body greyish-bg d-flex position-relative">
+
+                                <div class="empty-cart hide text-center position-absolute">
+                                    <h2 class="mb-4 roboto-medium font-24">Your cart is empty.</h2>
+
+                                    <a href="copy-3.html" class="shop-now w-100 d-flex
+                                             justify-content-center align-items-center btn-green green-bg br-2 border-2
+                                             white-text roboto-medium font-18
+                                             br-5 text-uppercase transition">Shop Now</a>
+                                </div>
+
+                                <div class="item flex-shrink-0">
+                                    <button type="button" class="delete position-relative">
+                                        <span class="position-absolute" aria-hidden="true">×</span>
+                                    </button>
+
+                                    <div class="item-image">
+                                        <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
                                     </div>
-
-                                    <div class="modal-body greyish-bg d-flex position-relative">
-
-                                        <div class="empty-cart hide text-center position-absolute">
-                                            <h2 class="mb-4 roboto-medium font-24">Your cart is empty.</h2>
-
-                                            <a href="copy-3.html" class="shop-now w-100 d-flex
-                                                 justify-content-center align-items-center btn-green green-bg br-2 border-2
-                                                 white-text roboto-medium font-18
-                                                 br-5 text-uppercase transition">Shop Now</a>
-                                        </div>
-
-                                        <div class="item flex-shrink-0">
-                                            <button type="button" class="delete position-relative">
-                                                <span class="position-absolute" aria-hidden="true">×</span>
-                                            </button>
-
-                                            <div class="item-image">
-                                                <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
-                                            </div>
-                                            <div class="item-body d-flex align-items-center">
-                                                <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
-                                                <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
-                                            </div>
-                                        </div>
-
-                                        <div class="item flex-shrink-0">
-                                            <button type="button" class="delete position-relative">
-                                                <span class="position-absolute" aria-hidden="true">×</span>
-                                            </button>
-                                            <div class="item-image">
-                                                <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
-                                            </div>
-                                            <div class="item-body d-flex align-items-center">
-                                                <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
-                                                <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
-                                            </div>
-                                        </div>
-
-                                        <div class="item flex-shrink-0">
-                                            <button type="button" class="delete position-relative">
-                                                <span class="position-absolute" aria-hidden="true">×</span>
-                                            </button>
-
-                                            <div class="item-image">
-                                                <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
-                                            </div>
-                                            <div class="item-body d-flex align-items-center">
-                                                <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
-                                                <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
-                                            </div>
-                                        </div>
+                                    <div class="item-body d-flex align-items-center">
+                                        <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
+                                        <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
                                     </div>
+                                </div>
 
-                                    <div class="modal-footer no-border">
-                                        <button class="green-text roboto-medium font-18 w-100 text-uppercase">$75 Checkout</button>
+                                <div class="item flex-shrink-0">
+                                    <button type="button" class="delete position-relative">
+                                        <span class="position-absolute" aria-hidden="true">×</span>
+                                    </button>
+                                    <div class="item-image">
+                                        <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
+                                    </div>
+                                    <div class="item-body d-flex align-items-center">
+                                        <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
+                                        <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
+                                    </div>
+                                </div>
+
+                                <div class="item flex-shrink-0">
+                                    <button type="button" class="delete position-relative">
+                                        <span class="position-absolute" aria-hidden="true">×</span>
+                                    </button>
+
+                                    <div class="item-image">
+                                        <img src="img/cart-item.png" class="img-fluid" alt="France Mushaf">
+                                    </div>
+                                    <div class="item-body d-flex align-items-center">
+                                        <img class="item-flag" src="img/france-flag.png" alt="France Flag" width="30" height="30">
+                                        <h5 class="item-title roboto-medium font-16 mb-0">France Mushaf</h5>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <button type="button" class="user-button black-text-2 roboto-medium font-14 br-24 transition">
-                            <img src="img/profile-picture.png" alt="Profile Picture" width="32" height="32">
-                            Welcome: user name
-                            <i class="ti-angle-down align-middle"></i>
-                        </button>
+                            <div class="modal-footer no-border">
+                                <button class="green-text roboto-medium font-18 w-100 text-uppercase">$75 Checkout</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <button type="button" class="user-button black-text-2 roboto-medium
+                 d-none d-xl-inline-block font-14 br-24 transition">
+                    <img src="img/profile-picture.png" alt="Profile Picture" width="32" height="32">
+                    Welcome: user name
+                    <i class="ti-angle-down align-middle"></i>
+                </button>
+
+                <img src="img/profile-picture.png" alt="Login/Register" class="d-inline-block d-xl-none pointer mt-1"
+                     data-toggle="modal" data-target="#login">
             </div>
         </div>
     </nav>

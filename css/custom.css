@@ -313,12 +313,13 @@ textarea {
 \* -------------------- */
 header .navbar {
     padding: 12px 0;
+    position: unset;
 }
 header .quran-gift-logo {
     margin-right: 12px;
 }
 header .navbar-nav .nav-item > a {
-    padding: 0 !important;
+    padding: 0;
 }
 header .navbar .quran-gift-text {
     margin-right: 28px;
@@ -336,7 +337,7 @@ header .navbar-nav .nav-item:last-of-type {
 header .navbar-nav .nav-item .nav-link {
     color: #222;
 }
-header .navbar-collapse .order-now {
+header .order-now {
     color: #ac4c31 !important;
 }
 header .nav-item .dropdown-toggle::after {
@@ -348,7 +349,7 @@ header .nav-item .dropdown-toggle::after {
     border-left: .2em solid transparent;
 }
 header .navbar .handbag {
-    margin-right: 16px;
+    margin-right: 17px;
 }
 header .navbar .cart-number {
     display: none;
@@ -376,6 +377,43 @@ header .navbar .modal-button:hover {
 header .navbar .modal-content {
     box-shadow: 0 2px 34px rgba(0, 0, 0, .2);
 }
+header .navbar .navbar-toggler {
+    margin-right: 22px;
+}
+header .nav-wrapper .logo-menu,
+header .nav-wrapper .close-menu {
+    display: none;
+}
+header .nav-wrapper .logo-menu.show,
+header .nav-wrapper .close-menu.show {
+    display: block;
+}
+header .nav-wrapper.show {
+    animation: showMenu .5s forwards ease-in-out;
+}
+@keyframes showMenu {
+    0% {
+        left: -300px;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 75%;
+    }
+}
+/*header .nav-wrapper.hide {
+    animation: showMenu .5s ease-in-out;
+}
+@keyframes showMenu {
+    0% {
+        left: 0;
+        width: 75%;
+    }
+    100% {
+        left: -300px;
+        width: 0;
+    }
+}*/
 /* -------------------- *\
   End Navbar
 \* -------------------- */
@@ -2117,28 +2155,6 @@ section.product-info.two-book .text-wrapper {
         margin: 50px 0 145px;
     }
 }
-@media (max-width: 1250px) {
-    header .navbar-collapse {
-        margin-top: 15px;
-    }
-    header .navbar-nav {
-        margin-bottom: 10px;
-    }
-    header .navbar-collapse .navbar-nav .nav-item {
-        margin: 8px 0;
-    }
-    header .nav-wrapper {
-        align-items: flex-start !important;
-    }
-    header .navbar .cart-modal,
-    header .cart-modal .modal-dialog {
-        top: 0;
-        left: 0;
-    }
-    header .cart-modal .modal-content:after {
-        content: none;
-    }
-}
 @media (max-width: 1199px) {
     section.get-started .step-two {
         margin-top: 0;
@@ -2187,6 +2203,53 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 991px) {
+    /* Start Responsive Menu */
+    header .nav-wrapper {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        height: 100%;
+        z-index: 9999;
+    }
+    header .header-responsive-menu {
+        padding: 25px 20px 25px 23px;
+    }
+    header .navbar-nav {
+        padding: 0 0 25px 23px;
+    }
+    header .navbar-nav .nav-item:last-of-type {
+        margin-left: 0;
+    }
+    header .navbar-nav .nav-item {
+        margin: 8px 0;
+    }
+    header .navbar-nav .nav-item .nav-link {
+        position: relative;
+        font-size: 14px;
+        padding: 4px 0;
+        border-bottom: 1px solid #e7ebee;
+    }
+    header .navbar-nav .nav-item .nav-link:after {
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        width: 7px;
+        height: 7px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent #000 #000 transparent;
+        transform: rotate(-45deg);
+    }
+    /* End Responsive Menu */
+    header .navbar .cart-modal,
+    header .cart-modal .modal-dialog {
+        top: 0;
+        left: 0;
+    }
+    header .cart-modal .modal-content:after {
+        content: none;
+    }
     section.slider .carousel {
         padding: 0 60px;
     }
@@ -2472,6 +2535,16 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 400px) {
+    header .quran-gift-logo img {
+        width: 32px;
+    }
+    header .navbar .quran-gift-text {
+        font-size: 15px;
+        margin-right: 0;
+    }
+    header .navbar .handbag {
+        width: 20px;
+    }
     header .navbar .register,
     section.create-account .forget-account {
         font-size: 15px;
@@ -2501,7 +2574,7 @@ section.product-info.two-book .text-wrapper {
         padding: 40px 15px 30px;
     }
     section.product .title-wrapper h1 {
-        font-size: 32px;
+        font-size: 30px;
         margin-left: 10px;
     }
     section.product .modal-body .thumbnail li {
@@ -2580,7 +2653,8 @@ section.product-info.two-book .text-wrapper {
         padding-left: 20px;
     }
 }
-@media (min-width: 1250px) {
+/* Start Responsive Menu */
+@media (min-width: 992px) {
     .navbar-expand-custom {
         flex-flow: row nowrap;
         justify-content: flex-start;
@@ -2599,11 +2673,8 @@ section.product-info.two-book .text-wrapper {
     .navbar-expand-custom > .container-fluid {
         flex-wrap: nowrap;
     }
-    .navbar-expand-custom .navbar-collapse {
-        display: flex !important;
-        flex-basis: auto;
-    }
     .navbar-expand-custom .navbar-toggler {
         display: none;
     }
 }
+/* End Responsive Menu */

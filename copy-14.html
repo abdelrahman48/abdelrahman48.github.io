@@ -21,50 +21,20 @@
 <!-- Start Header Section -->
 <header class="greyish-bg main-border-b">
     <nav class="navbar nav-with-ul navbar-expand-custom navbar-light px-0">
-        <div class="container p-xl-0">
+        <div class="container justify-content-start p-xl-0">
+
+            <button class="navbar-toggler no-border p-0" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="d-flex align-items-center">
                 <a class="navbar-brand quran-gift-logo" href="index.html">
                     <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
                 </a>
                 <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="nav-wrapper w-100 d-flex align-items-center justify-content-between">
-                    <ul class="navbar-nav mr-auto roboto">
-                        <li class="nav-item">
-                            <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Become a Partner</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                About Service
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Support
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-            <div class="login-register">
+            <div class="login-register ml-auto order-last">
                 <span class="position-relative text-center">
                     <!-- trigger Cart modal -->
                     <img src="img/handbag.svg" class="handbag font-24 align-middle pointer" alt="Shopping Cart"
@@ -145,9 +115,57 @@
                     </div>
                 </div>
                 <!-- Button trigger Login modal -->
-                <button type="button" class="modal-button white-text roboto-medium font-14 br-24 text-uppercase transition" data-toggle="modal" data-target="#login">
+                <button type="button" class="modal-button white-text roboto-medium font-14 br-24
+                         text-uppercase transition d-none d-xl-inline-block" data-toggle="modal" data-target="#login">
                     Login/Register
                 </button>
+                <img src="img/responsive-login.png" alt="Login/Register" class="d-inline-block d-xl-none pointer mt-1"
+                     data-toggle="modal" data-target="#login">
+            </div>
+
+            <div class="nav-wrapper greyish-bg">
+
+                <div class="header-responsive-menu d-lg-none d-flex justify-content-between">
+                    <div class="logo-menu">
+                        <a class="navbar-brand quran-gift-logo" href="index.html">
+                            <img src="img/logo.svg" alt="Mushaf Logo" width="51" height="51">
+                        </a>
+                        <a class="navbar-brand quran-gift-text frutiger-light font-20" href="index.html">Quran<strong>Gift</strong></a>
+                    </div>
+
+                    <span class="close-menu font-38 mb-2 pointer">×</span>
+                </div>
+
+                <ul class="navbar-nav mr-auto roboto">
+                    <li class="nav-item">
+                        <a class="nav-link order-now roboto-bold text-underline" href="#">ORDER NOW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Become a Partner</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About Service
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="aboutNavbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="supportNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Support
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="supportNavbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <!-- Login Modal -->
             <div class="modal login-modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
@@ -201,14 +219,15 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </nav>
+
     <div class="container p-sm-0">
         <h1 class="title roboto-light">Contact US</h1>
     </div>
 </header>
 <!-- End Header Section -->
-
 <!-- Start Checkout Section -->
 <section class="contact-us">
     <div class="container p-sm-0">
@@ -329,7 +348,6 @@
     </div>
 </section>
 <!-- End Checkout Section -->
-
 <!-- Start FAQ Section -->
 <section class="faq contact">
     <div class="container p-sm-0">
@@ -425,7 +443,6 @@
     </div>
 </section>
 <!-- End FAQ Section -->
-
 <!-- Start Footer Section -->
 <footer class="greyish-bg">
     <div class="container text-center">
@@ -484,12 +501,10 @@
     </div>
 </footer>
 <!-- End Footer Section -->
-
 <!--Start scripts-->
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="components/bootstrap-4.1.3/js/bootstrap.bundle.min.js"></script>
 <script src="js/custom.js"></script>
 <!--End scripts-->
-
 </body>
 </html>

@@ -34,6 +34,19 @@ $(function () {
         orderContainer = $('section.two-book .options'),
         orderAddToCart = $('section.two-book .options .cart');
 
+
+    $('header .navbar-toggler').on('click', function () {
+        $('header .nav-wrapper').removeClass('hide').addClass('show');
+        $('header .nav-wrapper .logo-menu').addClass('show');
+        $('header .nav-wrapper .close-menu').addClass('show');
+    });
+
+    $('header .nav-wrapper .close-menu').on('click', function () {
+        $('header .nav-wrapper').removeClass('show').addClass('hide');
+        $('header .nav-wrapper .logo-menu').removeClass('show');
+        $('header .nav-wrapper .close-menu').removeClass('show');
+    });
+
     paginationLi.on('click', function () {
         $(this).addClass('active').siblings('.page-number').removeClass('active');
     });
