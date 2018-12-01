@@ -382,34 +382,35 @@ header .navbar .navbar-toggler {
 }
 header .nav-wrapper .logo-menu,
 header .nav-wrapper .close-menu,
-header .nav-wrapper .navbar-nav-responsive {
+header .nav-wrapper .responsive-menu,
+header .nav-wrapper .level-2-menu {
     display: none;
 }
-header .nav-wrapper.show {
-    animation: showMenu .5s forwards ease-in-out;
+header .nav-wrapper .close-menu {
+    line-height: 1.2;
 }
-@keyframes showMenu {
-    0% {
-        left: -300px;
-        width: 0;
-    }
-    100% {
-        left: 0;
-        width: 75%;
-    }
+header header .nav-wrapper {
+    box-shadow: 2px 0 14px rgba(0, 0, 0, 0.1);
 }
-header .nav-wrapper.hide {
-    animation: hideMenu .5s ease-in-out;
+header .responsive-menu-header {
+    padding: 16px 20px 14px 23px;
 }
-@keyframes hideMenu {
-    0% {
-        left: 0;
-        width: 75%;
-    }
-    100% {
-        left: -300px;
-        width: 0;
-    }
+header .responsive-menu-footer {
+    padding: 30px 20px 80px 23px;
+}
+header .nav-wrapper .responsive-menu {
+    height: 72vh;
+    overflow: auto;
+}
+header .nav-wrapper .level-2-menu {
+    left: -300px;
+    top: 80px;
+    height: 100%;
+    z-index: 9999;
+    background-color: #f9f8f5;
+}
+header .level-2-menu .back {
+    background-color: rgba(0, 0, 0, .1);
 }
 .overlay-menu {
     display: none;
@@ -420,6 +421,38 @@ header .nav-wrapper.hide {
     background-color: rgba(0, 0, 0, .2);
     z-index: 999;
 }
+body.no-scroll {
+    overflow: hidden;
+}
+header .nav-wrapper.show,
+header .nav-wrapper .level-2-menu.show {
+    animation: showMenu .5s forwards ease-in-out;
+}
+@keyframes showMenu {
+    0% {
+        left: -300px;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 297px;
+    }
+}
+header .nav-wrapper.hide,
+header .nav-wrapper .level-2-menu.hide {
+    animation: hideMenu .5s ease-in-out;
+}
+@keyframes hideMenu {
+    0% {
+        left: 0;
+        width: 297px;
+    }
+    100% {
+        left: -300px;
+        width: 0;
+    }
+}
+
 /* -------------------- *\
   End Navbar
 \* -------------------- */
@@ -2162,6 +2195,14 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 1199px) {
+    header .navbar .cart-modal,
+    header .cart-modal .modal-dialog {
+        top: 0;
+        left: 0;
+    }
+    header .cart-modal .modal-content:after {
+        content: none;
+    }
     section.get-started .step-two {
         margin-top: 0;
     }
@@ -2210,6 +2251,17 @@ section.product-info.two-book .text-wrapper {
 }
 @media (max-width: 991px) {
     /* Start Responsive Menu */
+    header .navbar,
+    header .navbar .quran-gift-logo {
+        padding: 0;
+    }
+    header .quran-gift-logo img {
+        width: 32px;
+    }
+    header .navbar .quran-gift-text {
+        font-size: 15px;
+        margin-right: 0;
+    }
     header .nav-wrapper {
         position: fixed;
         top: 0;
@@ -2217,51 +2269,45 @@ section.product-info.two-book .text-wrapper {
         height: 100%;
         z-index: 9999;
     }
-    header .nav-wrapper .navbar-nav {
+    header .nav-wrapper .normal-menu {
         display: none;
     }
-    header .nav-wrapper .navbar-nav-responsive {
+    header .nav-wrapper .responsive-menu,
+    header .nav-wrapper .level-2-menu {
         display: flex;
     }
-    header .header-responsive-menu {
-        padding: 25px 20px 25px 23px;
-    }
-    header .navbar-nav {
-        padding: 0 0 25px 23px;
-    }
-    header .navbar-nav .nav-item:last-of-type {
+    header .nav-wrapper .nav-item:last-of-type {
         margin-left: 0;
     }
-    header .navbar-nav .nav-item {
-        margin: 8px 0;
+    header .nav-wrapper .nav-item {
+        margin: 0;
+        transition: .15s;
     }
-    header .navbar-nav .nav-item .nav-link {
+    header .nav-wrapper .nav-item:hover {
+        background-color: rgba(160, 123, 27, .2);
+    }
+    header .nav-wrapper .nav-item .nav-link {
         position: relative;
         font-size: 14px;
-        padding: 4px 0;
+        padding: 12px 18px 12px 23px;
         border-bottom: 1px solid #e7ebee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    header .navbar-nav .nav-item .nav-link:after {
+    header .nav-wrapper .nav-item .level-2:after,
+    header .nav-wrapper .nav-item .back:after{
         content: '';
-        position: absolute;
-        right: 20px;
-        top: 5px;
+        display: inline-block;
         width: 7px;
         height: 7px;
         border-width: 1px;
         border-style: solid;
         border-color: transparent #000 #000 transparent;
         transform: rotate(-45deg);
+        margin-right: 4px;
     }
     /* End Responsive Menu */
-    header .navbar .cart-modal,
-    header .cart-modal .modal-dialog {
-        top: 0;
-        left: 0;
-    }
-    header .cart-modal .modal-content:after {
-        content: none;
-    }
     section.slider .carousel {
         padding: 0 60px;
     }
@@ -2547,13 +2593,6 @@ section.product-info.two-book .text-wrapper {
     }
 }
 @media (max-width: 400px) {
-    header .quran-gift-logo img {
-        width: 32px;
-    }
-    header .navbar .quran-gift-text {
-        font-size: 15px;
-        margin-right: 0;
-    }
     header .navbar .handbag {
         width: 20px;
     }
@@ -2690,3 +2729,8 @@ section.product-info.two-book .text-wrapper {
     }
 }
 /* End Responsive Menu */
+@media (max-height: 700px) {
+    header .nav-wrapper .responsive-menu {
+        height: 62vh;
+    }
+}

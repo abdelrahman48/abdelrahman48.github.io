@@ -34,19 +34,36 @@ $(function () {
         orderContainer = $('section.two-book .options'),
         orderAddToCart = $('section.two-book .options .cart');
 
+    $('header .responsive-menu .nav-link').on('click', function () {
+       $( '.' + $(this).data('menu') ).addClass('show').removeClass('hide');
+    });
 
+    $('header .back').on('click', function () {
+        $(this).parents('.level-2-menu').addClass('hide').removeClass('show');
+    });
+    
     $('header .navbar-toggler').on('click', function () {
-        $('header .nav-wrapper').removeClass('hide').addClass('show');
+        $('body').addClass('no-scroll');
+        $('header .nav-wrapper').removeClass('hide').addClass('show').fadeIn();
         $('header .nav-wrapper .logo-menu').fadeIn();
         $('header .nav-wrapper .close-menu').fadeIn();
         $('.overlay-menu').fadeIn();
     });
 
-    $('header .nav-wrapper .close-menu').on('click', function () {
+    $('header .nav-wrapper .close-menu').on('click', closeResponsiveMenu );
+
+    function closeResponsiveMenu() {
+        $('body').removeClass('no-scroll');
         $('header .nav-wrapper').removeClass('show').addClass('hide');
+        $('header .nav-wrapper .level-2-menu').removeClass('show').addClass('hide');
         $('header .nav-wrapper .logo-menu').fadeOut();
         $('header .nav-wrapper .close-menu').fadeOut();
         $('.overlay-menu').fadeOut();
+    }
+    $('body').on('click', function (e) {
+        if(! $('body').hasClass('no-scroll') ) return;
+        if(! $(e.target).hasClass('overlay-menu')) return;
+        closeResponsiveMenu();
     });
 
     paginationLi.on('click', function () {
