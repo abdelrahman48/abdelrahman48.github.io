@@ -605,21 +605,35 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="form-group">
+                            <form novalidate>
+                                <div class="form-group position-relative">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
                                         </div>
-                                        <input type="email" class="form-control roboto no-border" placeholder="Email Adress" aria-label="Email Adress">
+                                        <input type="email" class="form-control roboto no-border"
+                                               placeholder="Email Adress" aria-label="Email Adress">
+                                    </div>
+
+                                    <div class="form-message position-absolute">
+                                        <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                        <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                        <span class="error-message roboto font-16 red-text">Error message here</span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+
+                                <div class="form-group position-relative">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                                         </div>
                                         <input type="password" class="form-control no-border" placeholder="Password" aria-label="Password">
+                                    </div>
+
+                                    <div class="form-message position-absolute">
+                                        <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                        <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                        <span class="error-message roboto font-16 red-text">Error message here</span>
                                     </div>
                                 </div>
                                 <button type="submit" class="submit roboto-medium font-18 green-text text-uppercase">Login</button>
@@ -659,67 +673,109 @@
             <div class="contact-form main-border br-5 white-bg">
                 <h2 class="roboto font-24">How can we help?</h2>
 
-                <form class="d-flex flex-wrap flex-column flex-md-row">
+                <form class="d-flex flex-wrap flex-column flex-md-row" novalidate>
 
-                    <div class="form-group main-border br-2">
+                    <div class="form-group main-border br-2 position-relative">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                             </div>
-                            <input type="text" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Your Name" name="sender-name">
+                            <input type="text" class="form-control font-18 roboto black-text-0 no-border"
+                                   placeholder="" aria-label="Your Name" name="sender-name">
                             <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Your Name</label>
+                        </div>
+                        <div class="form-message position-absolute">
+                            <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                            <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                            <span class="error-message roboto font-16 red-text">Error message here</span>
                         </div>
                     </div>
 
-                    <div class="form-group main-border br-2">
+                    <div class="form-group main-border br-2 position-relative">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
                             </div>
-                            <input type="email" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Your Email Adress" name="sender-email">
+                            <input type="email" class="form-control font-18 roboto black-text-0 no-border"
+                                   placeholder="" aria-label="Your Email Adress" name="sender-email">
                             <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Your Email</label>
+                        </div>
+                        <div class="form-message position-absolute">
+                            <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                            <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                            <span class="error-message roboto font-16 red-text">Error message here</span>
                         </div>
                     </div>
 
-                    <div class="form-group main-border br-2">
+                    <div class="form-group main-border br-2 position-relative">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                             </div>
-                            <input type="tel" class="form-control font-18 roboto black-text-0 no-border" placeholder="" aria-label="Your Phone" name="sender-phone">
+                            <input type="tel" class="form-control font-18 roboto black-text-0 no-border"
+                                   placeholder="" aria-label="Your Phone" name="sender-phone">
                             <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Your Phone</label>
+                        </div>
+                        <div class="form-message position-absolute">
+                            <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                            <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                            <span class="error-message roboto font-16 red-text">Error message here</span>
                         </div>
                     </div>
 
-                    <div class="form-group main-border br-2">
+                    <div class="form-group main-border br-2 position-relative">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                             </div>
                             <div class="select-wrapper position-relative flex-grow-1">
-                                <select title="" class="select form-control no-border pointer roboto font-18 black-text-7">
+                                <select title="" name="Country" class="select form-control no-border pointer roboto font-18 black-text-7">
+                                    <option value="0">- Select Your Country -</option>
                                     <option value="United State">United State</option>
                                     <option value="Caneda">Caneda</option>
                                     <option value="Egypt">Egypt</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="form-message position-absolute">
+                            <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                            <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                            <span class="error-message roboto font-16 red-text">Error message here</span>
+                        </div>
                     </div>
-                    <div class="form-group main-border br-2 mr-0">
+
+                    <div class="form-group main-border br-2 mr-0 position-relative">
                         <div class="input-group">
                             <div class="select-wrapper position-relative flex-grow-1">
-                                <select title="" class="select form-control no-border pointer roboto font-18 black-text-7">
+                                <select title="" name="Help-Options" class="select form-control no-border pointer roboto font-18 black-text-7">
                                     <option value="0">- Select an option -</option>
                                     <option value="Product didn't arrive">Product didn't arrive</option>
                                     <option value="Not the same Product I ordered">Not the same Product I ordered</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="form-message position-absolute">
+                            <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                            <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                            <span class="error-message roboto font-16 red-text">Error message here</span>
+                        </div>
                     </div>
-                    <div class="position-relative w-100">
-                        <textarea class="textarea font-18 roboto black-text-0 main-border br-2 w-100" placeholder=""></textarea>
-                        <label class="floating-label gift-label roboto font-18 black-text-7 transition position-absolute">Your message</label>
+
+                    <div class="form-group w-full main-border br-2 position-relative">
+                        <div class="input-group align-items-start">
+                            <div class="input-group-prepend mt-4">
+                                <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
+                            </div>
+                            <textarea class="textarea form-control font-18 roboto black-text-0 no-border" placeholder=""></textarea>
+                            <label class="floating-label gift-label roboto font-18 black-text-7 transition position-absolute">Your message</label>
+                        </div>
+                        <div class="form-message position-absolute">
+                            <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                            <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                            <span class="error-message roboto font-16 red-text">Error message here</span>
+                        </div>
                     </div>
+
                     <input type="submit" class="submit roboto-medium font-18 btn-green green-bg border-green br-2 transition border-2
                      pointer text-uppercase white-text" value="send">
                 </form>

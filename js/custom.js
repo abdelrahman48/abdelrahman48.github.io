@@ -26,13 +26,54 @@ $(function () {
         deleteItem2 = $('section.shopping-cart .details .delete'),
         sortOption = $('section.products .sort-wrapper .dropdown-toggle'),
         sortOptions = $('section.products .sort-wrapper .dropdown-item'),
-        inputFloatingLabel = $('input:not([type="submit"])'),
+        inputFloatingLabel = $('input:not([type="submit"]), textarea'),
         numberOfCopiesAdded = $('section.product .cart .added-number'),
         profileTabChangerLeft = $('section.user-profile.with-tabs .changer.left'),
         profileTabChangerRight = $('section.user-profile.with-tabs .changer.right'),
         orderBtn = $('section.two-book .order'),
         orderContainer = $('section.two-book .options'),
-        orderAddToCart = $('section.two-book .options .cart');
+        orderAddToCart = $('section.two-book .options .cart'),
+        paymentCheckout = $('section.checkout .payment-methods .checkout');
+
+function validate() {
+    if ($(this).val().length === 0 || $(this).val() == 0) { // Show Error
+
+        $(this).parents('.form-group').addClass('form-error').removeClass('form-info form-success');
+        $(this).parents('.form-group').find('.error-message').addClass('show').end()
+            .find('.info-message').removeClass('show').end()
+            .find('.sucsess-message').removeClass('show');
+    }
+    else if ($(this).val().length !== 0 && $(this).val().length < 5) {
+
+        $(this).parents('.form-group').addClass('form-info').removeClass('form-error form-success');
+        $(this).parents('.form-group').find('.info-message').addClass('show').end()
+            .find('.error-message').removeClass('show').end()
+            .find('.sucsess-message').removeClass('show');
+    }
+    else { // No Errors
+        $(this).parents('.form-group').addClass('form-success').removeClass('form-error form-info');
+        $(this).parents('.form-group').find('.sucsess-message').addClass('show').end()
+            .find('.info-message').removeClass('show').end()
+            .find('.error-message').removeClass('show');
+    }
+}
+    $('input[type=text]').blur( validate );
+    $('input[type=email]').blur( validate );
+    $('input[type=password]').blur( validate );
+    $('input[type=tel]').blur( validate );
+    $('textarea').blur( validate );
+    $('select').blur( validate );
+
+    $('form').on('submit', function (e) {
+
+        $(this).find($('input, textarea, select')).blur();
+        if( $(this).find('.form-group').hasClass('form-error') ) {
+            e.preventDefault();
+        }
+    });
+    paymentCheckout.on('click', function () {
+       $('.checkout-form').submit()
+    });
 
     $('header .responsive-menu .nav-link').on('click', function () {
        $( '.' + $(this).data('menu') ).addClass('show').removeClass('hide');
@@ -215,6 +256,10 @@ $(function () {
         setTimeout(function () {
             orderContainer.fadeOut();
         }, 4000)
+    });
+
+    $('.secondry-address .delete-address').on('click', function () {
+        $(this).parents('.secondry-address').fadeOut();
     });
 });
 

@@ -630,9 +630,9 @@
                 <div class="primary-address white-bg main-border br-5">
                     <h2 class="roboto-medium font-22">Primary Address</h2>
 
-                    <form>
+                    <form novalidate>
                         <div class="d-flex flex-wrap flex-column flex-md-row">
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -641,8 +641,15 @@
                                            placeholder="" aria-label="First Name" name="user-first-name">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">First Name</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -651,38 +658,59 @@
                                            placeholder="" aria-label="Last Name" name="user-last-name">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Last Name</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                                     </div>
                                     <div class="select-wrapper position-relative flex-grow-1">
                                         <select title="" class="select form-control no-border pointer roboto font-18 black-text-7">
-                                            <option value="Country">Country</option>
+                                            <option value="0">Country</option>
                                             <option value="Caneda">United States</option>
                                             <option value="Egypt">Egypt</option>
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                                     </div>
                                     <div class="select-wrapper position-relative flex-grow-1">
                                         <select title="" class="select form-control no-border pointer roboto font-18 black-text-7">
-                                            <option value="City">City</option>
+                                            <option value="0">City</option>
                                             <option value="Caneda">New York</option>
                                             <option value="Egypt">Alexandria</option>
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
                         </div>
+
                         <div>
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -692,7 +720,7 @@
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Phone</label>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -701,8 +729,15 @@
                                            placeholder="" aria-label="Street Name/No" name="user-street-name/no">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Street Name/No</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
-                            <div class="form-group ">
+
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -711,10 +746,17 @@
                                            placeholder="" aria-label="Building Name/No" name="user-building-name/no">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Building Name/No</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
                         </div>
+
                         <div class="d-flex flex-wrap flex-column flex-md-row">
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -723,8 +765,15 @@
                                            placeholder="" aria-label="Building Name/No" name="user-floor-no">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Floor No.</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -733,10 +782,17 @@
                                            placeholder="" aria-label="Building Name/No" name="user-apartment-no">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Apartment No.</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
                         </div>
+
                         <div>
-                            <div class="form-group">
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
@@ -745,24 +801,39 @@
                                            placeholder="" aria-label="Building Name/No" name="user-nearest-landmark">
                                     <label class="floating-label roboto font-18 black-text-7 transition position-absolute">Nearest Landmark</label>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
-                            <div class="form-group">
+
+                            <div class="form-group position-relative">
                                 <div class="input-group">
                                     <div class="select-wrapper position-relative flex-grow-1">
                                         <select title="" class="select with-out-icon form-control no-border pointer roboto font-18 black-text-7">
-                                            <option value="Location Type">Location Type</option>
+                                            <option value="0">Location Type</option>
                                             <option value="Countryside">Countryside</option>
                                             <option value="City">City</option>
                                         </select>
                                     </div>
                                 </div>
+
+                                <div class="form-message position-absolute">
+                                    <span class="sucsess-message roboto font-16 green-text">SUCSESS message here</span>
+                                    <span class="info-message roboto font-16 brown-text">INFO message here</span>
+                                    <span class="error-message roboto font-16 red-text">Error message here</span>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="buttons ml-1">
+                            <button type="submit" class="green-text greenish-bg roboto-medium font-18">Save Changes</button>
+                            <button class="red-text w-auto roboto-medium font-18 transparent">Cancel</button>
+                        </div>
                     </form>
-                    <div class="buttons ml-1">
-                        <button class="green-text greenish-bg roboto-medium font-18">Save Changes</button>
-                        <button class="red-text w-auto roboto-medium font-18 transparent">Cancel</button>
-                    </div>
+
                 </div>
 
                 <div class="secondry-address white-bg main-border br-5">
@@ -776,7 +847,7 @@
                     </address>
                     <div class="buttons ml-1">
                         <button class="green-text greenish-bg br-2 roboto-medium font-18">Edit Address</button>
-                        <button class="red-text w-auto roboto-medium font-18 transparent">Delete Address</button>
+                        <button class="delete-address red-text w-auto roboto-medium font-18 transparent">Delete Address</button>
                     </div>
                 </div>
 

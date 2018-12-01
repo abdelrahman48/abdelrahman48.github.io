@@ -79,9 +79,12 @@ select {
 }
 .form-group {
     flex: 1 1 calc(50% - 20px);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     border-radius: 2px;
     border: 1px solid #e5dacb;
+}
+.form-group.w-full {
+    flex-basis: 100%;
 }
 .flex-wrap > .form-group:nth-of-type(odd):not(:last-of-type) {
     margin-right: 20px;
@@ -91,6 +94,9 @@ select {
 }
 .form-group input, .form-group select {
     height: 75px;
+}
+.form-group input {
+    border-radius: initial !important;
 }
 .select-wrapper:after {
     content: '';
@@ -308,6 +314,27 @@ textarea {
 .pointer {
     cursor: pointer;
 }
+.form-success {
+    border: 1px solid #106b2e;
+}
+.form-info {
+    border: 1px solid #c8a038;
+}
+.form-error, .border-red {
+    border: 1px solid #ac4c31;
+}
+/* -------------------- *\
+  Start Form Validate
+\* -------------------- */
+.form-message > span {
+    display: none;
+}
+.form-message > span.show {
+    display: block;
+}
+/* -------------------- *\
+  End Form Validate
+\* -------------------- */
 /* -------------------- *\
   Start Navbar
 \* -------------------- */
@@ -573,9 +600,6 @@ header .login-modal .modal-header {
 }
 header .login-modal .modal-body {
     padding: 16px 25px;
-}
-header .login-modal .form-group {
- margin-bottom: 9px;
 }
 header .login-modal .form-control {
     height: 61px;
@@ -1400,14 +1424,17 @@ section.checkout .reciver-info .gift-checkbox {
     left: 13px;
     margin: 11px 0 32px;
 }
+section.checkout .reciver-info .gift {
+    background-color: #fbf6f4;
+}
 section.checkout .reciver-info .textarea {
     height: 198px;
     padding: 27px;
-    border: 1px solid #ac4c31;
-    background-color: rgba(172, 76, 49, .05);
+    background-color: #fbf6f4;
+    border-radius: 5px;
 }
 .floating-label.gift-label {
-    left: 28px;
+    left: 57px;
 }
 section.checkout .information .payment-methods {
     padding: 34px 0 23px;
@@ -1581,9 +1608,6 @@ section.create-account .login-form {
 }
 section.create-account .login-form .header {
     margin: 0 0 20px 2px;
-}
-section.create-account .login-form .form-group {
-    margin-bottom: 10px;
 }
 section.create-account .login-form input {
     height: 61px;
