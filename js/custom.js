@@ -10,6 +10,7 @@ $(function () {
         decreaseNumberOfCopy = $('.copies-number .minus'),
         addToCart = $('section.product .cart'),
         shoppingCart = $('header .navbar .handbag'),
+        shoppingCart = $('header .navbar .handbag'),
         shoppingCartModal = $('header .cart-modal'),
         shoppingCartNumber = $('header .navbar .cart-number'),
         numberOfCopies = $('.copies-number .number'),
