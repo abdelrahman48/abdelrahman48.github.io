@@ -2,9 +2,6 @@ $(function () {
     $('.carousel').carousel({
         interval: false
     });
-
-    $('a').on('click', function (e) { e.preventDefault()} );
-
     var paginationLi = $('.pagination-list .page-number'),
         productThumbnail = $('section.product .thumbnail li'),
         sizeButton = $('.details .size button'),
@@ -260,6 +257,24 @@ function validate() {
 
     $('.secondry-address .delete-address').on('click', function () {
         $(this).parents('.secondry-address').fadeOut();
+    });
+
+    $('.account-info .edit-account-info').on('click', function () {
+        $(this).hide();
+        $('.account-info address').addClass('hide');
+        $('.account-info .edit-account-form').fadeIn();
+    });
+    $('.account-info .edit-account-form').on('submit', function (e) {
+        e.preventDefault();
+
+        var asterisksPass = $('.account-info input[type=password]').val().replace(/./g, "*");
+
+        $('.account-info .account-email').text( $('.account-info input[type=email]').val() );
+        $('.account-info .account-password').text( asterisksPass );
+
+        $('.account-info .edit-account-info').fadeIn();
+        $(this).hide();
+        $('.account-info address').fadeIn().removeClass('hide');
     });
 });
 

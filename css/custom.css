@@ -1783,9 +1783,19 @@ section.user-profile .account-info h2 {
 section.user-profile .account-info address {
     margin-bottom: 60px;
 }
+section.user-profile .account-info address.hide {
+    display: none !important;
+}
 section.user-profile .account-info button {
     margin-left: 4px;
     margin-right: 0;
+}
+section.user-profile .edit-account-form {
+    display: none;
+}
+section.user-profile .submit {
+    width: 193px;
+    height: 61px;
 }
 /* ------------------------------------------------------------------ *\
   End Copy 20 Page
