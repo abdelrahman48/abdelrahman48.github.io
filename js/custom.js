@@ -10,7 +10,7 @@ $(function () {
         decreaseNumberOfCopy = $('.copies-number .minus'),
         addToCart = $('section.product .cart'),
         shoppingCart = $('header .navbar .handbag'),
-        shoppingCart = $('header .navbar .handbag'),
+        shoppingCartIcon = $('section.products .item .icon-handbag'),
         shoppingCartModal = $('header .cart-modal'),
         shoppingCartNumber = $('header .navbar .cart-number'),
         numberOfCopies = $('.copies-number .number'),
@@ -163,12 +163,75 @@ function validate() {
     });
 
     $('.category-list').on('click', function (e) { // add item to shopping cart when click on shopping icon
-        if(e.target.tagName === 'I') {
+        var iconHandbag = $(e.target);
+        if(iconHandbag.hasClass('icon-handbag')) {
             shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
+
+            shoppingCartItemsParent.removeClass('empty');
+            $('.empty-cart').hide();
+
+            var itemImgSrc = iconHandbag.parents('.item').find('.item-image').find('img').attr('src');
+            var itemImgAlt = iconHandbag.parents('.item').find('.item-image').find('img').attr('alt');
+            var itemFlagSrc = iconHandbag.parents('.item').find('.item-flag').attr('src');
+            var itemFlagAlt = iconHandbag.parents('.item').find('.item-flag').attr('alt');
+            var itemTitle = iconHandbag.parents('.item').find('.item-title').text();
+
+            var item =
+                "<div class='item flex-shrink-0 position-relative added'>\n" +
+                    "<button type='button' class='delete position-relative'>\n" +
+                        "<span class='position-absolute' aria-hidden='true'>×</span>\n" +
+                    "</button>\n" +
+                    "\n" +
+                    "<div class='item-image'>\n" +
+                    "   <img src='"+itemImgSrc+"'"+" alt='"+itemImgAlt+"'"+ " height='131'>\n" +
+                    "</div>\n" +
+                    "<div class='item-body d-flex align-items-center position-absolute'>\n" +
+                    "   <img src='"+itemFlagSrc+"'"+" class='img-fluid' alt='"+itemFlagAlt+"'"+ " width='30' height='30'>\n" +
+                    "   <h5 class='item-title roboto-medium font-14 mb-0'>"+itemTitle+"</h5>\n" +
+                    "</div>\n" +
+                "</div>";
+
+            shoppingCartItemsParent.append(item);
+            if(localStorage.item) {
+                localStorage.item += item;
+            } else {
+                localStorage.setItem('item', item);
+            }
 
             if(shoppingCartNumber.hasClass('active')) return;
             shoppingCartNumber.addClass('active');
             shoppingCart.attr('src', 'img/handbag-active.svg');
+        }
+    });
+
+    if(localStorage.item) {
+        shoppingCartItemsParent.append(localStorage.getItem('item'));
+        shoppingCartNumber.text(shoppingCartItemsParent.children('.item').length);
+        shoppingCartNumber.addClass('active');
+        shoppingCart.attr('src', 'img/handbag-active.svg');
+    }
+
+    if(shoppingCartItemsParent.children('.item').length === 0) {
+        $('.empty-cart').show();
+        shoppingCartItemsParent.addClass('empty')
+    }
+
+    if(shoppingCartItemsParent.children('.item').length === 0) {
+        $('.empty-cart').fadeIn(3000);
+        shoppingCartItemsParent.addClass('empty');
+    }
+
+    shoppingCartItemsParent.on('click','.delete', function () {
+        $(this).parents('.item').addClass('deleted').removeClass('added');
+        shoppingCartNumber.text(shoppingCartNumber.text() - 1);
+        $(this).parents('.item').fadeOut();
+        localStorage.setItem('item', shoppingCartItemsParent.find('.item.added').html() );
+        if(shoppingCartItemsParent.children('.item').length === shoppingCartItemsParent.children('.item.deleted').length) {
+            localStorage.clear();
+            $('.empty-cart').fadeIn(3000);
+            shoppingCartItemsParent.addClass('empty');
+            shoppingCartNumber.removeClass('active');
+            shoppingCart.attr('src', 'img/handbag.svg');
         }
     });
 
@@ -200,13 +263,6 @@ function validate() {
         $(this).parents('.details').find($('.visible')).removeClass('hide')
     });
 
-    deleteItem1.on('click', function () {
-        $(this).parents('.item').fadeOut().addClass('deleted');
-        if(shoppingCartItemsParent.children('.item.deleted').length === shoppingCartItemsParent.children('.item').length) {
-            $('.empty-cart').fadeIn(3000);
-            shoppingCartItemsParent.addClass('empty')
-        }
-    });
     deleteItem2.on('click', function () {
         $(this).parents('.shopping-item').fadeOut();
     });

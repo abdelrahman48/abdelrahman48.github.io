@@ -569,12 +569,14 @@ header .cart-modal .delete span {
 }
 header .cart-modal .item-image {
     margin: -20px 0 0 16px;
+    overflow: hidden;
 }
 header .cart-modal .item-body {
-    padding: 16px 12px 13px 11px;
+    bottom: 15px;
+    left: 12px;
 }
 header .cart-modal .item-title {
-    margin-left: 13px;
+    margin-left: 6px;
 }
 header .cart-modal .modal-footer {
     padding: 23px 25px 26px 33px;
