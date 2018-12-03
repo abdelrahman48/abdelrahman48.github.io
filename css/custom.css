@@ -81,7 +81,8 @@ select {
     -webkit-appearance: none;
 }
 .form-group {
-    flex: 1 1 calc(50% - 20px);
+    flex-grow: 1;
+    flex-basis: calc(50% - 20px);
     margin-bottom: 24px;
     border-radius: 2px;
     border: 1px solid #e5dacb;
@@ -931,7 +932,7 @@ section.products .item {
     margin: 19px 25px 19px 0;
     padding: 8px 0 0 7px;
     flex-direction: column;
-    flex: calc(33.3333% - 25px);
+    flex-basis: calc(33.3333% - 25px);
 }
 section.products .item:nth-of-type(3n) {
     margin-right: 0;
@@ -1948,7 +1949,7 @@ section.products.two .category-list {
     margin-top: 26px;
 }
 section.products.two .item {
-    flex: calc(50% - 25px)
+    flex-basis: calc(50% - 25px)
 }
 section.products.two .item {
     margin-right: 42px;
@@ -2355,7 +2356,7 @@ section.product-info.two-book .text-wrapper {
         max-width: 389px;
     }
     section.products .item {
-        flex: calc(50% - 25px);
+        flex-basis: calc(50% - 25px);
     }
     section.products .item:nth-of-type(even) {
         margin-right: 0;
@@ -2769,4 +2770,9 @@ section.product-info.two-book .text-wrapper {
     header .nav-wrapper .responsive-menu {
         height: 62vh;
     }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+
 }
