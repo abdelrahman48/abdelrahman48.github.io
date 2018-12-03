@@ -1,9 +1,12 @@
 /* -------------------- *\
   Fonts
 \* -------------------- */
-@font-face {
-    font-family: "Frutiger LT Arabic 45 Light";
-    src: url(../fonts/FrutigerLTArabic-45Light.ttf);
+@supports not (-ms-high-contrast: none) {
+    /* Non-IE styles here */
+    @font-face {
+        font-family: "Frutiger LT Arabic 45 Light";
+        src: url(../fonts/FrutigerLTArabic-45Light.ttf);
+    }
 }
 @font-face {
     font-family: "Frutiger LT Arabic 55 Roman";
