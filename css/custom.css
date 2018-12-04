@@ -998,7 +998,7 @@ section.products .item {
     box-shadow: 0 3px 7px rgba(0, 0, 0, .15);
     border-radius: 2px;
     margin: 19px 25px 19px 0;
-    padding: 8px 0 0 7px;
+    padding: 8px 8px 0 7px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1040,6 +1040,7 @@ section.products .item .icon-handbag {
     padding: 14px 0 13px;
     width: 57px;
     line-height: 26px;
+    vertical-align: bottom;
 }
 /* -------------------- *\
   Start Pagination Section
@@ -2601,9 +2602,8 @@ section.product-info.two-book .text-wrapper {
         width: 300px;
     }
     section.products .item {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 365px;
-        flex: 0 0 365px;
+        flex-basis: 100%;
+        max-width: 365px;
         margin-right: 0 !important;
     }
     section.products .item:nth-of-type(even) {
@@ -2716,10 +2716,6 @@ section.product-info.two-book .text-wrapper {
         width: 100%;
         max-width: none;
         margin-bottom: 30px;
-    }
-    section.products .item {
-        max-width: 365px;
-        display: inline-block !important;
     }
     section.product-info .text-wrapper {
         padding: 52px 15px 70px;
