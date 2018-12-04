@@ -95,6 +95,9 @@ input.small ~ .floating-label {
 select {
     -webkit-appearance: none;
 }
+select::-ms-expand {
+    display: none;
+}
 .form-group {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -1014,7 +1017,7 @@ section.products .item .item-flag {
     top: -38px;
 }
 section.products .item-body {
-    padding: 40px 34px 30px;
+    padding: 40px 30px 30px;
 }
 section.products .item .item-title {
     margin-bottom: 5px;
@@ -1104,6 +1107,7 @@ section.product .image {
 }
 section.product .image.slider img {
     display: none;
+    width: 100%;
 }
 section.product .image.slider img.active {
     display: block;
@@ -1994,7 +1998,7 @@ section.products.two .modal-body .copies-number {
     margin-bottom: 21px;
 }
 section.products.two .title {
-    width: 670px;
+    max-width: 670px;
     margin-bottom: 80px;
 }
 section.products.two .title h2 {
@@ -2602,21 +2606,16 @@ section.product-info.two-book .text-wrapper {
         width: 300px;
     }
     section.products .item {
-        flex-basis: 100%;
+        flex-basis: 100% !important;
         max-width: 365px;
         margin-right: 0 !important;
-    }
-    section.products .item:nth-of-type(even) {
-        margin-right: 0;
-    }
-    section.products .item:nth-of-type(odd) {
-        margin-right: 25px;
     }
     section.products .item .item-flag {
         left: 28px;
     }
     section.product .image {
         height: auto;
+        margin-left: 0;
     }
     section.product .modal-body {
         padding: 0 24px;
@@ -2985,6 +2984,24 @@ _:-ms-lang(x), .print-provider-container img.fixed {
     position: relative;
     left: -100px;
 }
+_:-ms-lang(x), section.products .item {
+    flex-basis: calc(32.3333% - 25px);
+}
+_:-ms-lang(x), section.product .copies-number span,
+_:-ms-lang(x), section.shopping-cart .copies-number span {
+    left: 50%;
+}
+_:-ms-lang(x), section.product .cart .added-number {
+    top: 50%;
+    transform: translateY(-50%);
+}
+_:-ms-lang(x), section.product-info .text-wrapper .description {
+    width: 100%;
+}
+_:-ms-lang(x), section.two.products .item {
+    display: block !important;
+}
+
 @media (max-width: 400px) {
     _:-ms-lang(x), section.get-started .steps {
         display: block !important;
@@ -2997,10 +3014,13 @@ _:-ms-lang(x), .print-provider-container img.fixed {
     }
 }
 @media (max-width: 991px) {
-
+    _:-ms-lang(x), section.products .item
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     _:-ms-lang(x), section.designs .image {
         flex: 1 1 0px;
     }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
 }
