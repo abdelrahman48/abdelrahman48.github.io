@@ -2,6 +2,13 @@ $(function () {
     $('.carousel').carousel({
         interval: false
     });
+    $(window).resize(function () {
+/*        $('.width').text($(this).outerWidth());*/
+       if( $(this).outerWidth() < 775) {
+           $('.ie-support').addClass('fixed');
+        }
+    });
+    
     var paginationLi = $('.pagination-list .page-number'),
         productThumbnail = $('section.product .thumbnail li'),
         sizeButton = $('.details .size button'),
