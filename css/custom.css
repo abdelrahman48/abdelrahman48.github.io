@@ -930,7 +930,8 @@ footer .list li a {
     color: #222;
 }
 footer .buttons a {
-    width: 280px;
+    max-width: 280px;
+    flex: 1;
     height: 53px;
 }
 footer .copyright {
@@ -2061,7 +2062,7 @@ section.products.two .progress-steps .step.active h4:last-child{
     color: #106b2e;
 }
 section.products.two .input-wrapper {
-    width: 676px;
+    width: 100%;
     max-width: 676px;
     margin-right: 0;
 }
@@ -2540,6 +2541,9 @@ section.product-info.two-book .text-wrapper {
     section.shopping-cart .shopping-price {
         margin-top: 40px;
     }
+    section.product.two .image-wrapper.with-border {
+        margin-right: 0;
+    }
     section.products.two .input-wrapper {
         margin-bottom: 12px;
     }
@@ -2706,6 +2710,7 @@ section.product-info.two-book .text-wrapper {
     }
     footer .buttons a {
         margin-bottom: 10px;
+        max-width: none;
         width: 100%;
     }
     section.products .text-wrapper {
@@ -2846,6 +2851,9 @@ section.product-info.two-book .text-wrapper {
         flex-basis: 30%;
         height: 55px;
     }
+    section.product.two.with-flag .thumbnail li {
+        width: 80px;
+    }
     section.shopping-cart .shopping-item {
         padding: 30px 12px 0;
     }
@@ -2975,7 +2983,6 @@ _:-ms-lang(x), .print-provider-container .text {
     transform: translate(-50%, -50%);
     width: 100%;
 }
-section.get-started .steps
 _:-ms-lang(x), .print-provider-container img {
     width: 100%;
 }
@@ -3001,26 +3008,34 @@ _:-ms-lang(x), section.product-info .text-wrapper .description {
 _:-ms-lang(x), section.two.products .item {
     display: block !important;
 }
+_:-ms-lang(x), section.two-book.product .image-wrapper .image {
+    flex-basis: calc(48.9% - 14px);
+}
 
+
+@media (max-width: 991px) {
+    _:-ms-lang(x), section.products .item {
+        flex-basis: calc(48.9% - 25px);
+    }
+}
+@media (max-width: 767px) {
+    _:-ms-lang(x), section.features .feature {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
 @media (max-width: 400px) {
     _:-ms-lang(x), section.get-started .steps {
         display: block !important;
     }
 }
-@media (max-width: 767px) {
-    _:-ms-lang(x), section.features .feature {
-        padding-top: 3rem ;
-        padding-bottom: 3rem ;
-    }
-}
-@media (max-width: 991px) {
-    _:-ms-lang(x), section.products .item
-}
+
+
 @media (min-width: 992px) and (max-width: 1199px) {
     _:-ms-lang(x), section.designs .image {
-        flex: 1 1 0px;
+        flex: 1 1 0%;
     }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-
+    _:-ms-lang(x), section.product.two .image-wrapper.with-border {
+        min-width: 600px;
+    }
 }
