@@ -3,7 +3,7 @@ $(function () {
         interval: false
     });
     $(window).resize(function () {
-        $('.width').text($(this).outerWidth());
+        /*$('.width').text($(this).outerWidth());*/
        if( $(this).outerWidth() < 775) {
            $('.ie-support').addClass('fixed');
         }
