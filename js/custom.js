@@ -3,7 +3,7 @@ $(function () {
         interval: false
     });
     $(window).resize(function () {
-        $('.width').text($(this).outerWidth());
+/*        $('.width').text($(this).outerWidth()); */
        if( $(this).outerWidth() < 775) {
            $('.ie-support').addClass('fixed');
         }
@@ -211,12 +211,12 @@ function validate() {
         }
     });
 
-/*    if(localStorage.item) {
+   if(localStorage.item) {
         shoppingCartItemsParent.find('.items-parent').append(localStorage.getItem('item'));
         shoppingCartNumber.text(shoppingCartItemsParent.find('.item').length);
         shoppingCartNumber.addClass('active');
         shoppingCart.attr('src', 'img/handbag-active.svg');
-    }*/
+    }
 
     if(shoppingCartItemsParent.find('.item').length === 0) {
         $('.empty-cart').show();
