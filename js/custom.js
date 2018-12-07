@@ -3,7 +3,7 @@ $(function () {
         interval: false
     });
     $(window).resize(function () {
-        /*$('.width').text($(this).outerWidth());*/
+/*        $('.width').text($(this).outerWidth());*/
        if( $(this).outerWidth() < 775) {
            $('.ie-support').addClass('fixed');
         }
@@ -278,6 +278,9 @@ function validate() {
        } else {
            $(this).siblings('.floating-label').addClass('active')
        }
+    });
+    $('form label').on('click', function () {
+        $(this).addClass('active')
     });
 
     profileTabChangerRight.on('click', function () {

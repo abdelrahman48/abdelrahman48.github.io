@@ -1596,7 +1596,8 @@ section.checkout .payment-methods .price {
     margin-bottom: 15px;
 }
 section.checkout .payment-methods .checkout {
-    height: 61px
+    height: 61px;
+    max-width: 445px;
 }
 section.checkout .payment-methods .text {
     -ms-flex-preferred-size: 232px;
@@ -1677,6 +1678,7 @@ section.contact-us .follow-us i {
     margin: 8px 8px 0 0;
 }
 section.contact-us .follow-us .text-link {
+    display: inline-block;
     padding: 21px 0 8px;
     border-bottom: 1px solid #c8c7cc;
     color: #444;
@@ -2406,7 +2408,8 @@ section.product-info.two-book .text-wrapper {
         flex-basis: auto;
     }
     section.checkout .shopping-items {
-        position: unset !important;
+        position: relative !important;
+        top: 0;
         width: 100%;
         margin-bottom: 52px;
     }
@@ -2743,6 +2746,12 @@ section.product-info.two-book .text-wrapper {
         width: 264px;
         padding: 44px 20px;
     }
+    section.checkout .payment-methods .nav-item {
+        padding: 8px;
+    }
+    section.checkout .payment-methods .tab-content {
+        padding: 42px 15px;
+    }
 }
 @media (max-width: 500px) {
     header .navbar.nav-with-out-ul .container {
@@ -2890,7 +2899,6 @@ section.product-info.two-book .text-wrapper {
         padding-right: 10px;
         padding-left: 10px;
     }
-    section.contact-us .contact-form .submit,
     section.create-account .register-form .submit {
         width: auto;
     }
@@ -2927,6 +2935,12 @@ section.product-info.two-book .text-wrapper {
     section.product.two-book .title h2 {
         font-size: 26px;
         margin-top: 14px;
+    }
+    form label, form select {
+        font-size: 16px !important;
+    }
+    .form-group i {
+        padding-left: 10px;
     }
 }
 @media (max-width: 350px) {
@@ -2992,7 +3006,8 @@ _:-ms-lang(x), section.product.with-flag .image-wrapper{
     flex-basis: 625px;
 }
 _:-ms-lang(x), section.product.two .text-wrapper,
-_:-ms-lang(x), section.product.with-flag .text-wrapper {
+_:-ms-lang(x), section.product.with-flag .text-wrapper,
+_:-ms-lang(x), section.product.with-flag .details {
     flex: 1 0 0% !important;
     width: 100%;
 }
@@ -3015,7 +3030,6 @@ _:-ms-lang(x), section.with-flag.two-book .image-wrapper .image {
 }
 @media (max-width: 767px) {
     _:-ms-lang(x), section.with-flag.two-book .image-wrapper .image {
-
         width: 100%;
     }
 }
@@ -3090,15 +3104,26 @@ _:-ms-lang(x), section.product .cart .added-number {
 _:-ms-lang(x), section.product-info .text-wrapper .description {
     width: 100%;
 }
+_:-ms-lang(x), section.checkout .payment-methods .checkout-button {
+    flex: 1;
+}
+_:-ms-lang(x), section.contact-us .follow-us ul {
+    overflow: hidden;
+}
 
-
+@media (min-width: 1200px) {
+    _:-ms-lang(x), section.contact-us .contact-form {
+        max-width: 734px;
+    }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
     _:-ms-lang(x), section.designs .image {
         flex: 1 1 0%;
     }
     _:-ms-lang(x), section.product.two .image-wrapper.with-border,
     _:-ms-lang(x), section.product.with-flag .image-wrapper {
-        min-width: 600px;
+        min-width: 540px;
+        flex: 0 1 0%;
     }
 }
 @media (max-width: 991px) {
@@ -3107,7 +3132,36 @@ _:-ms-lang(x), section.product-info .text-wrapper .description {
     }
 }
 @media (max-width: 767px) {
-
+    _:-ms-lang(x), form.d-flex,
+    _:-ms-lang(x), section.checkout .payment-methods .tab-content > .active{
+        display: block !important;
+    }
+}
+@media (max-width: 575px) {
+    _:-ms-lang(x), section.product.with-flag .thumbnail ul {
+        display: inline-block !important;
+        min-width: 197px;
+        flex: 0 1 0%;
+        text-align: center;
+    }
+    _:-ms-lang(x), section.product.with-flag .thumbnail li {
+        display: inline-block;
+        width: 75px !important;
+    }
+    _:-ms-lang(x), section.checkout .payment-methods .nav {
+        overflow: hidden;
+    }
+    _:-ms-lang(x), section.checkout .payment-methods .nav-item {
+        display: inline-block !important;
+        position: relative;
+    }
+    _:-ms-lang(x), section.checkout .payment-methods .nav-item span,
+    _:-ms-lang(x), section.checkout .payment-methods .nav-item img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
 @media (max-width: 400px) {
     _:-ms-lang(x), section.get-started .steps {
