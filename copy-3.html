@@ -57,7 +57,7 @@
 
                             <div class="modal-header no-border no-br-rd">
                                 <h4 class="roboto font-24">Shopping Cart
-                                    <span class="green-text roboto-medium font-22">(3 items)</span>
+                                    <span class="green-text roboto-medium font-22">(<span class="number">0</span> items)</span>
                                 </h4>
                                 <a href="copy-16.html" class="edit-cart brown-text roboto-medium font-18 no-underline">Edit Cart
                                     <i class="ti-angle-right align-middle"></i>
@@ -580,31 +580,45 @@
                     <div class="modal-content no-br-rd">
                         <div class="modal-header no-border no-br-rd align-items-center">
                             <h4 class="roboto font-24">Login</h4>
-                            <button class="register brown-text roboto-medium font-18 transparent">Create a new account
+                            <a href="copy-15.html" class="register brown-text roboto-medium font-18
+                                transparent no-underline">Create a new account
                                 <i class="ti-angle-right align-middle"></i>
-                            </button>
+                            </a>
                         </div>
+
                         <div class="modal-body">
                             <form>
-                                <div class="form-group">
+                                <div class="form-group position-relative">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <i class="input-group-text ti-email black-text-7 font-18 no-border transparent"></i>
                                         </div>
-                                        <input type="email" class="form-control roboto no-border" placeholder="Email Adress" aria-label="Email Adress">
+                                        <input type="email" class="form-control roboto no-border" placeholder="Email Address"
+                                               aria-label="Email Address">
+                                    </div>
+
+                                    <div class="form-message position-absolute">
+                                        <span class="error-message roboto font-16 red-text">Error message here</span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+
+                                <div class="form-group position-relative">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <i class="input-group-text ti-unlock black-text-7 font-18 no-border transparent"></i>
                                         </div>
                                         <input type="password" class="form-control no-border" placeholder="Password" aria-label="Password">
                                     </div>
+
+                                    <div class="form-message position-absolute">
+                                        <span class="error-message roboto font-16 red-text">Error message here</span>
+                                    </div>
                                 </div>
+
                                 <button type="submit" class="submit roboto-medium font-18 green-text text-uppercase">Login</button>
                             </form>
                         </div>
+
                         <div class="modal-footer no-border flex-column">
                             <h5 class="black-text-6 roboto font-18 mb-0">Easy Login with social media</h5>
 
@@ -661,7 +675,7 @@
 
         <div class="category-list d-flex flex-wrap justify-content-center">
 
-            <div class="item d-flex justify-content-between">
+            <a href="copy-4.html" class="item-link d-flex justify-content-between no-underline">
 
                 <div class="item-image">
                     <img class="img-fluid" src="img/mushaf-product-1.png" alt="France Mushaf">
@@ -669,18 +683,17 @@
 
                 <div class="item-body roboto position-relative">
                     <img class="item-flag position-absolute" alt="France Flag" src="img/france-flag.png">
-                    <h5 class="item-title roboto-medium font-25">France Mushaf</h5>
+                    <h5 class="item-title roboto-medium font-25 black-text-0">France Mushaf</h5>
                     <p class="item-text grey-text font-14">We print and deliver al mushaf to anywhere around the world…</p>
                     <!-- Button trigger modal -->
                     <button type="button" class="preview brown-text  transition modal-button pointer
-                        text-uppercase" data-toggle="modal" data-target="#mushaf">
+                    text-uppercase" data-toggle="modal" data-target="#mushaf">
                         Preview
                     </button>
                     <i class="icon-handbag pointer d-inline-block text-center align-bottom"></i>
                 </div>
-            </div>
-
-            <div class="item d-flex justify-content-between">
+            </a>
+            <a href="copy-4.html" class="item-link d-flex justify-content-between no-underline">
 
                 <div class="item-image">
                     <img class="img-fluid" src="img/mushaf-product-2.png" alt="Japanese Mushaf">
@@ -688,7 +701,7 @@
 
                 <div class="item-body roboto position-relative">
                     <img class="item-flag position-absolute" alt="Japanese Flag" src="img/japan-flag.png">
-                    <h5 class="item-title roboto-medium font-25">Japanese Mushaf</h5>
+                    <h5 class="item-title roboto-medium font-25 black-text-0">Japanese Mushaf</h5>
                     <p class="item-text grey-text font-14">We print and deliver al mushaf to anywhere around the world…</p>
                     <!-- Button trigger modal -->
                     <button type="button" class="preview brown-text transition modal-button pointer text-uppercase" data-toggle="modal" data-target="#mushaf">
@@ -696,9 +709,8 @@
                     </button>
                     <i class="icon-handbag pointer d-inline-block text-center align-bottom"></i>
                 </div>
-            </div>
-
-            <div class="item d-flex justify-content-between">
+            </a>
+            <a href="copy-4.html" class="item-link d-flex justify-content-between no-underline">
 
                 <div class="item-image">
                     <img class="img-fluid" src="img/mushaf-product-3.png" alt="English Mushaf">
@@ -706,7 +718,7 @@
 
                 <div class="item-body roboto position-relative">
                     <img class="item-flag position-absolute" alt="English Flag" src="img/english-flag.png">
-                    <h5 class="item-title roboto-medium font-25">English Mushaf</h5>
+                    <h5 class="item-title roboto-medium font-25 black-text-0">English Mushaf</h5>
                     <p class="item-text grey-text font-14">We print and deliver al mushaf to anywhere around the world…</p>
                     <!-- Button trigger modal -->
                     <button type="button" class="preview brown-text transition modal-button pointer
@@ -715,7 +727,7 @@
                     </button>
                     <i class="icon-handbag pointer d-inline-block text-center"></i>
                 </div>
-            </div>
+            </a>
         </div>
         <!-- Modal -->
         <div class="modal book-modal fade" id="mushaf" tabindex="-1" role="dialog" aria-labelledby="mushafLabel" aria-hidden="true">

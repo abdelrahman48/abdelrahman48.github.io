@@ -3,7 +3,7 @@ $(function () {
         interval: false
     });
     $(window).resize(function () {
-/*        $('.width').text($(this).outerWidth()); */
+        $('.width').text($(this).outerWidth());
        if( $(this).outerWidth() < 775) {
            $('.ie-support').addClass('fixed');
         }
@@ -42,24 +42,12 @@ $(function () {
 
 function validate() {
     if ($(this).val().length === 0 || $(this).val() == 0) { // Show Error
-
-        $(this).parents('.form-group').addClass('form-error').removeClass('form-info form-success');
-        $(this).parents('.form-group').find('.error-message').addClass('show').end()
-            .find('.info-message').removeClass('show').end()
-            .find('.sucsess-message').removeClass('show');
-    }
-    else if ($(this).val().length !== 0 && $(this).val().length < 5) {
-
-        $(this).parents('.form-group').addClass('form-info').removeClass('form-error form-success');
-        $(this).parents('.form-group').find('.info-message').addClass('show').end()
-            .find('.error-message').removeClass('show').end()
-            .find('.sucsess-message').removeClass('show');
+        $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
+        $(this).parents('.form-group').find('.error-message').addClass('show');
     }
     else { // No Errors
-        $(this).parents('.form-group').addClass('form-success').removeClass('form-error form-info');
-        $(this).parents('.form-group').find('.sucsess-message').addClass('show').end()
-            .find('.info-message').removeClass('show').end()
-            .find('.error-message').removeClass('show');
+        $(this).parents('.form-group').addClass('form-success').removeClass('form-error');
+        $(this).parents('.form-group').find('.error-message').removeClass('show');
     }
 }
     $('input[type=text]').blur( validate );
@@ -125,7 +113,7 @@ function validate() {
     });
 
     for(i = 0; i < 2; i++) { // generate multiply items divs by clone only 3 items
-        $('.category-list .item').clone().insertAfter(".category-list .item:last");
+        $('.category-list .item-link').clone().insertAfter(".category-list .item-link:last");
     }
 
     productThumbnail.on('click', function () {
@@ -141,11 +129,11 @@ function validate() {
     });
 
     increaseNumberOfCopy.on('click', function () {
-        numberOfCopies.text(parseInt(numberOfCopies.text()) + 1);
+        $(this).siblings('.number').text( parseInt( $(this).siblings('.number').text() ) + 1);
     });
     decreaseNumberOfCopy.on('click', function () {
-        if(parseInt(numberOfCopies.text()) < 1) return;
-        numberOfCopies.text(parseInt(numberOfCopies.text()) - 1);
+        if( parseInt( $(this).siblings('.number').text() ) < 1) return;
+        $(this).siblings('.number').text( parseInt( $(this).siblings('.number').text() ) - 1);
     });
 
     shoppingCart.on('click', function () {
@@ -173,15 +161,16 @@ function validate() {
         var iconHandbag = $(e.target);
         if(iconHandbag.hasClass('icon-handbag')) {
             shoppingCartNumber.text(parseInt(shoppingCartNumber.text()) + 1);
+            $('header .cart-modal .modal-header .number').text( parseInt(shoppingCartNumber.text()) );
 
             shoppingCartItemsParent.removeClass('empty');
             $('.empty-cart').hide();
 
-            var itemImgSrc = iconHandbag.parents('.item').find('.item-image').find('img').attr('src');
-            var itemImgAlt = iconHandbag.parents('.item').find('.item-image').find('img').attr('alt');
-            var itemFlagSrc = iconHandbag.parents('.item').find('.item-flag').attr('src');
-            var itemFlagAlt = iconHandbag.parents('.item').find('.item-flag').attr('alt');
-            var itemTitle = iconHandbag.parents('.item').find('.item-title').text();
+            var itemImgSrc = iconHandbag.parents('.item-link').find('.item-image').find('img').attr('src');
+            var itemImgAlt = iconHandbag.parents('.item-link').find('.item-image').find('img').attr('alt');
+            var itemFlagSrc = iconHandbag.parents('.item-link').find('.item-flag').attr('src');
+            var itemFlagAlt = iconHandbag.parents('.item-link').find('.item-flag').attr('alt');
+            var itemTitle = iconHandbag.parents('.item-link').find('.item-title').text();
 
             var item =
                 "<div class='item flex-shrink-0 position-relative'>\n" +
@@ -211,9 +200,18 @@ function validate() {
         }
     });
 
+    $('section.products .item-link').on('click', function (e) {
+        var that = $(e.target);
+        if( that.hasClass('icon-handbag') || that.hasClass('preview') ) {
+            e.preventDefault()
+        }
+    });
+
    if(localStorage.item) {
         shoppingCartItemsParent.find('.items-parent').append(localStorage.getItem('item'));
         shoppingCartNumber.text(shoppingCartItemsParent.find('.item').length);
+
+       $('header .cart-modal .modal-header .number').text( parseInt(shoppingCartNumber.text()) );
         shoppingCartNumber.addClass('active');
         shoppingCart.attr('src', 'img/handbag-active.svg');
     }
@@ -224,16 +222,20 @@ function validate() {
     }
 
     shoppingCartItemsParent.on('click','.delete', function () {
-        $(this).parents('.item').remove();
         shoppingCartNumber.text(shoppingCartNumber.text() - 1);
-        localStorage.setItem('item', shoppingCartItemsParent.find('.items-parent').html());
-        if(shoppingCartItemsParent.find('.item').length === 0) {
-            localStorage.clear();
-            $('.empty-cart').fadeIn(2000);
-            shoppingCartItemsParent.addClass('empty');
-            shoppingCartNumber.removeClass('active');
-            shoppingCart.attr('src', 'img/handbag.svg');
-        }
+
+        $(this).parents('.item').fadeOut(1000, function () {
+            $(this).remove();
+
+            localStorage.setItem('item', shoppingCartItemsParent.find('.items-parent').html());
+            if(shoppingCartItemsParent.find('.item').length === 0) {
+                localStorage.clear();
+                $('.empty-cart').fadeIn(1000);
+                shoppingCartItemsParent.addClass('empty');
+                shoppingCartNumber.removeClass('active');
+                shoppingCart.attr('src', 'img/handbag.svg');
+            }
+        });
     });
 
     thumbnailLi.on('click', function () { // change item's img when click on thumbnail imgs
@@ -337,6 +339,26 @@ function validate() {
         $(this).hide();
         $('.account-info address').fadeIn().removeClass('hide');
     });
+
+    $('.sender-info-checkbox').on('click', function () {
+        if($(this).is(':checked')) {
+            $('.sender-info-input').removeClass('d-flex').addClass('d-none');
+        } else {
+            $('.sender-info-input').removeClass('d-none').addClass('d-flex');
+        }
+    });
+    $('.gift-checkbox').on('click', function () {
+        if($(this).is(':checked')) {
+            $('.gift').fadeIn();
+        } else {
+            $('.gift').fadeOut();
+        }
+    });
+
+    $('.forget-account').on('click', function () {
+        $(this).parents('.login-form').find('.login-inputs').hide();
+        $(this).parents('.login-form').find('.forget-login-inputs').fadeIn();
+    })
 });
 
 // Shopping Cart Box Modal Scroll
