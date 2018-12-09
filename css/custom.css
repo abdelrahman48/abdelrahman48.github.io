@@ -3167,7 +3167,6 @@ _:-ms-lang(x), section.user-profile .shopping-item .details {
 _:-ms-lang(x), section.user-profile .shopping-item .copies-number span:last-of-type,
 _:-ms-lang(x), section.user-profile .orders-info .header span:last-of-type {
     display: inline-block;
-    margin-left: auto;
 }
 _:-ms-lang(x), section.user-profile .secondry-address address span,
 _:-ms-lang(x), section.user-profile .account-info address span,
