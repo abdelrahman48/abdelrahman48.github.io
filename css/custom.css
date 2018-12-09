@@ -1112,6 +1112,8 @@ section.product .image {
 }
 section.product .image.slider img {
     display: none;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
 }
 section.product .image.slider img.active {
@@ -3026,6 +3028,10 @@ section.product-info.two-book .text-wrapper {
 .width {
     right: 0;
 }
+.RTL{
+    top: 0;
+    left: 0;
+}
 
 /* IE10 CSS  */
 _:-ms-lang(x), section.two.products .item {
@@ -3183,6 +3189,7 @@ _:-ms-lang(x), section.products .item-link {
 _:-ms-lang(x), section.products .item-image,
 _:-ms-lang(x), section.products .item-body {
     min-width: 258px;
+    -ms-flex: 0 1 auto;
     flex: 0 1 auto;
 }
 

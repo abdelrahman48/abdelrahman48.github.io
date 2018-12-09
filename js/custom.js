@@ -8,6 +8,15 @@ $(function () {
            $('.ie-support').addClass('fixed');
         }
     });
+    $('.RTL').on('click', function () {
+        if (! $('html').attr('dir') ) {
+            $('html').attr('dir','rtl');
+            $('.rtl-css').attr('href', 'components/bootstrap-4.1.3/css/bootstrap-rtl.min.css')
+        } else {
+            $('html').attr('dir','');
+            $('.rtl-css').attr('href', '')
+        }
+    });
     
     var paginationLi = $('.pagination-list .page-number'),
         productThumbnail = $('section.product .thumbnail li'),
