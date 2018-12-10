@@ -11,10 +11,12 @@ $(function () {
     $('.RTL').on('click', function () {
         if (! $('html').attr('dir') ) {
             $('html').attr('dir','rtl');
-            $('.rtl-css').attr('href', 'components/bootstrap-4.1.3/css/bootstrap-rtl.min.css')
+            $('.bootstrap-rtl-css').attr('href', 'components/bootstrap-4.1.3/css/bootstrap-rtl.min.css');
+            $('.custom-rtl-css').attr('href', 'css/custom-rtl.css');
         } else {
             $('html').attr('dir','');
-            $('.rtl-css').attr('href', '')
+            $('.bootstrap-rtl-css').attr('href', '');
+            $('.custom-rtl-css').attr('href', '');
         }
     });
     

@@ -1,0 +1,1101 @@
+/* ------------------------------------------------------------------ *\
+  Start RTL CSS
+\* ------------------------------------------------------------------ */
+/* -------------------- *\
+  Start Bootstrap fixes
+\* -------------------- */
+.ml-1,
+.ml-2,
+.ml-3,
+.ml-4,
+.ml-5,
+.ml-1,
+.ml-auto {
+    margin-left: 0 !important;
+}
+.mr-1,
+.mr-2,
+.mr-3,
+.mr-4,
+.mr-5,
+.mr-1,
+.mr-auto {
+    margin-right: 0 !important;
+}
+.carousel-control-next {
+    right: auto;
+}
+.carousel-control-prev {
+    left: auto;
+}
+/* -------------------- *\
+  End Bootstrap fixes
+\* -------------------- */
+/* -------------------- *\
+  End icons fixes
+\* -------------------- */
+.ti-arrow-left:before {
+    content: "\e628";
+}
+.ti-arrow-right:before {
+    content: "\e629";
+}
+/* -------------------- *\
+  End icons fixes
+\* -------------------- */
+/* -------------------- *\
+  Start weird problems fixes
+\* -------------------- */
+
+/* -------------------- *\
+  End weird problems fixes
+\* -------------------- */
+/* -------------------- *\
+  Start Globals
+\* -------------------- */
+.floating-label {
+    right: 57px;
+    left: auto;
+}
+.flex-wrap > .form-group:nth-of-type(odd):not(:last-of-type) {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.form-group i {
+    padding: 0 20px 0 9px;
+}
+.select-wrapper:after {
+    left: 25px;
+    right: auto;
+}
+/* -------------------- *\
+  End Globals
+\* -------------------- */
+/* -------------------- *\
+  Start Navbar
+\* -------------------- */
+header .quran-gift-logo {
+    margin-left: 12px;
+    margin-right: 0;
+}
+header .navbar .quran-gift-text {
+    margin-left: 28px;
+    margin-right: 0;
+}
+header .navbar-nav .nav-item:last-of-type {
+    margin-right: -1px;
+    margin-left: 0;
+}
+header .nav-item .dropdown-toggle::after {
+    margin-right: 3px;
+    margin-left: 0;
+}
+header .navbar .handbag {
+    margin-left: 17px;
+    margin-right: 0;
+}
+header .navbar .cart-number {
+    right: -3px;
+    left: auto;
+}
+header .navbar .navbar-toggler {
+    margin-left: 22px;
+    margin-right: 0;
+}
+header .responsive-menu-header {
+    padding: 16px 23px 14px 20px;
+}
+header .responsive-menu-footer {
+    padding: 30px 23px 80px 20px;
+}
+header .nav-wrapper .level-2-menu {
+    right: -300px;
+    left: auto;
+}
+.overlay-menu {
+    right: 0;
+    left: auto;
+}
+@-webkit-keyframes showMenu {
+    0% {
+        right: -300px;
+        left: auto;
+        width: 0;
+    }
+    100% {
+        right: 0;
+        left: auto;
+        width: 297px;
+    }
+}
+@keyframes showMenu {
+    0% {
+        right: -300px;
+        left: auto;
+        width: 0;
+    }
+    100% {
+        right: 0;
+        left: auto;
+        width: 297px;
+    }
+}
+@-webkit-keyframes hideMenu {
+    0% {
+        right: 0;
+        left: auto;
+        width: 297px;
+    }
+    100% {
+        right: -300px;
+        left: auto;
+        width: 0;
+    }
+}
+@keyframes hideMenu {
+    0% {
+        right: 0;
+        left: auto;
+        width: 297px;
+    }
+    100% {
+        right: -300px;
+        left: auto;
+        width: 0;
+    }
+}
+/* -------------------- *\
+  End Navbar
+\* -------------------- */
+/* -------------------- *\
+  Start cart-box-modal
+\* -------------------- */
+header .navbar .cart-modal {
+    right: -202px;
+}
+header .cart-modal .modal-dialog {
+    right: 215px;
+    left: auto;
+}
+header .cart-modal .modal-content:after {
+    right: 507px;
+    left: auto;
+}
+header .logged .cart-modal .modal-content:after {
+    right: 468px;
+    left: auto;
+}
+header .cart-modal .modal-header {
+    padding: 36px 36px 3px 32px;
+}
+header .cart-modal .modal-body {
+    padding: 26px 25px;
+}
+header .cart-modal .item {
+    margin-left: 25px;
+    margin-right: 0;
+}
+header .cart-modal .delete {
+    right: 5px;
+    left: auto;
+}
+header .cart-modal .delete span {
+    right: 4px;
+    left: auto;
+}
+header .cart-modal .item-image {
+    margin: -24px 21px 0 0;
+}
+header .cart-modal .item-body {
+    right: 12px;
+    left: auto;
+}
+header .cart-modal .item-title {
+    margin-right: 6px;
+    margin-left: 0;
+}
+header .cart-modal .modal-footer {
+    padding: 23px 33px 26px 25px;
+}
+/* -------------------- *\
+  Start cart-box-modal
+\* -------------------- */
+/* -------------------- *\
+  Start login-box-modal
+\* -------------------- */
+header .login-modal .modal-dialog {
+    right: -10px;
+    left: auto;
+}
+header .login-modal .modal-header {
+    padding: 32px 25px 4px 18px;
+}
+header .login-modal .input-group i {
+    padding: 0 20px 0 10px;
+}
+header .login-modal .social-login i {
+    margin-left: 4px;
+    margin-right: 0;
+}
+/* -------------------- *\
+  End login-box-modal
+\* -------------------- */
+/* ------------------------------------------------------------------ *\
+  Start Home Page
+\* ------------------------------------------------------------------ */
+/* -------------------- *\
+  Start slider Section
+\* -------------------- */
+section.slider .carousel-next-icon:after,
+.carousel-prev-icon:after {
+    right: 22px;
+    left: auto;
+    border-right: 2px solid #fff;
+    border-left: none;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+section.slider .carousel-next-icon:after {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    right: 13px;
+    left: auto;
+}
+section.slider .carousel .image {
+    left: -33px;
+    right: auto;
+}
+section.slider .carousel .text {
+    text-align: right;
+}
+section.slider .text .order-copy {
+    margin-left: 11px;
+    margin-right: 0;
+}
+/* -------------------- *\
+  End Slider Section
+\* -------------------- */
+/* -------------------- *\
+  Start features
+\* -------------------- */
+section.features .features-image {
+    right: 6px;
+    left: auto;
+}
+section.features .feature:not(:last-of-type) {
+    border-left: 1px solid #dedfe1;
+    border-right: none;
+}
+/* -------------------- *\
+  End features
+\* -------------------- */
+/* -------------------- *\
+  Start Get-Started Section
+\* -------------------- */
+section.get-started p {
+    margin-right: -10px;
+    margin-left: 0;
+}
+/* -------------------- *\
+  End Get-Started Section
+\* -------------------- */
+/* -------------------- *\
+  Start Print Provider
+\* -------------------- */
+.print-provider-container .text {
+    margin-right: -15px;
+    margin-left: 0;
+}
+/* -------------------- *\
+  End Print Provider
+\* -------------------- */
+/* -------------------- *\
+  Start World-Map Section
+\* -------------------- */
+section.world-map h2.h1 {
+    left: 0;
+    right: auto;
+}
+/* -------------------- *\
+  End World-Map Section
+\* -------------------- */
+/* -------------------- *\
+  Start Footer
+\* -------------------- */
+footer .list:not(:last-of-type) {
+    border-left: 1px solid #dedfe1;
+    border-right: none;
+}
+/* -------------------- *\
+  End Footer
+\* -------------------- */
+/* ------------------------------------------------------------------ *\
+  End Home Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 3 Page
+\* ------------------------------------------------------------------ */
+section.products .text-wrapper {
+    margin-left: 60px;
+    margin-right: 0;
+}
+section.products .input-wrapper {
+    margin-left: 48px;
+    margin-right: 0;
+}
+section.products .input-wrapper input {
+    padding-right: 57px;
+    padding-left: 0;
+}
+section.products .input-wrapper i {
+    padding-right: 21px;
+    padding-left: 0;
+    right: 3px;
+    left: auto;
+}
+section.products .sort-wrapper .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    margin-left: 0;
+}
+section.products .sort-wrapper .dropdown-toggle i {
+    margin-right: 5px;
+    margin-left: 0;
+}
+section.products .item-link {
+    margin: 19px 0 19px 25px;
+    padding: 8px 7px 0 8px;
+}
+section.products .item-link:nth-of-type(3n) {
+    margin-left: 0;
+}
+section.products .item-link .item-flag {
+    right: 19px;
+    left: auto;
+}
+section.products .item-link .preview {
+    margin-left: 9px;
+    margin-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 3 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 4 Page
+\* ------------------------------------------------------------------ */
+/* -------------------- *\
+  Start Product Section
+\* -------------------- */
+section.product .title-wrapper h1 {
+    margin-right: 18px;
+    margin-left: 0;
+}
+section.product .image {
+    margin: 0 15px 0 30px;
+}
+section.product .copies-number .minus, section.shopping-cart .copies-number .minus {
+    right: 22px;
+    left: auto;
+}
+section.product .copies-number .plus, section.shopping-cart .copies-number .plus {
+    left: 18px;
+    right: auto;
+}
+section.product .cart .added-number {
+    left: 30px;
+    right: auto;
+}
+/* -------------------- *\
+  Start book-box-modal
+\* -------------------- */
+.book-modal {
+    margin: -17px -46px auto auto;
+}
+.book-modal section.product .title-wrapper {
+    padding: 25px 22px 30px 30px;
+}
+.book-modal section.product .title-wrapper h1 {
+    margin-right: 11px;
+    margin-left: 0;
+}
+.book-modal section.product .modal-body {
+    padding: 0 29px 0 24px;
+}
+.book-modal section.product .image-wrapper {
+    margin: 0 0 0 34px;
+}
+/* -------------------- *\
+  End book-box-modal
+\* -------------------- */
+section.product-info .text-wrapper {
+    padding: 50px 43px 70px 77px;
+}
+/* -------------------- *\
+  Start FAQ Section
+\* -------------------- */
+section.faq .card .caret {
+    margin-left: 14px;
+    margin-right: 0;
+}
+section.faq .card button.collapsed .caret {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+/* -------------------- *\
+  End FAQ Section
+\* -------------------- */
+/* ------------------------------------------------------------------ *\
+  End Copy 4 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 16 Page
+\* ------------------------------------------------------------------ */
+header .title span {
+    margin-right: 49px;
+    margin-left: 0;
+}
+section.shopping-cart .shopping-items {
+    margin-left: 39px;
+    margin-right: 0;
+}
+section.shopping-cart .title-wrapper h1 {
+    margin-right: 18px;
+    margin-left: 0;
+}
+section.shopping-cart .shopping-items .image {
+    margin-left: 28px;
+    margin-right: 0;
+}
+section.shopping-cart .size {
+    padding: 13px 17px 9px 13px;
+}
+section.shopping-cart .shopping-price .handbag {
+    margin-left: 12px;
+    margin-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 16 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 13 Page
+\* ------------------------------------------------------------------ */
+section.checkout .information {
+    margin: 52px 0 51px 35px;
+}
+section.checkout .information .sender-info {
+    padding: 30px 33px 7px 24px;
+}
+section.checkout .information .reciver-info {
+    padding: 40px 33px 36px 34px;
+}
+section.checkout .reciver-info .checkbox:before {
+    right: -44px;
+    left: auto;
+}
+section.checkout .reciver-info .checkbox:after {
+    right: -33px;
+    left: auto;
+}
+section.checkout .reciver-info .checkbox.bg-red:before {
+    right: -37px;
+    left: auto;
+}
+section.checkout .reciver-info .checkbox.bg-red:after {
+    right: -26px;
+    left: auto;
+}
+section.checkout .reciver-info .gift-checkbox-container {
+    right: 13px;
+    left: auto;
+}
+.floating-label.gift-label {
+    right: 57px;
+    left: auto;
+}
+section.checkout .payment-methods h2 {
+    margin: 0 34px 30px 0;
+}
+section.checkout .payment-methods .tab-content {
+    padding: 42px 32px 0 39px;
+}
+section.checkout .payment-methods .checkout-button {
+    margin-left: 42px;
+    margin-right: 0;
+}
+section.checkout .shopping-items .title {
+    padding: 26px 26px 16px 28px;
+}
+section.checkout .shopping-items .item {
+    padding: 20px 21px 13px 0;
+}
+section.checkout .shopping-items .text {
+    margin-right: 18px;
+    margin-left: 0;
+}
+section.checkout .shopping-items .footer {
+    padding: 21px 0 22px 23px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 13 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 14 Page
+\* ------------------------------------------------------------------ */
+section.contact-us .contact-form {
+    padding: 31px 32px 30px 38px;
+    margin: 53px 0 26px 45px;
+}
+section.contact-us .contact-form h2 {
+    margin: 0 1px 26px 0;
+}
+section.contact-us .contact-number {
+    padding: 34px 39px 25px 0;
+}
+section.contact-us .contact-number .phone-icon {
+    -webkit-transform: rotate(-175deg);
+    -ms-transform: rotate(-175deg);
+    transform: rotate(-175deg);
+    right: -5px;
+    left: auto;
+    margin-left: 19px;
+    margin-right: 0;
+}
+section.contact-us .follow-us i {
+    margin: 8px 0 0 8px;
+}
+section.faq.contact .card .caret {
+    margin-left: 9px;
+    margin-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 14 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 15 Page
+\* ------------------------------------------------------------------ */
+section.create-account .register-form {
+    margin-left: 41px;
+    margin-right: 0;
+    padding: 30px 33px 41px 29px;
+}
+section.create-account .register-form h2 {
+    margin: 0 1px 38px 0;
+}
+section.create-account .login-form {
+    padding: 31px 23px 45px 22px;
+}
+section.create-account .login-form .header {
+    margin: 0 2px 20px 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 15 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 18 Page
+\* ------------------------------------------------------------------ */
+section.user-profile .profile-links {
+    margin-left: 40px;
+    margin-right: 0;
+}
+section.user-profile .profile-links li {
+    padding: 30px 39px 30px 0;
+}
+section.user-profile .profile-links i {
+    margin-left: 16px;
+    margin-right: 0;
+}
+section.user-profile .orders-info .header,
+section.user-profile .shopping-item,
+section.user-profile .orders-info .footer {
+    padding: 0 39px 0 25px;
+}
+section.user-profile .orders-info .header {
+    padding: 0 29px 25px 29px;
+}
+section.user-profile .orders-info .footer {
+    padding-top: 18px;
+}
+section.user-profile .shopping-item .image {
+    margin-left: 23px;
+    margin-right: 0;
+}
+section.user-profile .shopping-item .flag {
+    margin-left: 18px;
+    margin-right: 0;
+}
+section.user-profile .size span:nth-of-type(odd) {
+    margin-left: 32px;
+    margin-right: 0;
+}
+section.user-profile .orders-info .total-price {
+    margin-right: 43px;
+    margin-left: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 18 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 19 Page
+\* ------------------------------------------------------------------ */
+section.user-profile .primary-address {
+    padding: 40px 33px 29px 21px;
+}
+section.user-profile .primary-address .with-out-icon {
+    padding-right: 19px;
+    padding-left: 0;
+}
+section.user-profile address {
+    margin-right: 2px;
+    margin-left: 0;
+}
+section.user-profile button.greenish-bg,
+section.user-profile button.greenish-bg {
+    margin-left: 35px;
+    margin-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 19 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 20 Page
+\* ------------------------------------------------------------------ */
+section.user-profile .account-info button {
+    margin-right: 4px;
+    margin-left: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 20 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 3-2 Page
+\* ------------------------------------------------------------------ */
+section.products.two .modal-body {
+    padding: 0 10px 0 24px;
+}
+section.products.two .modal-body .thumbnail {
+    margin: 22px 0 0 8px;
+}
+section.products.two .modal-body .thumbnail li {
+    margin: 0 3px 15px 7px;
+}
+section.products.two .modal-body .image .left {
+    right: 22px;
+    left: auto;
+}
+section.products.two .modal-body .image .right {
+    left: 20px;
+    right: auto;
+}
+section.products.two .modal-body .details {
+    margin-right: 30px;
+    margin-left: 0;
+}
+section.products.two .progress-steps .step {
+    margin: 40px 0 0 84px;
+}
+section.products.two .progress-steps .circle {
+    right: 5px;
+    left: auto;
+}
+section.products.two .progress-steps .step-one:after {
+    right: 40px;
+    left: auto;
+}
+section.products.two .progress-steps .step-one:before {
+    right: -1195px;
+    left: auto;
+}
+section.products.two .progress-steps .step-two:after {
+    right: 40px;
+    left: auto;
+}
+section.products.two .progress-steps .step-three:after {
+    right: 40px;
+    left: auto;
+}
+section.products.two .input-wrapper {
+    margin-left: 0;
+}
+section.products.two .input-wrapper input {
+    padding-right: 57px;
+    padding-left: 0;
+}
+section.products.two .sort-wrapper {
+    display: flex;
+    align-items: center;
+}
+section.products.two .sort-wrapper .dropdown {
+    margin-left: 4px;
+}
+section.products.two .item-link {
+    margin-left: 42px;
+    margin-right: 0;
+}
+section.products.two .item-link:nth-of-type(2n) {
+    margin-left: 0;
+}
+section.products.two .item-link .item-image {
+    padding-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 3-2 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 6 Page
+\* ------------------------------------------------------------------ */
+section.product.two .image-wrapper.with-border {
+    margin-left: 32px;
+    margin-right: 0;
+}
+section.product.two .options .custom-radio {
+    margin: 0 20px 9px 0;
+}
+section.product.two .options label:before {
+    right: -44px;
+    left: auto;
+}
+section.product.two .options label:after {
+    right: -35px;
+    left: auto;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 6 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 7 Page
+\* ------------------------------------------------------------------ */
+section.product.with-flag .title .image {
+    margin: 0 0 0 20px;
+}
+section.product.with-flag .top-cart {
+    left: 15px;
+    right: auto;
+}
+section.product.with-flag .image-wrapper {
+    margin-left: 34px;
+    margin-right: 0;
+}
+section.product.with-flag .image-wrapper .image {
+    margin: 0 0 18px 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 7 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 17 Page
+\* ------------------------------------------------------------------ */
+section.user-profile.with-tabs .nav-tab {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 17 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 9 Page
+\* ------------------------------------------------------------------ */
+section.product.with-faq .image-wrapper {
+    margin-left: 52px;
+    margin-right: 0;
+}
+section.product.with-faq .title img {
+    margin-left: 12px;
+    margin-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 9 Page
+\* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ *\
+  Start Copy 8 Page
+\* ------------------------------------------------------------------ */
+section.product.two-book .options {
+    left: 0;
+    right: auto;
+}
+section.product.two-book .title img {
+    margin-left: 21px;
+    margin-right: 0;
+}
+section.product.two-book .image-wrapper {
+    margin-left: 0;
+}
+section.product.two-book .image-wrapper .image {
+    padding: 20px 10px 20px 0;
+}
+section.product.two-book .image-wrapper .image:nth-of-type(odd) {
+    margin-left: 28px;
+    margin-right: 0;
+}
+/* ------------------------------------------------------------------ *\
+  End Copy 8 Page
+\* ------------------------------------------------------------------ */
+/* -------------------- *\
+  Media Queries
+\* -------------------- */
+@media (max-width: 1300px) {
+    section.slider .carousel .image {
+        left: 0;
+        right: auto;
+    }
+}
+@media (max-width: 1199px) {
+    .book-modal {
+        margin: auto;
+    }
+    section.product .modal-body .image-wrapper {
+        margin: 0;
+    }
+    header .navbar .cart-modal,
+    header .cart-modal .modal-dialog {
+        right: 0;
+    }
+    section.products .input-wrapper {
+        margin-left: 0;
+    }
+    section.products .item-link .item-flag {
+        right: 24px;
+        left: auto;
+    }
+    section.product .image {
+        margin: 0 15px 40px 0;
+    }
+    section.checkout .information,
+    section.contact-us .contact-form {
+        margin-left: 0;
+    }
+}
+@media (max-width: 991px) {
+    /* Start Responsive Menu */
+    header .navbar .quran-gift-text {
+        margin-left: 0;
+    }
+    header .nav-wrapper {
+        right: -300px;
+        left: auto;
+    }
+    header .nav-wrapper .nav-item:last-of-type {
+        margin-right: 0;
+    }
+    header .nav-wrapper .nav-item .nav-link {
+        padding: 12px 23px 12px 18px;
+    }
+    header .nav-wrapper .nav-item .level-2:after,
+    header .nav-wrapper .nav-item .back:after{
+        border-color: transparent transparent #000 #000;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-left: 4px;
+        margin-right: 0;
+    }
+    /* End Responsive Menu */
+    section.products .input-wrapper {
+        margin-left: 48px;
+        margin-right: 0;
+    }
+    section.products .item-link:nth-of-type(even) {
+        margin-left: 0;
+    }
+    section.products .item-link:nth-of-type(odd) {
+        margin-left: 25px;
+        margin-right: 0;
+    }
+    section.products .item-link .item-flag {
+        right: 27px;
+        left: auto;
+    }
+    section.product .thumbnail li {
+        margin: 0 0 20px 14px;
+    }
+    section.product.two .image-wrapper.with-border {
+        margin-left: 0;
+    }
+    section.product.two.with-flag .image-wrapper {
+        margin-left: 0;
+    }
+    section.create-account .register-form {
+        margin-left: 0;
+    }
+    section.shopping-cart .shopping-items {
+        margin-left: 0;
+    }
+    section.user-profile .profile-links {
+        margin-left: 0;
+    }
+}
+@media (max-width: 900px) {
+    section.features .features-image {
+        right: 0;
+        left: auto;
+    }
+}
+@media (max-width: 767px) {
+    header .login-modal .modal-dialog {
+        right: 0;
+        left: auto;
+    }
+    section.features .feature:not(:last-of-type) {
+        border-left: none;
+    }
+    .print-provider-container .text {
+        padding: 0 42px 0 26px;
+    }
+    footer .list:not(:last-of-type) {
+        border-left: none;
+    }
+    section.products .item-link {
+        margin-left: 0 !important;
+    }
+    section.products .item-link .item-flag {
+        right: 28px;
+    }
+    section.product .image {
+        margin-right: 0;
+    }
+    .flex-wrap .form-group:nth-of-type(odd):not(:last-of-type) {
+        margin-left: 0;
+    }
+    section.checkout .reciver-info .checkbox.info {
+        right: 20px;
+        left: auto;
+    }
+    section.checkout .payment-methods .checkout-button {
+        margin-left: 0;
+    }
+    section.products.two .progress-steps {
+        margin-right: 60px;
+        margin-left: 0;
+    }
+    section.products.two .progress-steps .step:after {
+        right: -67px;
+        left: auto;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+    section.products.two .progress-steps .step .circle {
+        right: -60px;
+        left: auto;
+    }
+    section.products.two .modal-body .details {
+        margin-right: 0;
+    }
+    section.product.two.with-flag .thumbnail li {
+        margin: 0 8px 8px;
+    }
+    section.product.two-book .image-wrapper .image:nth-of-type(odd) {
+        margin-left: 0;
+    }
+}
+@media (max-width: 575px) {
+    section.slider .text .order-copy {
+        margin-left: 0;
+    }
+    section.products .text-wrapper {
+        margin-left: 0;
+    }
+    section.faq .card .caret {
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    section.products.two .modal-body .image .right {
+        left: 5px;
+        right: auto;
+    }
+    section.products.two .modal-body .image .left {
+        right: 5px;
+        left: auto;
+    }
+}
+@media (max-width: 500px) {
+    header .title span {
+        margin-right: 18px;
+        margin-left: 0;
+    }
+    section.product .modal-header .title-wrapper {
+        padding: 55px 15px 16px 15px;
+    }
+    section.product .modal-header .title-wrapper h1 {
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    section.product .modal-header .close {
+        left: 5px;
+        right: auto;
+    }
+    section.user-profile .orders-info .total-price {
+        margin-right: 0;
+    }
+    section.user-profile .primary-address button.greenish-bg,
+    section.user-profile .secondry-address button.greenish-bg {
+        margin-left: 0;
+    }
+}
+@media (max-width: 400px) {
+    section.products .item-link .item-image {
+        padding-right: 0;
+    }
+    section.products .item-link .item-flag {
+        right: 20px;
+        left: auto;
+    }
+    section.product .title-wrapper h1 {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    section.contact-us .contact-number {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+    section.user-profile .personal-info-container button {
+        margin-left: 0;
+    }
+    section.product.with-flag .title .image {
+        margin: 0 0 0 5px;
+    }
+    .form-group i {
+        padding-right: 10px;
+        padding-left: 0;
+    }
+}
+@media (max-width: 350px) {
+    section.user-profile .profile-links li {
+        padding-right: 20px;
+        padding-left: 0;
+    }
+}
+/* IE11 CSS  */
+@media (max-width: 767px) {
+    _:-ms-fullscreen, :root section.products .item-link {
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+}
+/* IE10 & IE11 CSS  */
+_:-ms-lang(x), .print-provider-container .text {
+    left: 50%;
+    right: auto;
+}
+_:-ms-lang(x), .print-provider-container img.fixed {
+    left: -100px;
+    right: auto;
+}
+_:-ms-lang(x), section.product .copies-number span,
+_:-ms-lang(x), section.shopping-cart .copies-number span {
+    left: 50%;
+    right: auto;
+}
+@media (max-width: 575px) {
+    _:-ms-lang(x), section.checkout .payment-methods .nav-item span,
+    _:-ms-lang(x), section.checkout .payment-methods .nav-item img {
+        left: 50%;
+        right: auto;
+    }
+}
+
+
+
