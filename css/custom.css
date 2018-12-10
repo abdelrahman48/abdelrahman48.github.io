@@ -3023,12 +3023,11 @@ section.product-info.two-book .text-wrapper {
 .width {
     right: 0;
 }
-.RTL{
+.RTL {
     top: 0;
     left: 0;
     z-index: 9999;
 }
-
 /* IE10 CSS  */
 _:-ms-lang(x), section.two.products .item {
     display: block !important;
