@@ -1,6 +1,20 @@
 /* ------------------------------------------------------------------ *\
   Start RTL CSS
 \* ------------------------------------------------------------------ */
+@font-face {
+    font-family: 'droid';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/droidkufi/DroidKufi-Regular.eot);
+    src: url(../fonts/droidkufi/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/droidkufi/DroidKufi-Regular.woff2) format('woff2'),
+    url(../fonts/droidkufi/DroidKufi-Regular.woff) format('woff'),
+    url(../fonts/droidkufi/DroidKufi-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'droid', sans-serif;;
+}
 /* -------------------- *\
   Start Bootstrap fixes
 \* -------------------- */
@@ -40,8 +54,11 @@
 .ti-arrow-right:before {
     content: "\e629";
 }
+.ti-angle-right:before {
+    content: "\e64a";
+}
 /* -------------------- *\
-  End icons fixes
+      End icons fixes
 \* -------------------- */
 /* -------------------- *\
   Start weird problems fixes
@@ -246,6 +263,9 @@ header .login-modal .social-login i {
 /* -------------------- *\
   Start slider Section
 \* -------------------- */
+section.slider .carousel {
+    padding: 0 100px 0 45px;
+}
 section.slider .carousel-next-icon:after,
 .carousel-prev-icon:after {
     right: 22px;
@@ -838,7 +858,7 @@ section.product.two-book .image-wrapper .image:nth-of-type(odd) {
 \* -------------------- */
 @media (max-width: 1300px) {
     section.slider .carousel .image {
-        left: 0;
+        left: 28px;
         right: auto;
     }
 }
@@ -937,6 +957,9 @@ section.product.two-book .image-wrapper .image:nth-of-type(odd) {
     header .login-modal .modal-dialog {
         right: 0;
         left: auto;
+    }
+    section.slider .carousel {
+        padding: 0 60px 0 50px;
     }
     section.features .feature:not(:last-of-type) {
         border-left: none;

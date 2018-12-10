@@ -268,7 +268,7 @@ textarea {
     color: #106b2e;
     text-decoration: none;
 }
-.btn-brown:hover {
+.btn-brown:hover, a.btn-brown:hover {
     background-color: #a07b1b;
     color: #fff;
     text-decoration: none;
