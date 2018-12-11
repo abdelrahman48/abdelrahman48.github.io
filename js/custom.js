@@ -60,14 +60,14 @@ function validate() { /* form validate */
         $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
         $(this).parents('.form-group').find('.error-message').addClass('show');
     }
-    else if ($('input[type=text]').val().length < 3) {
+/*    else if ($('input[type=text]').val().length < 3) {
         $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
         $(this).parents('.form-group').find('.error-message').addClass('show');
     }
     else if ($('input[type=password]').val().length < 3) {
         $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
         $(this).parents('.form-group').find('.error-message').addClass('show');
-    }
+    }*/
     else { // No Errors
         $(this).parents('.form-group').addClass('form-success').removeClass('form-error');
         $(this).parents('.form-group').find('.error-message').removeClass('show');
