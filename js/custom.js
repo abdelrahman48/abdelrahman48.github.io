@@ -21,7 +21,7 @@ $(function () {
             $('.custom-rtl-css').attr('href', '');
         }
     });*/
-    $('button.RTL').on('click', function () {
+    $('.RTL').on('click', function () {
        localStorage.clear();
     });
     var paginationLi = $('.pagination-list .page-number'),
