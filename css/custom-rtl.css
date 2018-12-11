@@ -43,6 +43,12 @@ header .cart-modal .edit-cart i {
 p {
     line-height: 21px !important;
 }
+section.slider .carousel .text p:first-of-type {
+    line-height: 26px !important;
+}
+footer p:first-of-type {
+    line-height: 28px !important;
+}
 section.get-started h2 {
     margin-top: 0;
 }
