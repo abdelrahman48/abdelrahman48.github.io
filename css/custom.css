@@ -2194,6 +2194,7 @@ section.product.with-flag .title {
 }
 section.product.with-flag .title .image {
     margin: 0 20px 0 0;
+    padding-top: 0;
 }
 section.product.with-flag .title h2 {
     margin-bottom: -8px;

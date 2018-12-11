@@ -164,7 +164,11 @@ function validate() {
         if (parseInt(numberOfCopies.text()) > 0) {
             if(shoppingCartNumber.hasClass('active')) return;
             shoppingCartNumber.addClass('active');
-            shoppingCart.attr('src', 'img/handbag-active.svg');
+            if($('html').is('[dir]')) {
+                shoppingCart.attr('src', '../img/handbag-active.svg');
+            } else {
+                shoppingCart.attr('src', 'img/handbag-active.svg');
+            }
         }
     });
 
@@ -207,7 +211,11 @@ function validate() {
 
             if(shoppingCartNumber.hasClass('active')) return;
             shoppingCartNumber.addClass('active');
-            shoppingCart.attr('src', 'img/handbag-active.svg');
+            if($('html').is('[dir]')) {
+                shoppingCart.attr('src', '../img/handbag-active.svg');
+            } else {
+                shoppingCart.attr('src', 'img/handbag-active.svg');
+            }
         }
     });
 
@@ -224,7 +232,11 @@ function validate() {
 
        $('header .cart-modal .modal-header .number').text( parseInt(shoppingCartNumber.text()) );
         shoppingCartNumber.addClass('active');
-        shoppingCart.attr('src', 'img/handbag-active.svg');
+       if($('html').is('[dir]')) {
+           shoppingCart.attr('src', '../img/handbag-active.svg');
+       } else {
+           shoppingCart.attr('src', 'img/handbag-active.svg');
+       }
     }
 
     if(shoppingCartItemsParent.find('.item').length === 0) {
@@ -244,7 +256,11 @@ function validate() {
                 $('.empty-cart').fadeIn(1000);
                 shoppingCartItemsParent.addClass('empty');
                 shoppingCartNumber.removeClass('active');
-                shoppingCart.attr('src', 'img/handbag.svg');
+                if($('html').is('[dir]')) {
+                    shoppingCart.attr('src', '../img/handbag.svg');
+                } else {
+                    shoppingCart.attr('src', 'img/handbag.svg');
+                }
             }
         });
     });

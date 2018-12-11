@@ -15,6 +15,22 @@
 * {
     font-family: 'droid', sans-serif !important;
 }
+.fab {
+    font-family: "Font Awesome 5 Brands" !important;
+}
+.fas {
+    font-family: "Font Awesome 5 Free" !important;
+}
+[class*="ti-"] {
+     font-family: 'themify', sans-serif !important;
+ }
+[class*="icon-"] {
+    font-family: 'simple-line-icons' !important;
+}
+header .cart-modal .edit-cart i {
+    padding-top: 8px;
+    display: inline-block;
+}
 /* -------------------- *\
   Start Bootstrap fixes
 \* -------------------- */
