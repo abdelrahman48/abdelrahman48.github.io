@@ -67,6 +67,12 @@ section.shopping-cart .size p {
 section.user-profile address span {
     line-height: 28px;
 }
+.close span {
+    margin-bottom: 0 !important;
+}
+header .cart-modal .delete span {
+    top: 8px;
+}
 /* -------------------- *\
   Start Arabic Font Fixes
 \* -------------------- */
@@ -118,6 +124,9 @@ section.user-profile address span {
 /* -------------------- *\
   Start Globals
 \* -------------------- */
+header .navbar-nav .nav-item .order-now {
+    font-weight: bold;
+}
 .floating-label {
     right: 57px;
     left: auto;
