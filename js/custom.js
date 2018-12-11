@@ -1,14 +1,16 @@
 $(function () {
-    $('.carousel').carousel({
+    $('.carousel').carousel({ /* run bootstrap slider */
         interval: false
     });
+
     $(window).resize(function () {
-/*        $('.width').text($(this).outerWidth());*/
-       if( $(this).outerWidth() < 775) {
+    /*$('.width').text($(this).outerWidth());*/ /* to see page size in IE browser */
+       if( $(this).outerWidth() < 775) { /* fix image in print-provider section in home page in IE browser in small screen */
            $('.ie-support').addClass('fixed');
         }
     });
-    $('button.RTL').on('click', function () {
+
+/*    $('button.RTL').on('click', function () { /!* toggle between arabic and english version *!/
         if (! $('html').attr('dir') ) {
             $('html').attr('dir','rtl');
             $('.bootstrap-rtl-css').attr('href', 'components/bootstrap-4.1.3/css/bootstrap-rtl.min.css');
@@ -18,8 +20,10 @@ $(function () {
             $('.bootstrap-rtl-css').attr('href', '');
             $('.custom-rtl-css').attr('href', '');
         }
+    });*/
+    $('button.RTL').on('click', function () {
+       localStorage.clear();
     });
-    
     var paginationLi = $('.pagination-list .page-number'),
         productThumbnail = $('section.product .thumbnail li'),
         sizeButton = $('.details .size button'),
@@ -51,8 +55,16 @@ $(function () {
         orderAddToCart = $('section.two-book .options .cart'),
         paymentCheckout = $('section.checkout .payment-methods .checkout');
 
-function validate() {
+function validate() { /* form validate */
     if ($(this).val().length === 0 || $(this).val() == 0) { // Show Error
+        $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
+        $(this).parents('.form-group').find('.error-message').addClass('show');
+    }
+    else if ($('input[type=text]').val().length < 3) {
+        $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
+        $(this).parents('.form-group').find('.error-message').addClass('show');
+    }
+    else if ($('input[type=password]').val().length < 3) {
         $(this).parents('.form-group').addClass('form-error').removeClass('form-success');
         $(this).parents('.form-group').find('.error-message').addClass('show');
     }
@@ -76,7 +88,7 @@ function validate() {
         }
     });
     paymentCheckout.on('click', function () {
-       $('.checkout-form').submit()
+       $('.checkout-form').submit();
     });
 
     $('header .responsive-menu .nav-link').on('click', function () {
